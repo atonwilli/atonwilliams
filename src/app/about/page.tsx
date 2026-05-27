@@ -3,89 +3,269 @@ import Link from 'next/link'
 export const metadata = {
   title: 'About · Aton Williams',
   description:
-    "Aton Williams: founder of Front Page Agency since 2018, founder of Front Page Intelligence, operator-coach for direct sales organizations.",
+    "Aton Williams: entrepreneur since fourteen, founder of Front Page Agency, never held a 9-to-5. Seventeen years building, nine figures generated, now coaching and consulting the next wave of operators.",
 }
 
 export default function About() {
   return (
     <>
+      {/* ── HERO with portrait ── */}
       <section style={{ padding: '100px 0 60px' }}>
         <div className="container">
-          <span className="eyebrow" style={{ marginBottom: 28 }}>
-            <span className="dot" />
-            ABOUT ATON
-          </span>
-          <h1
-            className="gradient-text"
+          <div
             style={{
-              fontFamily: 'var(--display)',
-              fontSize: 'clamp(44px, 7vw, 80px)',
-              lineHeight: 1.0,
-              letterSpacing: '-2px',
-              fontWeight: 700,
-              maxWidth: 900,
-              margin: '24px 0 32px',
+              display: 'grid',
+              gridTemplateColumns: 'minmax(0, 1fr) minmax(0, 1.2fr)',
+              gap: 64,
+              alignItems: 'center',
             }}
+            className="about-hero-grid"
           >
-            I built the company I wished had existed when I started.
-          </h1>
-          <p style={{ fontSize: 19, color: 'var(--text-2)', maxWidth: 760, lineHeight: 1.7 }}>
-            Eight years ago I started Front Page Agency because the operating environment I wanted to work in didn't exist. I built it. Then I kept building. The agency grew. The software came next. The coaching came after. This page is the short version of how it all connects.
-          </p>
+            {/* Portrait left */}
+            <div>
+              <div
+                className="portrait"
+                style={{
+                  backgroundImage: 'url(/aton-about.jpg)',
+                  backgroundColor: 'var(--bg-elev)',
+                }}
+                aria-label="Aton Williams"
+              />
+            </div>
+
+            {/* Content right */}
+            <div>
+              <span className="eyebrow" style={{ marginBottom: 28 }}>
+                <span className="dot" />
+                About Aton
+              </span>
+              <h1
+                className="serif"
+                style={{
+                  fontSize: 'clamp(40px, 5.5vw, 68px)',
+                  lineHeight: 1.0,
+                  letterSpacing: '-1.8px',
+                  fontWeight: 500,
+                  margin: '24px 0 28px',
+                  color: 'var(--text)',
+                }}
+              >
+                Never had a 9-to-5. Never planned to.
+              </h1>
+              <p style={{ fontSize: 17, color: 'var(--text-2)', maxWidth: 580, lineHeight: 1.75 }}>
+                I&apos;ve been an entrepreneur since I was fourteen. YouTube channel at fourteen. Clothing boutique at twenty. Digital marketing agency until twenty-three. Then I founded Front Page Agency, and I&apos;ve been running it ever since. Seventeen years of building total. Nine figures generated for clients, multi-millions inside our own ecosystem. Now I&apos;m back in the media, coaching the next wave and consulting selectively for operators ready for that level of work.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* ── THE THREE THINGS I RUN ── */}
-      <section style={{ padding: '60px 0' }}>
+      {/* ── TIMELINE / THE ARC ── */}
+      <section style={{ padding: '80px 0 40px' }}>
         <div className="container" style={{ maxWidth: 880 }}>
+          <div className="rule" />
+          <div style={{ fontSize: 11, color: 'var(--accent)', fontWeight: 700, letterSpacing: 4, textTransform: 'uppercase', marginBottom: 18, fontFamily: 'var(--display-sans)' }}>
+            The arc
+          </div>
           <h2
+            className="serif"
             style={{
-              fontFamily: 'var(--display)',
-              fontSize: 36,
-              fontWeight: 700,
-              letterSpacing: '-1px',
-              marginBottom: 36,
+              fontSize: 'clamp(32px, 4.5vw, 44px)',
+              fontWeight: 500,
+              letterSpacing: '-1.2px',
+              marginBottom: 16,
+              color: 'var(--text)',
+              lineHeight: 1.1,
+            }}
+          >
+            Seventeen years building. The short version.
+          </h2>
+          <p style={{ fontSize: 16, color: 'var(--text-2)', maxWidth: 660, lineHeight: 1.75, marginBottom: 56 }}>
+            I&apos;ve never sold a course on building a business while never having built one. Every chapter below is something I actually ran. The lessons compound. The earlier ones made the later ones possible.
+          </p>
+
+          {/* Timeline */}
+          <div style={{ position: 'relative', paddingLeft: 40 }} className="timeline">
+            {/* Vertical line */}
+            <div
+              style={{
+                position: 'absolute',
+                left: 7,
+                top: 12,
+                bottom: 12,
+                width: 1,
+                background: 'linear-gradient(to bottom, var(--accent) 0%, var(--accent-dim) 100%)',
+                opacity: 0.4,
+              }}
+            />
+
+            {[
+              {
+                age: '14',
+                year: '2008',
+                title: 'Atonsworld',
+                body: 'Started a YouTube channel before "creator economy" was a phrase. First taste of building an audience from scratch and learning what it takes to hold one.',
+              },
+              {
+                age: '20',
+                year: '2014',
+                title: 'A clothing boutique',
+                body: 'Opened a retail boutique. Inventory, leases, payroll, customer service, margin math. Learned operations the hard way, which is to say the only way that actually sticks.',
+              },
+              {
+                age: '20–23',
+                year: '2014–2017',
+                title: 'Digital marketing agency',
+                body: 'Built and ran a client-services agency through my early twenties. Sales, fulfillment, managing a small team. Got my reps in on selling the invisible.',
+              },
+              {
+                age: '23',
+                year: '2018',
+                title: 'Front Page Agency',
+                body: 'Founded FPA in Atlanta. Direct sales firm. Multi-vertical from the start. The work I&apos;d been preparing for without knowing it.',
+              },
+              {
+                age: '23–31',
+                year: '2018–today',
+                title: 'Eight years and counting',
+                body: 'Built FPA into a multi-vertical sales organization. Six campaign categories. Nine figures generated for clients. Multi-millions inside our own ecosystem. Five owners promoted out of my chair. BBB A+. Still operating.',
+              },
+              {
+                age: '31',
+                year: '2026',
+                title: 'Public again',
+                body: 'Compiling seventeen years of operating into the writing, the community, and the coaching. Taking a small number of private engagements per year. For the operators and the organizations ready for that level of work.',
+              },
+            ].map((entry, idx) => (
+              <div
+                key={entry.year}
+                style={{
+                  position: 'relative',
+                  marginBottom: idx === 5 ? 0 : 40,
+                }}
+              >
+                {/* Dot indicator */}
+                <div
+                  style={{
+                    position: 'absolute',
+                    left: -40,
+                    top: 6,
+                    width: 15,
+                    height: 15,
+                    borderRadius: '50%',
+                    background: 'var(--bg-base)',
+                    border: '2px solid var(--accent)',
+                    boxShadow: '0 0 0 4px var(--bg-base), 0 0 16px var(--accent-glow)',
+                  }}
+                />
+
+                <div style={{ display: 'flex', gap: 28, flexWrap: 'wrap', alignItems: 'baseline', marginBottom: 10 }}>
+                  <span
+                    className="serif"
+                    style={{
+                      fontSize: 28,
+                      fontWeight: 500,
+                      color: 'var(--accent)',
+                      letterSpacing: '-0.6px',
+                      lineHeight: 1,
+                      minWidth: 80,
+                    }}
+                  >
+                    {entry.age}
+                  </span>
+                  <span
+                    style={{
+                      fontSize: 11,
+                      color: 'var(--text-3)',
+                      fontFamily: 'var(--display-sans)',
+                      letterSpacing: 1.5,
+                      textTransform: 'uppercase',
+                    }}
+                  >
+                    {entry.year}
+                  </span>
+                </div>
+
+                <h3
+                  className="serif"
+                  style={{
+                    fontSize: 24,
+                    fontWeight: 500,
+                    marginBottom: 10,
+                    color: 'var(--text)',
+                    letterSpacing: '-0.4px',
+                  }}
+                >
+                  {entry.title}
+                </h3>
+                <p
+                  style={{
+                    fontSize: 15,
+                    color: 'var(--text-2)',
+                    lineHeight: 1.75,
+                    maxWidth: 680,
+                  }}
+                >
+                  {entry.body}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── THE THREE THINGS ── */}
+      <section style={{ padding: '80px 0' }}>
+        <div className="container" style={{ maxWidth: 880 }}>
+          <div className="rule" />
+          <h2
+            className="serif"
+            style={{
+              fontSize: 'clamp(32px, 4.5vw, 44px)',
+              fontWeight: 500,
+              letterSpacing: '-1.2px',
+              marginBottom: 40,
               color: 'var(--text)',
             }}
           >
-            What I actually run, today.
+            What I actually run today.
           </h2>
 
           {[
             {
-              tag: 'OPERATING',
+              tag: 'Operating',
               name: 'Front Page Agency',
               loc: 'Fort Worth, TX · Est. 2018',
-              body: 'Direct sales firm. Consumer telecom, technology, cybersecurity, health enrollment, nonprofit development, emerging consumer brands. Over $312 million in client revenue generated since we opened. We don\'t sell decks. We sell results we\'ve already delivered. BBB A+. 5-star Google.',
+              body: 'Direct sales firm. Consumer telecom, technology, cybersecurity, health enrollment, nonprofit development, emerging consumer brands. Over $312 million in client revenue generated since we opened. BBB A+. 5-star Google. We don\'t sell decks. We sell results we\'ve already delivered.',
             },
             {
-              tag: 'BUILDING',
-              name: 'MESA · Front Page Intelligence',
-              loc: 'Software platform · Launched 2025',
-              body: 'The operator OS for direct sales orgs. CRM, ATS, AI Coach, and the platform that runs your floor. We use it every day at FPA. We license it to other direct sales organizations who want what FPA has without rebuilding it from scratch. Starter Lite from $39/seat/mo, white-label at Enterprise.',
-            },
-            {
-              tag: 'COACHING',
-              name: 'Operators Academy + Inner Circle',
+              tag: 'Coaching',
+              name: 'Operators Academy + The Inner Circle',
               loc: 'Free community + private mastermind',
-              body: 'The same frameworks I run my floor on, the same coaching loops I run with my owners, and the conversations that don\'t fit on social media. Free Skool community for operators serious about the work. Private mastermind for the ones building real numbers.',
+              body: 'Frameworks, breakdowns, and the same coaching loops I run with my owners. Free Skool community for operators serious about the work. The Inner Circle is the invite-only room for the operators building real numbers.',
+            },
+            {
+              tag: 'Writing',
+              name: 'The Newsletter + Notes',
+              loc: 'Weekly · Free',
+              body: 'One email a week. Real lessons, real numbers, no fluff. Everything I learn the hard way gets written down here first. The community sees it before the public.',
             },
           ].map((thing) => (
             <div
               key={thing.name}
               className="card-elevated"
-              style={{ marginBottom: 18 }}
+              style={{ marginBottom: 16 }}
             >
-              <div style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'space-between', marginBottom: 12, flexWrap: 'wrap', gap: 10 }}>
-                <div style={{ fontSize: 10, color: 'var(--accent)', fontWeight: 700, letterSpacing: 3, fontFamily: 'var(--display)' }}>
+              <div style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'space-between', marginBottom: 14, flexWrap: 'wrap', gap: 10 }}>
+                <div style={{ fontSize: 10.5, color: 'var(--accent)', fontWeight: 700, letterSpacing: 3, fontFamily: 'var(--display-sans)', textTransform: 'uppercase' }}>
                   {thing.tag}
                 </div>
-                <div style={{ fontSize: 11, color: 'var(--text-3)' }}>{thing.loc}</div>
+                <div style={{ fontSize: 11, color: 'var(--text-3)', fontFamily: 'var(--display-sans)', letterSpacing: 0.5 }}>{thing.loc}</div>
               </div>
-              <h3 style={{ fontFamily: 'var(--display)', fontSize: 26, fontWeight: 700, marginBottom: 14, color: 'var(--text)' }}>
+              <h3 className="serif" style={{ fontSize: 28, fontWeight: 500, marginBottom: 14, color: 'var(--text)', letterSpacing: '-0.6px' }}>
                 {thing.name}
               </h3>
-              <p style={{ fontSize: 15, color: 'var(--text-2)', lineHeight: 1.7 }}>
+              <p style={{ fontSize: 15, color: 'var(--text-2)', lineHeight: 1.75 }}>
                 {thing.body}
               </p>
             </div>
@@ -93,41 +273,40 @@ export default function About() {
         </div>
       </section>
 
-      {/* ── THE OPERATING LENS ── */}
+      {/* ── HOW I OPERATE ── */}
       <section style={{ padding: '60px 0' }}>
         <div className="container" style={{ maxWidth: 880 }}>
-          <span className="eyebrow" style={{ marginBottom: 24 }}>
-            <span className="dot" />
-            HOW I OPERATE
-          </span>
+          <div className="rule" />
+          <div style={{ fontSize: 11, color: 'var(--accent)', fontWeight: 700, letterSpacing: 4, textTransform: 'uppercase', marginBottom: 18, fontFamily: 'var(--display-sans)' }}>
+            How I operate
+          </div>
           <h2
+            className="serif"
             style={{
-              fontFamily: 'var(--display)',
-              fontSize: 'clamp(28px, 4.5vw, 44px)',
-              fontWeight: 700,
+              fontSize: 'clamp(30px, 4.5vw, 44px)',
+              fontWeight: 500,
               letterSpacing: '-1.2px',
-              lineHeight: 1.05,
-              marginTop: 16,
-              marginBottom: 32,
+              lineHeight: 1.1,
+              marginBottom: 40,
               color: 'var(--text)',
             }}
           >
-            Operator-first. Builder-second. Consultant-always.
+            Operator-first. Builder-second. Consultant always.
           </h2>
 
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: 14 }}>
             {[
               {
-                t: 'I still run the floor.',
-                d: 'Every framework I teach was tested on my own team this week. If it doesn\'t survive contact with a real shift, it doesn\'t survive at all.',
+                t: 'Hands-on, every day.',
+                d: 'I still run the agency. Every framework I teach was pressure-tested on a real team this week. If it doesn\'t survive contact with reality, it doesn\'t survive at all.',
               },
               {
-                t: 'I build the systems I need.',
-                d: 'When the software I wanted didn\'t exist, I built it. MESA is the operator OS I wished I\'d had on day one.',
+                t: 'Build what you need.',
+                d: 'When the tools I wanted didn\'t exist, I built them. Operators who can build are operators who don\'t wait around for permission to grow.',
               },
               {
                 t: 'The bar is the bar.',
-                d: 'Standards so high it\'s worthy of being on the front page. Hired in. Coached up. Held to it every day.',
+                d: 'Standards so high it\'s worthy of being on the front page. Hired in. Coached up. Held to it every day. No exceptions.',
               },
               {
                 t: 'Promote from within.',
@@ -135,18 +314,18 @@ export default function About() {
               },
               {
                 t: 'Calculated risk, not gambling.',
-                d: 'I commit when execution is in my control and the downside is bounded. The rest is patience and reps.',
+                d: 'I commit when execution is in my control and the downside is bounded. The rest is patience and reps. Confidence comes from preparation, not hope.',
               },
               {
                 t: 'Velocity beats perfect.',
-                d: 'Ship a v1 fast. Iterate. The floor doesn\'t pay you to plan. The floor pays you to produce.',
+                d: 'Ship a v1 fast. Iterate. Planning doesn\'t pay the team. Producing does. The operator who moves first usually wins, even if the move isn\'t pretty.',
               },
             ].map((p) => (
-              <div key={p.t} className="card" style={{ padding: 22 }}>
-                <h4 style={{ fontFamily: 'var(--display)', fontSize: 16, fontWeight: 700, marginBottom: 8, color: 'var(--accent)' }}>
+              <div key={p.t} className="card" style={{ padding: 24 }}>
+                <h4 className="serif" style={{ fontSize: 19, fontWeight: 500, marginBottom: 10, color: 'var(--accent-bright)', letterSpacing: '-0.3px' }}>
                   {p.t}
                 </h4>
-                <p style={{ fontSize: 13.5, color: 'var(--text-2)', lineHeight: 1.6 }}>
+                <p style={{ fontSize: 14, color: 'var(--text-2)', lineHeight: 1.65 }}>
                   {p.d}
                 </p>
               </div>
@@ -156,34 +335,44 @@ export default function About() {
       </section>
 
       {/* ── CTA ── */}
-      <section style={{ padding: '80px 0 40px', textAlign: 'center' }}>
-        <div className="container">
+      <section style={{ padding: '96px 0 32px', textAlign: 'center' }}>
+        <div className="container" style={{ maxWidth: 720 }}>
+          <div className="rule" style={{ margin: '0 auto 24px' }} />
           <h2
-            className="gradient-text"
+            className="serif"
             style={{
-              fontSize: 'clamp(32px, 5vw, 52px)',
-              fontFamily: 'var(--display)',
-              fontWeight: 700,
+              fontSize: 'clamp(34px, 5vw, 56px)',
+              fontWeight: 500,
               letterSpacing: '-1.5px',
               lineHeight: 1.05,
               marginBottom: 20,
+              color: 'var(--text)',
             }}
           >
             See where the seats are.
           </h2>
-          <p style={{ fontSize: 17, color: 'var(--text-2)', maxWidth: 540, margin: '0 auto 32px' }}>
-            Five ways in. Free at the bottom. Premium at the top. Pick the one that fits where you are right now.
+          <p style={{ fontSize: 16, color: 'var(--text-2)', maxWidth: 560, margin: '0 auto 36px', lineHeight: 1.7 }}>
+            Four ways in. Free at the bottom. Private at the top. Pick the one that fits where you are right now.
           </p>
           <div style={{ display: 'flex', gap: 14, justifyContent: 'center', flexWrap: 'wrap' }}>
             <Link href="/work-with-me" className="btn btn-primary">
-              See the offer ladder →
+              See How To Work With Me
             </Link>
             <a href="https://www.skool.com/operators-academy-5634" target="_blank" rel="noopener noreferrer" className="btn btn-ghost">
-              Join the academy free
+              Join Free
             </a>
           </div>
         </div>
       </section>
+
+      <style>{`
+        @media (max-width: 860px) {
+          .about-hero-grid {
+            grid-template-columns: 1fr !important;
+            gap: 40px !important;
+          }
+        }
+      `}</style>
     </>
   )
 }

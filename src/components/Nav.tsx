@@ -6,7 +6,7 @@ export function Nav() {
       <div className="nav-inner">
         <Link href="/" className="nav-brand">
           <span className="nav-brand-dot" />
-          <span>ATON WILLIAMS</span>
+          <span>Aton Williams</span>
         </Link>
         <div className="nav-links">
           <Link href="/" className="nav-link">Home</Link>
@@ -21,9 +21,9 @@ export function Nav() {
             target="_blank"
             rel="noopener noreferrer"
             className="btn btn-primary"
-            style={{ fontSize: 13, padding: '10px 18px' }}
+            style={{ fontSize: 12, padding: '10px 16px' }}
           >
-            Join Free →
+            Join Free
           </a>
         </div>
       </div>

@@ -13,21 +13,21 @@ export default function Contact() {
             GET IN TOUCH
           </span>
           <h1
-            className="gradient-text"
+            className="serif"
             style={{
-              fontFamily: 'var(--display)',
-              fontSize: 'clamp(44px, 7vw, 76px)',
+              fontSize: 'clamp(44px, 6.5vw, 76px)',
               lineHeight: 1.0,
               letterSpacing: '-2px',
-              fontWeight: 700,
+              fontWeight: 500,
               maxWidth: 880,
               margin: '24px 0 28px',
+              color: 'var(--text)',
             }}
           >
             One inbox. Real responses.
           </h1>
-          <p style={{ fontSize: 18, color: 'var(--text-2)', maxWidth: 720, lineHeight: 1.65 }}>
-            Subscribe to the newsletter, apply for coaching, or apply for the Inner Circle. Every message reads as a real one. No auto-responder.
+          <p style={{ fontSize: 18, color: 'var(--text-2)', maxWidth: 720, lineHeight: 1.75 }}>
+            Subscribe to the newsletter, apply for a strategy call, or apply for The Inner Circle. Every message gets read by me. No auto-responder.
           </p>
         </div>
       </section>
@@ -75,10 +75,9 @@ export default function Contact() {
                 What's this about?
               </label>
               <select id="topic" name="topic" defaultValue="newsletter" style={inputStyle}>
-                <option value="newsletter">Just subscribe me to the newsletter</option>
-                <option value="coaching-call">Apply for a 1:1 coaching call</option>
-                <option value="inner-circle">Apply for the Inner Circle</option>
-                <option value="mesa">MESA white-label / enterprise inquiry</option>
+                <option value="newsletter">Subscribe me to the newsletter</option>
+                <option value="coaching-call">Apply for a 1:1 strategy call</option>
+                <option value="inner-circle">Apply for The Inner Circle</option>
                 <option value="press">Press, podcast, or speaking inquiry</option>
                 <option value="other">Other</option>
               </select>
@@ -109,19 +108,19 @@ export default function Contact() {
           {/* ── ALTERNATE CONTACT ── */}
           <div style={{ marginTop: 36, display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: 14 }}>
             <a href="https://www.skool.com/operators-academy-5634" target="_blank" rel="noopener noreferrer" className="card" style={{ textDecoration: 'none', color: 'inherit', padding: 22 }}>
-              <div style={{ fontSize: 10, color: 'var(--accent)', fontWeight: 700, letterSpacing: 3, fontFamily: 'var(--display)', marginBottom: 8 }}>JOIN COMMUNITY</div>
-              <div style={{ fontFamily: 'var(--display)', fontWeight: 700, fontSize: 17, color: 'var(--text)', marginBottom: 4 }}>Operators Academy</div>
-              <div style={{ fontSize: 12.5, color: 'var(--text-2)' }}>Free Skool community → Frameworks + daily content</div>
+              <div style={{ fontSize: 10, color: 'var(--accent)', fontWeight: 700, letterSpacing: 2.5, fontFamily: 'var(--display-sans)', marginBottom: 8, textTransform: 'uppercase' }}>Community</div>
+              <div className="serif" style={{ fontWeight: 500, fontSize: 20, color: 'var(--text)', marginBottom: 6, letterSpacing: '-0.3px' }}>Operators Academy</div>
+              <div style={{ fontSize: 12.5, color: 'var(--text-2)', lineHeight: 1.6 }}>Free Skool community. Frameworks + daily content.</div>
             </a>
-            <a href="https://mesa-crm.com" target="_blank" rel="noopener noreferrer" className="card" style={{ textDecoration: 'none', color: 'inherit', padding: 22 }}>
-              <div style={{ fontSize: 10, color: 'var(--accent)', fontWeight: 700, letterSpacing: 3, fontFamily: 'var(--display)', marginBottom: 8 }}>SAAS PRODUCT</div>
-              <div style={{ fontFamily: 'var(--display)', fontWeight: 700, fontSize: 17, color: 'var(--text)', marginBottom: 4 }}>MESA</div>
-              <div style={{ fontSize: 12.5, color: 'var(--text-2)' }}>The operator OS. CRM, ATS, AI Coach.</div>
+            <a href="https://www.youtube.com/atonsworld" target="_blank" rel="noopener noreferrer" className="card" style={{ textDecoration: 'none', color: 'inherit', padding: 22 }}>
+              <div style={{ fontSize: 10, color: 'var(--accent)', fontWeight: 700, letterSpacing: 2.5, fontFamily: 'var(--display-sans)', marginBottom: 8, textTransform: 'uppercase' }}>YouTube</div>
+              <div className="serif" style={{ fontWeight: 500, fontSize: 20, color: 'var(--text)', marginBottom: 6, letterSpacing: '-0.3px' }}>Atonsworld</div>
+              <div style={{ fontSize: 12.5, color: 'var(--text-2)', lineHeight: 1.6 }}>Long-form on operating, building, and the work.</div>
             </a>
             <a href="mailto:aton@frontpageagencyinc.com" className="card" style={{ textDecoration: 'none', color: 'inherit', padding: 22 }}>
-              <div style={{ fontSize: 10, color: 'var(--accent)', fontWeight: 700, letterSpacing: 3, fontFamily: 'var(--display)', marginBottom: 8 }}>DIRECT EMAIL</div>
-              <div style={{ fontFamily: 'var(--display)', fontWeight: 700, fontSize: 17, color: 'var(--text)', marginBottom: 4 }}>aton@frontpageagencyinc.com</div>
-              <div style={{ fontSize: 12.5, color: 'var(--text-2)' }}>For partnerships, press, or anything urgent.</div>
+              <div style={{ fontSize: 10, color: 'var(--accent)', fontWeight: 700, letterSpacing: 2.5, fontFamily: 'var(--display-sans)', marginBottom: 8, textTransform: 'uppercase' }}>Direct Email</div>
+              <div className="serif" style={{ fontWeight: 500, fontSize: 17, color: 'var(--text)', marginBottom: 6, letterSpacing: '-0.3px', wordBreak: 'break-word' }}>aton@frontpageagencyinc.com</div>
+              <div style={{ fontSize: 12.5, color: 'var(--text-2)', lineHeight: 1.6 }}>For partnerships, press, or anything urgent.</div>
             </a>
           </div>
         </div>

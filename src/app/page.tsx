@@ -4,81 +4,120 @@ export default function Home() {
   return (
     <>
       {/* ── HERO ── */}
-      <section style={{ padding: '120px 0 80px' }}>
+      <section style={{ padding: '100px 0 80px' }}>
         <div className="container">
-          <span className="eyebrow" style={{ marginBottom: 28 }}>
-            <span className="dot" />
-            OPERATOR · COACH · BUILDER
-          </span>
-          <h1
+          <div
             style={{
-              fontFamily: 'var(--display)',
-              fontSize: 'clamp(48px, 8vw, 96px)',
-              lineHeight: 0.98,
-              letterSpacing: '-2.5px',
-              fontWeight: 700,
-              maxWidth: 980,
-              margin: '24px 0 28px',
+              display: 'grid',
+              gridTemplateColumns: 'minmax(0, 1.35fr) minmax(0, 1fr)',
+              gap: 64,
+              alignItems: 'center',
             }}
-            className="gradient-text"
+            className="hero-grid"
           >
-            I built the floor. Then I built the software that runs it.
-          </h1>
-          <p
-            style={{
-              fontSize: 19,
-              color: 'var(--text-2)',
-              maxWidth: 680,
-              lineHeight: 1.6,
-              marginBottom: 40,
-            }}
-          >
-            I'm Aton Williams. I run Front Page Agency, a direct sales firm that has generated over $312 million in revenue for clients since 2018. I built Front Page Intelligence to give operators like me the platform we wished existed. I coach the owners building what I'm building.
-          </p>
+            <div>
+              <span className="eyebrow" style={{ marginBottom: 28 }}>
+                <span className="dot" />
+                Operator · Coach · Builder
+              </span>
 
-          <div style={{ display: 'flex', gap: 14, flexWrap: 'wrap', marginBottom: 56 }}>
-            <a
-              href="https://www.skool.com/operators-academy-5634"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn btn-primary"
-            >
-              Join Operators Academy →
-            </a>
-            <Link href="/work-with-me" className="btn btn-ghost">
-              See what I offer
-            </Link>
+              <h1
+                className="serif"
+                style={{
+                  fontSize: 'clamp(48px, 6.5vw, 88px)',
+                  lineHeight: 1.0,
+                  letterSpacing: '-2px',
+                  fontWeight: 500,
+                  margin: '28px 0 28px',
+                  color: 'var(--text)',
+                }}
+              >
+                Hi, I&apos;m Aton.
+                <br />
+                I help operators build the business they actually want.
+              </h1>
+
+              <p
+                style={{
+                  fontSize: 18,
+                  color: 'var(--text-2)',
+                  maxWidth: 580,
+                  lineHeight: 1.65,
+                  marginBottom: 40,
+                }}
+              >
+                Founder of Front Page Agency. Eight years running it. Seventeen years building businesses total, starting at fourteen. Nine figures generated for clients, multi-millions inside our own ecosystem, five owners promoted out of my chair. Never held a 9-to-5. Now I&apos;m coaching the next wave of operators and consulting selectively for the ones ready for that level of work.
+              </p>
+
+              <div style={{ display: 'flex', gap: 14, flexWrap: 'wrap', marginBottom: 48 }}>
+                <a
+                  href="https://www.skool.com/operators-academy-5634"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn btn-primary"
+                >
+                  Join Operators Academy
+                </a>
+                <Link href="/work-with-me" className="btn btn-ghost">
+                  See How To Work With Me
+                </Link>
+              </div>
+            </div>
+
+            {/* Portrait */}
+            <div>
+              <div
+                className="portrait"
+                style={{
+                  backgroundImage: 'url(/aton.jpg)',
+                  backgroundColor: 'var(--bg-elev)',
+                }}
+                aria-label="Aton Williams portrait"
+              />
+              <div style={{ fontSize: 11, color: 'var(--text-3)', textAlign: 'right', marginTop: 12, fontFamily: 'var(--display-sans)', letterSpacing: 1.5, textTransform: 'uppercase' }}>
+                Fort Worth, TX
+              </div>
+            </div>
           </div>
 
-          {/* Proof row */}
+          {/* Stats row */}
           <div
             style={{
               display: 'grid',
               gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))',
-              gap: 18,
-              marginTop: 24,
+              gap: 0,
+              marginTop: 64,
+              borderTop: '1px solid var(--border-soft)',
+              borderBottom: '1px solid var(--border-soft)',
             }}
           >
             {[
               { num: '$312M+', label: 'Client revenue since 2018' },
-              { num: '208K+', label: 'New customers acquired' },
-              { num: '8 yrs', label: 'Running the floor every day' },
-              { num: '5+', label: 'Operators promoted to ownership' },
-            ].map((s) => (
-              <div key={s.label} className="card" style={{ padding: 22 }}>
+              { num: '17 yrs', label: 'Building businesses' },
+              { num: '5+', label: 'Owners promoted out' },
+              { num: '0', label: '9-to-5 jobs ever held' },
+            ].map((s, i) => (
+              <div
+                key={s.label}
+                style={{
+                  padding: '32px 24px',
+                  borderRight: i < 3 ? '1px solid var(--border-soft)' : 'none',
+                }}
+              >
                 <div
+                  className="serif"
                   style={{
-                    fontFamily: 'var(--display)',
-                    fontSize: 32,
-                    fontWeight: 700,
+                    fontSize: 38,
+                    fontWeight: 500,
                     color: 'var(--accent)',
-                    letterSpacing: '-0.5px',
-                    marginBottom: 6,
+                    letterSpacing: '-1px',
+                    marginBottom: 8,
+                    lineHeight: 1,
                   }}
                 >
                   {s.num}
                 </div>
-                <div style={{ fontSize: 12, color: 'var(--text-3)', textTransform: 'uppercase', letterSpacing: 1.2 }}>
+                <div style={{ fontSize: 11.5, color: 'var(--text-3)', textTransform: 'uppercase', letterSpacing: 1.5, fontFamily: 'var(--display-sans)' }}>
                   {s.label}
                 </div>
               </div>
@@ -87,180 +126,213 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── WHAT I ACTUALLY DO ── */}
-      <section style={{ padding: '80px 0' }}>
+      {/* ── WHAT I RUN ── */}
+      <section style={{ padding: '96px 0' }}>
         <div className="container">
-          <div style={{ textAlign: 'center', maxWidth: 720, margin: '0 auto 56px' }}>
-            <div style={{ fontSize: 11, color: 'var(--accent)', fontWeight: 700, letterSpacing: 4, textTransform: 'uppercase', marginBottom: 14, fontFamily: 'var(--display)' }}>
-              The three things I actually do
+          <div style={{ maxWidth: 720, margin: '0 auto 64px', textAlign: 'center' }}>
+            <div className="rule" style={{ margin: '0 auto 24px' }} />
+            <div style={{ fontSize: 11, color: 'var(--accent)', fontWeight: 700, letterSpacing: 4, textTransform: 'uppercase', marginBottom: 18, fontFamily: 'var(--display-sans)' }}>
+              What I run
             </div>
             <h2
-              className="gradient-text"
+              className="serif"
               style={{
-                fontSize: 'clamp(34px, 5vw, 52px)',
-                fontFamily: 'var(--display)',
-                fontWeight: 700,
+                fontSize: 'clamp(34px, 5vw, 54px)',
+                fontWeight: 500,
                 letterSpacing: '-1.2px',
-                lineHeight: 1.05,
-                marginBottom: 14,
+                lineHeight: 1.1,
+                marginBottom: 18,
+                color: 'var(--text)',
               }}
             >
-              I run a floor. I build software. I coach operators.
+              An agency. A community. The next wave of operators.
             </h2>
-            <p style={{ fontSize: 16, color: 'var(--text-2)', lineHeight: 1.6 }}>
-              Each one feeds the next. The floor produces what I know. The software encodes it. The coaching transfers it to the next operator.
+            <p style={{ fontSize: 16, color: 'var(--text-2)', lineHeight: 1.7 }}>
+              Three projects, one through-line. The agency proves what works. The community shares it. The next wave of operators picks it up and runs.
             </p>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 18 }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 16 }}>
             {[
               {
                 num: '01',
                 title: 'Front Page Agency',
-                role: 'I run the floor',
-                body: 'Direct sales firm in Fort Worth, TX. Six verticals. Eight years. Every coaching framework I teach was tested here first.',
-                cta: 'See FPA →',
+                role: 'Direct sales firm · Est. 2018',
+                body: 'Multi-vertical sales organization based in Fort Worth. Consumer telecom, technology, cybersecurity, health enrollment, and emerging consumer brands. Every framework I teach was pressure-tested here first.',
+                cta: 'Visit FPA',
                 href: 'https://frontpageagencyinc.com',
               },
               {
                 num: '02',
-                title: 'MESA (FPI)',
-                role: 'I build the software',
-                body: 'The operator OS for direct sales orgs. CRM, ATS, AI Coach, and the platform that runs floors. Built by an operator who runs a 7-figure agency on it daily.',
-                cta: 'See MESA →',
-                href: 'https://mesa-crm.com',
+                title: 'Operators Academy',
+                role: 'Free community on Skool',
+                body: 'Frameworks, breakdowns, and the same coaching loops I run with my owners. Free for operators serious about the work. No paywall, no upsell, just a real room.',
+                cta: 'Join Free',
+                href: 'https://www.skool.com/operators-academy-5634',
               },
               {
                 num: '03',
-                title: 'Operators Academy',
-                role: 'I coach the operators',
-                body: 'Free community on Skool. Frameworks, breakdowns, and the same playbook I run my floor on. For the operators building toward their own seat.',
-                cta: 'Join free →',
-                href: 'https://www.skool.com/operators-academy-5634',
+                title: 'The Inner Circle',
+                role: 'Private mastermind · Application only',
+                body: 'Invite-only mastermind for owners and aspiring owners running real numbers. Monthly group calls, quarterly in-person meetups, and direct access to me. Cap of twenty.',
+                cta: 'See Details',
+                href: '/work-with-me#inner-circle',
               },
-            ].map((p) => (
-              <a
-                key={p.num}
-                href={p.href}
-                target={p.href.startsWith('http') ? '_blank' : undefined}
-                rel="noopener noreferrer"
-                className="card-elevated"
-                style={{
-                  display: 'block',
-                  textDecoration: 'none',
-                  color: 'inherit',
-                  transition: 'transform 0.2s, border-color 0.2s',
-                }}
-              >
-                <div style={{ fontSize: 11, color: 'var(--text-3)', fontFamily: 'var(--display)', fontWeight: 700, letterSpacing: 3, marginBottom: 18 }}>
-                  {p.num}
-                </div>
-                <div style={{ fontSize: 11, color: 'var(--accent)', fontFamily: 'var(--display)', fontWeight: 700, letterSpacing: 2, textTransform: 'uppercase', marginBottom: 8 }}>
-                  {p.role}
-                </div>
-                <h3 style={{ fontSize: 24, fontFamily: 'var(--display)', fontWeight: 700, marginBottom: 12, color: 'var(--text)' }}>
-                  {p.title}
-                </h3>
-                <p style={{ fontSize: 14, color: 'var(--text-2)', lineHeight: 1.65, marginBottom: 20 }}>
-                  {p.body}
-                </p>
-                <span style={{ fontSize: 13, fontWeight: 600, color: 'var(--accent)' }}>
-                  {p.cta}
-                </span>
-              </a>
-            ))}
+            ].map((p) => {
+              const external = p.href.startsWith('http')
+              const inner = (
+                <>
+                  <div
+                    className="serif"
+                    style={{
+                      fontSize: 56,
+                      fontWeight: 400,
+                      color: 'var(--accent-dim)',
+                      letterSpacing: '-2px',
+                      marginBottom: 24,
+                      lineHeight: 1,
+                    }}
+                  >
+                    {p.num}
+                  </div>
+                  <div style={{ fontSize: 10.5, color: 'var(--accent)', fontFamily: 'var(--display-sans)', fontWeight: 700, letterSpacing: 2.5, textTransform: 'uppercase', marginBottom: 10 }}>
+                    {p.role}
+                  </div>
+                  <h3 className="serif" style={{ fontSize: 28, fontWeight: 500, marginBottom: 14, color: 'var(--text)', letterSpacing: '-0.6px' }}>
+                    {p.title}
+                  </h3>
+                  <p style={{ fontSize: 14.5, color: 'var(--text-2)', lineHeight: 1.65, marginBottom: 24 }}>
+                    {p.body}
+                  </p>
+                  <span style={{ fontSize: 13, fontWeight: 600, color: 'var(--accent)', fontFamily: 'var(--display-sans)', letterSpacing: 0.5 }}>
+                    {p.cta} →
+                  </span>
+                </>
+              )
+              return external ? (
+                <a
+                  key={p.num}
+                  href={p.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="card-elevated"
+                  style={{ display: 'block', textDecoration: 'none', color: 'inherit' }}
+                >
+                  {inner}
+                </a>
+              ) : (
+                <Link
+                  key={p.num}
+                  href={p.href}
+                  className="card-elevated"
+                  style={{ display: 'block', textDecoration: 'none', color: 'inherit' }}
+                >
+                  {inner}
+                </Link>
+              )
+            })}
           </div>
         </div>
       </section>
 
-      {/* ── HOW WE'D WORK TOGETHER ── */}
+      {/* ── OFFER LADDER ── */}
       <section style={{ padding: '80px 0' }}>
         <div className="container">
           <div style={{ maxWidth: 720, margin: '0 auto 56px', textAlign: 'center' }}>
-            <div style={{ fontSize: 11, color: 'var(--accent)', fontWeight: 700, letterSpacing: 4, textTransform: 'uppercase', marginBottom: 14, fontFamily: 'var(--display)' }}>
-              The offer ladder
+            <div className="rule" style={{ margin: '0 auto 24px' }} />
+            <div style={{ fontSize: 11, color: 'var(--accent)', fontWeight: 700, letterSpacing: 4, textTransform: 'uppercase', marginBottom: 18, fontFamily: 'var(--display-sans)' }}>
+              Ways in
             </div>
             <h2
-              className="gradient-text"
+              className="serif"
               style={{
                 fontSize: 'clamp(32px, 5vw, 48px)',
-                fontFamily: 'var(--display)',
-                fontWeight: 700,
+                fontWeight: 500,
                 letterSpacing: '-1.2px',
-                lineHeight: 1.05,
-                marginBottom: 14,
+                lineHeight: 1.1,
+                marginBottom: 16,
+                color: 'var(--text)',
               }}
             >
-              Five ways in. Start free. Climb when ready.
+              Four ways to work with me.
             </h2>
-            <p style={{ fontSize: 16, color: 'var(--text-2)', lineHeight: 1.6 }}>
-              Free at the bottom. Premium at the top. Every step is real value, not a trip-wire.
+            <p style={{ fontSize: 16, color: 'var(--text-2)', lineHeight: 1.7 }}>
+              Free at the entry. Private at the top. Every step is real value, not a trip-wire. Pick the one that fits where you are right now.
             </p>
           </div>
 
-          <div style={{ display: 'flex', flexDirection: 'column', gap: 14, maxWidth: 880, margin: '0 auto' }}>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 12, maxWidth: 880, margin: '0 auto' }}>
             {[
-              { tier: '01', name: 'Operators Academy', sub: 'Free community on Skool', desc: 'Frameworks, daily content, the playbook. Free for operators serious about the work.', cta: 'Join free', href: 'https://www.skool.com/operators-academy-5634' },
-              { tier: '02', name: 'Newsletter', sub: 'Weekly notes from the floor', desc: 'One email a week. Real lessons, real numbers, no corporate fluff.', cta: 'Subscribe', href: '/contact' },
-              { tier: '03', name: '1:1 Coaching Call', sub: '60-minute strategy session', desc: 'You bring the bottleneck. I bring the framework. Walk out with a 30-day plan.', cta: 'Book a call', href: '/work-with-me#call' },
-              { tier: '04', name: 'The Inner Circle', sub: 'Private mastermind', desc: 'Invite-only. For owners and aspiring owners running real numbers. Pricing private.', cta: 'Apply', href: '/work-with-me#inner-circle' },
-              { tier: '05', name: 'MESA Self-Serve', sub: 'The platform itself', desc: 'Run your own sales org on the same software FPA runs on. Starter Lite from $39/seat/mo.', cta: 'See MESA', href: 'https://mesa-crm.com' },
-            ].map((t) => (
-              <a
-                key={t.tier}
-                href={t.href}
-                target={t.href.startsWith('http') ? '_blank' : undefined}
-                rel="noopener noreferrer"
-                className="card"
-                style={{
-                  display: 'flex',
-                  alignItems: 'center',
-                  gap: 24,
-                  padding: '22px 26px',
-                  textDecoration: 'none',
-                  color: 'inherit',
-                  transition: 'border-color 0.2s, transform 0.15s',
-                }}
-              >
-                <div style={{ fontFamily: 'var(--display)', fontSize: 28, fontWeight: 700, color: 'var(--accent)', minWidth: 56, letterSpacing: '-1px' }}>
-                  {t.tier}
-                </div>
-                <div style={{ flex: 1 }}>
-                  <div style={{ display: 'flex', alignItems: 'baseline', gap: 14, flexWrap: 'wrap', marginBottom: 4 }}>
-                    <span style={{ fontFamily: 'var(--display)', fontSize: 19, fontWeight: 700, color: 'var(--text)' }}>{t.name}</span>
-                    <span style={{ fontSize: 12, color: 'var(--text-3)', textTransform: 'uppercase', letterSpacing: 1.5 }}>{t.sub}</span>
+              { tier: '01', name: 'Operators Academy', sub: 'Free community on Skool', desc: 'Frameworks, daily content, and the playbook. Free for operators serious about the work.', cta: 'Join Free', href: 'https://www.skool.com/operators-academy-5634' },
+              { tier: '02', name: 'The Newsletter', sub: 'Weekly · Free', desc: 'One email a week. Real lessons, real numbers, no corporate fluff. The frameworks before they hit the public.', cta: 'Subscribe', href: '/contact' },
+              { tier: '03', name: '1:1 Strategy Call', sub: '60 minutes · By application', desc: 'You bring the bottleneck. I bring the framework. Walk out with a 30-day plan you can run on Monday.', cta: 'Apply', href: '/work-with-me#call' },
+              { tier: '04', name: 'The Inner Circle', sub: 'Private mastermind · Invite only', desc: 'For owners and aspiring owners running real numbers. Pricing private. Cohort capped at 20.', cta: 'Apply', href: '/work-with-me#inner-circle' },
+            ].map((t) => {
+              const external = t.href.startsWith('http')
+              const cardContent = (
+                <>
+                  <div className="serif" style={{ fontSize: 32, fontWeight: 400, color: 'var(--accent)', minWidth: 60, letterSpacing: '-1px' }}>
+                    {t.tier}
                   </div>
-                  <div style={{ fontSize: 14, color: 'var(--text-2)', lineHeight: 1.55 }}>
-                    {t.desc}
+                  <div style={{ flex: 1 }}>
+                    <div style={{ display: 'flex', alignItems: 'baseline', gap: 14, flexWrap: 'wrap', marginBottom: 6 }}>
+                      <span className="serif" style={{ fontSize: 22, fontWeight: 500, color: 'var(--text)' }}>{t.name}</span>
+                      <span style={{ fontSize: 11, color: 'var(--text-3)', textTransform: 'uppercase', letterSpacing: 1.5, fontFamily: 'var(--display-sans)' }}>{t.sub}</span>
+                    </div>
+                    <div style={{ fontSize: 14, color: 'var(--text-2)', lineHeight: 1.6 }}>
+                      {t.desc}
+                    </div>
                   </div>
-                </div>
-                <div style={{ fontSize: 13, fontWeight: 600, color: 'var(--accent)', whiteSpace: 'nowrap' }}>
-                  {t.cta} →
-                </div>
-              </a>
-            ))}
+                  <div style={{ fontSize: 12, fontWeight: 600, color: 'var(--accent)', whiteSpace: 'nowrap', fontFamily: 'var(--display-sans)', letterSpacing: 0.5, textTransform: 'uppercase' }}>
+                    {t.cta} →
+                  </div>
+                </>
+              )
+              return external ? (
+                <a
+                  key={t.tier}
+                  href={t.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="card"
+                  style={{ display: 'flex', alignItems: 'center', gap: 24, padding: '24px 28px', textDecoration: 'none', color: 'inherit' }}
+                >
+                  {cardContent}
+                </a>
+              ) : (
+                <Link
+                  key={t.tier}
+                  href={t.href}
+                  className="card"
+                  style={{ display: 'flex', alignItems: 'center', gap: 24, padding: '24px 28px', textDecoration: 'none', color: 'inherit' }}
+                >
+                  {cardContent}
+                </Link>
+              )
+            })}
           </div>
         </div>
       </section>
 
       {/* ── FINAL CTA ── */}
-      <section style={{ padding: '100px 0 40px', textAlign: 'center' }}>
-        <div className="container">
+      <section style={{ padding: '96px 0 32px', textAlign: 'center' }}>
+        <div className="container" style={{ maxWidth: 720 }}>
+          <div className="rule" style={{ margin: '0 auto 24px' }} />
           <h2
-            className="gradient-text"
+            className="serif"
             style={{
-              fontSize: 'clamp(36px, 6vw, 64px)',
-              fontFamily: 'var(--display)',
-              fontWeight: 700,
+              fontSize: 'clamp(38px, 6vw, 66px)',
+              fontWeight: 500,
               letterSpacing: '-1.5px',
               lineHeight: 1.05,
-              marginBottom: 16,
+              marginBottom: 20,
+              color: 'var(--text)',
             }}
           >
-            The work is the work.
+            Show up. Run the playbook. Compound the wins.
           </h2>
-          <p style={{ fontSize: 18, color: 'var(--text-2)', maxWidth: 600, margin: '0 auto 32px' }}>
-            Show up. Run the playbook. Compound the wins. Everything else is noise.
+          <p style={{ fontSize: 17, color: 'var(--text-2)', maxWidth: 560, margin: '0 auto 36px', lineHeight: 1.7 }}>
+            Everything else is noise. If that sounds like how you already think, the academy is the right room to start in.
           </p>
           <div style={{ display: 'flex', gap: 14, justifyContent: 'center', flexWrap: 'wrap' }}>
             <a
@@ -269,14 +341,23 @@ export default function Home() {
               rel="noopener noreferrer"
               className="btn btn-primary"
             >
-              Join the academy free →
+              Join Operators Academy
             </a>
-            <Link href="/work-with-me" className="btn btn-ghost">
-              Explore the ladder
+            <Link href="/contact" className="btn btn-ghost">
+              Send Me A Note
             </Link>
           </div>
         </div>
       </section>
+
+      <style>{`
+        @media (max-width: 860px) {
+          .hero-grid {
+            grid-template-columns: 1fr !important;
+            gap: 40px !important;
+          }
+        }
+      `}</style>
     </>
   )
 }
