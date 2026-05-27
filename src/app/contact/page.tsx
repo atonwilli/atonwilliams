@@ -78,7 +78,10 @@ export default function Contact() {
                 <option value="newsletter">Subscribe me to the newsletter</option>
                 <option value="coaching-call">Apply for a 1:1 strategy call</option>
                 <option value="inner-circle">Apply for The Inner Circle</option>
-                <option value="press">Press, podcast, or speaking inquiry</option>
+                <option value="speaking">Book me to speak at your event</option>
+                <option value="team-training">Sales team training (Zoom or in-person)</option>
+                <option value="business-audit">Business audit / consulting</option>
+                <option value="press">Press or podcast inquiry</option>
                 <option value="other">Other</option>
               </select>
             </div>

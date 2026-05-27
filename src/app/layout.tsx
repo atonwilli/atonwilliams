@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import './globals.css'
 import { Nav } from '@/components/Nav'
 import { Footer } from '@/components/Footer'
+import { FloatingMotion } from '@/components/FloatingMotion'
 
 export const metadata: Metadata = {
   title: 'Aton Williams · Operator. Coach. Builder.',
@@ -27,6 +28,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
       </head>
       <body>
+        <FloatingMotion />
         <Nav />
         <main>{children}</main>
         <Footer />

@@ -53,7 +53,7 @@ export default function About() {
                 Never had a 9-to-5. Never planned to.
               </h1>
               <p style={{ fontSize: 17, color: 'var(--text-2)', maxWidth: 580, lineHeight: 1.75 }}>
-                I&apos;ve been an entrepreneur since I was fourteen. YouTube channel at fourteen. Clothing boutique at twenty. Digital marketing agency until twenty-three. Then I founded Front Page Agency, and I&apos;ve been running it ever since. Seventeen years of building total. Nine figures generated for clients, multi-millions inside our own ecosystem. Now I&apos;m back in the media, coaching the next wave and consulting selectively for operators ready for that level of work.
+                I’ve been an entrepreneur since I was fourteen. Atonsworld on YouTube at fourteen. Curated ATL, a boutique, at twenty. Atonsworld Digital, a marketing agency, until twenty-three. Then I founded Front Page Agency, and I’ve been running it ever since. Seventeen years building. Nine figures generated for clients. Multi-millions inside our own ecosystem. Now I’m back in the media, coaching business owners and executives, training sales teams, running business audits, and speaking at events for the organizations ready for that level of work.
               </p>
             </div>
           </div>
@@ -81,7 +81,7 @@ export default function About() {
             Seventeen years building. The short version.
           </h2>
           <p style={{ fontSize: 16, color: 'var(--text-2)', maxWidth: 660, lineHeight: 1.75, marginBottom: 56 }}>
-            I&apos;ve never sold a course on building a business while never having built one. Every chapter below is something I actually ran. The lessons compound. The earlier ones made the later ones possible.
+            I’ve never sold a course on building a business while never having built one. Every chapter below is something I actually ran. The lessons compound. The earlier ones made the later ones possible.
           </p>
 
           {/* Timeline */}
@@ -104,44 +104,57 @@ export default function About() {
                 age: '14',
                 year: '2008',
                 title: 'Atonsworld',
-                body: 'Started a YouTube channel before "creator economy" was a phrase. First taste of building an audience from scratch and learning what it takes to hold one.',
+                body: 'Started "atonsworld" on YouTube before "creator economy" was a phrase. Built an audience from scratch. The handle stuck — still my YouTube today.',
               },
               {
                 age: '20',
                 year: '2014',
-                title: 'A clothing boutique',
-                body: 'Opened a retail boutique. Inventory, leases, payroll, customer service, margin math. Learned operations the hard way, which is to say the only way that actually sticks.',
+                title: 'Curated ATL',
+                body: 'Opened Curated ATL in Atlanta. Boutique retail. Inventory, leases, payroll, customer service, margin math. Learned operations the hard way, which is the only way that sticks.',
               },
               {
                 age: '20–23',
                 year: '2014–2017',
-                title: 'Digital marketing agency',
-                body: 'Built and ran a client-services agency through my early twenties. Sales, fulfillment, managing a small team. Got my reps in on selling the invisible.',
+                title: 'Atonsworld Digital',
+                body: 'Took the Atonsworld brand into a digital marketing agency. Sales, fulfillment, managing a small team, selling the invisible. Got my reps in on client services.',
               },
               {
                 age: '23',
                 year: '2018',
                 title: 'Front Page Agency',
-                body: 'Founded FPA in Atlanta. Direct sales firm. Multi-vertical from the start. The work I&apos;d been preparing for without knowing it.',
+                body: 'Founded FPA in Atlanta. Multi-vertical from the start. The work I’d been preparing for without knowing it.',
               },
               {
                 age: '23–31',
                 year: '2018–today',
-                title: 'Eight years and counting',
-                body: 'Built FPA into a multi-vertical sales organization. Six campaign categories. Nine figures generated for clients. Multi-millions inside our own ecosystem. Five owners promoted out of my chair. BBB A+. Still operating.',
+                title: 'Eight years scaling FPA',
+                body: 'Built FPA into a multi-vertical sales organization across six campaign categories. Nine figures generated for clients. Multi-millions inside our own ecosystem. Five owners promoted out of my chair. BBB A+. Recognized as Sales Consultancy Firm of the Year. Still operating.',
+              },
+              {
+                age: '29',
+                year: '2024',
+                title: 'Objection Coach',
+                body: 'Shipped Objection Coach — an AI-powered training app for sales teams. Reps drill real objections, get scored, and improve before the live call. Already used inside FPA.',
+                pill: 'AI Aton voice-clone role play coming soon',
+              },
+              {
+                age: '30',
+                year: '2025',
+                title: 'Front Page Intelligence',
+                body: 'Launched FPI, the parent for the AI products and software I’m building for sales orgs and the operators inside them. Quietly compounding. More public soon.',
               },
               {
                 age: '31',
                 year: '2026',
                 title: 'Public again',
-                body: 'Compiling seventeen years of operating into the writing, the community, and the coaching. Taking a small number of private engagements per year. For the operators and the organizations ready for that level of work.',
+                body: 'Compiling seventeen years of operating into the writing, the community, the coaching, and the consulting. Taking a small number of private engagements per year. For the operators, executives, and organizations ready for that level of work.',
               },
-            ].map((entry, idx) => (
+            ].map((entry, idx, arr) => (
               <div
                 key={entry.year}
                 style={{
                   position: 'relative',
-                  marginBottom: idx === 5 ? 0 : 40,
+                  marginBottom: idx === arr.length - 1 ? 0 : 40,
                 }}
               >
                 {/* Dot indicator */}
@@ -198,6 +211,11 @@ export default function About() {
                 >
                   {entry.title}
                 </h3>
+                {'pill' in entry && entry.pill && (
+                  <div style={{ marginBottom: 10 }}>
+                    <span className="coming-soon">{entry.pill}</span>
+                  </div>
+                )}
                 <p
                   style={{
                     fontSize: 15,
@@ -236,7 +254,7 @@ export default function About() {
               tag: 'Operating',
               name: 'Front Page Agency',
               loc: 'Fort Worth, TX · Est. 2018',
-              body: 'Direct sales firm. Consumer telecom, technology, cybersecurity, health enrollment, nonprofit development, emerging consumer brands. Over $312 million in client revenue generated since we opened. BBB A+. 5-star Google. We don\'t sell decks. We sell results we\'ve already delivered.',
+              body: 'Direct sales firm. Consumer telecom, technology, cybersecurity, health enrollment, nonprofit development, emerging consumer brands. Over $312 million in client revenue generated since we opened. BBB A+. 5-star Google. We don’t sell decks. We sell results we’ve already delivered.',
             },
             {
               tag: 'Coaching',
@@ -298,15 +316,15 @@ export default function About() {
             {[
               {
                 t: 'Hands-on, every day.',
-                d: 'I still run the agency. Every framework I teach was pressure-tested on a real team this week. If it doesn\'t survive contact with reality, it doesn\'t survive at all.',
+                d: 'I still run the agency. Every framework I teach was pressure-tested on a real team this week. If it doesn’t survive contact with reality, it doesn’t survive at all.',
               },
               {
                 t: 'Build what you need.',
-                d: 'When the tools I wanted didn\'t exist, I built them. Operators who can build are operators who don\'t wait around for permission to grow.',
+                d: 'When the tools I wanted didn’t exist, I built them. Operators who can build are operators who don’t wait around for permission to grow.',
               },
               {
                 t: 'The bar is the bar.',
-                d: 'Standards so high it\'s worthy of being on the front page. Hired in. Coached up. Held to it every day. No exceptions.',
+                d: 'Standards so high it’s worthy of being on the front page. Hired in. Coached up. Held to it every day. No exceptions.',
               },
               {
                 t: 'Promote from within.',
@@ -318,7 +336,7 @@ export default function About() {
               },
               {
                 t: 'Velocity beats perfect.',
-                d: 'Ship a v1 fast. Iterate. Planning doesn\'t pay the team. Producing does. The operator who moves first usually wins, even if the move isn\'t pretty.',
+                d: 'Ship a v1 fast. Iterate. Planning doesn’t pay the team. Producing does. The operator who moves first usually wins, even if the move isn’t pretty.',
               },
             ].map((p) => (
               <div key={p.t} className="card" style={{ padding: 24 }}>

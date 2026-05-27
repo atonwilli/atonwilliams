@@ -2,7 +2,7 @@ import Link from 'next/link'
 
 export const metadata = {
   title: 'Notes · Aton Williams',
-  description: 'Frameworks, breakdowns, and operator-only lessons. Published when there\'s something worth saying.',
+  description: 'Frameworks, breakdowns, and operator-only lessons. Published when there’s something worth saying.',
 }
 
 const notes = [
@@ -11,7 +11,7 @@ const notes = [
     date: '2026-05-22',
     readTime: '6 min',
     title: 'Why the 90-day rule is actually real.',
-    teaser: 'Every operator who wrote the 90-day rule was either selling a book or had never built a team. Here is what 90 days actually means when you\'re inside it.',
+    teaser: 'Every operator who wrote the 90-day rule was either selling a book or had never built a team. Here is what 90 days actually means when you’re inside it.',
     tag: 'Operator Playbook',
   },
   {
@@ -42,8 +42,8 @@ const notes = [
     slug: 'standards-so-high-its-worthy-of-being-on-the-front-page',
     date: '2026-05-02',
     readTime: '3 min',
-    title: 'Standards so high it\'s worthy of being on the front page.',
-    teaser: 'The tagline isn\'t marketing. It\'s the operating standard. Here is what that looks like in practice when nobody is watching.',
+    title: 'Standards so high it’s worthy of being on the front page.',
+    teaser: 'The tagline isn’t marketing. It’s the operating standard. Here is what that looks like in practice when nobody is watching.',
     tag: 'Culture',
   },
 ]
@@ -69,10 +69,10 @@ export default function Notes() {
               color: 'var(--text)',
             }}
           >
-            Written when there&apos;s something worth saying.
+            Written when there’s something worth saying.
           </h1>
           <p style={{ fontSize: 18, color: 'var(--text-2)', maxWidth: 720, lineHeight: 1.75 }}>
-            No content-calendar cadence. No fluff. Frameworks I&apos;m running this week, breakdowns I share with my community first, and the lessons I keep relearning. Published when one of them is ready.
+            No content-calendar cadence. No fluff. Frameworks I’m running this week, breakdowns I share with my community first, and the lessons I keep relearning. Published when one of them is ready.
           </p>
         </div>
       </section>

@@ -26,16 +26,38 @@ export default function WorkWithMe() {
               color: 'var(--text)',
             }}
           >
-            Four ways in. Pick where you are.
+            Two paths. Pick the one that fits.
           </h1>
           <p style={{ fontSize: 18, color: 'var(--text-2)', maxWidth: 720, lineHeight: 1.75 }}>
-            Free community at the entry. Private mastermind at the top. Every step is real value, not a trip-wire. Climb when you&apos;re ready.
+            For individuals: a free community, a weekly newsletter, 1:1 strategy calls, and a private mastermind. For organizations: business audits, sales team training, and keynote speaking. Every step is real value, not a trip-wire.
+          </p>
+
+          {/* Quick jump */}
+          <div style={{ display: 'flex', gap: 14, flexWrap: 'wrap', marginTop: 32 }}>
+            <a href="#individuals" className="btn btn-ghost" style={{ fontSize: 12, padding: '12px 20px' }}>For Individuals →</a>
+            <a href="#organizations" className="btn btn-ghost" style={{ fontSize: 12, padding: '12px 20px' }}>For Organizations →</a>
+          </div>
+        </div>
+      </section>
+
+      {/* ── INDIVIDUALS HEADER ── */}
+      <section id="individuals" style={{ padding: '40px 0 0', scrollMarginTop: 80 }}>
+        <div className="container" style={{ maxWidth: 920 }}>
+          <div className="rule" />
+          <div style={{ fontSize: 11, color: 'var(--accent)', fontWeight: 700, letterSpacing: 4, textTransform: 'uppercase', marginBottom: 14, fontFamily: 'var(--display-sans)' }}>
+            For Individuals
+          </div>
+          <h2 className="serif" style={{ fontSize: 'clamp(28px, 4vw, 38px)', fontWeight: 500, letterSpacing: '-1px', color: 'var(--text)', marginBottom: 14, lineHeight: 1.15 }}>
+            Four ways in for operators, owners, and the ones building toward their own seat.
+          </h2>
+          <p style={{ fontSize: 15, color: 'var(--text-2)', maxWidth: 660, lineHeight: 1.7, marginBottom: 40 }}>
+            Free at the entry, private at the top. Pick the one that fits where you are right now.
           </p>
         </div>
       </section>
 
       {/* ── TIER CARDS ── */}
-      <section style={{ padding: '40px 0 60px' }}>
+      <section style={{ padding: '0 0 60px' }}>
         <div className="container" style={{ maxWidth: 920 }}>
           {[
             {
@@ -62,12 +84,12 @@ export default function WorkWithMe() {
               tag: 'Weekly Newsletter',
               name: 'The Newsletter',
               price: 'Free · Weekly',
-              body: 'One email a week. Real lessons from the week, real numbers, what worked, what didn\'t. No fluff. No content-calendar cadence. Just signal.',
+              body: 'One email a week. Real lessons from the week, real numbers, what worked, what didn’t. No fluff. No content-calendar cadence. Just signal.',
               includes: [
                 '1 email / week, ~5 min read',
                 'Real situations, real numbers',
                 'Frameworks before they hit the community',
-                'First look at what I\'m working on',
+                'First look at what I’m working on',
               ],
               cta: 'Subscribe',
               href: '/contact',
@@ -168,6 +190,99 @@ export default function WorkWithMe() {
         </div>
       </section>
 
+      {/* ── FOR ORGANIZATIONS ── */}
+      <section id="organizations" style={{ padding: '60px 0', scrollMarginTop: 80 }}>
+        <div className="container" style={{ maxWidth: 920 }}>
+          <div className="rule" />
+          <div style={{ fontSize: 11, color: 'var(--accent)', fontWeight: 700, letterSpacing: 4, textTransform: 'uppercase', marginBottom: 14, fontFamily: 'var(--display-sans)' }}>
+            For Organizations
+          </div>
+          <h2 className="serif" style={{ fontSize: 'clamp(28px, 4vw, 38px)', fontWeight: 500, letterSpacing: '-1px', color: 'var(--text)', marginBottom: 14, lineHeight: 1.15 }}>
+            Speaking, training, and consulting for the teams ready to move.
+          </h2>
+          <p style={{ fontSize: 15, color: 'var(--text-2)', maxWidth: 660, lineHeight: 1.7, marginBottom: 40 }}>
+            For private companies, public companies, executive teams, and sales orgs. By application. Pricing private. All engagements scoped after a discovery conversation.
+          </p>
+
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 16 }}>
+            {[
+              {
+                tag: 'Speaking',
+                title: 'Keynote & Fireside',
+                price: 'Book me for your next event',
+                body: 'Conferences, retreats, internal team events, podcast guesting. Topics around sales operations, recruiting, building from zero, and the operator playbook behind nine figures of client revenue.',
+                bullets: [
+                  'Keynote talks (30–60 min)',
+                  'Fireside chats and panel moderation',
+                  'Internal company offsites + retreats',
+                  'Travel from Fort Worth, TX',
+                ],
+                cta: 'Inquire',
+                topic: 'speaking',
+              },
+              {
+                tag: 'Team Training',
+                title: 'Sales Team Training',
+                price: 'Half-day · Full-day · Multi-day',
+                body: 'Custom training engagements for sales teams. Zoom or in-person, depending on what your floor needs. Built around your product, your team, your current bottleneck.',
+                bullets: [
+                  'Discovery call to scope the engagement',
+                  'Custom curriculum (no off-the-shelf decks)',
+                  'Live training: Zoom or in-person',
+                  'Recording + workbook for ongoing reps',
+                  'Optional 30-day follow-up coaching block',
+                ],
+                cta: 'Inquire',
+                topic: 'team-training',
+              },
+              {
+                tag: 'Consulting',
+                title: 'Business Audit',
+                price: 'Engagement-based',
+                body: 'A strategic audit of your sales motion, recruiting pipeline, ops, and growth model. Surface the bottlenecks. Build the path forward. Delivered as a written report plus working sessions with leadership.',
+                bullets: [
+                  'Sales process + funnel audit',
+                  'Recruiting + retention audit',
+                  'Comp plan + ops review',
+                  'Written report with prioritized roadmap',
+                  'Optional retainer for execution support',
+                ],
+                cta: 'Inquire',
+                topic: 'business-audit',
+              },
+            ].map((o) => (
+              <div key={o.tag} className="card-elevated" style={{ padding: 30, display: 'flex', flexDirection: 'column' }}>
+                <div style={{ fontSize: 10.5, color: 'var(--accent)', fontFamily: 'var(--display-sans)', fontWeight: 700, letterSpacing: 2.5, textTransform: 'uppercase', marginBottom: 12 }}>
+                  {o.tag}
+                </div>
+                <h3 className="serif" style={{ fontSize: 26, fontWeight: 500, color: 'var(--text)', letterSpacing: '-0.5px', marginBottom: 8, lineHeight: 1.15 }}>
+                  {o.title}
+                </h3>
+                <div style={{ fontSize: 12.5, color: 'var(--text-3)', fontFamily: 'var(--display-sans)', letterSpacing: 0.4, marginBottom: 16 }}>
+                  {o.price}
+                </div>
+                <p style={{ fontSize: 14, color: 'var(--text-2)', lineHeight: 1.7, marginBottom: 18 }}>
+                  {o.body}
+                </p>
+                <ul style={{ listStyle: 'none', padding: 0, margin: '0 0 24px', display: 'flex', flexDirection: 'column', gap: 8 }}>
+                  {o.bullets.map((b) => (
+                    <li key={b} style={{ display: 'flex', gap: 10, alignItems: 'flex-start', fontSize: 13, color: 'var(--text-2)' }}>
+                      <span style={{ color: 'var(--accent)', marginTop: 1, flexShrink: 0, fontSize: 11 }}>◆</span>
+                      <span>{b}</span>
+                    </li>
+                  ))}
+                </ul>
+                <div style={{ marginTop: 'auto' }}>
+                  <Link href={`/contact?topic=${o.topic}`} className="btn btn-primary" style={{ fontSize: 12, padding: '12px 22px' }}>
+                    {o.cta}
+                  </Link>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ── FAQ ── */}
       <section style={{ padding: '40px 0 60px' }}>
         <div className="container" style={{ maxWidth: 880 }}>
@@ -188,15 +303,15 @@ export default function WorkWithMe() {
           {[
             {
               q: 'Which tier should I start with?',
-              a: 'Start with the academy. Free. Real value. You\'ll see if the way I think matches the way you operate. Climb the ladder from there only when the next tier solves something the current one doesn\'t.',
+              a: 'Start with the academy. Free. Real value. You’ll see if the way I think matches the way you operate. Climb the ladder from there only when the next tier solves something the current one doesn’t.',
             },
             {
               q: 'Is the 1:1 coaching for any operator?',
-              a: 'I take a limited number of 1:1 calls per month. They\'re for operators with a real, specific bottleneck — promote-out math that isn\'t closing, a hire that\'s failing, a comp plan that\'s killing margin. If the bottleneck is "I need more clients" or "what business should I start," the academy is the right room for now.',
+              a: 'I take a limited number of 1:1 calls per month. They’re for operators with a real, specific bottleneck — promote-out math that isn’t closing, a hire that’s failing, a comp plan that’s killing margin. If the bottleneck is "I need more clients" or "what business should I start," the academy is the right room for now.',
             },
             {
               q: 'What does The Inner Circle actually do?',
-              a: 'Monthly call where every operator brings their biggest move of the month. We pressure-test it, sharpen it, and commit to it. Quarterly we meet in person. The private channel is the asynchronous version of that. Cap is twenty because that\'s the room size where I can still hold every operator to their commitments.',
+              a: 'Monthly call where every operator brings their biggest move of the month. We pressure-test it, sharpen it, and commit to it. Quarterly we meet in person. The private channel is the asynchronous version of that. Cap is twenty because that’s the room size where I can still hold every operator to their commitments.',
             },
             {
               q: 'What if I just want to read your stuff?',

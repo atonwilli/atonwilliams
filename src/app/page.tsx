@@ -32,9 +32,9 @@ export default function Home() {
                   color: 'var(--text)',
                 }}
               >
-                Hi, I&apos;m Aton.
+                Hi, I’m Aton.
                 <br />
-                I help operators build the business they actually want.
+                I help owners, executives, and the teams they lead build with leverage.
               </h1>
 
               <p
@@ -46,7 +46,7 @@ export default function Home() {
                   marginBottom: 40,
                 }}
               >
-                Founder of Front Page Agency. Eight years running it. Seventeen years building businesses total, starting at fourteen. Nine figures generated for clients, multi-millions inside our own ecosystem, five owners promoted out of my chair. Never held a 9-to-5. Now I&apos;m coaching the next wave of operators and consulting selectively for the ones ready for that level of work.
+                Founder of Front Page Agency. Eight years running it. Seventeen years building businesses, starting at fourteen. Nine figures for clients, multi-millions inside our own ecosystem, five owners promoted out of my chair. Never held a 9-to-5. Now I coach business owners, train sales teams, run business audits, and speak at events for the operators and organizations ready for that level of work.
               </p>
 
               <div style={{ display: 'flex', gap: 14, flexWrap: 'wrap', marginBottom: 48 }}>
@@ -145,10 +145,10 @@ export default function Home() {
                 color: 'var(--text)',
               }}
             >
-              An agency. A community. The next wave of operators.
+              An agency. A community. A standing seat at the table.
             </h2>
             <p style={{ fontSize: 16, color: 'var(--text-2)', lineHeight: 1.7 }}>
-              Three projects, one through-line. The agency proves what works. The community shares it. The next wave of operators picks it up and runs.
+              Three projects, one through-line. The agency proves what works. The community shares it. The consulting puts me back in the room with the operators and executives ready to use it.
             </p>
           </div>
 
@@ -172,11 +172,11 @@ export default function Home() {
               },
               {
                 num: '03',
-                title: 'The Inner Circle',
-                role: 'Private mastermind · Application only',
-                body: 'Invite-only mastermind for owners and aspiring owners running real numbers. Monthly group calls, quarterly in-person meetups, and direct access to me. Cap of twenty.',
+                title: 'Consulting & Speaking',
+                role: 'For organizations · By application',
+                body: 'Business audits, sales team training (Zoom or in-person), and keynote speaking for conferences and internal events. For organizations ready to put seventeen years of operating experience to work on their floor.',
                 cta: 'See Details',
-                href: '/work-with-me#inner-circle',
+                href: '/work-with-me#organizations',
               },
             ].map((p) => {
               const external = p.href.startsWith('http')
