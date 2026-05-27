@@ -53,7 +53,7 @@ export default function About() {
                 Never had a 9-to-5. Never planned to.
               </h1>
               <p style={{ fontSize: 17, color: 'var(--text-2)', maxWidth: 580, lineHeight: 1.75 }}>
-                I’ve been an entrepreneur since I was fourteen. Atonsworld on YouTube at fourteen. Curated ATL, a boutique, at twenty. Atonsworld Digital, a marketing agency, until twenty-three. Then I founded Front Page Agency, and I’ve been running it ever since. Seventeen years building. Nine figures generated for clients. Multi-millions inside our own ecosystem. Now I’m back in the media, coaching business owners and executives, training sales teams, running business audits, and speaking at events for the organizations ready for that level of work.
+                I’ve been an entrepreneur since I was fourteen. Atonsworld on YouTube at fourteen. Curated ATL, a boutique, at twenty. Atonsworld Digital, a marketing agency, until twenty-three. Then I founded Front Page Agency, and I’ve been running it ever since. Seventeen years building. Nine figures generated for clients. Multi-millions across our own ecosystem. Now I’m back in the media, coaching business owners and executives, training sales teams, running business audits, and speaking at events for the organizations ready for that level of work.
               </p>
             </div>
           </div>
@@ -128,7 +128,7 @@ export default function About() {
                 age: '23–31',
                 year: '2018–today',
                 title: 'Eight years scaling FPA',
-                body: 'Built FPA into a multi-vertical sales organization across six campaign categories. Nine figures generated for clients. Multi-millions inside our own ecosystem. Five owners promoted out of my chair. BBB A+. Recognized as Sales Consultancy Firm of the Year. Still operating.',
+                body: 'Built FPA into a multi-vertical sales organization across six campaign categories. Nine figures generated for clients. Multi-millions across our own ecosystem. BBB A+. Recognized as Sales Consultancy Firm of the Year. Still operating.',
               },
               {
                 age: '29',

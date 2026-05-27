@@ -13,7 +13,7 @@ export function Footer() {
               </span>
             </div>
             <p style={{ fontSize: 13.5, color: 'var(--text-2)', maxWidth: 340, lineHeight: 1.7 }}>
-              Operator, coach, and builder. Founder of Front Page Agency. I help direct sales organizations and the operators inside them turn hard work into compounding leverage.
+              Operator, coach, and builder. Founder of Front Page Agency. I help business owners, executives, and the teams they lead turn hard work into compounding leverage.
             </p>
           </div>
 

@@ -46,7 +46,7 @@ export default function Home() {
                   marginBottom: 40,
                 }}
               >
-                Founder of Front Page Agency. Eight years running it. Seventeen years building businesses, starting at fourteen. Nine figures for clients, multi-millions inside our own ecosystem, five owners promoted out of my chair. Never held a 9-to-5. Now I coach business owners, train sales teams, run business audits, and speak at events for the operators and organizations ready for that level of work.
+                Founder of Front Page Agency. Eight years running it. Seventeen years building businesses, starting at fourteen. Nine figures generated for clients. Multi-millions inside our own ecosystem. Never held a 9-to-5. Now I coach business owners and executives, train sales teams, run business audits, and speak at events for the organizations ready for that level of work.
               </p>
 
               <div style={{ display: 'flex', gap: 14, flexWrap: 'wrap', marginBottom: 48 }}>
@@ -93,8 +93,8 @@ export default function Home() {
           >
             {[
               { num: '$312M+', label: 'Client revenue since 2018' },
+              { num: '208K+', label: 'New customers acquired' },
               { num: '17 yrs', label: 'Building businesses' },
-              { num: '5+', label: 'Owners promoted out' },
               { num: '0', label: '9-to-5 jobs ever held' },
             ].map((s, i) => (
               <div
