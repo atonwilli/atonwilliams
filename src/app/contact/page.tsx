@@ -3,7 +3,24 @@ export const metadata = {
   description: 'Subscribe to the newsletter, apply for a strategy call, book me to speak, hire me for sales team training, or apply for The Inner Circle. Real responses, no auto-responder.',
 }
 
-export default function Contact() {
+const validTopics = [
+  'newsletter',
+  'coaching-call',
+  'inner-circle',
+  'speaking',
+  'team-training',
+  'business-audit',
+  'press',
+  'other',
+]
+
+export default async function Contact({
+  searchParams,
+}: {
+  searchParams: Promise<{ topic?: string }>
+}) {
+  const { topic } = await searchParams
+  const initialTopic = topic && validTopics.includes(topic) ? topic : 'newsletter'
   return (
     <>
       <section style={{ padding: '100px 0 60px' }}>
@@ -36,18 +53,23 @@ export default function Contact() {
       <section style={{ padding: '40px 0 80px' }}>
         <div className="container" style={{ maxWidth: 720 }}>
           <form
-            action="https://formspree.io/f/REPLACE_WITH_REAL_FORM_ID"
+            action="https://formsubmit.co/aton@frontpageagencyinc.com"
             method="POST"
             className="card-elevated"
             style={{ padding: 36 }}
           >
+            {/* FormSubmit config */}
+            <input type="hidden" name="_subject" value="New inquiry — atonwilliams.com" />
+            <input type="hidden" name="_template" value="table" />
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_next" value="https://atonwilliams.com/thanks" />
             {/* Honeypot (anti-spam) */}
-            <input type="text" name="_gotcha" style={{ display: 'none' }} tabIndex={-1} autoComplete="off" />
+            <input type="text" name="_honey" style={{ display: 'none' }} tabIndex={-1} autoComplete="off" />
 
             {/* Topic — first, so the form feels relevant */}
             <FieldRow>
               <Field label="What's this about?" htmlFor="topic" required>
-                <select id="topic" name="topic" defaultValue="newsletter" style={inputStyle} required>
+                <select id="topic" name="topic" defaultValue={initialTopic} style={inputStyle} required>
                   <option value="newsletter">Subscribe me to the newsletter</option>
                   <option value="coaching-call">Apply for a 1:1 strategy call</option>
                   <option value="inner-circle">Apply for The Inner Circle</option>

@@ -58,8 +58,8 @@ export default function Home() {
                 >
                   Join Operators Academy
                 </a>
-                <Link href="/work-with-me" className="btn btn-ghost">
-                  See How To Work With Me
+                <Link href="/work-with-me#call" className="btn btn-ghost">
+                  Book a 1:1 Strategy Call
                 </Link>
               </div>
             </div>
@@ -265,7 +265,7 @@ export default function Home() {
             {[
               { tier: '01', name: 'Operators Academy', sub: 'Free community on Skool', desc: 'Frameworks, daily content, and the playbook. Free for operators serious about the work.', cta: 'Join Free', href: 'https://www.skool.com/operators-academy-5634' },
               { tier: '02', name: 'The Newsletter', sub: 'Weekly · Free', desc: 'One email a week. Real lessons, real numbers, no corporate fluff. The frameworks before they hit the public.', cta: 'Subscribe', href: '/contact' },
-              { tier: '03', name: '1:1 Strategy Call', sub: '60 minutes · By application', desc: 'You bring the bottleneck. I bring the framework. Walk out with a 30-day plan you can run on Monday.', cta: 'Apply', href: '/work-with-me#call' },
+              { tier: '03', name: '1:1 Strategy Call', sub: '60 minutes · $1,000 · By application', desc: 'You bring the bottleneck. I bring the framework. Walk out with a 30-day plan you can run on Monday.', cta: 'Apply', href: '/work-with-me#call' },
               { tier: '04', name: 'The Inner Circle', sub: 'Private mastermind · Invite only', desc: 'For owners and aspiring owners running real numbers. Pricing private. Cohort capped at 20.', cta: 'Apply', href: '/work-with-me#inner-circle' },
             ].map((t) => {
               const external = t.href.startsWith('http')

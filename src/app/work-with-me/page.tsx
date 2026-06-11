@@ -100,8 +100,8 @@ export default function WorkWithMe() {
               tier: '03',
               tag: '1:1 Coaching',
               name: 'Strategy Call',
-              price: 'By application',
-              body: 'You bring the bottleneck. I bring the framework. Sixty minutes, recorded, walk out with a 30-day plan you can run on Monday morning.',
+              price: '$1,000 · By application',
+              body: 'You bring the bottleneck. I bring the framework. Sixty minutes, recorded, walk out with a 30-day plan you can run on Monday morning. Apply first — if it’s a fit, you get a private booking link. If it’s not, I’ll tell you straight and point you to the academy.',
               includes: [
                 '60-minute private session over Zoom',
                 'Pre-call diagnostic intake form',
@@ -109,9 +109,10 @@ export default function WorkWithMe() {
                 'Written 30-day action plan within 24h',
                 'Two follow-up emails over the next 30 days',
               ],
-              cta: 'Apply',
+              cta: 'Apply for a Call',
               href: '/contact?topic=coaching-call',
               external: false,
+              bookingNote: true,
             },
             {
               id: 'inner-circle',
@@ -184,6 +185,19 @@ export default function WorkWithMe() {
                 <Link href={t.href} className={t.featured ? 'btn btn-primary' : 'btn btn-ghost'}>
                   {t.cta}
                 </Link>
+              )}
+              {t.bookingNote && (
+                <div style={{ marginTop: 16, fontSize: 12.5, color: 'var(--text-3)', fontFamily: 'var(--display-sans)', letterSpacing: 0.3 }}>
+                  Already approved?{' '}
+                  <a
+                    href="https://buy.stripe.com/28E28s3EBb498uk3TQ5wI00"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{ color: 'var(--accent)', fontWeight: 600 }}
+                  >
+                    Complete your booking →
+                  </a>
+                </div>
               )}
             </div>
           ))}
