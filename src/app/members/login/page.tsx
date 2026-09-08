@@ -12,7 +12,7 @@ export default async function MembersLogin({ searchParams }: { searchParams: Pro
           {sent ? (
             <>
               <h1>Check your email.</h1>
-              <p className="lead">If that address belongs to an active member, a sign-in link is on its way. It works for thirty minutes. Nothing arrived? Check spam, then try again.</p>
+              <p className="lead">If that address belongs to an active member, a sign-in link is on its way from notes@atonwilliams.com. It works for thirty minutes. Nothing arrived? Check spam or promotions, drag it to your inbox so the next one lands right, then try again.</p>
             </>
           ) : (
             <>

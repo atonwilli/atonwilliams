@@ -40,6 +40,11 @@ export default async function MembersArea({ searchParams }: { searchParams: Prom
             <a className="button secondary" href="/api/members/logout">Sign out</a>
           </div>
           {telegram === 'soon' && <p className="small" style={{ marginTop: 12 }}>The Telegram invite is not ready yet. It will appear here the moment the room opens.</p>}
+          {member.telegram_invite && !member.telegram_joined_at && (
+            <p className="small" style={{ marginTop: 12 }}>
+              Phone would not open it? Your invite is <a href={member.telegram_invite}>{member.telegram_invite}</a>. Paste it into any Telegram chat and tap it there, or <a href={`https://web.telegram.org/k/#?tgaddr=${encodeURIComponent(`tg://join?invite=${member.telegram_invite.split('/+')[1] || ''}`)}`} target="_blank" rel="noopener">open it in Telegram Web</a>. It is a single-use link made for you.
+            </p>
+          )}
           {billing === 'unavailable' && <p className="small" style={{ marginTop: 12 }}>Billing could not open. Reply to your receipt and it gets handled by hand.</p>}
         </div>
       </section>
