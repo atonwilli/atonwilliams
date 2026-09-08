@@ -1,3 +1,4 @@
+import type { ProPack } from '@/lib/pro'
 import { createClient } from '@supabase/supabase-js'
 import { Resend } from 'resend'
 import type { Note } from './content'
@@ -156,5 +157,29 @@ ${note.action ? `
     subject: note.title.replace(/\.$/, ''),
     html: shell(note.teaser, inner, `You are getting this because you asked for notes from Aton Williams and confirmed it. <a href="${unsub}" style="color:#5a5970">Unsubscribe</a> in one click, or <a href="${utm('/#newsletter', c, 'preferences')}" style="color:#5a5970">change what you get</a>.<br>Aton Williams, atonwilliams.com. ${POSTAL}.`),
     text: `${note.title}\n\n${note.teaser}\n\n${note.body.replace(/<[^>]+>/g, '')}\n\n${note.action ? 'Do this week: ' + note.action + '\n\n' : ''}Read it: ${url}\n\nKeep going: ${site()}/guides/${next.guide} | ${site()}/pro | https://www.skool.com/operators-academy-5634\n\nUnsubscribe: ${unsub}`,
+  }
+}
+
+/** Sent once per paid checkout: the download, what is inside, and a link that keeps working. */
+export function deliveryEmail(pack: ProPack, sessionId: string) {
+  const download = `${site()}/api/download?session_id=${encodeURIComponent(sessionId)}`
+  const page = `${site()}/pro/thanks?session_id=${encodeURIComponent(sessionId)}`
+  const kind = pack.kind === 'agent' ? 'agent' : pack.kind === 'bundle' ? 'bundle' : 'pack'
+  const items = pack.includes.slice(0, 8).map((i) => `<tr><td valign="top" style="padding:0 10px 8px 0;font-family:${FONT};font-size:15px;color:#345b50;font-weight:700">&#10003;</td><td style="padding:0 0 8px;font-family:${FONT};font-size:15px;line-height:1.55;color:#3a3950">${i}</td></tr>`).join('')
+  const inner = `
+<p style="font-family:${FONT};font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#345b50;font-weight:600;margin:0 0 14px">Your ${kind} is ready</p>
+<h1 style="font-family:${SERIF};font-size:30px;line-height:1.15;font-weight:500;color:#252440;margin:0 0 14px;letter-spacing:-.01em">${pack.title}</h1>
+<p style="font-family:${FONT};font-size:16px;line-height:1.6;color:#3a3950;margin:0 0 22px">${pack.tagline}</p>
+${btn(download, 'Download the ' + kind, '#e07a4f')}
+<p style="font-family:${FONT};font-size:13px;line-height:1.6;color:#5a5970;margin:14px 0 26px">A zip with the PDF and every prompt and template as plain text. The button keeps working, so this email is your permanent copy.</p>
+<p style="font-family:${FONT};font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#345b50;font-weight:600;margin:0 0 10px">What is inside</p>
+<table role="presentation" cellpadding="0" cellspacing="0" border="0" style="margin:0 0 24px">${items}</table>
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#fbf2e1;border-radius:14px"><tr><td style="padding:16px 18px;font-family:${FONT};font-size:15px;line-height:1.55;color:#3a3950"><strong style="color:#252440">Start here.</strong> Open the file that begins with "Start here", paste the whole prompt into Claude, fill in the blanks about your business, and let it build the rest. Ten minutes, not a weekend.</td></tr></table>
+<p style="font-family:${FONT};font-size:15px;line-height:1.6;color:#3a3950;margin:24px 0 0">Trouble with the file, or want the link again? Reply to this email and it will be sent to you directly.<br>Aton</p>`
+  const footer = `You are receiving this because you bought ${pack.title} on atonwilliams.com. Keep this email: <a href="${page}" style="color:#345b50">this page</a> re-opens your download any time.<br>Aton Williams, ${POSTAL}`
+  return {
+    subject: `Your download: ${pack.title}`,
+    html: shell(`${pack.title} is ready to download.`, inner, footer),
+    text: `${pack.title} is ready.\n\nDownload: ${download}\n\nWhat is inside:\n${pack.includes.map((i) => '- ' + i).join('\n')}\n\nStart with the file that begins with "Start here": paste the whole prompt into Claude and let it build the rest.\n\nThis link keeps working: ${page}\nTrouble? Reply to this email.\n\nAton Williams, ${POSTAL}`,
   }
 }
