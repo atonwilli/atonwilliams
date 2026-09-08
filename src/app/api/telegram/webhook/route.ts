@@ -11,12 +11,19 @@ export const dynamic = 'force-dynamic'
 export async function POST(req: Request) {
   const expected = process.env.TELEGRAM_WEBHOOK_SECRET
   if (expected && req.headers.get('x-telegram-bot-api-secret-token') !== expected) return NextResponse.json({ error: 'forbidden' }, { status: 403 })
-  const update = await req.json().catch(() => null) as { chat_member?: { new_chat_member?: { status?: string; user?: { id?: number } }; invite_link?: { name?: string } } } | null
+  const update = await req.json().catch(() => null) as {
+    chat_member?: { new_chat_member?: { status?: string; user?: { id?: number } }; invite_link?: { name?: string } }
+    my_chat_member?: { chat?: { id?: number; title?: string; type?: string }; new_chat_member?: { status?: string } }
+  } | null
+  const client = db()
+  const mine = update?.my_chat_member
+  if (client && mine?.chat?.id && mine.new_chat_member?.status && mine.new_chat_member.status !== 'left' && mine.new_chat_member.status !== 'kicked') {
+    await client.from('telegram_chats').upsert({ chat_id: mine.chat.id, title: mine.chat.title || '', type: mine.chat.type || '', bot_status: mine.new_chat_member.status, added_at: new Date().toISOString() }, { onConflict: 'chat_id' })
+  }
   const cm = update?.chat_member
   const status = cm?.new_chat_member?.status
   const userId = cm?.new_chat_member?.user?.id
   const memberId = cm?.invite_link?.name
-  const client = db()
   if (client && userId && memberId && (status === 'member' || status === 'administrator')) {
     await client.from('members').update({ telegram_user_id: userId, telegram_joined_at: new Date().toISOString() }).eq('id', memberId)
   }

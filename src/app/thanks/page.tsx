@@ -41,7 +41,7 @@ export default async function Thanks({ searchParams }: { searchParams: Promise<{
               <div className="button-row" style={{ justifyContent: 'center' }}>
                 {t && <a className="button peach" href={t.resource.href}>{t.resource.label}</a>}
                 {redirect && <a className="button secondary" href={`/contact?topic=${redirect.key}`}>Ask about {redirect.label.toLowerCase()}</a>}
-                <a className="button secondary" href="https://www.skool.com/operators-academy-5634">Join the free community</a>
+                <a className="button secondary" href="/community">Join the free community</a>
               </div>
             </>
           )}
@@ -50,7 +50,7 @@ export default async function Thanks({ searchParams }: { searchParams: Promise<{
               <h1>It is in my inbox.</h1>
               <p className="lead">A person reads every one of these. You will hear back directly, usually within one business day, with next steps or an honest no.</p>
               <div className="button-row" style={{ justifyContent: 'center' }}>
-                {t ? <a className="button peach" href={t.resource.href}>{t.resource.label}</a> : <a className="button" href="https://www.skool.com/operators-academy-5634">Join the free community</a>}
+                {t ? <a className="button peach" href={t.resource.href}>{t.resource.label}</a> : <a className="button" href="/community">Join the free community</a>}
                 <a className="button secondary" href="/guides">Read a guide while you wait</a>
               </div>
             </>

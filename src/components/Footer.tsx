@@ -28,7 +28,7 @@ export function Footer() {
             <li><a href="https://www.tiktok.com/@ceoaton">TikTok</a></li>
             <li><a href="https://www.youtube.com/atonsworld">YouTube</a></li>
             <li><a href="https://www.linkedin.com/in/atonwilliams/">LinkedIn</a></li>
-            <li><a href="https://www.skool.com/operators-academy-5634">Operators Academy on Skool</a></li>
+            <li><a href="/community">Operators Academy, free</a></li>
           </ul>
         </div>
         <div>

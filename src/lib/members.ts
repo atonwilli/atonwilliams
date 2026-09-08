@@ -168,17 +168,47 @@ export async function consumeLogin(token: string): Promise<string | null> {
 /* ---------- Telegram ---------- */
 
 const TG = () => process.env.TELEGRAM_BOT_TOKEN ? `https://api.telegram.org/bot${process.env.TELEGRAM_BOT_TOKEN}` : ''
-export function telegramConfigured(): boolean {
-  return Boolean(process.env.TELEGRAM_BOT_TOKEN && process.env.TELEGRAM_GROUP_ID)
+type TgChat = { chat_id: number; title: string; type: string; invite_link: string | null }
+/** The bot's chats, recorded by the webhook when the bot is added. The private group is the members room; the channel is the free community. */
+async function chats(): Promise<TgChat[]> {
+  const client = db()
+  if (!client) return []
+  const { data } = await client.from('telegram_chats').select('chat_id, title, type, invite_link').order('added_at', { ascending: false })
+  return (data as TgChat[]) || []
+}
+export async function groupId(): Promise<string | null> {
+  if (process.env.TELEGRAM_GROUP_ID) return process.env.TELEGRAM_GROUP_ID
+  const g = (await chats()).find((c) => c.type === 'supergroup' || c.type === 'group')
+  return g ? String(g.chat_id) : null
+}
+export async function telegramConfigured(): Promise<boolean> {
+  return Boolean(process.env.TELEGRAM_BOT_TOKEN && (await groupId()))
+}
+/** A permanent join link for the free channel, created once through the bot and stored. */
+export async function freeChannelLink(): Promise<string | null> {
+  if (process.env.NEXT_PUBLIC_TELEGRAM_FREE) return process.env.NEXT_PUBLIC_TELEGRAM_FREE
+  const ch = (await chats()).find((c) => c.type === 'channel')
+  if (!ch) return null
+  if (ch.invite_link) return ch.invite_link
+  if (!process.env.TELEGRAM_BOT_TOKEN) return null
+  try {
+    const res = await fetch(`${TG()}/exportChatInviteLink`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ chat_id: ch.chat_id }) })
+    const j = await res.json()
+    const link = j?.result as string | undefined
+    const client = db()
+    if (link && client) await client.from('telegram_chats').update({ invite_link: link }).eq('chat_id', ch.chat_id)
+    return link || null
+  } catch { return null }
 }
 /** One single-use invite link per member, named with the member id so the join can be matched back. */
 export async function telegramInvite(member: Member): Promise<string | null> {
-  if (!telegramConfigured()) return null
+  const chat = await groupId()
+  if (!process.env.TELEGRAM_BOT_TOKEN || !chat) return null
   const client = db()
   try {
     const res = await fetch(`${TG()}/createChatInviteLink`, {
       method: 'POST', headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ chat_id: process.env.TELEGRAM_GROUP_ID, name: member.id, member_limit: 1, expire_date: Math.floor(Date.now() / 1000) + 86400 }),
+      body: JSON.stringify({ chat_id: chat, name: member.id, member_limit: 1, expire_date: Math.floor(Date.now() / 1000) + 86400 }),
     })
     const j = await res.json()
     const link = j?.result?.invite_link as string | undefined
@@ -187,10 +217,11 @@ export async function telegramInvite(member: Member): Promise<string | null> {
   } catch (e) { console.error('telegram invite failed', e); return null }
 }
 export async function telegramRemove(userId: number): Promise<void> {
-  if (!telegramConfigured()) return
+  const chat = await groupId()
+  if (!process.env.TELEGRAM_BOT_TOKEN || !chat) return
   try {
-    await fetch(`${TG()}/banChatMember`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ chat_id: process.env.TELEGRAM_GROUP_ID, user_id: userId }) })
-    await fetch(`${TG()}/unbanChatMember`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ chat_id: process.env.TELEGRAM_GROUP_ID, user_id: userId, only_if_banned: true }) })
+    await fetch(`${TG()}/banChatMember`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ chat_id: chat, user_id: userId }) })
+    await fetch(`${TG()}/unbanChatMember`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ chat_id: chat, user_id: userId, only_if_banned: true }) })
   } catch (e) { console.error('telegram remove failed', e) }
 }
 

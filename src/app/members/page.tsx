@@ -23,6 +23,7 @@ export default async function MembersArea({ searchParams }: { searchParams: Prom
   const team = getAgentBundle()
   const lib = getLibraryPack()
   const memberAgentPrice = (p: number) => Math.round(p * (1 - PRICES.agentDiscount))
+  const tgReady = await telegramConfigured()
 
   return (
     <main>
@@ -32,7 +33,7 @@ export default async function MembersArea({ searchParams }: { searchParams: Prom
           <h1>{member.name ? `Welcome back, ${member.name.split(' ')[0]}.` : 'Welcome back.'}</h1>
           <p className="lead">{member.plan === 'annual' ? 'Annual member' : 'Monthly member'}{member.founding ? ', founding rate' : ''}{member.status === 'past_due' ? '. Your last payment did not go through, update your card below to keep access.' : '.'} Next live call: {callLabel(calls[0])}.</p>
           <div className="button-row">
-            {telegramConfigured()
+            {tgReady
               ? <form action="/api/members/telegram" method="POST"><button className="button peach" type="submit">{member.telegram_joined_at ? 'Open the Telegram room' : 'Join the Telegram room'}</button></form>
               : <span className="chip warn">Telegram room opening shortly</span>}
             <form action="/api/members/billing" method="POST"><button className="button secondary" type="submit">Manage billing</button></form>
