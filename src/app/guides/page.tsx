@@ -40,7 +40,7 @@ export default function Guides() {
                               <span className="tag-id">Guide {g.num}</span>
                               <span className="meta">{SUBS[g.sub] || g.topicLabel}</span>
                             </div>
-                            <h2>{g.h1}</h2>
+                            <h2>{g.title}</h2>
                             <p>{g.cardBlurb}</p>
                             <div className="kit-chips">{g.cardTags.map((t) => <span key={t}>{t}</span>)}</div>
                           </div>
