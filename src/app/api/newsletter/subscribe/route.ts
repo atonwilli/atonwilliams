@@ -30,7 +30,10 @@ export async function POST(req: Request) {
     if (existing.status === 'active') return wantsRedirect ? back('already=1') : NextResponse.json({ ok: true, status: 'active' })
   } else {
     const { data, error } = await client.from('newsletter_subscribers').insert({ email, interests: [interest], source }).select('token').single()
-    if (error || !data) return wantsRedirect ? back('error=save') : NextResponse.json({ error: 'Could not save' }, { status: 500 })
+    if (error || !data) {
+      console.error('newsletter insert failed', error)
+      return wantsRedirect ? back('error=save') : NextResponse.json({ error: 'Could not save', detail: error?.message, code: error?.code }, { status: 500 })
+    }
     token = data.token
   }
   const msg = confirmEmail(token!, interest)
