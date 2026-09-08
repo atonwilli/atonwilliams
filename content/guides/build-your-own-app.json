@@ -1,0 +1,186 @@
+{
+ "kind": "spec",
+ "status": "published",
+ "date": "2026-09-07",
+ "slug": "build-your-own-app",
+ "num": "19",
+ "topicKey": "ai",
+ "pillar": "ai",
+ "sub": "building",
+ "topicLabel": "AI",
+ "topic": "Building apps with AI",
+ "band": " mint",
+ "keys": "build your own app custom build tools download xcode android studio cursor claude code github expo connectors mcp models recommend claude chatgpt let ai control computer",
+ "cardBlurb": "What you actually need to build an app with AI in 2026: the tools to download, what connectors are, how an AI can drive your computer, and which models to use for which job. The what and the why.",
+ "cardTags": [
+  "Free lesson",
+  "Worksheet",
+  "Prompt",
+  "Deeper in Pro"
+ ],
+ "title": "Building your own app with AI",
+ "desc": "The tools, the connectors, the models, and the way an AI can drive your machine, explained so you know what you are choosing before you start.",
+ "h1": "Building your own app with AI.",
+ "em": "The tools, the connectors, the models.",
+ "lead": "You can build a real app with AI now. Not a prototype that dies in week three, a real one, if you understand what the pieces are and why each one exists. This guide is the map. The Pro pack is the setup order and the routing table. The Build Foreman agent sets your machine up and runs the build with you.",
+ "read": 9,
+ "kit": "The map and a prompt",
+ "tiles": [
+  [
+   "The lesson",
+   "The five kinds of tools, what a connector is, how an AI drives your computer, and which models do which job."
+  ],
+  [
+   "The prompt",
+   "A plain-language build plan for your idea: what you need, what it costs, and what to build first."
+  ],
+  [
+   "The foreman",
+   "The Pro pack has the setup order. The Build Foreman agent installs, connects, and runs the loop."
+  ]
+ ],
+ "sections": [
+  {
+   "nav": "The tools",
+   "label": "The five kinds of tools",
+   "h2": "What to download, and why each exists.",
+   "body": [
+    [
+     "steps",
+     [
+      [
+       "A place to write and run code.",
+       "Claude Code runs in your terminal and can read, write, and run your project. Cursor and VS Code are editors that an AI can work inside. Why: the AI needs a place where it can act on files, not just talk about them."
+      ],
+      [
+       "The platform's own kit.",
+       "Xcode for iPhone and iPad (Mac only), Android Studio for Android. Both include the simulators you test on. Why: the stores require builds made with the official tools, and the simulator is how you see what a reviewer will see."
+      ],
+      [
+       "A cross-platform layer, if you want both stores from one codebase.",
+       "Expo and React Native let one project ship to both. Why: two native apps means two of everything; one shared codebase means one."
+      ],
+      [
+       "A backend.",
+       "Somewhere for accounts, data, and payments to live: a hosted database with authentication and a payment provider. Why: the app on the phone is the front of the house; the backend is where the business actually is."
+      ],
+      [
+       "Version control.",
+       "GitHub, through the desktop app or the terminal. Why: every change is saved with a history, an AI can propose changes you review, and nothing is ever lost."
+      ]
+     ]
+    ]
+   ]
+  },
+  {
+   "nav": "Connectors",
+   "label": "Connectors",
+   "h2": "How an AI reaches your tools.",
+   "body": [
+    [
+     "p",
+     "A connector (the technical name is an MCP server) is a small bridge that lets an AI tool talk to a specific service: your repository, your database, your payment account, your browser. Without connectors, the AI can only write text and you carry it everywhere. With them, it can open a pull request, read a table, check a payment, or load a page. Why they matter: the difference between an assistant that advises and one that does."
+    ],
+    [
+     "said",
+     "The rule",
+     "Every connector is a door into something real. You decide which doors are open, and you keep the keys in environment variables, never in a file the AI writes."
+    ]
+   ]
+  },
+  {
+   "nav": "Letting it drive",
+   "label": "Letting the AI drive",
+   "h2": "Claude or ChatGPT guiding your computer.",
+   "body": [
+    [
+     "p",
+     "There are three levels. First, the AI writes and you paste. Second, the AI works inside your project through a tool like Claude Code and asks before it runs anything that matters. Third, the AI drives your browser or desktop through a connector, clicking and typing where you would. Each level trades speed for oversight. Why the levels exist: the second is where most real building happens, because the AI can build and verify while you keep the deploy button."
+    ],
+    [
+     "checks",
+     [
+      "The AI proposes; you approve anything that spends money, touches customer data, or ships.",
+      "Everything it does lands in version control so you can see it and undo it.",
+      "It verifies by running, opening, or reading back, and says which."
+     ]
+    ]
+   ]
+  },
+  {
+   "nav": "Models",
+   "label": "Which model for which job",
+   "h2": "Plan with the strongest. Build with the efficient one.",
+   "body": [
+    [
+     "p",
+     "Use the strongest model available to you for planning, architecture, and review, because those decisions are expensive to get wrong. Use a fast, efficient model for the slices of work the plan produces, because that is where the volume is. Use the cheapest for repetitive checks. Why: cost tracks volume; judgment tracks stakes. Matching the model to the stakes is most of the cost control in a build."
+    ],
+    [
+     "p",
+     "Claude's models are built to work inside your project through Claude Code; ChatGPT is strong for drafting, explaining, and working through a problem in conversation. Many builders use both: one to think with, one to build with. Which is right depends on the tool you already live in."
+    ],
+    [
+     "linkedin",
+     "You can build a real app with AI now. Not because the AI got magic, but because it can finally act: write files, run them, open the page, check the result. The builders who ship are the ones who learned what a connector is and kept the deploy button."
+    ]
+   ]
+  },
+  {
+   "nav": "What still needs a builder",
+   "label": "What still needs a builder",
+   "h2": "The boring layer, and when to hire it.",
+   "body": [
+    [
+     "p",
+     "A prototype that runs and a product that survives are different things. The difference is the boring layer: support, testing, monitoring, backups, access control, a data model that will not fall over in month three, and the store approvals. Building a simple app yourself is realistic. Building a platform your business depends on, with payments, integrations, and a review to pass, is a project, and it is what we do at Front Page Intelligence. The guides here teach the map. They do not hand you a copy of our systems, and they will not turn a weekend into a business platform. They will make you a better client, or a capable builder of the right-sized thing."
+    ]
+   ]
+  }
+ ],
+ "ws": [
+  "Your app",
+  "Describe the idea.",
+  "Four questions before any tool gets installed."
+ ],
+ "fields": [
+  [
+   "What it does",
+   "One sentence, and who it is for."
+  ],
+  [
+   "Where the money and data live",
+   "Accounts? Payments? What must be stored?"
+  ],
+  [
+   "Stores",
+   "iPhone, Android, both, or web first?"
+  ],
+  [
+   "Your machine and comfort",
+   "Mac or Windows, and have you used a terminal?"
+  ]
+ ],
+ "pr": [
+  "The prompt",
+  "A plain-language build plan for your idea.",
+  "Paste the four answers. It tells you what you need, what it will cost per month, what to build first, and whether this is a weekend build or a project to hire."
+ ],
+ "prompt": "I want to build an app with AI. From my answers, give me a plain-language plan. Do not write code and do not give step-by-step setup instructions. Tell me what each thing is and why I need it.\n\n<b>1.</b> THE TOOLS: which of the five kinds I need for my case (a place to write and run code, the platform kit, a cross-platform layer, a backend, version control), named, with one line on why each.\n<b>2.</b> THE CONNECTORS: which services my AI tool should be connected to, and what each door opens.\n<b>3.</b> THE MODELS: which kind of model plans, which builds, which checks, and roughly what a month of building costs at my size.\n<b>4.</b> BUILD ORDER: the first three things to build, in order, and the first thing to show a real user.\n<b>5.</b> THE HONEST CALL: weekend build, a few weeks of evenings, or a project to hire, and why. Name the boring layer items I will need before this can hold real customers.\n\nMY ANSWERS:\n[what it does and for whom; where money and data live; which stores; my machine and comfort with a terminal]",
+ "pro_h3": "The builder's pack",
+ "pro_items": [
+  "The setup order: what to install first, second, third, for Mac and for Windows",
+  "The connector map: which connector for which service, and the key-handling rules",
+  "The model routing table: planner, worker, checker, with costs",
+  "The let-it-drive rules: what the AI may do alone and what waits for you",
+  "The project brief template and the ship checklist",
+  "A readiness prompt that scopes your idea and tells you what to build first"
+ ],
+ "offer": [
+  "Work with Front Page Intelligence",
+  "Want it built, shipped, and approved for you?",
+  "Custom builds, integrations, and app submissions are Front Page Intelligence engagements: scoped in writing, built with the boring layer, and handed over with the keys. By application.",
+  "/contact?topic=intelligence",
+  "Ask about a custom build"
+ ]
+}

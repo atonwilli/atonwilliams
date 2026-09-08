@@ -1,0 +1,217 @@
+{
+ "kind": "spec",
+ "status": "published",
+ "date": "2026-09-07",
+ "slug": "google-play-approval",
+ "num": "18",
+ "topicKey": "ai",
+ "pillar": "ai",
+ "sub": "building",
+ "topicLabel": "AI",
+ "topic": "Building apps with AI",
+ "band": " mint",
+ "keys": "google play approval android review rejected policy play billing account deletion data safety target api closed testing permissions user generated content screenshots broken functionality login credentials",
+ "cardBlurb": "What Google Play checks, the reasons Android apps get rejected or removed, and why each policy exists, in plain language before you submit.",
+ "cardTags": [
+  "Free lesson",
+  "Worksheet",
+  "Prompt",
+  "Deeper in Pro"
+ ],
+ "title": "Getting your app approved on Google Play",
+ "desc": "What Play reviews, the policies that send Android apps back, and why each one exists, so you submit once.",
+ "h1": "Getting your app approved on Google Play.",
+ "em": "Same idea, different rulebook.",
+ "lead": "Google Play review is partly automated and partly human, and it is stricter about declarations than Apple and looser about design. Most Android returns come from forms filled in wrong, policies nobody read, and testing steps skipped. Here is what they check and why.",
+ "read": 8,
+ "kit": "The rulebook and a prompt",
+ "tiles": [
+  [
+   "The lesson",
+   "What Play reviews, where it differs from Apple, and the returns that account for most of the pain."
+  ],
+  [
+   "The prompt",
+   "A readiness read on your Android app from a plain description."
+  ],
+  [
+   "The auditor",
+   "The Pro pack has the checklist. The App Review Auditor agent runs it against your build for both stores."
+  ]
+ ],
+ "sections": [
+  {
+   "nav": "How Play reviews",
+   "label": "How Play reviews",
+   "h2": "Forms first, then a person.",
+   "body": [
+    [
+     "p",
+     "Play checks your declarations before anyone opens the app: the data safety form, the content rating questionnaire, the permissions you request, the target audience, and whether your account has met its testing requirement. Then a reviewer or an automated pass opens the build. Apps are returned for policy problems, removed later for the same, and suspended for repeat offenses. Why: Play operates at a scale where the declarations are the first line of defense, and a wrong declaration is treated as a broken promise."
+    ],
+    [
+     "said",
+     "The frame",
+     "On Play, the forms are the review. Fill them in as carefully as you built the app."
+    ]
+   ]
+  },
+  {
+   "nav": "Money and accounts",
+   "label": "Money and accounts",
+   "h2": "Billing, deletion, and data.",
+   "body": [
+    [
+     "steps",
+     [
+      [
+       "Google Play Billing.",
+       "Digital goods and services used inside the app go through Play's billing system. Physical goods and services consumed outside the app do not. Why: same logic as Apple; the platform's commerce runs through the platform."
+      ],
+      [
+       "Account deletion, in the app and on the web.",
+       "If people create accounts, Play requires a way to delete the account inside the app and a web link to request deletion that you declare in the console. Why: a person should be able to remove their data whether or not they still have the app installed."
+      ],
+      [
+       "The data safety form.",
+       "You declare what you collect, what you share, and why, and the form has to match what the app actually does. Why: the form is shown to users before install; a mismatch is a false statement to them."
+      ],
+      [
+       "Permissions.",
+       "Every sensitive permission needs a reason the reviewer accepts, and some need a declaration form. Why: location, contacts, SMS, and file access are where abuse lives."
+      ]
+     ]
+    ]
+   ]
+  },
+  {
+   "nav": "Completeness",
+   "label": "Completeness and testing",
+   "h2": "It has to work, and Play wants proof you tested it.",
+   "body": [
+    [
+     "steps",
+     [
+      [
+       "Closed testing before production.",
+       "New personal developer accounts have to run a closed test with real testers for a period before production access. Why: Play wants evidence the app has been used by people who are not you."
+      ],
+      [
+       "Login credentials for review.",
+       "If the app needs an account, valid credentials go in the console's app access section. Why: the reviewer cannot approve what they cannot open."
+      ],
+      [
+       "Broken functionality.",
+       "Crashes, dead buttons, coming soon screens, and features that do not do what the listing says are returned. Why: the store lists finished products."
+      ],
+      [
+       "Target API level.",
+       "Play requires apps to target a recent Android version. Old targets are blocked from publishing. Why: newer targets carry the security and privacy behavior users are promised."
+      ],
+      [
+       "Screenshots and listing.",
+       "Screenshots must show the app as it is, and the listing cannot claim features that do not exist or hide that a feature is paid. Why: the listing is the promise."
+      ]
+     ]
+    ]
+   ]
+  },
+  {
+   "nav": "Content",
+   "label": "Content and users",
+   "h2": "If people can post, you are responsible for what they post.",
+   "body": [
+    [
+     "steps",
+     [
+      [
+       "User-generated content.",
+       "Apps with posts, messages, or profiles need reporting, blocking, moderation, and a way to reach you. Why: Play holds the developer responsible for the space they created."
+      ],
+      [
+       "Content rating and target audience.",
+       "The questionnaire decides who sees your app. Answer it for the app you shipped, not the one you plan. Why: a wrong rating puts the app in front of the wrong people."
+      ],
+      [
+       "Families and ads.",
+       "If children could be an audience, a separate set of rules applies to ads, data, and content. Why: the strictest rules protect the youngest users."
+      ]
+     ]
+    ],
+    [
+     "linkedin",
+     "Apple checks the app. Google checks the forms first. Most Play rejections are a data safety form that does not match the app, an account you can delete in the app but not from the web, or a closed test nobody ran. Read the rulebook before you fill in the console."
+    ]
+   ]
+  },
+  {
+   "nav": "Before you submit",
+   "label": "Before you submit",
+   "h2": "The Android checklist, at a glance.",
+   "body": [
+    [
+     "checks",
+     [
+      "Digital goods go through Play Billing.",
+      "Account deletion works in the app and there is a web request link declared in the console.",
+      "The data safety form matches what the app actually collects and shares.",
+      "Every sensitive permission has a reason the app visibly needs.",
+      "The closed test has run with real testers if your account requires it.",
+      "Review credentials are in the console and work today.",
+      "Nothing crashes, nothing says coming soon, every link resolves.",
+      "Target API level is current. Screenshots are from this build."
+     ]
+    ],
+    [
+     "p",
+     "The Pro pack is the full checklist with the policy each item comes from, the console walkthrough of every form, and response templates. The App Review Auditor agent checks your project and your declarations against it and fixes what you approve."
+    ]
+   ]
+  }
+ ],
+ "ws": [
+  "Your app",
+  "Describe it honestly.",
+  "The four things Play will ask you first."
+ ],
+ "fields": [
+  [
+   "What people buy",
+   "Digital or physical? Where does the money move?"
+  ],
+  [
+   "Data and permissions",
+   "What do you collect, what do you share, what permissions do you request?"
+  ],
+  [
+   "Accounts and testing",
+   "Can people create and delete accounts? Have real testers used it?"
+  ],
+  [
+   "User content and audience",
+   "Can people post? Could children be an audience?"
+  ]
+ ],
+ "pr": [
+  "The prompt",
+  "A readiness read for Play.",
+  "Paste a plain description. It tells you which policies apply, where you are likely to be returned, and the declarations to get right before you touch the console."
+ ],
+ "prompt": "I am preparing an Android app for Google Play review. From my description, tell me which of these areas apply and, for each that applies, whether I am likely to pass or be returned, and the one thing to get right before submitting. Do not tell me how to build anything. Explain what the policy is and why Play has it.\n\nAreas: Play Billing for digital goods, account deletion in the app and on the web, the data safety form, sensitive permissions and their declarations, closed testing before production, review credentials, broken functionality and placeholder screens, target API level, screenshots and listing accuracy including paid features, user-generated content controls, content rating and target audience, families and ads.\n\nEnd with: the three areas most likely to send my app back, in order.\n\nMY APP:\n[what it does, how people pay, what data it collects, permissions, whether there are accounts, what users can post, who the audience is, whether real testers have used it]",
+ "pro_h3": "The Google Play approval pack",
+ "pro_items": [
+  "The reviewer's checklist: forty items with the policy each one comes from",
+  "The console walkthrough: every form, in order, with the answer that matches your app",
+  "The account deletion requirement done right: in-app and the web link",
+  "Permissions and data safety, declared to match the build",
+  "Return response templates and the resubmission plan",
+  "A readiness prompt that scores your app before you submit"
+ ],
+ "offer": [
+  "Work with Front Page Intelligence",
+  "Want it built, shipped, and approved for you?",
+  "Custom builds, integrations, and app submissions are Front Page Intelligence engagements: scoped in writing, built with the boring layer, and handed over with the keys. By application.",
+  "/contact?topic=intelligence",
+  "Ask about a custom build"
+ ]
+}

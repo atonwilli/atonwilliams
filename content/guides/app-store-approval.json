@@ -1,0 +1,216 @@
+{
+ "kind": "spec",
+ "status": "published",
+ "date": "2026-09-07",
+ "slug": "app-store-approval",
+ "num": "17",
+ "topicKey": "ai",
+ "pillar": "ai",
+ "sub": "building",
+ "topicLabel": "AI",
+ "topic": "Building apps with AI",
+ "band": " mint",
+ "keys": "apple app store approval review rejected guidelines in-app purchase stripe sign in with apple account deletion ipad screenshots demo login coming soon restore purchases report feature testflight",
+ "cardBlurb": "Why apps get rejected, in plain language: the twelve reasons reviewers send apps back, what each rule protects, and what it means for yours before you submit.",
+ "cardTags": [
+  "Free lesson",
+  "Worksheet",
+  "Prompt",
+  "Deeper in Pro"
+ ],
+ "title": "Getting your app approved on the App Store",
+ "desc": "What Apple actually reviews, the twelve reasons apps come back, and why each rule exists, so you submit once.",
+ "h1": "Getting your app approved on the App Store.",
+ "em": "What they check, and why.",
+ "lead": "Most rejections are not about your idea. They are about a dozen predictable things a reviewer checks in the first ten minutes. This guide explains what those things are and why Apple cares, so you understand the review before you are in it. The Pro pack has the reviewer's checklist. The agent runs the audit on your app.",
+ "read": 8,
+ "kit": "Twelve reasons and a prompt",
+ "tiles": [
+  [
+   "The lesson",
+   "What a reviewer is actually looking at, and the twelve rejections that account for most of the pain."
+  ],
+  [
+   "The prompt",
+   "A readiness read on your app from a plain description."
+  ],
+  [
+   "The auditor",
+   "The Pro pack has the full checklist. The App Review Auditor agent runs it against your build."
+  ]
+ ],
+ "sections": [
+  {
+   "nav": "What review is",
+   "label": "What review is",
+   "h2": "A person, a checklist, and about ten minutes.",
+   "body": [
+    [
+     "p",
+     "App Review is a human with your build on a phone and an iPad, your screenshots, your description, and a set of published guidelines. They are not judging whether the app is a good business. They are checking whether it does what it says, whether it is safe for the person holding the phone, and whether Apple's own rules about money, accounts, and platform are respected. Most rejections happen because a builder never looked at the app the way a reviewer does."
+    ],
+    [
+     "said",
+     "The frame",
+     "Apple is protecting three parties: the user (safety, privacy, honesty), the platform (payments, sign-in, native quality), and itself (metadata that tells the truth). Every rule below belongs to one of the three."
+    ]
+   ]
+  },
+  {
+   "nav": "Money and accounts",
+   "label": "Money and accounts",
+   "h2": "The rules that get apps sent back fastest.",
+   "body": [
+    [
+     "steps",
+     [
+      [
+       "Payments inside the app.",
+       "If a person buys something digital that they use inside the app (a subscription, a feature, credits, content), Apple expects its in-app purchase system, not a card form or a Stripe checkout inside the app. Physical goods and services used outside the app are different. Why: Apple treats digital purchases on its platform as its commerce, and the review is strict about it. Knowing which side of that line your product sits on is the single most important question before you build a checkout."
+      ],
+      [
+       "Sign in with Apple.",
+       "If your app offers a third-party sign-in (Google, Facebook, and the like), Apple expects an equivalent option that limits data collection, and Sign in with Apple is the accepted one. Why: the user should be able to create an account without handing a third company their identity."
+      ],
+      [
+       "Account deletion.",
+       "If your app lets someone create an account, it must let them delete it from inside the app, not by emailing support. Why: the person who made the data should be able to remove it without a negotiation."
+      ],
+      [
+       "Restore purchases.",
+       "If you sell anything that persists (a non-consumable or a subscription), the app needs a working way to restore it on a new device. Why: a person who paid should never be asked to pay again because they changed phones."
+      ]
+     ]
+    ]
+   ]
+  },
+  {
+   "nav": "Completeness",
+   "label": "Completeness",
+   "h2": "It has to work, all of it, on the day you submit.",
+   "body": [
+    [
+     "steps",
+     [
+      [
+       "Demo login that works.",
+       "If the app needs an account, review needs one that is live, with the credentials in the review notes. A broken demo login is an instant return. Why: the reviewer cannot approve what they cannot open."
+      ],
+      [
+       "No coming soon.",
+       "Placeholder screens, features marked coming soon, and empty states that lead nowhere are treated as an unfinished app. Why: the store lists finished products; the review is not a beta program."
+      ],
+      [
+       "No broken links.",
+       "Every link in the app and the listing (privacy policy, support, terms) has to resolve. Why: those links are the user's recourse, and a dead support link means there is none."
+      ],
+      [
+       "Not just a website.",
+       "An app that is a web page inside a frame with nothing native about it is judged on minimum functionality. Why: the store is for apps; the browser already exists."
+      ],
+      [
+       "iPad is not optional.",
+       "If your app installs on iPad, the reviewer opens it on iPad. Stretched layouts, cut-off buttons, and portrait-only screens that break in landscape are all returns. Why: it is the same app in the same store; it has to work on both."
+      ]
+     ]
+    ]
+   ]
+  },
+  {
+   "nav": "Honesty",
+   "label": "Honesty and safety",
+   "h2": "The listing has to tell the truth, and users need a way to speak.",
+   "body": [
+    [
+     "steps",
+     [
+      [
+       "Screenshots that match the app.",
+       "Outdated screenshots, features that no longer exist, or screens from a different version are metadata problems. Why: the screenshot is the promise; the app is the product; they have to be the same thing."
+      ],
+      [
+       "Paid features shown without saying so.",
+       "If a screenshot shows a feature that requires a purchase, the listing needs to make that clear. Why: a person should know what is free before they download."
+      ],
+      [
+       "A way to report.",
+       "If users can post, message, or share anything, the app needs a way to report content, block a person, and reach you. Why: the person on the receiving end of abuse needs a button, not a search for your email."
+      ]
+     ]
+    ],
+    [
+     "linkedin",
+     "Most App Store rejections have nothing to do with the idea. A card form where in-app purchase should be. No account deletion. A demo login that does not work. A coming soon screen. Fix the twelve boring things and review becomes a formality."
+    ]
+   ]
+  },
+  {
+   "nav": "Before you submit",
+   "label": "Before you submit",
+   "h2": "Look at it the way the reviewer will.",
+   "body": [
+    [
+     "checks",
+     [
+      "Know which side of the payment line your product is on before you write a checkout.",
+      "Every account feature has a delete path inside the app.",
+      "A demo account exists, works today, and is in the review notes.",
+      "Nothing says coming soon. Every link resolves.",
+      "Open it on an iPad and use every screen.",
+      "Screenshots are from this build, and paid features are marked as paid.",
+      "If users can post or message, there is report, block, and contact."
+     ]
+    ],
+    [
+     "p",
+     "This guide is the what and the why. The Pro pack is the reviewer's full checklist with the guideline references, the review-notes template, and the response templates for when something comes back. The App Review Auditor is the agent that opens your project, checks every item against your actual screens and code, and fixes what you tell it to fix."
+    ]
+   ]
+  }
+ ],
+ "ws": [
+  "Your app",
+  "Describe it honestly.",
+  "Four questions the reviewer will answer about you."
+ ],
+ "fields": [
+  [
+   "What people buy",
+   "Digital, physical, or nothing? Where does the money move?"
+  ],
+  [
+   "Accounts",
+   "Can people create one? Delete one? Sign in with a third party?"
+  ],
+  [
+   "What is unfinished",
+   "Any coming soon, placeholders, dead links, screens that do not work on iPad?"
+  ],
+  [
+   "User content",
+   "Can people post, message, or share? What happens when someone abuses it?"
+  ]
+ ],
+ "pr": [
+  "The prompt",
+  "A readiness read from a plain description.",
+  "Paste a plain description of your app. It tells you which of the twelve rules apply, which ones you are likely to trip, and what to check before you spend time on submission."
+ ],
+ "prompt": "I am preparing an iOS app for App Store review. From my description, tell me which of these twelve areas apply to my app and, for each that applies, whether I am likely to pass or fail, and the one question I should answer before submitting. Do not tell me how to build anything. Explain what the rule is and why Apple has it.\n\nAreas: payments inside the app (digital versus physical), Sign in with Apple when third-party sign-in exists, account deletion inside the app, restore purchases, demo login for review, coming soon or placeholder screens, broken links, website-in-a-frame apps, iPad layout, screenshots matching the current build, paid features shown in screenshots without disclosure, report and block for user content.\n\nEnd with: the three areas most likely to send my app back, in order.\n\nMY APP:\n[what it does, how people pay, whether there are accounts, what users can post, which devices it runs on, what is unfinished]",
+ "pro_h3": "The App Store approval pack",
+ "pro_items": [
+  "The reviewer's checklist: forty items with the guideline each one comes from",
+  "The payment decision tree: in-app purchase or not, with the edge cases",
+  "The review-notes template and the demo-account rules",
+  "The screenshot and metadata rules, with a disclosure line for paid features",
+  "Rejection response templates and the resubmission plan",
+  "A readiness prompt that scores your app before you submit"
+ ],
+ "offer": [
+  "Work with Front Page Intelligence",
+  "Want it built, shipped, and approved for you?",
+  "Custom builds, integrations, and app submissions are Front Page Intelligence engagements: scoped in writing, built with the boring layer, and handed over with the keys. By application.",
+  "/contact?topic=intelligence",
+  "Ask about a custom build"
+ ]
+}

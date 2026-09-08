@@ -21,8 +21,8 @@ export type ProPack = {
 
 const ROOT = process.env.CONTENT_DIR || path.join(process.cwd(), 'content')
 export const PRIVATE_DIR = process.env.PRIVATE_DIR || path.join(process.cwd(), 'private', 'pro')
-export const LIBRARY_PRICE = 69
-export const LIBRARY_COMPARE_AT = 192
+export const LIBRARY_PRICE = 79
+export const LIBRARY_COMPARE_AT = 228
 
 function parse(raw: string): Record<string, string | string[]> {
   const m = raw.match(/^---\n([\s\S]*?)\n---\n/)
@@ -41,7 +41,7 @@ function parse(raw: string): Record<string, string | string[]> {
   return data
 }
 
-const ORDER = ['sales-debrief', 'pitch-framework', 'objections', 'brain-file', 'prompt-with-skills', 'what-is-github', 'custom-skill', 'loop-engineering', 'ai-drift', 'sales-terms', 'identity-selling', 'closer-standards', 'marketing-math', 'business-math', 'five-seats', 'job-post-second-week']
+const ORDER = ['sales-debrief', 'pitch-framework', 'objections', 'brain-file', 'prompt-with-skills', 'what-is-github', 'custom-skill', 'loop-engineering', 'ai-drift', 'sales-terms', 'identity-selling', 'closer-standards', 'marketing-math', 'business-math', 'five-seats', 'job-post-second-week', 'app-store-approval', 'google-play-approval', 'build-your-own-app']
 
 export function getProPacks(): ProPack[] {
   const dir = path.join(ROOT, 'pro')
@@ -83,7 +83,7 @@ export function getLibraryPack(): ProPack {
   }
 }
 
-const AGENT_ORDER = ['strategic-cofounder', 'meta-media-buyer', 'google-media-buyer', 'email-marketing-strategist', 'creative-director']
+const AGENT_ORDER = ['strategic-cofounder', 'meta-media-buyer', 'google-media-buyer', 'email-marketing-strategist', 'creative-director', 'app-review-auditor', 'build-foreman']
 
 /** AI agents: one folder each under content/agents, described by its meta.md. */
 export function getAgents(): ProPack[] {
@@ -121,7 +121,7 @@ export function getAgentBundle(): ProPack {
     short: (d.short as string) || 'All five agents',
     tagline: (d.tagline as string) || `All ${agents.length} agents in one download.`,
     includes: agents.map((a) => a.title),
-    price: Number(d.price) || 78,
+    price: Number(d.price) || 98,
     compareAt: d.compare_at ? Number(d.compare_at) : undefined,
     file: 'agent-team.zip',
     kind: 'bundle' as const,

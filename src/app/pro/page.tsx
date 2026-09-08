@@ -19,7 +19,7 @@ export default async function ProPage({ searchParams }: { searchParams: Promise<
         <div className="wrap">
           <span className="eyebrow">Operators Academy Pro</span>
           <h1>Agents that do the job. <em>Packs that build the system.</em></h1>
-          <p className="lead">Five AI agents that run in your own Claude Code: a co-founder, two media buyers, an email strategist, and a creative director, each with memory that compounds. And a Pro pack behind every free guide, across sales, AI, recruitment, leadership, and operations: paste one prompt, fill in the blanks, and it builds the whole system. One payment each. Yours forever.</p>
+          <p className="lead">Seven AI agents that run in your own Claude Code: a co-founder, two media buyers, an email strategist, a creative director, an app review auditor, and a build foreman, each with memory that compounds. And a Pro pack behind every free guide, across sales, AI, recruitment, leadership, and operations: paste one prompt, fill in the blanks, and it builds the whole system. One payment each. Yours forever.</p>
           {unavailable && <p className="small" style={{ marginTop: 14 }}>Checkout is not open yet. Leave your details on the contact page and you will get the link first.</p>}
           <div className="button-row"><a className="button" href="#agents">The agents</a><a className="button secondary" href="#packs">The Pro packs</a></div>
         </div>
@@ -39,12 +39,12 @@ export default async function ProPage({ searchParams }: { searchParams: Promise<
             <div>
               <span className="chip">The whole team</span>
               <h2>{team.title}</h2>
-              <p>{team.tagline} The co-founder reads the other four agents' reports and hands you one brief.</p>
+              <p>{team.tagline} The co-founder reads the other agents' reports and hands you one brief.</p>
             </div>
             <div className="pro-buy dark">
               <Price price={team.price} compareAt={team.compareAt} />
               <span className="small">against ${agents.reduce((s, a) => s + a.price, 0)} one at a time</span>
-              <BuyButton sku="agents-bundle" price={team.price} label={`Get all five agents, $${team.price}`} />
+              <BuyButton sku="agents-bundle" price={team.price} label={`Get all seven agents, $${team.price}`} />
             </div>
           </div>
 

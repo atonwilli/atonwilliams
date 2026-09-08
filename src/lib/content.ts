@@ -22,12 +22,12 @@ export const PILLARS: { key: Pillar; label: string; blurb: string }[] = [
 ]
 export const SUBS: Record<string, string> = {
   coaching: 'Coaching', scripts: 'Scripts', objections: 'Objections by medium, industry, and niche', frameworks: 'Frameworks', closing: 'Closing', terms: 'Terms and quizzes',
-  'any-model': 'Works with any model', claude: 'Claude', 'claude-code': 'Claude Code', chatgpt: 'ChatGPT',
+  'any-model': 'Works with any model', claude: 'Claude', 'claude-code': 'Claude Code', chatgpt: 'ChatGPT', building: 'Building and shipping apps',
   hiring: 'Hiring', team: 'The team', numbers: 'The numbers', systems: 'Systems',
 }
 export const SUB_ORDER: Record<Pillar, string[]> = {
   sales: ['coaching', 'scripts', 'objections', 'frameworks', 'closing', 'terms'],
-  ai: ['any-model', 'claude', 'claude-code', 'chatgpt'],
+  ai: ['any-model', 'claude', 'claude-code', 'chatgpt', 'building'],
   recruitment: ['hiring'],
   leadership: ['team'],
   operations: ['numbers', 'systems'],
