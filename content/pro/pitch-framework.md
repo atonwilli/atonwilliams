@@ -4,6 +4,7 @@ guide: pitch-framework
 price: 29
 tagline: "Every beat in three mediums with forty-five lines, three worked pitches, a seven-day drill plan, a scorecard, and four prompts."
 includes:
+  - "The build prompt: paste it into Claude, fill in the blanks, and it builds the whole system for your business"
   - "The five beats explained in depth for retail and events, phone, and meetings"
   - "Forty-five lines: three variants of every beat in every medium"
   - "Three complete worked pitches for generic products you can swap for your own"
@@ -17,6 +18,41 @@ includes:
 Open, story, show, ask, lock. The free guide gave you the shape and one line per beat. This pack gives you enough lines, examples, and drills to own the shape in any medium, and to teach it to a room.
 
 A note before the lines. Every example is generic on purpose. "XYZ Company" and "the plan" stand in for your name and your product. Use the structure, keep your own words, and only promise what your product actually does.
+
+## Start here: the build prompt
+
+Paste everything below into Claude. Fill in CONTEXT. It asks for what is missing, then builds your pitch: every beat in your medium, three variants per beat, worked conversations for your product, the ready signals, the asks, the seven-day drill plan, and the scorecard, all in your words.
+
+Everything after this section explains the method behind what it builds, so you can judge the output and coach with it. You do not need to read it first.
+
+```
+You are building a complete pitch for my team using a five-beat framework. Read CONTEXT, then THE METHOD, then follow BUILD. Before building, ask me up to five questions about anything blank or unclear in CONTEXT. Only promise what the product facts support.
+
+CONTEXT
+- What we sell, in plain words: [ ]
+- Verified product facts (what it does, what it costs, what is included, what is NOT included): [ ]
+- Claims we can make: [ ]   Claims we never make: [ ]
+- The customer problems it actually solves, in the customer's words if possible: [ ]
+- Medium (retail or events, phone, meetings, or a mix): [ ]
+- Who the customer is and what they are afraid of: [ ]
+- Our name and how reps introduce themselves: [ ]
+- Words we use: [ ]   Words we never use: [ ]
+
+THE METHOD
+Five beats in order. OPEN: earn the next fifteen seconds; under ten words, ends in a question, never a statement about us. STORY: why we are here and why it matters to them, two sentences, ends in a discovery question (what are they using now, what do they wish worked better, what happens when it fails). SHOW: only after one real detail; show exactly one thing tied to what they said, then check "does that address what you described?" ASK: a choice between two real options, never yes or no; use a tie-down first (a small question that gets a small yes). LOCK: say what happens next, when, and who to call, so the yes survives the walk to the car. Retail opens are physical first (face them, then speak). Phone opens are name, company, one reason, one permission question in under eight seconds. Meeting opens are a question about them before any slide. Ready signals: a second price question, timing questions, "what happens if" about the future, repeating our line back, bringing in the decider, shrinking objections, asking what they would need to do, leaning in. The three asks: alternate choice, assumptive next step (only after three yeses), direct (only after three yeses).
+
+BUILD
+1. THE PITCH: all five beats for our medium, one primary line each, in our words, using our product facts. If we use more than one medium, build each.
+2. FORTY-FIVE LINES: three variants per beat per medium.
+3. THREE WORKED CONVERSATIONS with our product: an easy customer, a realistic one, a hard one, each running all five beats with the customer's replies.
+4. THE READY SIGNALS as they would sound with our customers, and the three asks in our words.
+5. A SEVEN-DAY DRILL PLAN, fifteen minutes a day in pairs, one beat per day, full runs on day seven.
+6. THE SCORECARD, ten points, one line per item.
+7. TWO PROMPTS I can paste later with our facts inside: a pitch critic that grades a transcript, and an interruption trainer that plays our customer.
+8. A ONE-PAGE VERSION for the wall: the five beats, one line each.
+
+Rules: plain language, no jargon, no hype, no dashes. Every claim must trace to the product facts. Mark anything you had to assume as [CHECK].
+```
 
 ## 1. The five beats, in depth
 

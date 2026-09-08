@@ -1,9 +1,10 @@
 ---
 title: "Sales Terms, Pro"
 guide: sales-terms
-price: 29
+price: 19
 tagline: "Forty terms every rep and leader should be able to explain, each with the mistake, the drill, and the morning-meeting line, plus the onboarding week, ten meeting cards, and the forty-question quiz."
 includes:
+  - "The build prompt: paste it into Claude, fill in the blanks, and it builds the whole system for your business"
   - "Forty terms in four groups: money, conversation, floor, leadership, each with definition, the mistake, the drill, and a one-line for the morning meeting"
   - "The five-day onboarding week built on the terms"
   - "Ten morning meeting cards: three minutes each"
@@ -14,6 +15,38 @@ includes:
 # Sales Terms, Pro
 
 New reps hear these words in week one and nod. Leaders use them without checking that everyone means the same thing. Forty terms, each in four parts: what it is, the mistake new reps make with it, the drill, and the one line you can say in a morning meeting. Then the week that teaches them, the cards that keep them alive, and the quiz that proves it.
+
+## Start here: the build prompt
+
+Paste everything below into Claude. Fill in CONTEXT. It rewrites all forty terms with examples from your product and your numbers, builds the five-day onboarding week, ten morning meeting cards, and a forty-question quiz with the answer key, in your words.
+
+Everything after this section explains the method behind what it builds, so you can judge the output and coach with it. You do not need to read it first.
+
+```
+You are building a sales vocabulary training kit for my team. Read CONTEXT, then THE TERMS, then follow BUILD. Ask me up to five questions first if CONTEXT is thin. Use only my numbers; where I did not give one, use a clearly marked example figure.
+
+CONTEXT
+- What we sell, price, and how reps are paid (commission structure, any clawback window, any override): [ ]
+- Medium and what a shift or block looks like: [ ]
+- Our real numbers if I have them (rough CAC, average customer lifetime, churn, close rate, show rate): [ ]
+- What counts as a set, a conversation, and activity for us: [ ]
+- Our ramp period and promotion path, if written: [ ]
+- Our voice rules and banned words: [ ]
+- Where new reps are trained and how long the first week is: [ ]
+
+THE TERMS
+Forty terms in four groups. Money: CAC, LTV, LTV to CAC, gross versus net, clawback, churn, margin, payback period, retention, pipeline. Conversation: CTA, discovery, tie-down, alternate close, assumptive close, trial close, reflex objection, reason objection, rebuttal, the last few feet, lock, value rebuild, talk ratio, pattern interrupt, qualifying. Floor: set, show rate, close rate, activity, shift, territory or venue, ramp, debrief, role-play, scoreboard. Leadership: leading versus lagging indicators, override, promotion path, gate, standard. Each term is taught in four parts: what it is, the mistake new reps make with it, the drill, and a one-line for the morning meeting.
+
+BUILD
+1. THE FORTY TERMS, each in four parts, with our product, our pay structure, and our numbers in the examples.
+2. THE ONBOARDING WEEK: five days, fifteen minutes a day, which terms each day, the exercise, and the pass mark for the quiz on day five.
+3. TEN MORNING MEETING CARDS: term, a thirty-second story from our kind of floor, the one-line, and the explain-it-back question.
+4. THE QUIZ: forty situational questions set in our business, one per term, with a one-sentence model answer each and a passing score.
+5. TWO PROMPTS I can paste later: a quiz generator loaded with our facts, and an explain-it-back grader.
+6. A ONE-PAGE GLOSSARY for the wall: forty terms, one line each.
+
+Rules: plain language, no jargon beyond the terms themselves, no dashes, no earnings claims, every number either mine or marked as an example.
+```
 
 ## 1. Money terms
 

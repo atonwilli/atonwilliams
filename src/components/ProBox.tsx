@@ -9,14 +9,14 @@ export function ProBox({ guide, num }: { guide: string; num: number }) {
   return (
     <section className="lesson" id="pro">
       <span className="num">{num < 99 && <b>{num}</b>}The Pro pack</span>
-      <h2>The free version gets you started. The Pro pack finishes the job.</h2>
-      <p>{pack.tagline}</p>
+      <h2>One prompt. Paste it into Claude. It builds the whole thing for your business.</h2>
+      <p>The Pro pack is a build prompt with blanks for your context: your product, your medium, your team. Fill them in, answer its questions, and it produces the complete system in your words. The PDF explains the method so you can judge the output. {pack.tagline}</p>
       <div className="pro-box">
         <div>
           <span className="chip">{pack.title}</span>
           <ul>{pack.includes.map((x) => <li key={x}>{x}</li>)}</ul>
           <p className="small" style={{ color: 'rgba(255,250,240,.7)', margin: '14px 0 0' }}>
-            Delivered as a zip: the PDF plus every prompt and template as plain text. One payment, yours to keep.
+            Delivered as a zip: the build prompt as a text file, the PDF, and every prompt and template as plain text. One payment, yours to keep.
             {!checkoutEnabled() && ' Checkout is opening shortly; leave your details and you will get the link first.'}
           </p>
         </div>

@@ -1,9 +1,10 @@
 ---
 title: "Prevent AI Drift, Pro"
 guide: ai-drift
-price: 29
+price: 19
 tagline: "The five kinds of drift and how each shows up, the guardrail file, the weekly audit, a regression set you can run in ten minutes, reset rules, and three prompts."
 includes:
+  - "The build prompt: paste it into Claude, fill in the blanks, and it builds the whole system for your business"
   - "The five drift types: voice, facts, scope, format, decisions, with the early warning for each"
   - "The guardrail file template that sits next to the brain file"
   - "The weekly ten-minute drift audit checklist"
@@ -15,6 +16,38 @@ includes:
 # Prevent AI Drift, Pro
 
 Drift is what happens when the AI's output slowly stops matching what you set up. It is rarely one bad answer. It is fifty answers, each one percent off, until a customer email sounds like nobody who works here. This pack names the kinds of drift, gives you the file that stops most of it, and a ten-minute weekly routine that catches the rest.
+
+## Start here: the build prompt
+
+Paste everything below into Claude. Fill in CONTEXT, or paste your brain file where marked. It builds your guardrail file, your weekly audit, a regression set of ten tasks with expected answers for your business, and the reset rules, then runs the first audit on a piece of your recent output.
+
+Everything after this section explains the method behind what it builds, so you can judge the output and coach with it. You do not need to read it first.
+
+```
+You are building a drift-prevention system for the AI work in my business. Read CONTEXT, then THE METHOD, then follow BUILD. Ask me up to five questions first if CONTEXT is thin.
+
+CONTEXT
+- My brain file (paste it, or describe our voice rules, banned words, offers and prices, and private matters): [ ]
+- Our decisions log, or the five decisions people keep reopening: [ ]
+- The kinds of output we produce most (customer emails, posts, reports, SOPs, code, other): [ ]
+- Three recent outputs I was happy with (paste or describe): [ ]
+- Three recent outputs that felt off, and what was off: [ ]
+- The tools and models we use: [ ]
+- How long our typical AI session runs and how many pieces of work it produces: [ ]
+
+THE METHOD
+Five kinds of drift: VOICE (longer sentences, adjectives, banned words return), FACTS (numbers rounded, then estimated, then invented; unverified capabilities), SCOPE ("I also" in a report; a post becomes a campaign), FORMAT (a skill's output shape changes), DECISIONS (a settled decision gets reopened because the session forgot it). A GUARDRAILS.md sits next to the brain file with checks to run before producing and before returning anything. A weekly ten-minute audit pulls five outputs, runs a drift detector on each, and any break that appears twice becomes a guardrail line. A regression set is ten small tasks with a known expected shape, run whenever the tool, model, or brain file changes, compared against a saved baseline. Reset a session after ten pieces of work, two failed regression tasks, one self-contradiction, or the same correction twice; carry over only a 150-word state summary.
+
+BUILD
+1. GUARDRAILS.md for my business, with our actual banned words, our offers and prices as the fact source, our private matters, and our reopened decisions.
+2. THE WEEKLY AUDIT checklist, ten minutes, with the exact steps and where to record results.
+3. THE REGRESSION SET: ten tasks for our kinds of output, each with the expected shape and the specific facts the answer must contain. Then produce the BASELINE by answering all ten yourself using only CONTEXT.
+4. RESET RULES and the state-summary template.
+5. THREE PROMPTS with our rules inside them: a drift detector, a style diff against our approved samples, and a fact check against our offers.
+6. FIRST AUDIT: run the drift detector on the three outputs that felt off, name the drift type for each, and give the corrected version.
+
+Rules: plain language, no dashes, nothing invented about my business beyond CONTEXT (mark assumptions [CHECK]).
+```
 
 ## 1. The five kinds of drift
 

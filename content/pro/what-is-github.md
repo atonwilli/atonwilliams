@@ -1,9 +1,10 @@
 ---
 title: "GitHub for Operators, Pro"
 guide: what-is-github
-price: 29
+price: 19
 tagline: "The setup walkthrough, the daily cheat sheet, commit and PR conventions, the folder structure for running a business (not just code) on GitHub, recovery recipes, and three prompts."
 includes:
+  - "The build prompt: paste it into Claude, fill in the blanks, and it builds the whole system for your business"
   - "Setup in twenty minutes: account, first repository, desktop app or command line"
   - "The twelve-command daily cheat sheet with what each one actually does"
   - "Commit message convention, branch naming, and a pull request template"
@@ -15,6 +16,38 @@ includes:
 # GitHub for Operators, Pro
 
 GitHub is a place where a project's files live with a full history of every change, who made it, and why. Software teams use it for code. Operators can use it for everything that is text: SOPs, the brain file, content, contracts in draft, the weekly report. Once it is there, an AI can read it, propose changes, and you approve them before they land. This pack gets you set up and productive without learning more than you need.
+
+## Start here: the build prompt
+
+Paste everything below into Claude. Fill in CONTEXT. It walks you through setup for your exact situation, builds your repository structure, writes your README, PR template, and conventions, and gives you a cheat sheet with only the commands you will use.
+
+Everything after this section explains the method behind what it builds, so you can judge the output and coach with it. You do not need to read it first.
+
+```
+You are setting up GitHub for a small business that will use it for text, not just code: SOPs, a brain file, content, reports, and AI-proposed changes reviewed by a human. Read CONTEXT, then follow BUILD. Ask me up to five questions first if anything is unclear. Assume I am not a developer unless CONTEXT says otherwise.
+
+CONTEXT
+- My comfort with a terminal (none, some, comfortable): [ ]
+- Computer (Mac or Windows): [ ]
+- Do I already have a GitHub account and any repositories: [ ]
+- What will live in the repository (brain file, SOPs, content, reports, other): [ ]
+- Who else needs access and what they should be able to do: [ ]
+- The AI tools that will read or write these files: [ ]
+- Does a website read from this repository, or will it: [ ]
+- How often content or documents change: [ ]
+
+BUILD
+1. SETUP: numbered steps for my computer and comfort level to get from nothing to a private repository with the first file committed and pushed, including two-factor authentication. If I said "none" for terminal, use GitHub Desktop only.
+2. THE STRUCTURE: the folder layout for what will live here, with a one-line purpose per folder and file naming rules (date-first).
+3. README.md for the repository, written for my team.
+4. CONVENTIONS: commit message rule, branch naming, and a pull request template saved at .github/pull_request_template.md.
+5. THE WEEKLY FLOW: how a change goes from an AI draft on a branch, to a pull request, to my review on my phone, to a merge, in numbered steps.
+6. THE CHEAT SHEET: only the commands (or Desktop buttons) I will actually use, each with one plain sentence on what it does.
+7. RECOVERY: the five situations most likely to scare me (undo a change, restore an old version, find who changed a line, set work aside, "it is broken and I do not know why") with the exact steps for each.
+8. THREE PROMPTS I can paste later: explain this change to me plainly, write this pull request description, and help me recover from this git state.
+
+Rules: plain language, no jargon without a one-line definition, no dashes. If a step could lose work, say so before the step and give the safer alternative.
+```
 
 ## 1. Setup in twenty minutes
 

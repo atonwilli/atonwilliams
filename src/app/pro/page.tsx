@@ -14,8 +14,8 @@ export default async function ProPage({ searchParams }: { searchParams: Promise<
       <section className="band">
         <div className="wrap">
           <span className="eyebrow">Operators Academy Pro</span>
-          <h1>The free guide teaches it. <em>The Pro pack runs it.</em></h1>
-          <p className="lead">Every free guide has a Pro pack behind it: the full SOP, the templates, the drills, and every prompt written out. Buy one, or take the whole library.</p>
+          <h1>Paste one prompt. <em>It builds the system.</em></h1>
+          <p className="lead">Every Pro pack is a build prompt with blanks for your business. Paste it into Claude, fill in the blanks, answer its questions, and it produces the whole system in your words: the SOP, the templates, the drills, the prompts. The PDF explains the method behind it. Buy one, or take the whole library.</p>
           {unavailable && <p className="small" style={{ marginTop: 14 }}>Checkout is not open yet. Leave your details on the contact page and you will get the link first.</p>}
         </div>
       </section>
@@ -26,7 +26,7 @@ export default async function ProPage({ searchParams }: { searchParams: Promise<
             <div>
               <span className="chip">Best value</span>
               <h2>{lib.title}</h2>
-              <p>{lib.tagline} That is ten SOPs, more than seventy prompts and templates, and eighty pages you can hand to a leader on Monday.</p>
+              <p>{lib.tagline} Ten build prompts, ten PDFs, more than seventy prompts and templates as plain text.</p>
             </div>
             <div className="pro-buy dark">
               <strong>${lib.price}</strong>
@@ -58,7 +58,7 @@ export default async function ProPage({ searchParams }: { searchParams: Promise<
             <ul>
               <li>Pay once through Stripe. Card, Apple Pay, or Google Pay. No account to create.</li>
               <li>The download opens the moment payment clears, and the link is on your receipt so you can come back for it.</li>
-              <li>Each pack is a zip: the PDF and every prompt and template as plain text, ready to paste into any AI tool.</li>
+              <li>Each pack is a zip: the build prompt as a text file, the PDF, and every prompt and template as plain text, ready to paste into Claude or any AI tool.</li>
               <li>Licensed to you for use inside your own business. Not for resale or redistribution.</li>
               <li>If a pack is not what you expected, reply to your receipt within fourteen days and you get a refund. No form, no argument.</li>
             </ul>

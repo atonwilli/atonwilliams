@@ -62,7 +62,7 @@ export function getLibraryPack(): ProPack {
   return {
     sku: 'library',
     title: 'The Operators Pro Library',
-    tagline: `All ${packs.length} Pro packs in one download: every SOP, template, drill, and prompt.`,
+    tagline: `All ${packs.length} Pro packs in one download: every build prompt, SOP, template, drill, and prompt.`,
     includes: packs.map((p) => p.title),
     price: LIBRARY_PRICE,
     file: 'operators-pro-library.zip',

@@ -4,6 +4,7 @@ guide: objections
 price: 29
 tagline: "Forty objections sorted by reflex and reason, the answer builder, twelve value-rebuild lines, when-to-stop rules, a drill schedule, and three prompts."
 includes:
+  - "The build prompt: paste it into Claude, fill in the blanks, and it builds the whole system for your business"
   - "Forty objections: the twenty from the free guide plus twenty more, each with the answer and medium notes"
   - "The reflex-or-reason diagnostic, with the five-second test"
   - "The three-line answer builder and twelve value-rebuild lines across cost, quality, and value"
@@ -15,6 +16,40 @@ includes:
 # Objections, Pro
 
 Half of what sounds like a no is a reflex. The other half is a reason. Reps lose because they answer both the same way. This pack gives you the diagnostic, forty objections with the answer for each, the lines to rebuild value, and the drills that make the difference automatic.
+
+## Start here: the build prompt
+
+Paste everything below into Claude. Fill in CONTEXT. It asks what is missing, then builds your objection bank: forty objections your customers actually raise, each sorted reflex or reason, with the answer, the rebuild line, the stop rules, the two-week drill schedule, and a sparring partner prompt loaded with your product.
+
+Everything after this section explains the method behind what it builds, so you can judge the output and coach with it. You do not need to read it first.
+
+```
+You are building a complete objection-handling system for my team. Read CONTEXT, then THE METHOD, then follow BUILD. Ask me up to five questions first about anything blank or unclear. Use only the product facts. Never disparage a competitor. Never recommend pressure.
+
+CONTEXT
+- What we sell and the verified product facts (does, costs, included, NOT included): [ ]
+- Claims we can make: [ ]   Claims we never make: [ ]
+- Medium (retail or events, phone, meetings, or a mix): [ ]
+- Who the customer is: [ ]
+- The ten objections we hear most, in the customer's words: [ ]
+- Competitors or alternatives customers mention: [ ]
+- Our commitment terms (contract, cancellation, refund), stated exactly: [ ]
+- Words we use: [ ]   Words we never use: [ ]
+
+THE METHOD
+The five-second test: is there a specific noun in the objection? No noun ("I am good," "not today") is a REFLEX and gets a three-word nod plus a question, never a fact. A noun ("we are under contract," "it failed last time") is a REASON and gets the three-line answer: validate ("I hear you"), normalize ("other people in your spot felt the same way"), pivot ("here is what we found for them"), then a value rebuild against the reason they named, on one of three angles: COST (dollars and time), QUALITY (how well it performs), VALUE (what is included they did not expect). Stop rules: a reason we cannot answer honestly ends the conversation; two clean nos means done; anyone on a fixed income, in hardship, or confused gets slowed down; if asked to stop or leave, we do it and log it; the rep never decides for the customer.
+
+BUILD
+1. THE DIAGNOSTIC in our words, with ten of our own objections classified as examples.
+2. THE BANK: forty objections our customers raise (start from the ten in CONTEXT, then the thirty most likely for our product and medium). For each: the line as a customer says it, REFLEX or REASON, the angle if reason, the answer in our words, one rebuild line from our facts, and a medium note.
+3. TWELVE REBUILD LINES for our product, four per angle.
+4. THE STOP RULES rewritten for our business, including our exact commitment terms.
+5. A TWO-WEEK DRILL SCHEDULE, fifteen minutes a day in pairs, using our bank.
+6. TWO PROMPTS I can paste later with our facts inside: a sparring partner that plays our customer, and an answer grader for transcripts.
+7. A ONE-PAGE CARD: the five-second test, the nod, the three lines, the three angles, the stop rules.
+
+Rules: plain language, no jargon, no dashes. At least five objections in the bank must be marked STOP with the reason. Mark any assumed fact as [CHECK].
+```
 
 ## 1. The five-second test
 

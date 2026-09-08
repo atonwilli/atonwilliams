@@ -1,9 +1,10 @@
 ---
 title: "Prompt With Skills, Pro"
 guide: prompt-with-skills
-price: 29
+price: 19
 tagline: "Ten complete, ready-to-use skills for operators, the skill-writing template, the index file, and the prompts that turn any repeated task into a skill."
 includes:
+  - "The build prompt: paste it into Claude, fill in the blanks, and it builds the whole system for your business"
   - "Ten finished skills: meeting notes to actions, weekly report, job post, SOP writer, sales email, LinkedIn post, customer reply, decision memo, content repurpose, objection drill"
   - "The skill file template and the folder layout that works in Claude Code, Claude Projects, and ChatGPT"
   - "The skill index file so the AI knows what it has"
@@ -14,6 +15,37 @@ includes:
 # Prompt With Skills, Pro
 
 A skill is a prompt you wrote once, carefully, that the AI can load by name. Instead of typing the same three paragraphs every Tuesday, you type "run weekly-report" and paste the numbers. This pack gives you ten skills that are finished and tested, the template for writing your own, and the file that ties them together.
+
+## Start here: the build prompt
+
+Paste everything below into Claude. Fill in CONTEXT with the tasks you repeat. It builds a working skills folder for your business: ten skill files written for your work, the index, the install steps for your tool, and a test run of each.
+
+Everything after this section explains the method behind what it builds, so you can judge the output and coach with it. You do not need to read it first.
+
+```
+You are building a skills library for my business: reusable prompt files I can run by name. Read CONTEXT, then THE SHAPE, then follow BUILD. Ask me up to five questions first if CONTEXT is thin.
+
+CONTEXT
+- What we do and who we serve, in two sentences: [ ]
+- The AI tool we use most (Claude Code, Claude Projects, ChatGPT, Cursor): [ ]
+- Ten tasks I or my team repeat every week (for example: meeting notes to actions, weekly report, job post, SOP from a walkthrough, sales follow-up email, social post, customer reply, decision memo, repurposing content, objection drill). List mine: [ ]
+- For each task, what the input usually is and what "done" looks like: [ ]
+- Our voice in five words, banned words, formatting rules: [ ]
+- Verified facts the skills may use (offers, prices, claims): [ ]
+
+THE SHAPE
+Every skill is one file under a page: NAME (lowercase, hyphens, a verb phrase), TRIGGER (when to use it), INPUT (exactly what to paste), OUTPUT (a format block, not a description), RULES (three to six, with at least one "never" and one "if X, stop and ask"), STEPS (numbered verbs), EXAMPLE (one input and its output). An INDEX.md lists every skill in one line each. The tool's instructions get one line: "Skills live in /skills. When I say run <name>, read /skills/<name>.md and follow it." A skill is done when it runs on three inputs (easy, realistic, broken) and holds its rules on all three.
+
+BUILD
+1. THE FOLDER: list the ten skill file names for my tasks.
+2. THE TEN SKILLS in full, one code block each, written for my business with my voice rules and facts inside their RULES.
+3. INDEX.md.
+4. INSTALL: the exact steps for my tool, including the one line to add to my instructions or brain file.
+5. TEST RUN: for the three skills I use most, run each on a realistic sample input you invent (marked as sample) and show the output, then note any rule that needs tightening.
+6. THE SKILL TEMPLATE and a ten-line checklist for writing the next one.
+
+Rules: plain language, no dashes, every skill under a page, nothing invented about my business beyond CONTEXT (mark assumptions [CHECK]).
+```
 
 ## 1. Folder layout
 

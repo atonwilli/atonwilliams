@@ -4,6 +4,7 @@ guide: loop-engineering
 price: 29
 tagline: "The full loop packet template, the four prompts in full (planner, worker, auditor, handoff), the report and slice queue templates, a twelve-slice example, cost controls, and the failure catalog."
 includes:
+  - "The build prompt: paste it into Claude, fill in the blanks, and it builds the whole system for your business"
   - "The complete loop packet: laws, definition of done, report format, deploy rules, slice queue"
   - "Four prompts in full: planner, worker kickoff, auditor, cross-model handoff"
   - "The report template and a twelve-slice example queue for a website build"
@@ -15,6 +16,44 @@ includes:
 # Loop Engineering, Pro
 
 A loop is how you get an AI to build something real over hours instead of minutes. One planner writes short briefs. One worker does one slice and reports honestly. You sit at the boundaries and decide what ships. The free guide gave the method. This pack is the operating kit: every file, every prompt, and the failure list learned from running loops on real projects.
+
+## Start here: the build prompt
+
+Paste everything below into Claude. Fill in CONTEXT with what you want built. It writes your entire loop packet (laws, definition of done, report format, deploy rules, and a slice queue for your project), then hands you the planner prompt and the worker prompt already pointed at your files, so you can start the loop immediately.
+
+Everything after this section explains the method behind what it builds, so you can judge the output and coach with it. You do not need to read it first.
+
+```
+You are setting up a build loop for my project and writing every file it needs. Read CONTEXT, then THE METHOD, then follow BUILD. Ask me up to five questions first about anything blank or unclear. Do not start building the project itself; build the loop that will build it.
+
+CONTEXT
+- What I want built, in five lines (what is real when it is done): [ ]
+- Who it is for and what they must be able to do with it: [ ]
+- Where the work lives (a folder, a repository, a tool): [ ]
+- What already exists that the loop must not touch: [ ]
+- Brand and voice rules that apply (or where the brain file is): [ ]
+- The strongest model I have access to, and the cheaper one: [ ]
+- My rough budget per day (money or hours): [ ]
+- Anything that must never ship without me approving it (money, access, customer-facing copy, data): [ ]
+- Three things that have gone wrong in past AI work with me: [ ]
+
+THE METHOD
+A loop has one planner (strongest model, writes briefs under 200 words, never builds) and one worker per pass (cheaper model, does one slice, reports honestly). A slice is the smallest thing that works end to end. Every report ends PASS or FAIL with one reason and a "verified by" line (ran, opened, or read back); "should work" is FAIL. Workers never change scope, never touch files outside the slice, never invent data (use [NEEDS REAL]). Two FAILs on one slice stops the run and escalates to the human. The human ships; the loop proposes. Files: LAWS.md (ten standing rules), DONE.md (definition of done for the project and for a slice), REPORT.md (the report format), DEPLOY.md (what needs human approval), QUEUE.md (slices in order with status), and a reports folder. The first slices produce nothing a customer sees: repository and folders, a blank shell that renders, tokens and base styles, then real content. Normal runs have a few FAILs; zero FAILs in twenty passes means the worker is grading itself generously.
+
+BUILD
+1. LAWS.md: ten rules, written for my project, including my three past failures as explicit laws.
+2. DONE.md: project done and slice done, observable and testable, from my five lines.
+3. REPORT.md: the exact report format including model and spend.
+4. DEPLOY.md: my approval rules from CONTEXT, with a named rollback for every deploy.
+5. QUEUE.md: twelve to twenty slices in order for my project, the first three producing nothing customer-facing, the last one being deploy with human review.
+6. THE PLANNER PROMPT, pointed at my files and my models, ready to paste into the strongest model.
+7. THE WORKER PROMPT, ready for the planner to send with each brief.
+8. THE AUDITOR PROMPT and THE HANDOFF PROMPT for switching models mid-run.
+9. COST RULES for my budget: ceiling per pass, when to split a slice, when to stop for the day.
+10. THE FIRST BRIEF: the planner's brief for slice one, so I can start the loop the moment I paste.
+
+Rules: plain language, no dashes, every file in its own code block with its file name as the title, nothing invented about my project beyond CONTEXT (mark assumptions [CHECK]).
+```
 
 ## 1. The loop packet
 

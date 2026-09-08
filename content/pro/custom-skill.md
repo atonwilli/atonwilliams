@@ -4,6 +4,7 @@ guide: custom-skill
 price: 29
 tagline: "The anatomy of a skill that holds up, five fully written operator skills, the testing rubric, versioning rules, and two prompts to draft and stress-test your own."
 includes:
+  - "The build prompt: paste it into Claude, fill in the blanks, and it builds the whole system for your business"
   - "The seven-part anatomy of a skill: name, trigger, input, output, steps, guardrails, examples"
   - "Five complete skills: interview scorecard, weekly numbers, onboarding checklist builder, incident write-up, pricing page audit"
   - "The testing rubric and the three-input rule"
@@ -14,6 +15,39 @@ includes:
 # Build a Custom Skill, Pro
 
 The free guide showed what a skill is and how to write a first one. This pack is for the skills you will actually run every week: the ones with judgment in them. It gives you the anatomy that keeps a skill reliable, five finished examples with that anatomy, and the testing habit that separates a skill from a prompt you got lucky with once.
+
+## Start here: the build prompt
+
+Paste everything below into Claude. Fill in CONTEXT with the task you want turned into a skill. It drafts the skill with all seven parts, tests it on three inputs, tries to break it, fixes it, and hands you the final file with a version line.
+
+Everything after this section explains the method behind what it builds, so you can judge the output and coach with it. You do not need to read it first.
+
+```
+You are building one custom skill for my business and proving it works. Read CONTEXT, then THE ANATOMY, then follow BUILD. Ask me up to five questions first if the task is unclear.
+
+CONTEXT
+- The task, in one sentence: [ ]
+- Who runs it and when (the trigger): [ ]
+- What they have in hand when they start (the input): [ ]
+- What a great result looks like, with a real past example if I have one: [ ]
+- What must never happen (invented numbers, wrong tone, scope creep, sharing something private): [ ]
+- Our voice rules and banned words: [ ]
+- Verified facts the skill may use: [ ]
+- The tool it will run in: [ ]
+
+THE ANATOMY
+Seven parts in order: NAME (lowercase, hyphens, verb phrase), VERSION line with a date, TRIGGER (one line), INPUT (an exact list), OUTPUT (a format block), STEPS (numbered verbs, one action each), GUARDRAILS (at least one "never" and one "if X, stop and ask"), EXAMPLE (one input and its expected output). A skill is done only when it has been run on three inputs (easy, realistic, broken) and every guardrail held, especially on the broken one. Changing the OUTPUT format bumps the major version.
+
+BUILD
+1. DRAFT the skill in full, under 300 words, with all seven parts, in one code block.
+2. THREE TEST INPUTS: easy, realistic, broken (missing fields, a contradiction, something a guardrail should catch). Invent them, marked as samples, based on CONTEXT.
+3. RUN the skill on all three and show the outputs.
+4. RED-TEAM: list five ways a model could still get this wrong, and rewrite the STEP or GUARDRAIL that prevents each.
+5. FINAL: the improved skill in full, version 1.0 with today's date, in one code block, plus a one-line entry for my skills INDEX.md.
+6. INSTALL: where the file goes in my tool and the one line to add so I can run it by name.
+
+Rules: plain language, no dashes, the skill stays under a page, nothing invented about my business beyond CONTEXT.
+```
 
 ## 1. The seven parts
 

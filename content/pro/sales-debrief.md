@@ -4,6 +4,7 @@ guide: sales-debrief
 price: 29
 tagline: "The full debrief system: the SOP, the log, fifteen scripts by medium, four prompts, and a thirty-day rollout."
 includes:
+  - "The build prompt: paste it into Claude, fill in the blanks, and it builds the whole system for your business"
   - "The ten-minute debrief SOP, step by step with timing"
   - "Two-line log template and the leader's weekly review sheet"
   - "Fifteen debrief scripts: five each for retail and events, phone, and meetings"
@@ -17,6 +18,42 @@ includes:
 The free guide taught the method: one conversation, one skill, one drill. This pack is everything needed to run it across a floor every day without it turning into a lecture, a pep talk, or a thing that quietly stops happening in week three.
 
 Use it in order the first time. After that, the log and the scripts are the parts you will open every day.
+
+## Start here: the build prompt
+
+Paste everything below into Claude (or ChatGPT). Fill in the CONTEXT block. It will interview you for anything missing, then build your whole debrief system: the SOP in your words, the log, the weekly sheet, the scripts for your medium, the four prompts wired to your product, and the thirty-day rollout with dates.
+
+Everything after this section explains the method behind what it builds, so you can judge the output and coach with it. You do not need to read it first.
+
+```
+You are building a complete sales debrief system for my team. Read CONTEXT, then read THE METHOD, then follow BUILD exactly. Before building, ask me up to five questions about anything in CONTEXT that is blank or unclear. Do not build until I answer.
+
+CONTEXT
+- My business and what we sell: [one or two sentences]
+- How we sell (retail or events, phone, meetings, or a mix): [ ]
+- Team: [number of reps, number of leaders, whether leaders run shifts]
+- A typical shift or block of calls looks like: [ ]
+- The three things reps most often get wrong in a conversation: [ ]
+- Words and phrases we use: [ ]   Words we never use: [ ]
+- Where we keep shared notes (a doc, a CRM, a chat): [ ]
+- Start date for the rollout: [ ]
+
+THE METHOD
+A debrief is ten minutes, after every shift, one rep, one conversation. Minute 0 to 1: pick the conversation the rep is still thinking about. Minutes 1 to 4: three questions in order: what did the customer say they wanted to change (their words), what did you present and how did it connect, what do we still not know. Minutes 4 to 6: name exactly one skill in the shape "the moment was X, the change is Y." Minutes 6 to 9: run the moment again, leader plays the customer, starting two lines before the break. Minutes 9 to 10: write two lines, SKILL and LISTEN FOR, and read them aloud. Coach only what was observed. Never invent the customer's motive. Never name a second skill. The log is one shared doc per rep: DATE, CONVERSATION, SKILL, LISTEN FOR. The leader fills a weekly sheet per rep: debriefs run, skills named, the repeated skill, second passes run, next week's one thing. A skill repeated three times in a week is a training gap: build a group drill. Rollout: days 1 to 3 leader only, days 4 to 10 every rep every shift, days 11 to 20 second-line leaders run it and the top leader audits, days 21 to 30 weekly group drills on the most repeated skill. Measure debriefs per rep per week and second passes per debrief, not sales, for thirty days.
+
+BUILD
+Produce these, in this order, each as its own clearly titled section, written in our words from CONTEXT:
+1. THE SOP: the ten-minute debrief, step by step with timing, using our product and our medium in every example.
+2. THE LOG TEMPLATE: ready to paste into the place we keep notes, with one filled example from our business.
+3. THE WEEKLY SHEET: the leader's review sheet with the two reading rules.
+4. FIFTEEN SCRIPTS for our medium (if we use more than one medium, split them): each with the coach's opening question, what to listen for, and the drill, built around the three mistakes in CONTEXT.
+5. FOUR PROMPTS I can paste later, with our product facts already inside them: (a) notes to drill, (b) weekly log to coaching plan, (c) role-play customer for our medium, (d) leader self-audit.
+6. THE THIRTY-DAY ROLLOUT with real dates from our start date, who does what each phase, and the two numbers to watch.
+7. THE SCORECARD for grading a leader's debrief, five items, two points each.
+8. A ONE-PAGE VERSION I can print and hand to every leader.
+
+Rules: plain language, short sentences, no jargon, no hype, no dashes. Never invent numbers or customer quotes. If something depends on a fact I did not give you, ask, or mark it [FILL IN].
+```
 
 ## 1. The ten-minute debrief SOP
 

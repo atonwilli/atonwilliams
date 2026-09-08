@@ -4,6 +4,7 @@ guide: brain-file
 price: 29
 tagline: "The complete brain file template filled in for a real example company, the interview prompts that draft each section, the decisions log, the voice guide, and the setup for every major AI tool."
 includes:
+  - "The build prompt: paste it into Claude, fill in the blanks, and it builds the whole system for your business"
   - "The full brain file template, every section written out for a worked example company"
   - "Twelve section prompts that draft your file from a conversation"
   - "The decisions log and the voice guide with do and do not lists"
@@ -15,6 +16,44 @@ includes:
 # The Brain File, Pro
 
 The free guide explained the idea: one file the AI reads first, so it starts as a new hire who read the handbook instead of a stranger. This pack gives you the whole file, filled in for an example company so you can see what good looks like, plus the prompts that write yours from an interview, and the routine that keeps it alive.
+
+## Start here: the build prompt
+
+Paste everything below into Claude. Fill in CONTEXT, or leave it mostly blank and let it interview you. It builds your complete brain file, your decisions log, and your voice guide, then tells you exactly where to put them in Claude Code, Claude Projects, ChatGPT, or Cursor.
+
+Everything after this section explains the method behind what it builds, so you can judge the output and coach with it. You do not need to read it first.
+
+```
+You are building my business's brain file: the one document an AI reads before doing anything for us. Read CONTEXT, then THE SHAPE, then follow BUILD. Interview me one question at a time for any section that is blank or thin. Never fill a gap with a guess; write "unknown" and ask.
+
+CONTEXT
+- Company name and one sentence on what we do and for whom: [ ]
+- Where we operate and team size and shape: [ ]
+- Related businesses and whether they may be mentioned: [ ]
+- Best customer, second-best customer, who we turn away: [ ]
+- Every offer: what it is, price, included, NOT included: [ ]
+- Claims we can make (verified): [ ]   Claims we never make: [ ]
+- Three pieces of our writing we are proud of (paste): [ ]
+- Words we use: [ ]   Words we never use: [ ]   Formatting rules (dashes, emoji, exclamation points): [ ]
+- Weekly rhythm, tools, folder conventions: [ ]
+- Who decides what; our defaults when there is no rule: [ ]
+- Decisions made in the last ninety days that people keep re-asking about: [ ]
+- Private matters that must never appear in any material: [ ]
+- This month's three priorities, open questions, parked items: [ ]
+- The AI tools we use (Claude Code, Claude Projects, ChatGPT, Cursor, other): [ ]
+
+THE SHAPE
+BRAIN.md has eight sections in this order: 1 who we are, 2 who we serve, 3 what we sell (with claims we can and cannot make), 4 how we talk (five voice words, we say, we never say, formatting, three samples), 5 how we work, 6 how we decide (pointing to DECISIONS.md), 7 rules the AI must follow (never invent numbers, quotes, or capabilities; banned words; private matters; flag conflicts with decisions; propose an addition whenever something is explained twice), 8 current focus. DECISIONS.md is one dated line per decision with a name, newest first, never edited, only appended. VOICE.md is five words, do, do not, and three before-and-after pairs from our real writing. Every section over fifty words. The file is owned by one person and updated ten minutes a week.
+
+BUILD
+1. Interview me for every blank or thin section, one question at a time, showing each section's draft before moving on.
+2. Output BRAIN.md in full, then DECISIONS.md, then VOICE.md, each as its own code block.
+3. Output SETUP: exact steps for each tool in CONTEXT (file name, where it goes, what to paste where).
+4. Output THE WEEKLY SOP: the ten-minute maintenance routine with the two triggers.
+5. Run a FIRST TEST: using only the brain file, write a customer-facing paragraph about our main offer, then list every place you had to guess. Those gaps become an addendum to BRAIN.md.
+
+Rules: plain language, no dashes, nothing invented. Flag any section under fifty words as too thin.
+```
 
 ## 1. The complete template
 
