@@ -14,11 +14,18 @@ export async function POST(req: Request) {
   const update = await req.json().catch(() => null) as {
     chat_member?: { new_chat_member?: { status?: string; user?: { id?: number } }; invite_link?: { name?: string } }
     my_chat_member?: { chat?: { id?: number; title?: string; type?: string }; new_chat_member?: { status?: string } }
+    message?: { chat?: { id?: number; title?: string; type?: string } }
+    channel_post?: { chat?: { id?: number; title?: string; type?: string } }
   } | null
   const client = db()
   const mine = update?.my_chat_member
   if (client && mine?.chat?.id && mine.new_chat_member?.status && mine.new_chat_member.status !== 'left' && mine.new_chat_member.status !== 'kicked') {
     await client.from('telegram_chats').upsert({ chat_id: mine.chat.id, title: mine.chat.title || '', type: mine.chat.type || '', bot_status: mine.new_chat_member.status, added_at: new Date().toISOString() }, { onConflict: 'chat_id' })
+  }
+  // Any post in a group or channel the bot can see also registers that chat (belt to the braces above).
+  const seen = update?.message?.chat || update?.channel_post?.chat
+  if (client && seen?.id && seen.type && seen.type !== 'private') {
+    await client.from('telegram_chats').upsert({ chat_id: seen.id, title: seen.title || '', type: seen.type, bot_status: 'seen', added_at: new Date().toISOString() }, { onConflict: 'chat_id' })
   }
   const cm = update?.chat_member
   const status = cm?.new_chat_member?.status
