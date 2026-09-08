@@ -83,5 +83,7 @@ export function checkoutEnabled(): boolean {
 }
 
 export function siteUrl(): string {
-  return process.env.SITE_URL || process.env.NEXT_PUBLIC_SITE_URL || (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'http://localhost:3000')
+  if (process.env.SITE_URL) return process.env.SITE_URL
+  if (process.env.VERCEL_ENV === 'production') return 'https://atonwilliams.com'
+  return process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'http://localhost:3000'
 }
