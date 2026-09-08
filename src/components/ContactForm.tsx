@@ -2,7 +2,7 @@
 
 import { Suspense, useEffect, useMemo, useState } from 'react'
 import { useSearchParams } from 'next/navigation'
-import { AUTHORITY, REVENUE_BANDS, TEAM_SIZES, TIMELINES, TOPICS, decide, getTopic, topicsFor, type Track } from '@/lib/routing'
+import { AUTHORITY, PIPELINE_OWNER, REVENUE_BANDS, TEAM_SIZES, TIMELINES, decide, getTopic, topicsFor, type Track } from '@/lib/routing'
 
 const FORM = 'https://formsubmit.co/aton@frontpageagencyinc.com'
 const SITE = 'https://atonwilliams.com'
@@ -35,7 +35,9 @@ function Form() {
     <>
       <div className="form-card">
         <form id="intake" action={FORM} method="POST">
-          <input type="hidden" name="_subject" value={`New inquiry: ${t ? t.label : 'atonwilliams.com'}`} />
+          <input type="hidden" name="_subject" value={`[${t ? t.pipeline : track === 'career' ? 'recruiting' : 'inquiry'}] ${t ? t.label : 'atonwilliams.com'}: ${decision.route}`} />
+          <input type="hidden" name="pipeline" value={t ? t.pipeline : ''} />
+          <input type="hidden" name="pipeline_owner" value={t ? PIPELINE_OWNER[t.pipeline] : ''} />
           <input type="hidden" name="_template" value="table" />
           <input type="hidden" name="_captcha" value="false" />
           <input type="hidden" name="_next" value={next} />
@@ -52,8 +54,8 @@ function Form() {
 
           <fieldset className={step === 1 ? '' : 'collapsed'}>
             <legend>Who are you?</legend>
-            <div className="choice-grid">
-              {([['individual', 'An operator, leader, or rep', 'Building toward your own seat, or already in it.'], ['organization', 'An executive or an organization', 'Running an operation and ready to move on it.']] as const).map(([k, h, p]) => (
+            <div className="choice-grid three">
+              {([['individual', 'An operator, leader, or rep', 'Building toward your own seat, or already in it.'], ['organization', 'An executive or an organization', 'Running an operation and ready to move on it.'], ['career', 'Looking for a sales career', 'You want to learn this on a real floor and get paid to do it.']] as const).map(([k, h, p]) => (
                 <label key={k} className={`choice${track === k ? ' picked' : ''}`}>
                   <input type="radio" name="who" value={k} checked={track === k} onChange={() => { setTrack(k); setTopic(''); setStep(2) }} />
                   <b>{h}</b><span>{p}</span>
@@ -62,7 +64,15 @@ function Form() {
             </div>
           </fieldset>
 
-          {track && (
+          {track === 'career' && (
+            <fieldset>
+              <legend>The fastest way in is the recruiting team.</legend>
+              <p className="small">Sales careers run through Front Page Agency's recruiting pipeline, not this form. Apply there, the recruiting team books your interview, and you hear back the same day where possible.</p>
+              <div className="button-row"><a className="button" href="https://www.frontpagerecruitment.com">Apply to work with Aton and his team on the sales floor</a></div>
+            </fieldset>
+          )}
+
+          {track && track !== 'career' && (
             <fieldset className={step === 2 ? '' : step > 2 ? 'collapsed' : 'hidden-step'}>
               <legend>What would you like help with?</legend>
               <div className="choice-list">

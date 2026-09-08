@@ -27,7 +27,7 @@ export default async function Thanks({ searchParams }: { searchParams: Promise<{
           {route === 'qualified' && (
             <>
               <h1>Received. Next: pick a time.</h1>
-              <p className="lead">{cal ? 'Book the call now, then fill in the short briefing on the confirmation so the time is spent on your situation, not on catching up.' : 'You will get a booking link within one business day, with a short briefing to fill in before the call so the time is spent on your situation.'}</p>
+              <p className="lead">{cal ? 'Book the call now, then fill in the short briefing on the confirmation so the time is spent on your situation, not on catching up.' : 'Our team reaches out first to confirm the details, then you get the booking link for the consultation and a short briefing to fill in before it. Usually within one business day.'}</p>
               <div className="button-row" style={{ justifyContent: 'center' }}>
                 {cal && <a className="button peach" href={cal}>Book the call</a>}
                 {t && <a className="button secondary" href={t.resource.href}>{t.resource.label}</a>}

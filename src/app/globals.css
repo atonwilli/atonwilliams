@@ -908,3 +908,5 @@ dialog::backdrop { background: rgba(37, 36, 64, .55); backdrop-filter: blur(3px)
 .form-card .note { margin: 12px 0 0; }
 .form-card .note.warn { color: #8a4a33; background: var(--peach-3); padding: 10px 12px; border-radius: 10px; }
 @media (max-width: 640px) { .choice-grid, .steps-bar { grid-template-columns: 1fr 1fr; } }
+.choice-grid.three { grid-template-columns: 1fr 1fr 1fr; }
+@media (max-width: 760px) { .choice-grid.three { grid-template-columns: 1fr; } }
