@@ -11,6 +11,8 @@ const topics: Record<string, [string, string]> = {
   academy: ['Operators Academy in person', 'Sessions run in Arizona, registered like a class. Leave your details and you get the next date and the seat price as soon as they are set.'],
   membership: ['Membership', 'Operators Academy Pro is being finalized. Leave your details and we will share pricing and what is included when they are approved.'],
   'inner-circle': ['Inner Circle', 'A small group of owners and operators with direct access to Aton. Applications are reviewed personally, and most people are pointed to coaching or the community first.'],
+  speaking: ['Speaking', 'Tell us about the event, the room, the date, and what you want the audience to leave with. Every request gets a reply within three business days with a fit answer and, if it is a fit, the fee and terms in writing.'],
+  podcast: ['Podcast appearance', 'Podcast appearances are free. Share the show, the audience, the format, and the topic you have in mind. Aton says yes to most shows where the listeners run or lead something.'],
   partnerships: ['Partnerships', 'Tell us about your organization and the collaboration you have in mind.'],
 }
 
@@ -40,7 +42,9 @@ function Form() {
               <option value="academy">Operators Academy in person</option>
               <option value="membership">Membership</option>
               <option value="inner-circle">Inner Circle</option>
-              <option value="partnerships">Partnerships</option>
+              <option value="speaking">Speaking</option>
+              <option value="podcast">Podcast appearance</option>
+              <option value="partnerships">Partnerships and brand deals</option>
               <option value="other">Other</option>
             </select>
           </label>

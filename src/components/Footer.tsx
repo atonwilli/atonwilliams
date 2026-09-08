@@ -14,6 +14,7 @@ export function Footer() {
             <li><a href="/pro">Pro packs</a></li>
             <li><a href="/notes">Notes</a></li>
             <li><a href="/#proof">Proof</a></li>
+            <li><a href="/speaking">Speaking</a></li>
             <li><a href="/#work">Work with me</a></li>
           </ul>
         </div>
