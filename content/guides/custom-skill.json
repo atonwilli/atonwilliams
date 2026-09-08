@@ -1,0 +1,180 @@
+{
+ "kind": "spec",
+ "slug": "custom-skill",
+ "num": "07",
+ "date": "2026-09-06",
+ "status": "published",
+ "topicKey": "ai",
+ "keys": "build a custom skill the best skills are not clever. they are a job you already do well, written down in the order you do it, with the rules you follow without thinking. here is the template, how to test it, and the three mistakes that make most skills fail. from a job you do well to a skill file the ai runs the same way every time: the template, the test, and the three mistakes that make skills fail.",
+ "cardBlurb": "From a job you do well to a skill file the AI runs the same way every time: the template, the test, and the three mistakes that make skills fail.",
+ "cardTags": [
+  "Free lesson",
+  "Worksheet",
+  "Prompt",
+  "Deeper in Pro"
+ ],
+ "topicLabel": "AI and tools",
+ "topic": "AI and tools",
+ "band": " mint",
+ "title": "Build a custom skill",
+ "desc": "From a job you do well to a skill file the AI runs the same way every time: the template, the test, and the three mistakes that make skills fail.",
+ "h1": "Build a custom skill.",
+ "em": "Teach the AI a job you already do well.",
+ "lead": "The best skills are not clever. They are a job you already do well, written down in the order you do it, with the rules you follow without thinking. Here is the template, how to test it, and the three mistakes that make most skills fail.",
+ "read": 7,
+ "kit": "Template and prompt",
+ "tiles": [
+  [
+   "The lesson",
+   "The template, the test, and the three mistakes."
+  ],
+  [
+   "The prompt",
+   "Watch you do the job once, then write the skill from what it saw."
+  ],
+  [
+   "The skill workshop",
+   "Build three skills live with Aton's team's templates and a review rubric."
+  ]
+ ],
+ "sections": [
+  {
+   "nav": "Pick the job",
+   "label": "Pick the job",
+   "h2": "Start with a job you do well and often.",
+   "body": [
+    [
+     "p",
+     "A skill for a job you are bad at teaches the AI to be bad at it. Pick something you do well, do often, and could explain to a new hire in ten minutes. Writing the follow-up text after a customer conversation. Screening an applicant. Turning a meeting into three action items."
+    ],
+    [
+     "checks",
+     [
+      "You do it at least weekly.",
+      "You could explain it to someone new in ten minutes.",
+      "You can name what a bad version looks like."
+     ]
+    ]
+   ]
+  },
+  {
+   "nav": "The template",
+   "label": "The template",
+   "h2": "Five parts, under 250 words.",
+   "body": [
+    [
+     "code",
+     "# [Skill name]\n\nPurpose: [one sentence: the job, and when to use this]\nInputs: [what I give you. If missing, ask before starting]\nSteps:\n1. ...\n2. ...\n3. ...\nRules:\n- Never ...\n- Always ...\nFormat: [what the output looks like, word limit]\nExample: [one real output, done right]"
+    ],
+    [
+     "p",
+     "Write the steps the way you would say them out loud to a new hire, in order. Write the rules from your mistakes: every rule is something that went wrong once. Put one real example at the bottom. The example teaches more than the steps."
+    ]
+   ]
+  },
+  {
+   "nav": "Test it",
+   "label": "Test it",
+   "h2": "Run it three times before you trust it.",
+   "body": [
+    [
+     "steps",
+     [
+      [
+       "An easy case.",
+       "Clean inputs, obvious answer. It should be right the first time."
+      ],
+      [
+       "A messy case.",
+       "Missing information, a contradiction, an edge. The skill should ask, not guess."
+      ],
+      [
+       "A case where the right answer is no.",
+       "Where the job should not be done at all. The skill should say so."
+      ]
+     ]
+    ],
+    [
+     "p",
+     "If it fails a test, fix the skill file, not the prompt. Then run all three again."
+    ]
+   ]
+  },
+  {
+   "nav": "Three mistakes",
+   "label": "Three mistakes",
+   "h2": "Why most skills fail.",
+   "body": [
+    [
+     "steps",
+     [
+      [
+       "Too long.",
+       "A skill over a page gets skimmed by the AI the same way a long handbook gets skimmed by a person. Cut it."
+      ],
+      [
+       "No rules.",
+       "Steps without rules produce confident, wrong output. The rules are where your judgment lives."
+      ],
+      [
+       "No example.",
+       "One real example of the job done right is worth ten sentences describing it."
+      ]
+     ]
+    ],
+    [
+     "said",
+     "What the coach says",
+     "Your skill has fourteen steps and no rules. Cut it to six steps, add the three things that have gone wrong before, and paste in one good example."
+    ]
+   ]
+  }
+ ],
+ "ws": [
+  "Draft your skill",
+  "Fill in the five parts.",
+  "Write it the way you would say it to a new hire."
+ ],
+ "fields": [
+  [
+   "Skill name and purpose",
+   "One sentence."
+  ],
+  [
+   "Inputs",
+   "What you always provide. What to ask for if missing."
+  ],
+  [
+   "Steps",
+   "Numbered, in order, short."
+  ],
+  [
+   "Rules",
+   "From your mistakes. Never and always."
+  ],
+  [
+   "Format and one example",
+   "What good looks like, and one real one."
+  ]
+ ],
+ "pr": [
+  "The prompt",
+  "Let the AI write it from watching you.",
+  "Do the job once in the chat, out loud, then run this."
+ ],
+ "prompt": "I just did a job in this conversation the way I always do it. Write a skill file from what you observed.\n<b>1.</b> Purpose in one sentence.\n<b>2.</b> Inputs: what I provided, and what you should ask for if it is missing next time.\n<b>3.</b> Steps: the order I actually worked in, numbered, no adjectives.\n<b>4.</b> Rules: anything I corrected, avoided, or refused to do. Write each as never or always.\n<b>5.</b> Format: what my final output looked like, with a word limit.\n<b>6.</b> Example: the output from this conversation, cleaned of any private details.\nKeep the whole file under 250 words. Mark anything you inferred rather than saw with [confirm].",
+ "pro_h3": "The skill workshop",
+ "pro_items": [
+  "Build three skills live: a debrief, a screening, and a follow-up message",
+  "Aton's team's review rubric: how a skill gets approved before the floor uses it",
+  "The test set: nine cases that catch most bad skills before they ship",
+  "How to hand a skill to a team so everyone gets the same result"
+ ],
+ "offer": [
+  "Work with Aton",
+  "Want your floor's best habits turned into skills?",
+  "The operations program documents how your best people work and turns it into skills the whole team can run. By application.",
+  "../preview/contact.html?topic=consulting",
+  "Ask about a team program"
+ ]
+}

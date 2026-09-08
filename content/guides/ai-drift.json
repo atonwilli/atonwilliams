@@ -1,0 +1,165 @@
+{
+ "kind": "spec",
+ "slug": "ai-drift",
+ "num": "09",
+ "date": "2026-09-06",
+ "status": "published",
+ "topicKey": "ai",
+ "keys": "stop ai drift drift is when the ai slowly stops doing what you asked: it forgets a rule, invents a detail, grades its own work generously, or solves a slightly different problem than the one you gave it. it is not random. it has causes, and each cause has a fix. why an ai that was doing great an hour ago starts making things up, and the five habits that keep it anchored: fresh sessions, written state, verification before belief, and more.",
+ "cardBlurb": "Why an AI that was doing great an hour ago starts making things up, and the five habits that keep it anchored: fresh sessions, written state, verification before belief, and more.",
+ "cardTags": [
+  "Free lesson",
+  "Worksheet",
+  "Prompt",
+  "Deeper in Pro"
+ ],
+ "topicLabel": "AI and tools",
+ "topic": "AI and tools",
+ "band": " mint",
+ "title": "Stop AI drift",
+ "desc": "Why an AI that was doing great an hour ago starts making things up, and the five habits that keep it anchored: fresh sessions, written state, verification before belief, and more.",
+ "h1": "Stop AI drift.",
+ "em": "Why it was right an hour ago and wrong now.",
+ "lead": "Drift is when the AI slowly stops doing what you asked: it forgets a rule, invents a detail, grades its own work generously, or solves a slightly different problem than the one you gave it. It is not random. It has causes, and each cause has a fix.",
+ "read": 7,
+ "kit": "Checklist and prompt",
+ "tiles": [
+  [
+   "The lesson",
+   "The four causes of drift and the five habits that stop it."
+  ],
+  [
+   "The prompt",
+   "A reset prompt that re-anchors a session that has started to slide."
+  ],
+  [
+   "The anti-drift kit",
+   "Aton's session checklist, the state file template, and the verification ritual."
+  ]
+ ],
+ "sections": [
+  {
+   "nav": "The causes",
+   "label": "The four causes",
+   "h2": "Drift has causes. Name them.",
+   "body": [
+    [
+     "steps",
+     [
+      [
+       "The conversation got long.",
+       "Early instructions get buried under later ones. The AI weights what is recent. Your rule from message three is now competing with two hundred messages of noise."
+      ],
+      [
+       "The state lives in the chat.",
+       "If the only record of what was decided is the conversation, the AI has to remember it. It will not."
+      ],
+      [
+       "Nobody checked.",
+       "The AI said it did something and everyone believed it. Unverified claims compound. By the fifth one the work is fiction."
+      ],
+      [
+       "The problem changed.",
+       "You asked for one thing, then adjusted, then adjusted again. The AI is now solving the average of your requests."
+      ]
+     ]
+    ]
+   ]
+  },
+  {
+   "nav": "Five habits",
+   "label": "Five habits",
+   "h2": "The habits that keep it anchored.",
+   "body": [
+    [
+     "steps",
+     [
+      [
+       "Fresh sessions for new jobs.",
+       "When the task changes, start a new conversation. Carry the state in a file, not in the chat."
+      ],
+      [
+       "Write the state down.",
+       "A short file: what was decided, what is done, what is next. The AI reads it at the start. You update it at the end. This is the single biggest fix."
+      ],
+      [
+       "Verify before you believe.",
+       "'Done' means shown, not said. Ask for the evidence: the output, the screenshot, the test result. If it cannot show it, it did not do it."
+      ],
+      [
+       "Restate the job.",
+       "Every few passes, have the AI say back in two lines what it is building and what done looks like. If the restatement is off, you caught the drift early."
+      ],
+      [
+       "Keep the rules in a file.",
+       "Standing rules live in the brain file or the skill, not in the chat. A rule in a file survives. A rule in a message fades."
+      ]
+     ]
+    ]
+   ]
+  },
+  {
+   "nav": "Catching it",
+   "label": "Catching it early",
+   "h2": "Three signs it is already drifting.",
+   "body": [
+    [
+     "checks",
+     [
+      "It starts using words you never used, especially confident ones.",
+      "It stops asking questions it used to ask.",
+      "Its summaries get more polished while the actual output gets thinner."
+     ]
+    ],
+    [
+     "said",
+     "What the coach says",
+     "The summary read like everything shipped. The screenshot showed half of it. Ask for the screenshot first, the summary second."
+    ]
+   ]
+  }
+ ],
+ "ws": [
+  "Your anti-drift setup",
+  "Set up the two files.",
+  "Where the state lives, where the rules live, and what verification means for your work."
+ ],
+ "fields": [
+  [
+   "Where the state file lives",
+   "The path or the place. What goes in it."
+  ],
+  [
+   "The rules that must survive",
+   "Three to five. These go in the brain file or the skill, not the chat."
+  ],
+  [
+   "What 'verified' means here",
+   "Screenshot, test, output, a person checking. Be specific."
+  ],
+  [
+   "When you start a fresh session",
+   "The trigger. New task, new day, after a bad turn."
+  ]
+ ],
+ "pr": [
+  "The reset prompt",
+  "Re-anchor a session that has started to slide.",
+  "Paste this when the AI feels off. It forces a restatement and a check before any more work."
+ ],
+ "prompt": "Stop. Before doing anything else:\n<b>1.</b> Restate in two lines what you are building and what done looks like.\n<b>2.</b> List every rule you are operating under. If a rule came from a file, name the file. If it came from this chat, say so.\n<b>3.</b> List what you have claimed is done in this session, and for each one say whether you verified it (show how) or only believe it.\n<b>4.</b> Say what you would change about the plan if you were starting fresh right now.\nThen wait. Do not continue until I confirm the restatement is right.",
+ "pro_h3": "The anti-drift kit",
+ "pro_items": [
+  "Aton's session start and end checklist, one page",
+  "The state file template used across real builds",
+  "The verification ritual: what counts as proof for code, content and numbers",
+  "Three real drift examples and how they were caught"
+ ],
+ "offer": [
+  "Work with Aton",
+  "Want AI running inside your operation without the drift?",
+  "That is what Front Page Intelligence is built for. Start with the free audit.",
+  "https://frontpageintelligence.com/audit/",
+  "Run the free business audit"
+ ]
+}

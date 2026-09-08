@@ -1,0 +1,173 @@
+{
+ "kind": "spec",
+ "slug": "sales-terms",
+ "num": "10",
+ "date": "2026-09-06",
+ "status": "published",
+ "topicKey": "sales",
+ "keys": "ten sales terms every rep should be able to explain new reps hear these words in week one and nod. leaders use them without checking that everyone means the same thing. here are ten, each explained in a paragraph a new rep can repeat back, with a line you can post or put in a morning meeting. cta, cac and ltv, the tie-down, the two-option ask, ready signals, the approach distance and more, each in one clear paragraph with a line you can post.",
+ "cardBlurb": "CTA, CAC and LTV, the tie-down, the two-option ask, ready signals, the approach distance and more, each in one clear paragraph with a line you can post.",
+ "cardTags": [
+  "Free lesson",
+  "Worksheet",
+  "Prompt",
+  "Deeper in Pro"
+ ],
+ "topicLabel": "Sales",
+ "topic": "Sales",
+ "band": "",
+ "title": "Ten sales terms every rep should be able to explain",
+ "desc": "CTA, CAC and LTV, the tie-down, the two-option ask, ready signals, the approach distance and more, each in one clear paragraph with a line you can post.",
+ "h1": "Ten sales terms",
+ "em": "every rep should be able to explain.",
+ "lead": "New reps hear these words in week one and nod. Leaders use them without checking that everyone means the same thing. Here are ten, each explained in a paragraph a new rep can repeat back, with a line you can post or put in a morning meeting.",
+ "read": 9,
+ "kit": "Ten lessons and prompt",
+ "tiles": [
+  [
+   "The lesson",
+   "Ten terms, one paragraph each, with the mistake new reps make with it."
+  ],
+  [
+   "The prompt",
+   "Quiz a rep on all ten and get a coaching note back."
+  ],
+  [
+   "The full vocabulary",
+   "Forty terms with drills, for onboarding week and morning meetings."
+  ]
+ ],
+ "sections": [
+  {
+   "nav": "Money terms",
+   "label": "The money terms",
+   "h2": "Three numbers that decide whether the business lives.",
+   "body": [
+    [
+     "steps",
+     [
+      [
+       "CAC, customer acquisition cost.",
+       "Everything spent to win one customer, divided by the customers won. Ads, wages, tools, time. If it costs $180 to win a customer, that is your CAC. New reps think the sale is free because they did not write the check."
+      ],
+      [
+       "LTV, lifetime value.",
+       "What a customer is worth over the whole relationship, not the first order. A $60 a month customer who stays two years is worth $1,440. LTV against CAC tells you whether growing is smart or suicidal."
+      ],
+      [
+       "CTA, call to action.",
+       "The one thing you ask the person to do next. Not three things. One. In a post, in a text, at the end of a conversation. If you cannot say what the CTA was, there was not one."
+      ]
+     ]
+    ],
+    [
+     "linkedin",
+     "Most reps can tell you the price. Fewer can tell you what it cost to get the customer in front of them, or what that customer is worth over two years. Those two numbers decide everything the price does not."
+    ]
+   ]
+  },
+  {
+   "nav": "Conversation terms",
+   "label": "The conversation terms",
+   "h2": "Four moves inside the conversation.",
+   "body": [
+    [
+     "steps",
+     [
+      [
+       "Discovery.",
+       "The questions that find the customer's actual problem before you present anything. The sale is made here. Skip it and you get 'let me think about it.'"
+      ],
+      [
+       "The tie-down.",
+       "A small question that gets agreement on one point before moving on. 'That makes sense, right?' Used well, it keeps the customer with you. Used every sentence, it sounds like a script and people feel it."
+      ],
+      [
+       "The ready signal.",
+       "The moment the customer shows they are ready: a deeper question, future talk, 'how soon.' Two of them and you stop presenting and ask. Most reps miss the signal and keep talking."
+      ],
+      [
+       "The two-option ask.",
+       "'Thursday or Saturday?' Both answers are a yes. It removes the yes-or-no decision for the customer who is on the fence. It does not work on someone who has not been through discovery."
+      ]
+     ]
+    ],
+    [
+     "linkedin",
+     "A tie-down every sentence is a script. A tie-down at the right moment is a conversation. New reps learn the words before they learn the timing, and the timing is the whole skill."
+    ]
+   ]
+  },
+  {
+   "nav": "Floor terms",
+   "label": "The floor terms",
+   "h2": "Three terms for face to face and phone.",
+   "body": [
+    [
+     "steps",
+     [
+      [
+       "The approach distance.",
+       "Face to face, how far away a customer decides whether to engage with you: usually before you have said a word. Body language, energy and position do the work at ten feet. The words only matter once they are at three."
+      ],
+      [
+       "The pre-frame.",
+       "Telling the customer what is about to happen before it happens. 'I am going to ask two questions, then show you one thing.' It lowers resistance because nobody is being ambushed."
+      ],
+      [
+       "The lock.",
+       "What you say after the yes so it stays a yes. Reframe the choice, confirm the next step, tell them exactly what happens next. Buyer's remorse starts in the silence after the sale, and the lock fills it."
+      ]
+     ]
+    ],
+    [
+     "linkedin",
+     "The sale is not over when they say yes. It is over when they know exactly what happens next and why they made a good call. The silence after the yes is where deals die."
+    ]
+   ]
+  }
+ ],
+ "ws": [
+  "Your morning meeting",
+  "Pick three for this week.",
+  "One term a day, one example from your floor, one rep who explains it back."
+ ],
+ "fields": [
+  [
+   "Term one and the floor example",
+   "Which term, and where it showed up this week."
+  ],
+  [
+   "Term two and the floor example",
+   "Which term, and where it showed up this week."
+  ],
+  [
+   "Term three and the floor example",
+   "Which term, and where it showed up this week."
+  ],
+  [
+   "Who explains it back tomorrow",
+   "The rep who teaches it to the room."
+  ]
+ ],
+ "pr": [
+  "The prompt",
+  "Quiz a rep and get a coaching note.",
+  "Give this to a rep to run on themselves, or run it with them."
+ ],
+ "prompt": "Quiz me on ten sales terms, one at a time: CAC, LTV, CTA, discovery, tie-down, ready signal, the two-option ask, approach distance, pre-frame, and the lock.\n<b>1.</b> Ask me to explain each one in my own words and give one example from my own work.\n<b>2.</b> After each answer, score it 1 to 3: 1 means I could not explain it, 2 means I explained it but the example was weak, 3 means I could teach it.\n<b>3.</b> Do not correct me mid-quiz. At the end, give me the three terms to study, the one I explained best, and one coaching note in two sentences.\nMy medium is [face to face / phone / meetings].",
+ "pro_h3": "The full vocabulary",
+ "pro_items": [
+  "Forty terms across money, conversation, floor and leadership, each with a drill",
+  "The onboarding-week schedule that teaches them in order",
+  "Morning meeting cards: one term, one example, one question, ready to print",
+  "The leader's version: how to hear when a rep is using a word without understanding it"
+ ],
+ "offer": [
+  "Work with Aton",
+  "Want your whole floor speaking the same language?",
+  "Sales floor training installs the vocabulary, the pitch framework and the review rhythm with your leaders. By application.",
+  "../preview/contact.html?topic=training",
+  "Ask about team training"
+ ]
+}

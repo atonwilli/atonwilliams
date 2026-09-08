@@ -1,0 +1,8 @@
+I just did a job in this conversation the way I always do it. Write a skill file from what you observed.
+1. Purpose in one sentence.
+2. Inputs: what I provided, and what you should ask for if it is missing next time.
+3. Steps: the order I actually worked in, numbered, no adjectives.
+4. Rules: anything I corrected, avoided, or refused to do. Write each as never or always.
+5. Format: what my final output looked like, with a word limit.
+6. Example: the output from this conversation, cleaned of any private details.
+Keep the whole file under 250 words. Mark anything you inferred rather than saw with [confirm].

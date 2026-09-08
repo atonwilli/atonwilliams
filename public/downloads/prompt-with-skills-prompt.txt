@@ -1,0 +1,8 @@
+Here is a prompt I keep rewriting:
+
+[paste it]
+
+Turn it into a skill file with exactly five parts: Purpose (one sentence), Inputs (what I must provide, and what to ask for if missing), Steps (numbered, short, no adjectives), Rules (what you must never do, including: never invent facts, never promise results), Format (what the output looks like, with a word limit).
+1. Keep the whole file under 250 words.
+2. Where my prompt was vague, write the rule you think I meant and mark it [confirm].
+3. Finish with the one-line prompt I will type from now on to run it.

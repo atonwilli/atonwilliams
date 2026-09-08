@@ -1,0 +1,7 @@
+I run a business and I am not an engineer. Help me set up my first GitHub repo and make my first commit, explaining each step in one plain sentence before you do it.
+1. Check whether Git and the GitHub tool are installed. If not, tell me the exact command to install them and wait.
+2. Create a private repo named [name] with a README that says what the project is for.
+3. Add my brain file to it.
+4. Make the first commit with a clear message and show me what the commit looks like.
+5. Create a branch for the next piece of work and explain, in two sentences, why you did not work on main.
+Do not run any command that deletes or overwrites files without asking me first.

@@ -2,19 +2,15 @@ import type { Metadata } from 'next'
 import './globals.css'
 import { Nav } from '@/components/Nav'
 import { Footer } from '@/components/Footer'
-import { FloatingMotion } from '@/components/FloatingMotion'
-import { MobileCta } from '@/components/MobileCta'
+import { BgDepth } from '@/components/BgDepth'
+import { SiteFx } from '@/components/SiteFx'
 
 export const metadata: Metadata = {
-  title: 'Aton Williams · Operator. Coach. Builder.',
+  metadataBase: new URL('https://atonwilliams.com'),
+  title: { default: 'Aton Williams | Leadership, operations, sales, and recruitment', template: '%s | Aton Williams' },
   description:
-    "Aton Williams is the founder of Front Page Agency and Front Page Intelligence. Operator-first coaching for direct sales orgs, recruiting machines, and the operators building them.",
-  openGraph: {
-    title: 'Aton Williams · Operator. Coach. Builder.',
-    description:
-      'The operator-coach for direct sales orgs and the operators building them.',
-    type: 'website',
-  },
+    'Aton Williams builds and runs sales organizations, develops the leaders inside them, and operates Front Page Intelligence, the AI business infrastructure his companies run on. Free guides, a free community, and coaching by application.',
+  openGraph: { type: 'website', siteName: 'Aton Williams' },
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -24,16 +20,16 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
         <link
-          href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700;9..144,800&family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600&display=swap"
           rel="stylesheet"
         />
       </head>
       <body>
-        <FloatingMotion />
+        <BgDepth />
         <Nav />
-        <main>{children}</main>
+        {children}
         <Footer />
-        <MobileCta />
+        <SiteFx />
       </body>
     </html>
   )

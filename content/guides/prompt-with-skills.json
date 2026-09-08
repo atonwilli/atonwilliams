@@ -1,0 +1,180 @@
+{
+ "kind": "spec",
+ "slug": "prompt-with-skills",
+ "num": "05",
+ "date": "2026-09-06",
+ "status": "published",
+ "topicKey": "ai",
+ "keys": "prompt your ai with skills a skill is a saved way of doing one job well: the steps, the rules, the format, the examples. once it exists, you stop writing a long prompt and start saying the name of the job. here is what a skill is, how to spot one you need, and how to use one. stop writing the same long prompt over and over. package what works into a skill the ai can load by name, and prompt in one line.",
+ "cardBlurb": "Stop writing the same long prompt over and over. Package what works into a skill the AI can load by name, and prompt in one line.",
+ "cardTags": [
+  "Free lesson",
+  "Worksheet",
+  "Prompt",
+  "Deeper in Pro"
+ ],
+ "topicLabel": "AI and tools",
+ "topic": "AI and tools",
+ "band": " mint",
+ "title": "Prompt your AI with skills",
+ "desc": "Stop writing the same long prompt over and over. Package what works into a skill the AI can load by name, and prompt in one line.",
+ "h1": "Prompt your AI with skills.",
+ "em": "Say the job, not the paragraph.",
+ "lead": "A skill is a saved way of doing one job well: the steps, the rules, the format, the examples. Once it exists, you stop writing a long prompt and start saying the name of the job. Here is what a skill is, how to spot one you need, and how to use one.",
+ "read": 6,
+ "kit": "Checklist and prompt",
+ "tiles": [
+  [
+   "The lesson",
+   "What a skill is, the three signs you need one, and how prompting changes once you have them."
+  ],
+  [
+   "The prompt",
+   "Turn a prompt you keep rewriting into a skill draft in one pass."
+  ],
+  [
+   "The skills library",
+   "Aton's starter set for sales, recruiting and content, ready to load."
+  ]
+ ],
+ "sections": [
+  {
+   "nav": "What a skill is",
+   "label": "What a skill is",
+   "h2": "A prompt you never have to write again.",
+   "body": [
+    [
+     "p",
+     "A skill is a file that tells the AI how to do one job: the purpose, the steps in order, the rules, the output format, and one or two examples of it done right. In Claude Code these live in a folder and load when you name them. In other tools they are saved prompts or custom instructions. Same idea."
+    ],
+    [
+     "p",
+     "The difference between a prompt and a skill is repetition. A prompt is what you type once. A skill is what you would otherwise type every week."
+    ],
+    [
+     "said",
+     "The test",
+     "If you have a note somewhere titled 'the prompt that works for X,' that note is a skill waiting to be filed."
+    ]
+   ]
+  },
+  {
+   "nav": "Three signs",
+   "label": "When you need one",
+   "h2": "Three signs you need a skill.",
+   "body": [
+    [
+     "checks",
+     [
+      "You keep pasting the same setup paragraph before the real request.",
+      "The AI does the job well on the third try and badly on the first, every time.",
+      "Two people on your team get different results from the same request."
+     ]
+    ],
+    [
+     "p",
+     "Each of those is the same problem: the knowledge of how to do the job lives in a person's head or a chat history instead of in a file the AI can read."
+    ]
+   ]
+  },
+  {
+   "nav": "Anatomy",
+   "label": "What is inside",
+   "h2": "Five parts, in this order.",
+   "body": [
+    [
+     "steps",
+     [
+      [
+       "Purpose.",
+       "One sentence. What the job is and when to use this skill."
+      ],
+      [
+       "Inputs.",
+       "What the AI needs from you before it starts. A transcript, a name, a number. If it is missing, the skill says to ask."
+      ],
+      [
+       "Steps.",
+       "The job in order. Short, numbered, no adjectives."
+      ],
+      [
+       "Rules.",
+       "What it must never do. This is where your judgment lives. Do not invent quotes. Do not promise results. Keep it under 200 words."
+      ],
+      [
+       "Format and example.",
+       "Exactly what the output looks like, and one real example of it done right."
+      ]
+     ]
+    ],
+    [
+     "code",
+     "# Sales debrief skill\n\nPurpose: turn my notes from one customer conversation into a coaching plan.\nInputs: the notes or transcript, names removed.\nSteps: 1) state the customer's problem in their words ... 5) give one follow-up question.\nRules: use only what is in the notes. Never invent a motive.\nFormat: five numbered sections, under 250 words.\nExample: [paste one good output]"
+    ]
+   ]
+  },
+  {
+   "nav": "Using them",
+   "label": "Prompting with skills",
+   "h2": "The prompt shrinks to one line.",
+   "body": [
+    [
+     "p",
+     "Before: three paragraphs of setup, then the request. After: 'Run the sales debrief skill on these notes.' The AI loads the file, follows the steps, applies the rules, returns the format. If it drifts, you fix the skill file once, not the prompt every time."
+    ],
+    [
+     "said",
+     "What the coach says",
+     "Your prompts got shorter and your results got more consistent in the same week. That is the whole point."
+    ]
+   ]
+  }
+ ],
+ "ws": [
+  "Find your first skill",
+  "Which job gets a skill first?",
+  "Pick the request you make most often and write the five parts in rough form."
+ ],
+ "fields": [
+  [
+   "The job you repeat most",
+   "What you ask the AI for at least weekly."
+  ],
+  [
+   "Inputs it always needs",
+   "What you paste in every time."
+  ],
+  [
+   "The steps",
+   "Number them. Short."
+  ],
+  [
+   "The rules",
+   "What it must never do."
+  ],
+  [
+   "The format",
+   "What a good output looks like."
+  ]
+ ],
+ "pr": [
+  "The prompt",
+  "Turn a repeated prompt into a skill.",
+  "Paste a prompt you keep rewriting. The AI restructures it into the five parts."
+ ],
+ "prompt": "Here is a prompt I keep rewriting:\n\n[paste it]\n\nTurn it into a skill file with exactly five parts: Purpose (one sentence), Inputs (what I must provide, and what to ask for if missing), Steps (numbered, short, no adjectives), Rules (what you must never do, including: never invent facts, never promise results), Format (what the output looks like, with a word limit).\n<b>1.</b> Keep the whole file under 250 words.\n<b>2.</b> Where my prompt was vague, write the rule you think I meant and mark it [confirm].\n<b>3.</b> Finish with the one-line prompt I will type from now on to run it.",
+ "pro_h3": "The skills library",
+ "pro_items": [
+  "Twelve ready skills: the sales debrief, the second-round interview, the rehash message, the comp math check, the morning meeting plan, and more",
+  "The naming and folder convention that keeps a growing library findable",
+  "How to version a skill when the job changes without losing what worked",
+  "A monthly skill review checklist"
+ ],
+ "offer": [
+  "Work with Aton",
+  "Want your team's best work turned into skills?",
+  "The operations program documents how your best people do the job and turns it into skills the whole floor can run. By application.",
+  "../preview/contact.html?topic=consulting",
+  "Ask about a team program"
+ ]
+}

@@ -1,0 +1,14 @@
+Play a customer for a sales practice session. I will run a conversation in five beats: Open, Story, Show, Ask, Lock.
+
+My medium: [face to face at a retail location / a cold call / a scheduled business meeting]
+My product, in one sentence: [describe it plainly, no claims you cannot back]
+My five beats: [paste them]
+
+Rules for you as the customer:
+1. Stay in the medium. On a call, you cannot see me. In a store, you were walking somewhere.
+2. Have one real problem in mind that my product could plausibly address. Do not volunteer it. Reveal it only if my Story beat earns it with a good question.
+3. Give me two ready signals during the Show beat if I have tied it to your problem. Give me none if I am listing features.
+4. If I skip a beat or jump to the Ask early, respond the way a real person would: “let me think about it.”
+5. After I finish, score each beat from 1 to 5 with one sentence of evidence from what I said. Tell me which beat I skipped or weakened, and give me the one line I should practice next time.
+
+Do not coach me during the conversation. Do not invent product capabilities. Respect a no.

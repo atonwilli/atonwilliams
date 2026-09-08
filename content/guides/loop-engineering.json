@@ -1,0 +1,180 @@
+{
+ "kind": "spec",
+ "slug": "loop-engineering",
+ "num": "08",
+ "date": "2026-09-06",
+ "status": "published",
+ "topicKey": "ai",
+ "keys": "run a loop engineering project a loop is how you get an ai to build something real over hours instead of minutes. it is not one long chat. it is a planner that writes short briefs, a worker that does one slice and reports honestly, and you at the boundaries deciding what ships. here is the method and the prompts. how to run an ai build as a loop instead of a chat: one planner, one worker at a time, one slice per pass, honest reports, and the exact prompts to use.",
+ "cardBlurb": "How to run an AI build as a loop instead of a chat: one planner, one worker at a time, one slice per pass, honest reports, and the exact prompts to use.",
+ "cardTags": [
+  "Free lesson",
+  "Worksheet",
+  "Prompt",
+  "Deeper in Pro"
+ ],
+ "topicLabel": "AI and tools",
+ "topic": "AI and tools",
+ "band": " mint",
+ "title": "Run a loop engineering project",
+ "desc": "How to run an AI build as a loop instead of a chat: one planner, one worker at a time, one slice per pass, honest reports, and the exact prompts to use.",
+ "h1": "Run a loop engineering project.",
+ "em": "One planner. One worker. One slice at a time.",
+ "lead": "A loop is how you get an AI to build something real over hours instead of minutes. It is not one long chat. It is a planner that writes short briefs, a worker that does one slice and reports honestly, and you at the boundaries deciding what ships. Here is the method and the prompts.",
+ "read": 9,
+ "kit": "Method and prompts",
+ "tiles": [
+  [
+   "The lesson",
+   "The roles, the slice, the laws packet, and the report the worker must give back."
+  ],
+  [
+   "The prompts",
+   "The planner brief, the worker kickoff, and the audit, ready to paste."
+  ],
+  [
+   "The full loop kit",
+   "Aton's laws packet template, the audit protocol, and the cost lessons from real runs."
+  ]
+ ],
+ "sections": [
+  {
+   "nav": "Why a loop",
+   "label": "Why a loop",
+   "h2": "A chat forgets. A loop keeps score.",
+   "body": [
+    [
+     "p",
+     "Ask an AI to build a whole system in one conversation and three things happen: it loses track of what it already did, it grades its own work generously, and you cannot tell what is real until the end. A loop fixes all three by splitting the work into roles and slices, and by making every pass end with an honest report."
+    ],
+    [
+     "said",
+     "The rule",
+     "Nobody, human or AI, builds and audits the same slice. The planner briefs, the worker builds, the planner audits."
+    ]
+   ]
+  },
+  {
+   "nav": "The roles",
+   "label": "The roles",
+   "h2": "Planner, worker, owner.",
+   "body": [
+    [
+     "steps",
+     [
+      [
+       "The planner.",
+       "Your strongest model. It only plans and reviews. It writes one brief at a time, reads what comes back, and decides the next slice. It never does the work itself, because the strongest model doing the typing is the most expensive way to type."
+      ],
+      [
+       "The worker.",
+       "A cheaper, faster model, or a second tool. It gets one brief, does one slice end to end, and reports. One worker in the files at a time. If it is blocked, it stops and says so instead of guessing."
+      ],
+      [
+       "The owner.",
+       "You. You approve what ships at the boundaries, and your feedback jumps the queue. Every idea you have mid-run gets written into the packet, never left in the chat."
+      ]
+     ]
+    ]
+   ]
+  },
+  {
+   "nav": "The slice",
+   "label": "The slice",
+   "h2": "One named piece, finished, verified, reported.",
+   "body": [
+    [
+     "p",
+     "A slice is the smallest thing that is real when it is done: a form that saves, a page that renders, a report that runs. Not 'set up the database.' The worker does the whole slice, checks it actually works, and writes a report with four lines: what was verified live versus only read, what broke, what was left out on purpose, and what test data was cleaned up."
+    ],
+    [
+     "checks",
+     [
+      "If the report says 'should work,' it is not done.",
+      "If the report has no 'left out' line, ask what was skipped.",
+      "If two slices are running at once in the same files, stop one."
+     ]
+    ]
+   ]
+  },
+  {
+   "nav": "The laws packet",
+   "label": "The laws packet",
+   "h2": "Write the rules down once, before the first slice.",
+   "body": [
+    [
+     "p",
+     "One document every worker reads first: the non-negotiables. Style rules. Things that must never be claimed. What every slice has to prove before it is done. How to deploy and when not to. The packet is what lets you swap workers, or even tools, without losing the standard."
+    ],
+    [
+     "code",
+     "LOOP PACKET\n1. What we are building, in five lines.\n2. Laws: never do X. Always do Y. (from real mistakes)\n3. Definition of done for a slice.\n4. The report format, four lines.\n5. Deploy rules: who approves, when.\n6. Slice queue, in order."
+    ]
+   ]
+  },
+  {
+   "nav": "Cost",
+   "label": "Keeping it cheap",
+   "h2": "Where loops waste money.",
+   "body": [
+    [
+     "checks",
+     [
+      "The strong model doing the typing. Move execution to the cheaper worker on day one.",
+      "Long briefs re-read on every pass. Keep briefs short and put the standing rules in the packet.",
+      "Fan-outs that are too wide. Twenty parallel research tasks beat a hundred.",
+      "Retrying flaky checks. If a verification keeps failing for tool reasons, fix the tool, not the retry count."
+     ]
+    ],
+    [
+     "said",
+     "What the coach says",
+     "The run hit half the weekly budget before the split. The split is not an optimization, it is the starting position."
+    ]
+   ]
+  }
+ ],
+ "ws": [
+  "Plan your loop",
+  "Set up the first run.",
+  "Name the project, write three laws, and define the first slice."
+ ],
+ "fields": [
+  [
+   "What we are building",
+   "Five lines. What is real when it is done."
+  ],
+  [
+   "Three laws",
+   "From things that have gone wrong before."
+  ],
+  [
+   "The first slice",
+   "The smallest thing that works end to end."
+  ],
+  [
+   "Definition of done",
+   "What the worker must prove before reporting."
+  ]
+ ],
+ "pr": [
+  "The prompts",
+  "The planner brief and the worker kickoff.",
+  "Two prompts. The first goes to your strongest model. The second is what the planner sends to each worker."
+ ],
+ "prompt": "PLANNER PROMPT (strongest model):\nYou are the planner for a build loop. You never write code or content yourself. Read the loop packet at [path]. Your job each pass: <b>1.</b> read the last worker report, <b>2.</b> decide the next single slice, <b>3.</b> write a brief under 200 words with: the slice name, what is real when it is done, the files it touches, the laws that apply, and the report format, <b>4.</b> after the worker reports, audit it against the definition of done and say PASS or FAIL with one reason. Never accept 'should work.' Never let two workers touch the same files at once. Ask me only at deploy boundaries.\n\nWORKER PROMPT (cheaper model, one per slice):\nRead the loop packet at [path] first, then this brief: [paste brief]. Do this one slice end to end and verify it actually works, not just that the code exists. If you are blocked, stop and report what is blocking you instead of guessing. Report in four lines: verified live versus only reviewed, what broke, what was left out on purpose, what test data you created and deleted. Do not touch anything outside the brief.",
+ "pro_h3": "The full loop kit",
+ "pro_items": [
+  "Aton's laws packet template, filled in from real runs, with the rules that came from real mistakes",
+  "The audit protocol: mechanical gates, judgment gates, and the honesty cross-check that catches inflated reports",
+  "The cost lessons from a full production run, with the numbers",
+  "How to hand a loop from one tool to another without losing the standard"
+ ],
+ "offer": [
+  "Work with Aton",
+  "Want a build run like this inside your operation?",
+  "Front Page Intelligence builds AI business infrastructure this way, in the open. Start with the free audit.",
+  "https://frontpageintelligence.com/audit/",
+  "Run the free business audit"
+ ]
+}

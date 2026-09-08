@@ -1,0 +1,6 @@
+Stop. Before doing anything else:
+1. Restate in two lines what you are building and what done looks like.
+2. List every rule you are operating under. If a rule came from a file, name the file. If it came from this chat, say so.
+3. List what you have claimed is done in this session, and for each one say whether you verified it (show how) or only believe it.
+4. Say what you would change about the plan if you were starting fresh right now.
+Then wait. Do not continue until I confirm the restatement is right.

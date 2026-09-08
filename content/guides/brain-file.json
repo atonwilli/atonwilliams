@@ -1,0 +1,176 @@
+{
+ "kind": "spec",
+ "slug": "brain-file",
+ "num": "04",
+ "date": "2026-09-06",
+ "status": "published",
+ "topicKey": "ai",
+ "keys": "set up your first brain file most people re-explain their business to the ai every single time. the fix is one plain text file the ai reads at the start of every session: who you are, what you run, how you talk, what never changes. here is how to write it in an hour. how to train your ai on your business with one plain text file it reads every time, so it stops guessing and starts working like someone who has been in the building.",
+ "cardBlurb": "How to train your AI on your business with one plain text file it reads every time, so it stops guessing and starts working like someone who has been in the building.",
+ "cardTags": [
+  "Free lesson",
+  "Worksheet",
+  "Prompt",
+  "Deeper in Pro"
+ ],
+ "topicLabel": "AI and tools",
+ "topic": "AI and tools",
+ "band": " mint",
+ "title": "Set up your first brain file",
+ "desc": "How to train your AI on your business with one plain text file it reads every time, so it stops guessing and starts working like someone who has been in the building.",
+ "h1": "Set up your first brain file.",
+ "em": "Train your AI once, then stop repeating yourself.",
+ "lead": "Most people re-explain their business to the AI every single time. The fix is one plain text file the AI reads at the start of every session: who you are, what you run, how you talk, what never changes. Here is how to write it in an hour.",
+ "read": 7,
+ "kit": "Template and prompt",
+ "tiles": [
+  [
+   "The lesson",
+   "What a brain file is, what goes in it, and the four sections that do most of the work."
+  ],
+  [
+   "The starter prompt",
+   "Have the AI interview you and draft the file from your answers."
+  ],
+  [
+   "The full brain kit",
+   "The complete template, the update ritual, and the private-versus-public split."
+  ]
+ ],
+ "sections": [
+  {
+   "nav": "What it is",
+   "label": "What a brain file is",
+   "h2": "One file the AI reads first.",
+   "body": [
+    [
+     "p",
+     "Every serious AI tool can read a file before it does anything. Claude Code reads a file named CLAUDE.md in your project folder. Other tools have a custom instructions box or a project file. The name does not matter. What matters is that it is one place, in plain language, that says who you are and how you work."
+    ],
+    [
+     "p",
+     "Without it, the AI is a very smart stranger. With it, the AI is a new hire who read the handbook before day one. The difference shows up in the first ten minutes of every session."
+    ],
+    [
+     "said",
+     "The test",
+     "If you have typed the same explanation about your business more than twice, that explanation belongs in the brain file."
+    ]
+   ]
+  },
+  {
+   "nav": "The four sections",
+   "label": "What goes in it",
+   "h2": "Four sections do most of the work.",
+   "body": [
+    [
+     "steps",
+     [
+      [
+       "Who we are.",
+       "The business in five lines: what you sell, to whom, in what medium, where, and the names of the companies and people that come up daily. Facts only."
+      ],
+      [
+       "How we talk.",
+       "Your voice rules. Short sentences. Words you use and words you never use. Whether you write lowercase. One or two example paragraphs in your real voice."
+      ],
+      [
+       "What never changes.",
+       "The rules the AI must not break: things it must never claim, names it must never publish, numbers it may only use once verified, formats you require."
+      ],
+      [
+       "What we are working on.",
+       "The current priorities, dated. Three to five lines. This is the part you update every week, and the part that keeps the AI from working on last month's plan."
+      ]
+     ]
+    ],
+    [
+     "p",
+     "Keep it under two pages. A brain file that tries to hold everything gets ignored the same way a forty-page handbook does."
+    ]
+   ]
+  },
+  {
+   "nav": "Writing it",
+   "label": "Write it in an hour",
+   "h2": "Let the AI interview you.",
+   "body": [
+    [
+     "p",
+     "Do not write the file from a blank page. Use the prompt below. It makes the AI ask you the questions a good new hire would ask, then drafts the file from your answers. You edit, you do not author."
+    ],
+    [
+     "code",
+     "CLAUDE.md  (or brain.md, or your tool's instructions box)\n\n# Who we are\n...\n\n# How we talk\n...\n\n# What never changes\n...\n\n# What we are working on (updated 2026-09-07)\n..."
+    ],
+    [
+     "checks",
+     [
+      "Read it out loud once. If a line sounds like a brochure, cut it.",
+      "Put the date on the priorities section and change it when they change.",
+      "Keep private facts out of any file that could be shared. The brain file is for what the AI needs, not everything you know."
+     ]
+    ]
+   ]
+  },
+  {
+   "nav": "Keeping it alive",
+   "label": "Keeping it alive",
+   "h2": "The file is only as good as its last update.",
+   "body": [
+    [
+     "p",
+     "Once a week, spend five minutes: update the priorities, add any rule you found yourself repeating, delete anything the AI no longer needs. When the AI gets something wrong that it should have known, the fix goes in the file, not in the chat."
+    ],
+    [
+     "said",
+     "What the coach says",
+     "You corrected the same mistake three sessions in a row. That is not an AI problem. That is a missing line in the brain file."
+    ]
+   ]
+  }
+ ],
+ "ws": [
+  "Your first draft",
+  "Rough out the four sections.",
+  "Bullet points are fine. The prompt turns them into the file."
+ ],
+ "fields": [
+  [
+   "Who we are",
+   "What you sell, to whom, in what medium, where. The names that come up daily."
+  ],
+  [
+   "How we talk",
+   "Sentence length, words you use, words you never use, one example line."
+  ],
+  [
+   "What never changes",
+   "Rules the AI must not break. Names never to publish. Numbers it may not use unverified."
+  ],
+  [
+   "What we are working on",
+   "Three to five dated priorities."
+  ]
+ ],
+ "pr": [
+  "The starter prompt",
+  "Have the AI build it with you.",
+  "Paste this into your AI tool. Answer its questions in plain language. Edit what comes back."
+ ],
+ "prompt": "You are helping me write a brain file: one plain text document you will read at the start of every session so you stop guessing about my business.\n\nInterview me first. Ask one question at a time, in this order, and wait for my answer before the next:\n<b>1.</b> What does the business sell, to whom, and in what medium (face to face, phone, online)?\n<b>2.</b> Which company names, product names and people come up every day?\n<b>3.</b> How do I write? Ask for two examples of things I have actually written.\n<b>4.</b> What must you never claim, never publish, or never do?\n<b>5.</b> What are the three to five priorities this month?\n\nThen draft the file with four sections: Who we are, How we talk, What never changes, What we are working on (dated). Under two pages. Plain language. No marketing tone. Mark anything you inferred rather than heard with [confirm].",
+ "pro_h3": "The full brain kit",
+ "pro_items": [
+  "The complete template with the sections the public version leaves out: decision rules, escalation, and what to do when sources disagree",
+  "The weekly update ritual as a five-minute checklist",
+  "How to split a private brain from a public one so nothing leaks into shared work",
+  "Worked examples from a sales floor, an agency, and a one-person business"
+ ],
+ "offer": [
+  "Work with Aton",
+  "Want this set up for your whole team, not just you?",
+  "The recruiting and operations programs put a brain file behind every seat so the AI works the same way for everyone. By application.",
+  "../preview/contact.html?topic=consulting",
+  "Ask about a team program"
+ ]
+}

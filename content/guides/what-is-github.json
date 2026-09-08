@@ -1,0 +1,176 @@
+{
+ "kind": "spec",
+ "slug": "what-is-github",
+ "num": "06",
+ "date": "2026-09-06",
+ "status": "published",
+ "topicKey": "ai",
+ "keys": "what github is, and how to use it you will hear engineers and ai tools talk about repos, commits and branches as if everyone knows what they mean. here is the plain version: what github is for, why it matters even if you never write code, and the handful of moves that cover most of real use. github explained for an operator, not an engineer: what a repo is, why version history matters, and the six commands that cover ninety percent of real use.",
+ "cardBlurb": "GitHub explained for an operator, not an engineer: what a repo is, why version history matters, and the six commands that cover ninety percent of real use.",
+ "cardTags": [
+  "Free lesson",
+  "Worksheet",
+  "Prompt",
+  "Deeper in Pro"
+ ],
+ "topicLabel": "AI and tools",
+ "topic": "AI and tools",
+ "band": " mint",
+ "title": "What GitHub is, and how to use it",
+ "desc": "GitHub explained for an operator, not an engineer: what a repo is, why version history matters, and the six commands that cover ninety percent of real use.",
+ "h1": "What GitHub is,",
+ "em": "and how an operator actually uses it.",
+ "lead": "You will hear engineers and AI tools talk about repos, commits and branches as if everyone knows what they mean. Here is the plain version: what GitHub is for, why it matters even if you never write code, and the handful of moves that cover most of real use.",
+ "read": 8,
+ "kit": "Glossary and prompt",
+ "tiles": [
+  [
+   "The lesson",
+   "Repos, commits, branches and pull requests, in the words of someone who runs a business."
+  ],
+  [
+   "The prompt",
+   "Have the AI set up your first repo and walk you through the first commit."
+  ],
+  [
+   "The operator's workflow",
+   "The exact routine Aton's team uses with AI tools, with the safety rails."
+  ]
+ ],
+ "sections": [
+  {
+   "nav": "What it is",
+   "label": "What GitHub is",
+   "h2": "A shared, versioned filing cabinet.",
+   "body": [
+    [
+     "p",
+     "GitHub is a place on the internet where a project's files live, with a full history of every change ever made to them. Git is the tool that tracks the changes. GitHub is the website that hosts them and lets people work on the same files without overwriting each other."
+    ],
+    [
+     "p",
+     "For an operator the value is not the code. It is the history and the safety. Every change has a name, a date and a reason. Anything can be undone. Two people, or a person and an AI, can work at the same time without stepping on each other."
+    ],
+    [
+     "said",
+     "The test",
+     "If a file matters and more than one person or tool touches it, it belongs in a repo."
+    ]
+   ]
+  },
+  {
+   "nav": "Six words",
+   "label": "The six words",
+   "h2": "Six words that cover most conversations.",
+   "body": [
+    [
+     "steps",
+     [
+      [
+       "Repo.",
+       "The project folder, with its history. One business system, one repo."
+      ],
+      [
+       "Commit.",
+       "A saved snapshot with a message saying what changed and why. 'Fix the interview scorecard math' is a commit."
+      ],
+      [
+       "Branch.",
+       "A copy of the project where work happens without touching the live version. When it is ready, it gets merged back."
+      ],
+      [
+       "Pull request.",
+       "The request to merge a branch, with the changes laid out for someone to review before they go live."
+      ],
+      [
+       "Main.",
+       "The branch that is the real, live version. Protect it. Nothing lands there without review."
+      ],
+      [
+       "Clone.",
+       "Downloading the repo to a computer so you or an AI tool can work on it."
+      ]
+     ]
+    ]
+   ]
+  },
+  {
+   "nav": "With AI tools",
+   "label": "Why it matters with AI",
+   "h2": "The AI works in a branch, you approve the merge.",
+   "body": [
+    [
+     "p",
+     "AI coding tools are fast and confident, and sometimes wrong. GitHub is how you let them work without letting them break anything. The AI works in a branch. It commits with a message. You read the pull request. You merge, or you do not. Nothing reaches main without a human deciding it should."
+    ],
+    [
+     "checks",
+     [
+      "Never let an AI tool push straight to main.",
+      "Read the commit message before you read the code. If the message is vague, the change probably is too.",
+      "One task per branch. A branch called 'fixes' is a branch you cannot review."
+     ]
+    ]
+   ]
+  },
+  {
+   "nav": "Your first hour",
+   "label": "Your first hour",
+   "h2": "Create an account, make one repo, make one commit.",
+   "body": [
+    [
+     "p",
+     "Create a free account. Make a private repo with a plain name. Add one file, even a text file with your brain file in it. Commit it with a message. That is the whole first hour, and after it the words in this guide stop being abstract."
+    ],
+    [
+     "said",
+     "What the coach says",
+     "You do not need to understand Git. You need to understand that every change has a name and can be undone. Start there."
+    ]
+   ]
+  }
+ ],
+ "ws": [
+  "Your first repo",
+  "Plan the one repo you will make today.",
+  "Name it, decide what goes in it, and write the first commit message."
+ ],
+ "fields": [
+  [
+   "Repo name",
+   "Plain, lowercase, hyphens. What system is this?"
+  ],
+  [
+   "What goes in it",
+   "The files that matter and get touched by more than one person or tool."
+  ],
+  [
+   "First commit message",
+   "What changed and why, in one line."
+  ],
+  [
+   "Who can merge to main",
+   "The one or two people who approve changes."
+  ]
+ ],
+ "pr": [
+  "The prompt",
+  "Have the AI walk you through it.",
+  "Use this with an AI coding tool that can see your computer. It sets up the repo and explains each step as it goes."
+ ],
+ "prompt": "I run a business and I am not an engineer. Help me set up my first GitHub repo and make my first commit, explaining each step in one plain sentence before you do it.\n<b>1.</b> Check whether Git and the GitHub tool are installed. If not, tell me the exact command to install them and wait.\n<b>2.</b> Create a private repo named [name] with a README that says what the project is for.\n<b>3.</b> Add my brain file to it.\n<b>4.</b> Make the first commit with a clear message and show me what the commit looks like.\n<b>5.</b> Create a branch for the next piece of work and explain, in two sentences, why you did not work on main.\nDo not run any command that deletes or overwrites files without asking me first.",
+ "pro_h3": "The operator's workflow",
+ "pro_items": [
+  "The branch, commit, review, merge routine Aton's team runs with AI tools, as a one-page checklist",
+  "How to read a pull request without reading code: what to look for, what to ask",
+  "The three settings to lock on a repo so nothing lands on main unreviewed",
+  "Recovering from a bad change in two commands"
+ ],
+ "offer": [
+  "Work with Aton",
+  "Putting AI to work in your operation?",
+  "Start with the free business audit from Front Page Intelligence, then talk to us about what to build first.",
+  "https://frontpageintelligence.com/audit/",
+  "Run the free business audit"
+ ]
+}
