@@ -93,6 +93,26 @@ h2 + p { margin-top: 16px; }
 .nav-links a { text-decoration: none; opacity: .85; transition: opacity .2s; }
 .nav-links a:hover { opacity: 1; }
 .nav-links .button { padding: 11px 18px; font-size: 14px; }
+.nav-menu { position: relative; }
+.nav-menu-btn {
+  display: inline-flex; align-items: center; gap: 6px; background: none; border: 0; padding: 0; margin: 0;
+  font: inherit; color: var(--ink); cursor: pointer; opacity: .85; transition: opacity .2s;
+}
+.nav-menu-btn svg { transition: transform .2s var(--ease); }
+.nav-menu:hover .nav-menu-btn, .nav-menu.open .nav-menu-btn { opacity: 1; }
+.nav-menu.open .nav-menu-btn svg { transform: rotate(180deg); }
+.nav-menu-panel {
+  position: absolute; top: calc(100% + 14px); left: 50%; transform: translateX(-50%) translateY(-6px); min-width: 268px;
+  background: #fff; border: 1px solid var(--line); border-radius: 18px; padding: 10px; box-shadow: 0 24px 50px -24px rgba(37, 36, 64, .35);
+  opacity: 0; visibility: hidden; pointer-events: none; transition: opacity .18s var(--ease), transform .18s var(--ease), visibility .18s;
+}
+.nav-menu-panel::before { content: ''; position: absolute; left: 0; right: 0; top: -14px; height: 14px; }
+.nav-menu.open .nav-menu-panel { opacity: 1; visibility: visible; pointer-events: auto; transform: translateX(-50%) translateY(0); }
+.nav-menu-group + .nav-menu-group { border-top: 1px solid var(--line); margin-top: 6px; padding-top: 6px; }
+.nav-menu-label { display: block; padding: 6px 12px 4px; font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: var(--green); font-weight: 600; opacity: .9; }
+.nav-menu-panel a { display: flex; justify-content: space-between; align-items: center; gap: 18px; padding: 9px 12px; border-radius: 10px; font-size: 14.5px; opacity: .92; }
+.nav-menu-panel a:hover { background: var(--mint); opacity: 1; }
+.nav-menu-panel a em { font-style: normal; font-size: 13px; color: var(--green); font-weight: 600; }
 .nav-toggle {
   display: none; border: 1.5px solid var(--ink); background: transparent; border-radius: 999px;
   padding: 9px 14px; font: 600 14px var(--sans); color: var(--ink); cursor: pointer;
@@ -340,6 +360,14 @@ dialog::backdrop { background: rgba(37, 36, 64, .55); backdrop-filter: blur(3px)
   .nav-links.open { display: flex; }
   .nav-links a { padding: 12px 0; border-bottom: 1px solid var(--line); }
   .nav-links .button { margin-top: 14px; justify-content: center; border-bottom: 0; }
+  .nav-menu { border-bottom: 1px solid var(--line); }
+  .nav-menu-btn { width: 100%; justify-content: space-between; padding: 12px 0; opacity: 1; }
+  .nav-menu-panel {
+    position: static; transform: none; min-width: 0; border: 0; border-radius: 0; box-shadow: none; padding: 0 0 8px 12px; background: transparent;
+    display: none; opacity: 1; visibility: visible; pointer-events: auto;
+  }
+  .nav-menu.open .nav-menu-panel { display: block; transform: none; }
+  .nav-menu-panel a { border-bottom: 0; padding: 9px 10px; }
   .hero .wrap { grid-template-columns: 1fr; gap: 36px; padding-top: 28px; padding-bottom: 56px; min-height: 0; }
   h1 { font-size: clamp(46px, 13vw, 64px); }
   .hero-copy .lead { font-size: 18px; margin: 20px 0 24px; }

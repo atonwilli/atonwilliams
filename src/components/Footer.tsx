@@ -10,8 +10,10 @@ export function Footer() {
           <strong>Explore</strong>
           <ul>
             <li><a href="/#start">Start here</a></li>
+            <li><a href="/#story">My story</a></li>
             <li><a href="/guides">Free guides</a></li>
-            <li><a href="/pro">Pro packs and AI agents</a></li>
+            <li><a href="/pro#agents">AI agents</a></li>
+            <li><a href="/pro#packs">Pro packs</a></li>
             <li><a href="/notes">Notes</a></li>
             <li><a href="/#proof">Proof</a></li>
             <li><a href="/speaking">Speaking</a></li>

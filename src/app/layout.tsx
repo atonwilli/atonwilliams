@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import './globals.css'
-import { Nav } from '@/components/Nav'
+import { Nav, type NavProduct } from '@/components/Nav'
+import { getAgents, getAgentBundle, getLibraryPack } from '@/lib/pro'
 import { Footer } from '@/components/Footer'
 import { BgDepth } from '@/components/BgDepth'
 import { SiteFx } from '@/components/SiteFx'
@@ -14,6 +15,13 @@ export const metadata: Metadata = {
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
+  const team = getAgentBundle()
+  const lib = getLibraryPack()
+  const products: NavProduct[] = [
+    ...getAgents().map((a) => ({ href: `/pro#${a.sku}`, label: a.short || a.title, price: a.price, group: 'Agents' })),
+    { href: '/pro#agents', label: team.title, price: team.price, group: 'Bundles' },
+    { href: '/pro#packs', label: lib.title, price: lib.price, group: 'Bundles' },
+  ]
   return (
     <html lang="en">
       <head>
@@ -26,7 +34,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body>
         <BgDepth />
-        <Nav />
+        <Nav products={products} />
         {children}
         <Footer />
         <SiteFx />

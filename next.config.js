@@ -6,6 +6,9 @@ const nextConfig = {
     return [
       { source: '/about', destination: '/#story', permanent: true },
       { source: '/work-with-me', destination: '/#work', permanent: true },
+      { source: '/agents', destination: '/pro#agents', permanent: true },
+      { source: '/packs', destination: '/pro#packs', permanent: true },
+      { source: '/shop', destination: '/pro', permanent: true },
     ]
   },
 }
