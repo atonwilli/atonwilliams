@@ -1,9 +1,25 @@
 import type { Metadata } from 'next'
 import Stripe from 'stripe'
 import { getPack } from '@/lib/pro'
+import { db } from '@/lib/newsletter'
+import { pushLead } from '@/lib/mesa'
 
 export const metadata: Metadata = { title: 'Your Pro pack', robots: { index: false } }
 export const dynamic = 'force-dynamic'
+
+/** First paid load of a session: one row in site_purchases, one push to Mesa. Later loads are no-ops. */
+async function recordPurchase(sessionId: string, email: string, name: string, sku: string, title: string, amountCents: number | null, currency: string) {
+  const client = db()
+  if (!client) return
+  const { data } = await client.from('site_purchases').insert({ session_id: sessionId, email, sku, title, amount_cents: amountCents, currency }).select('session_id').maybeSingle()
+  if (!data) return // already recorded (duplicate key) or unavailable
+  const amount = amountCents != null ? (amountCents / 100).toFixed(2) : ''
+  const ok = await pushLead({
+    type: 'purchase', email, name, source: `atonwilliams-pro:${sku}`,
+    extras: { sku, product: title, amount, currency: currency.toUpperCase(), stripe_session: sessionId },
+  })
+  if (ok) await client.from('site_purchases').update({ mesa_pushed_at: new Date().toISOString() }).eq('session_id', sessionId)
+}
 
 export default async function ProThanks({ searchParams }: { searchParams: Promise<{ session_id?: string }> }) {
   const { session_id: sessionId = '' } = await searchParams
@@ -18,6 +34,7 @@ export default async function ProThanks({ searchParams }: { searchParams: Promis
       packTitle = pack?.title || 'your Pro pack'
       email = session.customer_details?.email || ''
       state = session.payment_status === 'paid' ? 'paid' : 'pending'
+      if (state === 'paid') await recordPurchase(sessionId, email, session.customer_details?.name || '', String(session.metadata?.sku || ''), packTitle, session.amount_total ?? null, session.currency || 'usd')
     } catch {
       state = 'invalid'
     }

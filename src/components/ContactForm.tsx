@@ -4,7 +4,7 @@ import { Suspense, useEffect, useMemo, useState } from 'react'
 import { useSearchParams } from 'next/navigation'
 import { AUTHORITY, PIPELINE_OWNER, REVENUE_BANDS, TEAM_SIZES, TIMELINES, decide, getTopic, topicsFor, type Track } from '@/lib/routing'
 
-const FORM = 'https://formsubmit.co/aton@frontpageagencyinc.com'
+const FORM = '/api/lead'
 const SITE = 'https://atonwilliams.com'
 
 function Form() {
@@ -43,11 +43,8 @@ function Form() {
             fetch('/api/newsletter/subscribe', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ email, interest, source: 'contact:' + topic }), keepalive: true }).catch(() => {})
           }
         }}>
-          <input type="hidden" name="_subject" value={`[${t ? t.pipeline : track === 'career' ? 'recruiting' : 'inquiry'}] ${t ? t.label : 'atonwilliams.com'}: ${decision.route}`} />
           <input type="hidden" name="pipeline" value={t ? t.pipeline : ''} />
           <input type="hidden" name="pipeline_owner" value={t ? PIPELINE_OWNER[t.pipeline] : ''} />
-          <input type="hidden" name="_template" value="table" />
-          <input type="hidden" name="_captcha" value="false" />
           <input type="hidden" name="_next" value={next} />
           <input type="hidden" name="route" value={decision.route} />
           <input type="hidden" name="route_reason" value={decision.reason} />
