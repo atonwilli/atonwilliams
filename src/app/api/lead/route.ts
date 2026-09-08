@@ -9,7 +9,7 @@ import { pushLead, pipelineNameFor } from '@/lib/mesa'
  * 3. the visitor is sent to the thanks page the form asked for.
  */
 const INBOX = process.env.LEAD_INBOX || 'aton@frontpageagencyinc.com'
-const HIDDEN = new Set(['_honey', '_next', 'website'])
+const HIDDEN = new Set(['_honey', '_next', 'website', 'pipeline']) // pipeline is re-sent as mesa_pipeline_key + the mapped Mesa pipeline name
 const FIELDS: Array<[string, string]> = [
   ['name', 'Name'], ['email', 'Email'], ['phone', 'Phone'], ['company', 'Company'],
   ['track', 'Track'], ['topic', 'Topic'], ['pipeline', 'Pipeline'], ['pipeline_owner', 'Pipeline owner'],

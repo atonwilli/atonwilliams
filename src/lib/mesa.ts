@@ -34,7 +34,10 @@ export async function pushLead(lead: MesaLead): Promise<boolean> {
     const res = await fetch(process.env.MESA_LEAD_URL!, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${process.env.MESA_LEAD_TOKEN}` },
+      // Extras go first so a raw form field (like the routing key `pipeline`) can never
+      // overwrite the mapped values Mesa actually routes on.
       body: JSON.stringify({
+        ...extras,
         org: process.env.MESA_LEAD_ORG,
         type: lead.type,
         email: lead.email,
@@ -44,7 +47,6 @@ export async function pushLead(lead: MesaLead): Promise<boolean> {
         message: lead.message || '',
         pipeline: lead.pipeline || '',
         source: lead.source || 'atonwilliams.com',
-        ...extras,
       }),
       signal: AbortSignal.timeout(8000),
     })
