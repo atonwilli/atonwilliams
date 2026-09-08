@@ -1,10 +1,10 @@
 ---
 title: "Build a Custom Skill, Pro"
 guide: custom-skill
-price: 12
+price: 29
 pillar: ai
 sub: claude
-compare_at: 24
+compare_at: 58
 tagline: "The anatomy of a skill that holds up, five fully written operator skills, the testing rubric, versioning rules, and two prompts to draft and stress-test your own."
 includes:
   - "The build prompt: paste it into Claude, fill in the blanks, and it builds the whole system for your business"

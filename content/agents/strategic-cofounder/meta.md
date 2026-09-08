@@ -1,8 +1,8 @@
 ---
 title: "The Operator Co-Founder"
 short: "Strategic Co-Founder"
-price: 38
-compare_at: 76
+price: 49
+compare_at: 98
 tagline: "An AI co-founder that knows your business, your numbers, your non-negotiables, and every lesson you have paid for, and pushes back before you chase the wrong thing."
 includes:
   - "Onboarding by chat: goals, margins, team, working style, non-negotiables, lessons learned, loaded every session"

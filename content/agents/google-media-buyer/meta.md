@@ -1,8 +1,8 @@
 ---
 title: "The Google Media Buyer"
 short: "Google Media Buyer"
-price: 38
-compare_at: 76
+price: 49
+compare_at: 98
 tagline: "A media buyer for Google Ads that audits search, Performance Max, and YouTube against your own numbers, cleans your search terms, and proposes bids and budgets with the reasoning attached."
 includes:
   - "Install audit from your Google Ads exports: real percentile benchmarks for CPA, ROAS, CTR, and conversion rate from your account"

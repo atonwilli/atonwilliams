@@ -1,10 +1,10 @@
 ---
 title: "The Brain File, Pro"
 guide: brain-file
-price: 12
+price: 29
 pillar: ai
 sub: any-model
-compare_at: 24
+compare_at: 58
 tagline: "The complete brain file template filled in for a real example company, the interview prompts that draft each section, the decisions log, the voice guide, and the setup for every major AI tool."
 includes:
   - "The build prompt: paste it into Claude, fill in the blanks, and it builds the whole system for your business"

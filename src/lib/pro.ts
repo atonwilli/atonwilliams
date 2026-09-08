@@ -21,8 +21,8 @@ export type ProPack = {
 
 const ROOT = process.env.CONTENT_DIR || path.join(process.cwd(), 'content')
 export const PRIVATE_DIR = process.env.PRIVATE_DIR || path.join(process.cwd(), 'private', 'pro')
-export const LIBRARY_PRICE = 79
-export const LIBRARY_COMPARE_AT = 228
+export const LIBRARY_PRICE = 129
+export const LIBRARY_COMPARE_AT = 415 // what the packs cost bought one at a time
 
 function parse(raw: string): Record<string, string | string[]> {
   const m = raw.match(/^---\n([\s\S]*?)\n---\n/)
@@ -58,7 +58,7 @@ export function getProPacks(): ProPack[] {
         title: (d.title as string) || slug,
         tagline: (d.tagline as string) || '',
         includes: (d.includes as string[]) || [],
-        price: Number(d.price) || 12,
+        price: Number(d.price) || 29,
         compareAt: d.compare_at ? Number(d.compare_at) : undefined,
         file: `${slug}-pro.zip`,
         kind: 'pack' as const,
@@ -102,7 +102,7 @@ export function getAgents(): ProPack[] {
         includes: (d.includes as string[]) || [],
         who: (d.who as string[]) || [],
         needs: (d.needs as string) || '',
-        price: Number(d.price) || 38,
+        price: Number(d.price) || 49,
         compareAt: d.compare_at ? Number(d.compare_at) : undefined,
         file: `agent-${slug}.zip`,
         kind: 'agent' as const,
@@ -121,7 +121,7 @@ export function getAgentBundle(): ProPack {
     short: (d.short as string) || 'All five agents',
     tagline: (d.tagline as string) || `All ${agents.length} agents in one download.`,
     includes: agents.map((a) => a.title),
-    price: Number(d.price) || 98,
+    price: Number(d.price) || 149,
     compareAt: d.compare_at ? Number(d.compare_at) : undefined,
     file: 'agent-team.zip',
     kind: 'bundle' as const,

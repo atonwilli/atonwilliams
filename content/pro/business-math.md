@@ -1,8 +1,8 @@
 ---
 title: "Business Math, Pro"
 guide: business-math
-price: 12
-compare_at: 24
+price: 29
+compare_at: 58
 pillar: operations
 sub: numbers
 tagline: "Forty business numbers in the card format with worked examples for a service and a product business, the owner's monthly review built from your statements, the pricing test, and quiz mode."

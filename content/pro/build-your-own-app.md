@@ -1,8 +1,8 @@
 ---
 title: "Building Your Own App, Pro"
 guide: build-your-own-app
-price: 12
-compare_at: 24
+price: 29
+compare_at: 58
 pillar: ai
 sub: building
 tagline: "The setup order for Mac and Windows, the connector map, the model routing table with costs, the let-it-drive rules, the project brief, and the ship checklist."

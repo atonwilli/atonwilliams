@@ -1,8 +1,8 @@
 ---
 title: "The Creative Director"
 short: "Creative Director"
-price: 38
-compare_at: 76
+price: 49
+compare_at: 98
 tagline: "A creative director that audits your ads against your own winners, briefs the next round with a hypothesis every time, and keeps the winner database so you never re-shoot a documented loser."
 includes:
   - "Install audit from your ad exports: your top and bottom creatives scored on your account's own benchmarks, with the patterns named"

@@ -1,8 +1,8 @@
 ---
 title: "The App Review Auditor"
 short: "App Review Auditor"
-price: 38
-compare_at: 76
+price: 49
+compare_at: 98
 tagline: "Point it at your project, your screenshots, and your store listing. It audits against Apple's and Google's rulebooks, writes the findings with severity and the guideline behind each, and fixes what you approve."
 includes:
   - "Two rulebooks, Apple and Google Play, as checklists it reads every audit: payments, Sign in with Apple, account deletion, website-only apps, demo login, iPad layout, screenshots, coming soon screens, broken links, report and block, restore purchases, paid features disclosed"

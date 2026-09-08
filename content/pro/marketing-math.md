@@ -1,8 +1,8 @@
 ---
 title: "Marketing Math, Pro"
 guide: marketing-math
-price: 12
-compare_at: 24
+price: 29
+compare_at: 58
 pillar: operations
 sub: numbers
 tagline: "Forty marketing numbers in the card format, the fifteen-minute owner's ad audit, the agency-honesty test, a weekly one-page read built from your exports, and quiz mode."

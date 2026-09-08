@@ -1,8 +1,8 @@
 ---
 title: "The Email Strategist"
 short: "Email Marketing Strategist"
-price: 38
-compare_at: 76
+price: 49
+compare_at: 98
 tagline: "An email strategist that builds your flows, plans your calendar, writes every send in your voice, and reads your own open, click, and revenue numbers to decide what goes out next."
 includes:
   - "Onboarding that captures your voice, your offers, your customer, and your list segments, loaded every session"

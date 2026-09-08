@@ -1,8 +1,8 @@
 ---
 title: "The Build Foreman"
 short: "Build Foreman"
-price: 38
-compare_at: 76
+price: 49
+compare_at: 98
 tagline: "Sets up your machine, connects your tools, writes the loop packet for your app, and runs the build with you at the boundaries. It executes the how; you keep the deploy button."
 includes:
   - "Environment setup it runs with you: checks what is installed, installs what is missing in the right order, for Mac or Windows"

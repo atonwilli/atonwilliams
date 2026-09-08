@@ -1,8 +1,8 @@
 ---
 title: "The Meta Media Buyer"
 short: "Meta Media Buyer"
-price: 38
-compare_at: 76
+price: 49
+compare_at: 98
 tagline: "A media buyer for your Meta account that audits every campaign against your own benchmarks, tells you what to scale, hold, or kill, and logs every move so you never re-run a documented loser."
 includes:
   - "Install audit from your Ads Manager exports: real percentile benchmarks for CPA, ROAS, CTR, CPM, and frequency from your account, not industry averages"

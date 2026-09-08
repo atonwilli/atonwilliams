@@ -1,8 +1,8 @@
 ---
 title: "The Five Seats, Pro"
 guide: five-seats
-price: 12
-compare_at: 24
+price: 29
+compare_at: 58
 pillar: leadership
 sub: team
 tagline: "The seat map for your actual team, five scorecards, the handoffs between seats, the hiring order, and the GM chapter."

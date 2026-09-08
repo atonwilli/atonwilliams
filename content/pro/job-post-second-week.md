@@ -1,8 +1,8 @@
 ---
 title: "The Hiring System, Pro"
 guide: job-post-second-week
-price: 12
-compare_at: 24
+price: 29
+compare_at: 58
 pillar: recruitment
 sub: hiring
 tagline: "The post that filters, the screening pipeline with reply-speed rules, the second-round interview that filters instead of sells, the ten-day plan, and the day-ten conversation."

@@ -1,8 +1,8 @@
 ---
 title: "App Store Approval, Pro"
 guide: app-store-approval
-price: 12
-compare_at: 24
+price: 29
+compare_at: 58
 pillar: ai
 sub: building
 tagline: "The reviewer's forty-item checklist with the guideline behind each item, the payment decision tree, the review-notes template, the screenshot rules, and the response templates for when something comes back."

@@ -1,8 +1,8 @@
 ---
 title: "Google Play Approval, Pro"
 guide: google-play-approval
-price: 12
-compare_at: 24
+price: 29
+compare_at: 58
 pillar: ai
 sub: building
 tagline: "The reviewer's forty-item checklist with the policy behind each item, the console walkthrough of every form, the account deletion requirement done right, the permissions and data safety rules, and the response templates."

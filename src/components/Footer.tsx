@@ -40,8 +40,7 @@ export function Footer() {
         </div>
       </div>
       <div className="footer-base">
-        <span>Aton Williams. All rights reserved.</span>
-        <span>Fort Worth and Arizona.</span>
+        <span>&copy; {new Date().getFullYear()} Aton Williams. All rights reserved.</span>
       </div>
     </footer>
   )
