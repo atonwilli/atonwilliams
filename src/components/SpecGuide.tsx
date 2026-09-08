@@ -1,4 +1,5 @@
 import type { SpecGuide as Spec, SpecBlock } from '@/lib/content'
+import { ProBox } from './ProBox'
 
 function esc(s: string) {
   return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
@@ -108,19 +109,7 @@ export function SpecGuidePage({ g }: { g: Spec }) {
             </div>
           </section>
 
-          <section className="lesson" id="pro">
-            <span className="num"><b>{n + 3}</b>Deeper in Pro</span>
-            <h2>The free version gets you started. Pro finishes the job.</h2>
-            <p>Operators Academy Pro is the paid tier of the community, opening soon. This guide has a deeper version there.</p>
-            <div className="pro-box">
-              <div>
-                <span className="chip">Operators Academy Pro</span>
-                <h3>{g.pro_h3}</h3>
-                <ul>{g.pro_items.map((x) => <li key={x}>{x}</li>)}</ul>
-              </div>
-              <a className="button peach" href="/contact?topic=membership">Get notified when Pro opens</a>
-            </div>
-          </section>
+          <ProBox guide={g.slug} num={n + 3} />
 
           <aside className="offer">
             <span className="eyebrow">{g.offer[0]}</span>

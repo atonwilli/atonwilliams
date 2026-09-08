@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation'
 import { getGuide, getGuides } from '@/lib/content'
 import { SpecGuidePage } from '@/components/SpecGuide'
 import { GuideTools } from '@/components/GuideTools'
+import { ProBox } from '@/components/ProBox'
 
 export const revalidate = 3600
 export const dynamicParams = true
@@ -29,7 +30,10 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
           <>
             <section className={`band${g.band}`}><div className="wrap" dangerouslySetInnerHTML={{ __html: g.heroHtml }} /></section>
             <section className="kit" aria-label="What you get"><div className="wrap" dangerouslySetInnerHTML={{ __html: g.kitHtml }} /></section>
-            <article className="article"><div className="wrap" dangerouslySetInnerHTML={{ __html: g.articleHtml }} /></article>
+            <article className="article">
+              <div className="wrap" dangerouslySetInnerHTML={{ __html: g.articleHtml }} />
+              <div className="wrap"><ProBox guide={g.slug} num={99} /></div>
+            </article>
           </>
         ) : (
           <SpecGuidePage g={g} />

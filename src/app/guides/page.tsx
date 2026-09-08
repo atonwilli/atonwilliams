@@ -13,7 +13,7 @@ export default function Guides() {
         <div className="wrap">
           <span className="eyebrow">The free library</span>
           <h1>Put the ideas <em>to work.</em></h1>
-          <p className="lead">Sales frameworks and the AI methods behind the operation. Each guide is a full lesson on the page with a tool you can use the same day. The deeper version lives in Operators Academy Pro.</p>
+          <p className="lead">Sales frameworks and the AI methods behind the operation. Each guide is a full lesson on the page with a tool you can use the same day. The deeper version of every guide is a Pro pack, <a className="textlink" href="/pro">available now</a>.</p>
         </div>
       </section>
       <section className="library">

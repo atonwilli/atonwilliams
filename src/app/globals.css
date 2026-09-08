@@ -833,3 +833,27 @@ dialog::backdrop { background: rgba(37, 36, 64, .55); backdrop-filter: blur(3px)
 .page-grid .form-card { grid-row: 1 / span 2; }
 .page-grid .aside { grid-column: 1; grid-row: 2; align-self: start; }
 @media (max-width: 820px) { .page-grid { grid-template-rows: none; } .page-grid .form-card, .page-grid .aside { grid-row: auto; grid-column: auto; } }
+
+/* Pro packs and checkout */
+.pro-buy { display: grid; gap: 10px; justify-items: stretch; min-width: 240px; }
+.pro-buy strong { font-family: var(--serif); font-size: 40px; font-weight: 500; letter-spacing: -.03em; line-height: 1; color: #fff; }
+.pro-buy form { display: block; }
+.pro-buy .button { width: 100%; justify-content: center; }
+.pro-buy .textlink { justify-self: start; font-size: 14px; }
+.pro-buy.dark strong { color: var(--ink); }
+.pro-library { display: grid; grid-template-columns: 1fr auto; gap: 32px; align-items: center; padding: 34px 36px; border-radius: 22px; background: var(--mint); margin-bottom: 28px; }
+.pro-library h2 { font-size: clamp(28px, 3.4vw, 40px); margin: 10px 0 12px; }
+.pro-library p { margin: 0; color: var(--ink-2); max-width: 600px; }
+.pro-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+.pro-card { background: #fff; border: 1px solid var(--line); border-radius: 18px; padding: 26px 28px; display: grid; gap: 10px; align-content: start; }
+.pro-card h3 { font-size: 24px; }
+.pro-card p { margin: 0; color: var(--ink-2); font-size: 15px; }
+.pro-card ul { margin: 6px 0 0; padding-left: 18px; font-size: 14.5px; color: var(--ink-2); display: grid; gap: 4px; }
+.pro-card-foot { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; margin-top: 10px; padding-top: 16px; border-top: 1px solid var(--line); }
+.pro-card-foot strong { font-family: var(--serif); font-size: 30px; font-weight: 500; letter-spacing: -.02em; }
+.pro-card-foot form { display: inline; }
+.pro-terms { margin-top: 40px; padding: 28px 32px; border-radius: 18px; background: var(--cream-2); }
+.pro-terms h3 { margin-bottom: 10px; }
+.pro-terms ul { margin: 0; padding-left: 18px; display: grid; gap: 6px; color: var(--ink-2); }
+@media (max-width: 820px) { .pro-library, .pro-grid { grid-template-columns: 1fr; } .pro-buy { min-width: 0; } }
+.pro-box ul li, .pro-box ul li b { color: rgba(255,250,240,.88); }
