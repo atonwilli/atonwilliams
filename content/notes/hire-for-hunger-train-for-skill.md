@@ -5,6 +5,7 @@ tag: "Recruitment"
 readTime: "4 min"
 teaser: "Skill is a curriculum. Hunger is not. The one interview question that tells you which one you are looking at."
 status: "published"
+action: "Ask every candidate this week: tell me about something you wanted badly enough to be bad at it for a while."
 ---
 
 <p>Every hiring mistake I have made came from the same place. Someone had the experience, sounded the part, and I let that stand in for the thing I actually needed. The thing I needed was a reason to show up on the bad days.</p>

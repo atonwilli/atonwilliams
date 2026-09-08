@@ -16,10 +16,19 @@ export async function GET(req: Request) {
   const secret = process.env.CRON_SECRET
   if (!secret || (auth !== `Bearer ${secret}` && url.searchParams.get('secret') !== secret)) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
   const dryRun = url.searchParams.get('dry') === '1'
+  const test = url.searchParams.get('test') || ''
 
   const client = db()
   const resend = mailer()
   if (!client || !resend) return NextResponse.json({ error: 'Newsletter is not configured' }, { status: 503 })
+
+  if (test) {
+    const latest = getNotes()[0]
+    if (!latest) return NextResponse.json({ error: 'No notes' }, { status: 404 })
+    const msg = noteEmail(latest, 'test-token', formatDate(latest.date))
+    const sent = await resend.emails.send({ from: FROM, to: test, subject: `[Test] ${msg.subject}`, html: msg.html, text: msg.text })
+    return NextResponse.json({ ok: !sent.error, test, note: latest.slug, id: sent.data?.id, error: sent.error })
+  }
 
   const t = today()
   const weekAgo = new Date(new Date(t + 'T12:00:00Z').getTime() - 7 * 86400000).toISOString().slice(0, 10)

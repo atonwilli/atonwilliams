@@ -5,6 +5,7 @@ tag: "Recruitment"
 readTime: "4 min"
 teaser: "Most interviews try to sell. The 2nd-round filters. Here is the structure I run, what to ask, and what to avoid."
 status: "published"
+action: "Rewrite your second-round questions so each one requires a story, not a claim."
 ---
 
 <p>

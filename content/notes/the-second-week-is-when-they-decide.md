@@ -5,6 +5,7 @@ tag: "Recruitment"
 readTime: "4 min"
 teaser: "New hires do not quit in week one. They decide in week two and leave in week five. Here is what the second week has to contain."
 status: "published"
+action: "Put a named daily check-in on the calendar for every hire in week two, and book the day-ten conversation now."
 ---
 
 <p>Ask any leader when their new hires leave and they will say around the one-month mark. Ask when those hires decided to leave and most cannot answer. I can. It was the second week.</p>

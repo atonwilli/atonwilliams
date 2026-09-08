@@ -5,6 +5,7 @@ tag: "Sales"
 readTime: "4 min"
 teaser: "Most lost sales are not lost in the pitch. They are lost in the pause after it, when the rep waits to be told yes."
 status: "published"
+action: "Script your ask as a choice between two real options and use it in every conversation this week."
 ---
 
 <p>Watch a hundred conversations at a kiosk and you will see the same thing a hundred times. The rep does the work. They ask, they listen, they show the thing that fits. Then they stop, smile, and wait. And the customer, given a pause, fills it with the safest possible answer: let me think about it.</p>

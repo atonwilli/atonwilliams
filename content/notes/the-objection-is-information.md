@@ -5,6 +5,7 @@ tag: "Sales"
 readTime: "4 min"
 teaser: "Half of what sounds like a no is a reflex. The other half is a reason. Reps lose because they answer both the same way."
 status: "published"
+action: "For a week, label every objection reflex or reason before you answer it. Count how many you got wrong."
 ---
 
 <p>Watch a new rep hear an objection and you will see one of two reactions: argue with it, or fold. Both are wrong, and both come from the same mistake. They treat every objection as the same kind of thing.</p>

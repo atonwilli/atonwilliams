@@ -5,6 +5,7 @@ tag: "Leadership"
 readTime: "4 min"
 teaser: "Three habits that cost nothing and fix most of the culture problems owners hire consultants for."
 status: "published"
+action: "Write down the last three decisions your team is still re-asking about, with a date and a name."
 ---
 
 <p>Culture is a word people use when they cannot name the habit. Most of the time the habit is one of these three, done wrong.</p>

@@ -5,6 +5,7 @@ tag: "Operations"
 readTime: "4 min"
 teaser: "Revenue is a report card. It tells you how last month went. The numbers that run a floor are the ones that move before revenue does."
 status: "published"
+action: "Give every seat on your team one leading number, and put it where they see it without asking."
 ---
 
 <p>Ask an owner what their most important number is and they will say revenue, or profit, or maybe headcount. All true. All useless for running a Tuesday. By the time revenue moves, the thing that moved it happened three weeks ago.</p>

@@ -5,6 +5,7 @@ tag: "Sales"
 readTime: "4 min"
 teaser: "A closed sale can hide a bad conversation. A lost one can hide a good one. If you only coach outcomes, you are coaching luck."
 status: "published"
+action: "Pick one conversation from today. Ask the three questions. Name one skill. Run the moment again."
 ---
 
 <p>Most sales coaching is a scoreboard with a pep talk attached. Numbers went down, so the talk gets louder. Numbers went up, so nobody says anything. Either way, the rep learns nothing about what they actually did.</p>

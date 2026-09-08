@@ -5,6 +5,7 @@ tag: "Leadership"
 readTime: "4 min"
 teaser: "Soft standards feel kind. They are not. They tell your best people that the floor is the ceiling."
 status: "published"
+action: "Name one gate your floor has been letting people skip. Close it Monday, with the override in writing."
 ---
 
 <p>There is a version of leadership that confuses lowering the bar with caring about people. Late is fine, we understand. The number is a target, not a requirement. Practice is optional if you have been here a while. It reads as compassion. It lands as something else.</p>

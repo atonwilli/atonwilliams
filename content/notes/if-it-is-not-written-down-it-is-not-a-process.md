@@ -5,6 +5,7 @@ tag: "Operations"
 readTime: "4 min"
 teaser: "It is a person. And people get sick, get promoted, and leave. The fifteen-minute way to turn what your best people do into something the operation owns."
 status: "published"
+action: "Stand next to your best person while they do the thing, and write the numbered steps. Fifteen minutes."
 ---
 
 <p>Every operation has processes. Ask how a new hire gets onboarded and someone will explain it in detail. Then ask them to explain it while they are on vacation. That is the test. If the answer lives in one person, you do not have a process. You have a dependency.</p>

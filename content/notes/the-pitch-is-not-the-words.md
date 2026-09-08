@@ -5,6 +5,7 @@ tag: "Sales"
 readTime: "4 min"
 teaser: "A memorized pitch sounds like a memorized pitch. Here is how a rep goes from saying it to owning it, and what the leader has to do to get them there."
 status: "published"
+action: "Run one practice where the customer goes off script, and grade the rep on the shape, not the words."
 ---
 
 <p>Every rep starts by memorizing. That is fine. You cannot improvise a structure you do not know. The problem is the reps who never leave that stage. They can recite the pitch perfectly, and customers can hear that it is a recitation.</p>

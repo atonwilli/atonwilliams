@@ -5,6 +5,7 @@ tag: "Leadership"
 readTime: "4 min"
 teaser: "Whatever your weekly meeting actually spends its time on is what you actually value. Most leaders would not like the reflection."
 status: "published"
+action: "Time your next meeting by section. Compare the minutes to what you say you value."
 ---
 
 <p>Ask a leader what they care about and they will tell you: developing people, the standard, the customer. Then sit in their Monday meeting. Forty minutes of announcements, ten minutes of numbers, and a rushed close. The meeting is telling the truth. The leader is not.</p>

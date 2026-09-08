@@ -5,6 +5,7 @@ tag: "Leadership"
 readTime: "5 min"
 teaser: "Presence used to mean being in the room. Now it means the team can feel your standard when you are not."
 status: "published"
+action: "Write your standard down this week: what a good shift looks like, in one page, and send it to every leader."
 ---
 
 <p>For years my leadership was physical. I was on the floor, at the kiosk, in the meeting. If a standard slipped I saw it slip and I fixed it in the moment. That works right up until you have more than one location, or you move, or you build a company on top of the first one. Then the only leadership that survives is the kind that runs without you in the room.</p>

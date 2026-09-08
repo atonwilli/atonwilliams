@@ -5,6 +5,7 @@ tag: "AI and tools"
 readTime: "5 min"
 teaser: "The single most useful thing I have done with AI cost nothing and took an afternoon: one file that tells it who we are before it does anything."
 status: "published"
+action: "Start a brain file today: who we are, who we serve, what we sell, how we talk. One page is enough."
 ---
 
 <p>For the first year I used AI tools the way most people do. Open a chat, explain the business again, get something generic, fix it by hand, close the tab, repeat tomorrow. The tool was smart. It was also a stranger every single time.</p>

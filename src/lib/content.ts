@@ -10,6 +10,7 @@ export type Note = {
   teaser: string
   status: 'published' | 'draft'
   body: string
+  action?: string
 }
 
 export type Pillar = 'sales' | 'ai' | 'recruitment' | 'leadership' | 'operations'
@@ -136,6 +137,7 @@ function readNotes(): Note[] {
         teaser: data.teaser ?? '',
         status: (data.status as Note['status']) ?? 'published',
         body: toHtml(body),
+        action: data.action || undefined,
       }
     })
 }

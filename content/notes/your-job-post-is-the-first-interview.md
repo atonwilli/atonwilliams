@@ -5,6 +5,7 @@ tag: "Recruitment"
 readTime: "4 min"
 teaser: "A post that flatters everyone attracts everyone. Write the one that makes the wrong people close the tab."
 status: "published"
+action: "Rewrite your job post so the hard part is in the second sentence and the first step is a small test."
 ---
 
 <p>Most job posts are written to get applicants. That is the wrong goal. A hundred applicants who are wrong for the seat cost you a week of screening and a leader's patience. The right goal is fewer applicants who already know what they are walking into.</p>
