@@ -1,0 +1,1 @@
+If you connect the Meta Marketing API, the agent writes its pull scripts here and shows you each one before running it. Your token lives in an environment variable named META_ACCESS_TOKEN, never in a file.

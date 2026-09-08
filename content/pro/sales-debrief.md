@@ -1,7 +1,8 @@
 ---
 title: "The Sales Debrief, Pro"
 guide: sales-debrief
-price: 29
+price: 12
+compare_at: 24
 tagline: "The full debrief system: the SOP, the log, fifteen scripts by medium, four prompts, and a thirty-day rollout."
 includes:
   - "The build prompt: paste it into Claude, fill in the blanks, and it builds the whole system for your business"

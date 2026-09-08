@@ -1,7 +1,8 @@
 ---
 title: "Loop Engineering, Pro"
 guide: loop-engineering
-price: 29
+price: 12
+compare_at: 24
 tagline: "The full loop packet template, the four prompts in full (planner, worker, auditor, handoff), the report and slice queue templates, a twelve-slice example, cost controls, and the failure catalog."
 includes:
   - "The build prompt: paste it into Claude, fill in the blanks, and it builds the whole system for your business"

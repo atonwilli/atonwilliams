@@ -1,0 +1,2 @@
+# Weekly review
+Read memory and every report in /memory/reports from this week. Produce: WHAT MOVED (numbers, this week versus last, no adjectives), WHAT I DECIDED (from DECISIONS.md), WHAT I AVOIDED (the thing that was on the list and did not happen, and why you think so), NEXT WEEK'S ONE THING, and one line about whether I am drifting from my own non-negotiables. Then ask the three questions that will improve PROFILE.md most.

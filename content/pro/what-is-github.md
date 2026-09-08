@@ -1,7 +1,8 @@
 ---
 title: "GitHub for Operators, Pro"
 guide: what-is-github
-price: 19
+price: 12
+compare_at: 24
 tagline: "The setup walkthrough, the daily cheat sheet, commit and PR conventions, the folder structure for running a business (not just code) on GitHub, recovery recipes, and three prompts."
 includes:
   - "The build prompt: paste it into Claude, fill in the blanks, and it builds the whole system for your business"

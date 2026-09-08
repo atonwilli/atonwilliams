@@ -1,7 +1,8 @@
 ---
 title: "The Pitch Framework, Pro"
 guide: pitch-framework
-price: 29
+price: 12
+compare_at: 24
 tagline: "Every beat in three mediums with forty-five lines, three worked pitches, a seven-day drill plan, a scorecard, and four prompts."
 includes:
   - "The build prompt: paste it into Claude, fill in the blanks, and it builds the whole system for your business"

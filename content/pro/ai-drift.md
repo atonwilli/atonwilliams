@@ -1,7 +1,8 @@
 ---
 title: "Prevent AI Drift, Pro"
 guide: ai-drift
-price: 19
+price: 12
+compare_at: 24
 tagline: "The five kinds of drift and how each shows up, the guardrail file, the weekly audit, a regression set you can run in ten minutes, reset rules, and three prompts."
 includes:
   - "The build prompt: paste it into Claude, fill in the blanks, and it builds the whole system for your business"

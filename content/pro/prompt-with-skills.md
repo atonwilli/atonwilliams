@@ -1,7 +1,8 @@
 ---
 title: "Prompt With Skills, Pro"
 guide: prompt-with-skills
-price: 19
+price: 12
+compare_at: 24
 tagline: "Ten complete, ready-to-use skills for operators, the skill-writing template, the index file, and the prompts that turn any repeated task into a skill."
 includes:
   - "The build prompt: paste it into Claude, fill in the blanks, and it builds the whole system for your business"

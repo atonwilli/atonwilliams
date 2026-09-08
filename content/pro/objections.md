@@ -1,7 +1,8 @@
 ---
 title: "Objections, Pro"
 guide: objections
-price: 29
+price: 12
+compare_at: 24
 tagline: "Forty objections sorted by reflex and reason, the answer builder, twelve value-rebuild lines, when-to-stop rules, a drill schedule, and three prompts."
 includes:
   - "The build prompt: paste it into Claude, fill in the blanks, and it builds the whole system for your business"

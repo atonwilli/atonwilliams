@@ -1,5 +1,6 @@
 import { packForGuide, getLibraryPack, checkoutEnabled } from '@/lib/pro'
 import { BuyButton } from './BuyButton'
+import { Price } from './Price'
 
 /** The paid layer under every free guide: what the Pro pack holds, its price, and the library bundle. */
 export function ProBox({ guide, num }: { guide: string; num: number }) {
@@ -21,9 +22,9 @@ export function ProBox({ guide, num }: { guide: string; num: number }) {
           </p>
         </div>
         <div className="pro-buy">
-          <strong>${pack.price}</strong>
+          <Price price={pack.price} compareAt={pack.compareAt} />
           <BuyButton sku={pack.sku} price={pack.price} label={`Get the Pro pack, $${pack.price}`} />
-          <BuyButton sku="library" price={lib.price} label={`All ${pack.includes.length ? lib.includes.length : 10} packs, $${lib.price}`} variant="light" />
+          <BuyButton sku="library" price={lib.price} label={`All ${lib.includes.length} packs, $${lib.price}`} variant="light" />
           <a className="textlink" href="/pro" style={{ color: 'var(--cream)', borderColor: 'var(--peach)' }}>See everything in Pro</a>
         </div>
       </div>

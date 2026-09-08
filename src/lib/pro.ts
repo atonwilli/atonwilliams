@@ -8,13 +8,19 @@ export type ProPack = {
   tagline: string
   includes: string[]
   price: number
+  compareAt?: number // struck-through list price
   file: string // zip file name under private/pro
   guide?: string
+  kind?: 'pack' | 'agent' | 'bundle'
+  short?: string
+  who?: string[]
+  needs?: string
 }
 
 const ROOT = process.env.CONTENT_DIR || path.join(process.cwd(), 'content')
 export const PRIVATE_DIR = process.env.PRIVATE_DIR || path.join(process.cwd(), 'private', 'pro')
-export const LIBRARY_PRICE = 97
+export const LIBRARY_PRICE = 49
+export const LIBRARY_COMPARE_AT = 120
 
 function parse(raw: string): Record<string, string | string[]> {
   const m = raw.match(/^---\n([\s\S]*?)\n---\n/)
@@ -50,8 +56,10 @@ export function getProPacks(): ProPack[] {
         title: (d.title as string) || slug,
         tagline: (d.tagline as string) || '',
         includes: (d.includes as string[]) || [],
-        price: Number(d.price) || 29,
+        price: Number(d.price) || 12,
+        compareAt: d.compare_at ? Number(d.compare_at) : undefined,
         file: `${slug}-pro.zip`,
+        kind: 'pack' as const,
       }
     })
   return packs.sort((a, b) => ORDER.indexOf(a.sku) - ORDER.indexOf(b.sku))
@@ -65,12 +73,61 @@ export function getLibraryPack(): ProPack {
     tagline: `All ${packs.length} Pro packs in one download: every build prompt, SOP, template, drill, and prompt.`,
     includes: packs.map((p) => p.title),
     price: LIBRARY_PRICE,
+    compareAt: LIBRARY_COMPARE_AT,
     file: 'operators-pro-library.zip',
+    kind: 'bundle' as const,
+  }
+}
+
+const AGENT_ORDER = ['strategic-cofounder', 'meta-media-buyer', 'google-media-buyer', 'email-marketing-strategist', 'creative-director']
+
+/** AI agents: one folder each under content/agents, described by its meta.md. */
+export function getAgents(): ProPack[] {
+  const dir = path.join(ROOT, 'agents')
+  if (!fs.existsSync(dir)) return []
+  return fs
+    .readdirSync(dir)
+    .filter((f) => fs.existsSync(path.join(dir, f, 'meta.md')))
+    .map((slug) => {
+      const d = parse(fs.readFileSync(path.join(dir, slug, 'meta.md'), 'utf8'))
+      return {
+        sku: `agent-${slug}`,
+        title: (d.title as string) || slug,
+        short: (d.short as string) || (d.title as string),
+        tagline: (d.tagline as string) || '',
+        includes: (d.includes as string[]) || [],
+        who: (d.who as string[]) || [],
+        needs: (d.needs as string) || '',
+        price: Number(d.price) || 38,
+        compareAt: d.compare_at ? Number(d.compare_at) : undefined,
+        file: `agent-${slug}.zip`,
+        kind: 'agent' as const,
+      }
+    })
+    .sort((a, b) => AGENT_ORDER.indexOf(a.sku.replace('agent-', '')) - AGENT_ORDER.indexOf(b.sku.replace('agent-', '')))
+}
+
+export function getAgentBundle(): ProPack {
+  const agents = getAgents()
+  const f = path.join(ROOT, 'agents', 'BUNDLE.md')
+  const d = fs.existsSync(f) ? parse(fs.readFileSync(f, 'utf8')) : {}
+  return {
+    sku: 'agents-bundle',
+    title: (d.title as string) || 'The Agent Team',
+    short: (d.short as string) || 'All five agents',
+    tagline: (d.tagline as string) || `All ${agents.length} agents in one download.`,
+    includes: agents.map((a) => a.title),
+    price: Number(d.price) || 78,
+    compareAt: d.compare_at ? Number(d.compare_at) : undefined,
+    file: 'agent-team.zip',
+    kind: 'bundle' as const,
   }
 }
 
 export function getPack(sku: string): ProPack | undefined {
   if (sku === 'library') return getLibraryPack()
+  if (sku === 'agents-bundle') return getAgentBundle()
+  if (sku.startsWith('agent-')) return getAgents().find((a) => a.sku === sku)
   return getProPacks().find((p) => p.sku === sku)
 }
 

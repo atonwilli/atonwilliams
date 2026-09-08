@@ -865,3 +865,14 @@ dialog::backdrop { background: rgba(37, 36, 64, .55); backdrop-filter: blur(3px)
 .format-row p { margin: 0; font-size: 15px; line-height: 1.55; color: var(--ink-2); }
 .pro-card .meta-label { display: block; margin-bottom: 4px; }
 @media (max-width: 720px) { .format-row { grid-template-columns: 1fr; gap: 6px; } }
+
+/* Prices with a struck list price */
+.price-tag { display: inline-flex; align-items: baseline; gap: 10px; font-family: var(--serif); font-weight: 500; letter-spacing: -.02em; }
+.price-tag strong { font-weight: 500; }
+.price-tag.lg strong { font-size: 40px; line-height: 1; }
+.price-tag.md strong { font-size: 30px; }
+.price-tag s { font-size: 18px; color: var(--ink-2); text-decoration-thickness: 2px; text-decoration-color: var(--peach); opacity: .8; }
+.pro-buy .price-tag strong { color: #fff; } .pro-buy .price-tag s { color: rgba(255,250,240,.6); }
+.pro-buy.dark .price-tag strong { color: var(--ink); } .pro-buy.dark .price-tag s { color: var(--ink-2); }
+.pro-card.agent .meta-label { display: block; margin-top: 10px; }
+.pro-card.agent ul { margin-top: 4px; }
