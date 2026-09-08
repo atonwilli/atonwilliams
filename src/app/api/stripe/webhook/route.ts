@@ -1,18 +1,20 @@
 import { NextResponse } from 'next/server'
 import Stripe from 'stripe'
 import { fulfillSession } from '@/lib/fulfill'
+import { fulfillMembership, syncSubscription } from '@/lib/members'
 
 export const dynamic = 'force-dynamic'
 
-const HANDLED = new Set(['checkout.session.completed', 'checkout.session.async_payment_succeeded'])
+const CHECKOUT = new Set(['checkout.session.completed', 'checkout.session.async_payment_succeeded'])
+const SUBSCRIPTION = new Set(['customer.subscription.updated', 'customer.subscription.deleted', 'customer.subscription.created'])
 
 /**
- * Stripe calls this on checkout.session.completed. It is the belt to the thanks page's braces:
- * if a buyer closes the tab before the redirect, they still get their download email.
+ * Stripe events. Checkout completions fulfil a pack, an agent, or a membership; subscription
+ * events keep membership status current (and remove churned members from Telegram).
  *
- * Trust model: when STRIPE_WEBHOOK_SECRET is set the signature is verified. Without it, the
- * payload is treated as a hint only: the session id is re-fetched from Stripe with the secret
- * key, so nothing in the request body can forge a paid purchase, and fulfillment is idempotent.
+ * Trust model: with STRIPE_WEBHOOK_SECRET set the signature is verified. Without it, the payload is
+ * only a hint: the object id is re-fetched from Stripe with the secret key, so nothing in the request
+ * body can forge a purchase, and every fulfilment is idempotent.
  */
 export async function POST(req: Request) {
   const key = process.env.STRIPE_SECRET_KEY
@@ -21,13 +23,13 @@ export async function POST(req: Request) {
   const raw = await req.text()
 
   let type = ''
-  let sessionId = ''
+  let objectId = ''
   const secret = process.env.STRIPE_WEBHOOK_SECRET
   if (secret) {
     try {
       const event = stripe.webhooks.constructEvent(raw, req.headers.get('stripe-signature') || '', secret)
       type = event.type
-      sessionId = (event.data.object as { id?: string }).id || ''
+      objectId = (event.data.object as { id?: string }).id || ''
     } catch (err) {
       return NextResponse.json({ error: `Bad signature: ${(err as Error).message}` }, { status: 400 })
     }
@@ -35,22 +37,29 @@ export async function POST(req: Request) {
     try {
       const body = JSON.parse(raw) as { type?: string; data?: { object?: { id?: string } } }
       type = String(body.type || '')
-      sessionId = String(body.data?.object?.id || '')
+      objectId = String(body.data?.object?.id || '')
     } catch {
       return NextResponse.json({ error: 'Bad JSON' }, { status: 400 })
     }
   }
 
-  if (!HANDLED.has(type)) return NextResponse.json({ received: true, ignored: type })
-  if (!sessionId.startsWith('cs_')) return NextResponse.json({ error: 'No session id' }, { status: 400 })
-
-  // Always act on Stripe's copy of the session, never on the request body.
-  let session: Stripe.Checkout.Session
-  try {
-    session = await stripe.checkout.sessions.retrieve(sessionId)
-  } catch {
-    return NextResponse.json({ error: 'Unknown session' }, { status: 404 })
+  if (CHECKOUT.has(type)) {
+    if (!objectId.startsWith('cs_')) return NextResponse.json({ error: 'No session id' }, { status: 400 })
+    let session: Stripe.Checkout.Session
+    try { session = await stripe.checkout.sessions.retrieve(objectId) } catch { return NextResponse.json({ error: 'Unknown session' }, { status: 404 }) }
+    if (session.mode === 'subscription') {
+      const done = await fulfillMembership(session, stripe)
+      return NextResponse.json({ received: true, kind: 'membership', fulfilled: done })
+    }
+    const result = await fulfillSession(session)
+    return NextResponse.json({ received: true, kind: 'purchase', ...result })
   }
-  const result = await fulfillSession(session)
-  return NextResponse.json({ received: true, verified: secret ? 'signature' : 'refetch', ...result })
+  if (SUBSCRIPTION.has(type)) {
+    if (!objectId.startsWith('sub_')) return NextResponse.json({ error: 'No subscription id' }, { status: 400 })
+    let sub: Stripe.Subscription
+    try { sub = await stripe.subscriptions.retrieve(objectId) } catch { return NextResponse.json({ error: 'Unknown subscription' }, { status: 404 }) }
+    await syncSubscription(sub)
+    return NextResponse.json({ received: true, kind: 'subscription', status: sub.status })
+  }
+  return NextResponse.json({ received: true, ignored: type })
 }

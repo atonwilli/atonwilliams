@@ -14,6 +14,7 @@ export function Footer() {
             <li><a href="/guides">Free guides</a></li>
             <li><a href="/pro#agents">AI agents</a></li>
             <li><a href="/pro#packs">Pro packs</a></li>
+            <li><a href="/membership">Operators Academy Pro</a></li>
             <li><a href="/notes">Notes</a></li>
             <li><a href="/#proof">Proof</a></li>
             <li><a href="/speaking">Speaking</a></li>
