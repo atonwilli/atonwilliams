@@ -5,6 +5,7 @@ tag: "Sales"
 readTime: "4 min"
 teaser: "Half of what sounds like a no is a reflex. The other half is a reason. Reps lose because they answer both the same way."
 status: "published"
+hook: "Half of every no is a habit. The other half is a map."
 action: "For a week, label every objection reflex or reason before you answer it. Count how many you got wrong."
 ---
 

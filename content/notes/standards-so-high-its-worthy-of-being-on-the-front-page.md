@@ -5,6 +5,7 @@ tag: "Leadership"
 readTime: "3 min"
 teaser: "The tagline isn’t marketing. It’s the operating standard. Here is what that looks like in practice when nobody is watching."
 status: "published"
+hook: "Defensible is not the standard. Proud is."
 action: "Find one thing this week you would not be proud of on the front page, and fix it in front of the team."
 ---
 

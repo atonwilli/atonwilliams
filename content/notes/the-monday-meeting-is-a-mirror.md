@@ -5,6 +5,7 @@ tag: "Leadership"
 readTime: "4 min"
 teaser: "Whatever your weekly meeting actually spends its time on is what you actually value. Most leaders would not like the reflection."
 status: "published"
+hook: "Your meeting already told the team what you value."
 action: "Time your next meeting by section. Compare the minutes to what you say you value."
 ---
 

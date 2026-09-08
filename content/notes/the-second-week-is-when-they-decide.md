@@ -5,6 +5,7 @@ tag: "Recruitment"
 readTime: "4 min"
 teaser: "New hires do not quit in week one. They decide in week two and leave in week five. Here is what the second week has to contain."
 status: "published"
+hook: "Your new hire decided to quit before you noticed. Here is when."
 action: "Put a named daily check-in on the calendar for every hire in week two, and book the day-ten conversation now."
 ---
 

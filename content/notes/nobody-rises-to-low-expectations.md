@@ -5,6 +5,7 @@ tag: "Leadership"
 readTime: "4 min"
 teaser: "Soft standards feel kind. They are not. They tell your best people that the floor is the ceiling."
 status: "published"
+hook: "Soft standards feel kind. They are the opposite."
 action: "Name one gate your floor has been letting people skip. Close it Monday, with the override in writing."
 ---
 

@@ -5,6 +5,7 @@ tag: "Operations"
 readTime: "5 min"
 teaser: "AI belongs in the parts of the pipeline where speed wins and nobody notices who typed it. It does not belong in the parts where trust is built."
 status: "published"
+hook: "Automate the promise. Keep the relationship."
 action: "List every message your team sends more than ten times a week. Automate those. Keep the rest human."
 ---
 

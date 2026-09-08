@@ -46,16 +46,19 @@ const NEXT: Record<string, { guide: string; guideTitle: string; pack: string }> 
   recruitment: { guide: 'job-post-second-week', guideTitle: 'The job post and the second week', pack: 'The Hiring System, Pro' },
   ai: { guide: 'brain-file', guideTitle: 'Set up your first brain file', pack: 'The Brain File, Pro' },
 }
-function nextFor(tag: string) {
+function pillarKey(tag: string) {
   const t = tag.toLowerCase()
-  const key = (['sales', 'leadership', 'operations', 'recruitment', 'ai'] as const).find((k) => t.includes(k)) || 'sales'
-  return NEXT[key]
+  return (['sales', 'leadership', 'operations', 'recruitment', 'ai'] as const).find((k) => t.includes(k)) || 'sales'
 }
+function nextFor(tag: string) {
+  return NEXT[pillarKey(tag)]
+}
+const img = (file: string) => `${site()}/newsletter/${file}`
 const utm = (path: string, campaign: string, content: string) => `${site()}${path}${path.includes('?') ? '&' : '?'}utm_source=newsletter&utm_medium=email&utm_campaign=${encodeURIComponent(campaign)}&utm_content=${encodeURIComponent(content)}`
 
 const FONT = "'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif"
 const SERIF = "'Fraunces','Iowan Old Style','Palatino Linotype',Georgia,serif"
-const POSTAL = process.env.NEWSLETTER_POSTAL || 'Fort Worth, Texas'
+const POSTAL = process.env.NEWSLETTER_POSTAL || '5601 Bridge St, Fort Worth, TX 76112'
 
 /** The shell every email uses: preheader, wordmark, card, footer. Table layout so it holds in Gmail, Outlook, and Apple Mail. */
 const shell = (preheader: string, inner: string, footer: string) => `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light"><meta name="supported-color-schemes" content="light"><title>Aton Williams</title></head>
@@ -78,6 +81,7 @@ const btn = (href: string, label: string, color = '#345b50', text = '#ffffff') =
 export function confirmEmail(token: string, interest: Interest) {
   const link = `${site()}/api/newsletter/confirm?token=${token}`
   const inner = `
+<img src="${img('banner-confirm.gif')}" width="528" alt="" style="display:block;width:100%;max-width:528px;height:auto;border-radius:14px;margin:0 0 22px">
 <p style="font-family:${FONT};font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#345b50;font-weight:600;margin:0 0 14px">One click</p>
 <h1 style="font-family:${SERIF};font-size:30px;line-height:1.1;font-weight:500;margin:0 0 14px;color:#252440">You asked for ${INTEREST_LABELS[interest].toLowerCase()}. Confirm it.</h1>
 <p style="font-family:${FONT};font-size:16px;line-height:1.65;color:#3a3950;margin:0 0 22px">One short note a week on how the operation actually runs, written from the floor. Click below and the next one lands on Friday.</p>
@@ -102,29 +106,52 @@ export function noteEmail(note: Note, token: string, dateLabel: string) {
     .replace(/<ul>/g, `<ul style="padding-left:20px;margin:0 0 16px;font-family:${FONT};font-size:16.5px;line-height:1.7;color:#3a3950">`)
     .replace(/<li>/g, `<li style="margin-bottom:6px">`)
     .replace(/<strong>/g, `<strong style="color:#252440">`)
+  const pk = pillarKey(note.tag)
+  const midCta = `
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin:8px 0 22px"><tr>
+  <td width="88" valign="top" style="padding:0 16px 0 0"><a href="${utm(`/guides/${next.guide}`, c, 'mid-guide')}"><img src="${img(`pillar-${pk}.png`)}" width="80" height="60" alt="" style="display:block;border-radius:10px"></a></td>
+  <td valign="middle" style="font-family:${FONT};font-size:15px;line-height:1.55;color:#3a3950"><strong style="color:#252440">Want the whole method, not the note?</strong><br><a href="${utm(`/guides/${next.guide}`, c, 'mid-guide')}" style="color:#345b50;font-weight:600">${next.guideTitle}</a> is the free guide: a full lesson, a worksheet, and a prompt you can use today.</td>
+</tr></table>`
+  // The mid-email CTA sits right after the pull quote, where attention peaks.
+  const bodyWithCta = body.includes('</blockquote>') ? body.replace('</blockquote>', '</blockquote>' + midCta) : body + midCta
   const inner = `
-<p style="font-family:${FONT};font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#345b50;font-weight:600;margin:0 0 14px">${note.tag} &middot; ${dateLabel} &middot; ${note.readTime}</p>
+<img src="${img(`banner-${pk}.gif`)}" width="528" alt="" style="display:block;width:100%;max-width:528px;height:auto;border-radius:14px;margin:0 0 22px">
+<p style="font-family:${FONT};font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#345b50;font-weight:600;margin:0 0 12px">${note.tag} &middot; ${dateLabel} &middot; ${note.readTime}</p>
+${note.hook ? `<p style="font-family:${SERIF};font-size:21px;line-height:1.3;color:#345b50;margin:0 0 10px;font-style:italic">${note.hook}</p>` : ''}
 <h1 style="font-family:${SERIF};font-size:32px;line-height:1.08;font-weight:500;letter-spacing:-.02em;margin:0 0 14px;color:#252440">${note.title}</h1>
-<p style="font-family:${FONT};font-size:17px;line-height:1.6;color:#5a5970;margin:0 0 26px">${note.teaser}</p>
-${body}
+<p style="font-family:${FONT};font-size:17px;line-height:1.6;color:#5a5970;margin:0 0 22px">${note.teaser}</p>
+<img src="${img('divider.gif')}" width="528" height="5" alt="" style="display:block;width:100%;max-width:528px;height:5px;margin:0 0 22px">
+${bodyWithCta}
 ${note.action ? `
-<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin:26px 0 8px"><tr><td style="background:#d9eddd;border-radius:16px;padding:20px 22px">
-  <p style="font-family:${FONT};font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#1f3830;font-weight:600;margin:0 0 8px">Do this week</p>
-  <p style="font-family:${FONT};font-size:16px;line-height:1.6;color:#1f3830;margin:0">${note.action}</p>
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin:26px 0 8px"><tr><td style="background:#d9eddd;border-radius:16px;padding:18px 20px">
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr>
+    <td width="60" valign="top" style="padding:2px 14px 0 0"><img src="${img('check.gif')}" width="48" height="48" alt="" style="display:block;border-radius:12px"></td>
+    <td valign="top"><p style="font-family:${FONT};font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#1f3830;font-weight:600;margin:0 0 6px">Do this week</p>
+    <p style="font-family:${FONT};font-size:16px;line-height:1.6;color:#1f3830;margin:0">${note.action}</p>
+    <p style="font-family:${FONT};font-size:14px;line-height:1.5;color:#345b50;margin:10px 0 0">Did it? <a href="mailto:notes@atonwilliams.com?subject=${encodeURIComponent('Did it: ' + note.title)}" style="color:#345b50;font-weight:600">Reply "done"</a> and I will send you the next step.</p></td>
+  </tr></table>
 </td></tr></table>` : ''}
-<table role="presentation" cellpadding="0" cellspacing="0" border="0" style="margin:22px 0 6px"><tr><td>${btn(url, 'Read it on the site')}</td></tr></table>
+<table role="presentation" cellpadding="0" cellspacing="0" border="0" style="margin:22px 0 6px"><tr><td style="border-radius:999px;background:#345b50"><a href="${url}" style="display:inline-block;padding:14px 22px 14px 24px;font-family:${FONT};font-size:15px;font-weight:600;color:#ffffff;text-decoration:none;border-radius:999px">Read it on the site &nbsp;<img src="${img('arrow.gif')}" width="20" height="10" alt="" style="display:inline-block;vertical-align:middle;margin-left:4px"></a></td></tr></table>
 
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin:30px 0 0;border-top:1px solid #e6dcc8"><tr><td style="padding-top:22px">
-  <p style="font-family:${FONT};font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#345b50;font-weight:600;margin:0 0 12px">Keep going</p>
+  <p style="font-family:${FONT};font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#345b50;font-weight:600;margin:0 0 6px">Keep going</p>
+  <p style="font-family:${SERIF};font-size:20px;line-height:1.25;color:#252440;margin:0 0 14px">The note is the idea. These are the tools.</p>
   <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
-    <tr><td style="padding:0 0 10px;font-family:${FONT};font-size:15px;line-height:1.55;color:#3a3950"><span style="display:inline-block;width:7px;height:7px;border-radius:50%;background:#fe9979;margin:0 10px 2px 0"></span><a href="${utm(`/guides/${next.guide}`, c, 'guide')}" style="color:#252440;font-weight:600;text-decoration:none">${next.guideTitle}</a> <span style="color:#5a5970">&middot; the free guide, a full lesson with a tool you can use today</span></td></tr>
-    <tr><td style="padding:0 0 10px;font-family:${FONT};font-size:15px;line-height:1.55;color:#3a3950"><span style="display:inline-block;width:7px;height:7px;border-radius:50%;background:#fe9979;margin:0 10px 2px 0"></span><a href="${utm('/pro', c, 'pro')}" style="color:#252440;font-weight:600;text-decoration:none">${next.pack}</a> <span style="color:#5a5970">&middot; paste one prompt into Claude and it builds the system for your business, $12</span></td></tr>
-    <tr><td style="padding:0;font-family:${FONT};font-size:15px;line-height:1.55;color:#3a3950"><span style="display:inline-block;width:7px;height:7px;border-radius:50%;background:#fe9979;margin:0 10px 2px 0"></span><a href="https://www.skool.com/operators-academy-5634?utm_source=newsletter&utm_medium=email&utm_campaign=${encodeURIComponent(c)}&utm_content=community" style="color:#252440;font-weight:600;text-decoration:none">Operators Academy</a> <span style="color:#5a5970">&middot; the free community where these get discussed</span></td></tr>
+    <tr>
+      <td width="33%" valign="top" style="padding:0 6px 0 0"><a href="${utm(`/guides/${next.guide}`, c, 'guide')}" style="text-decoration:none"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#fbf2e1;border-radius:14px"><tr><td style="padding:14px"><p style="font-family:${FONT};font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#345b50;font-weight:600;margin:0 0 6px">Free guide</p><p style="font-family:${FONT};font-size:14px;line-height:1.4;font-weight:600;color:#252440;margin:0">${next.guideTitle}</p></td></tr></table></a></td>
+      <td width="33%" valign="top" style="padding:0 3px"><a href="${utm('/pro', c, 'pro')}" style="text-decoration:none"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#252440;border-radius:14px"><tr><td style="padding:14px"><p style="font-family:${FONT};font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#fe9979;font-weight:600;margin:0 0 6px">Pro pack, $12</p><p style="font-family:${FONT};font-size:14px;line-height:1.4;font-weight:600;color:#ffffff;margin:0">${next.pack.replace(', Pro', '')}: paste one prompt, it builds the system</p></td></tr></table></a></td>
+      <td width="33%" valign="top" style="padding:0 0 0 6px"><a href="https://www.skool.com/operators-academy-5634?utm_source=newsletter&utm_medium=email&utm_campaign=${encodeURIComponent(c)}&utm_content=community" style="text-decoration:none"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#d9eddd;border-radius:14px"><tr><td style="padding:14px"><p style="font-family:${FONT};font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#345b50;font-weight:600;margin:0 0 6px">Free community</p><p style="font-family:${FONT};font-size:14px;line-height:1.4;font-weight:600;color:#252440;margin:0">Operators Academy: where these get discussed</p></td></tr></table></a></td>
+    </tr>
   </table>
 </td></tr></table>
 
-<p style="font-family:${FONT};font-size:15.5px;line-height:1.65;color:#3a3950;margin:28px 0 0"><strong style="color:#252440">P.S.</strong> Reply with one line: the thing on your floor this week that this note did not solve. I read every reply, and the best ones become next month's notes.</p>
-<p style="font-family:${FONT};font-size:14px;line-height:1.6;color:#5a5970;margin:14px 0 0">Know one person who runs a floor? Forward this. They can get their own at <a href="${utm('/#newsletter', c, 'forward')}" style="color:#345b50">atonwilliams.com</a>.</p>`
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin:26px 0 0"><tr><td style="background:#fff0e8;border-radius:16px;padding:18px 20px">
+  <p style="font-family:${FONT};font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#8a4a33;font-weight:600;margin:0 0 8px">One reply, one number</p>
+  <p style="font-family:${FONT};font-size:15.5px;line-height:1.6;color:#252440;margin:0 0 10px">What is the bigger problem on your floor this month? Reply with the number and I will point you to the right thing.</p>
+  <p style="font-family:${FONT};font-size:15px;line-height:1.7;color:#3a3950;margin:0"><a href="mailto:notes@atonwilliams.com?subject=1" style="color:#252440;text-decoration:none"><strong>1</strong> &nbsp;Not enough conversations</a><br><a href="mailto:notes@atonwilliams.com?subject=2" style="color:#252440;text-decoration:none"><strong>2</strong> &nbsp;Conversations that do not close</a><br><a href="mailto:notes@atonwilliams.com?subject=3" style="color:#252440;text-decoration:none"><strong>3</strong> &nbsp;People who do not stay</a><br><a href="mailto:notes@atonwilliams.com?subject=4" style="color:#252440;text-decoration:none"><strong>4</strong> &nbsp;Me, in every seat</a></p>
+</td></tr></table>
+
+<p style="font-family:${FONT};font-size:14px;line-height:1.6;color:#5a5970;margin:22px 0 0">Know one person who runs a floor? Forward this. They can get their own at <a href="${utm('/#newsletter', c, 'forward')}" style="color:#345b50">atonwilliams.com</a>. Every reply lands with me, not a bot.</p>`
   return {
     subject: note.title.replace(/\.$/, ''),
     html: shell(note.teaser, inner, `You are getting this because you asked for notes from Aton Williams and confirmed it. <a href="${unsub}" style="color:#5a5970">Unsubscribe</a> in one click, or <a href="${utm('/#newsletter', c, 'preferences')}" style="color:#5a5970">change what you get</a>.<br>Aton Williams, atonwilliams.com. ${POSTAL}.`),

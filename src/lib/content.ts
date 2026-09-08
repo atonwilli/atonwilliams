@@ -11,6 +11,7 @@ export type Note = {
   status: 'published' | 'draft'
   body: string
   action?: string
+  hook?: string
 }
 
 export type Pillar = 'sales' | 'ai' | 'recruitment' | 'leadership' | 'operations'
@@ -138,6 +139,7 @@ function readNotes(): Note[] {
         status: (data.status as Note['status']) ?? 'published',
         body: toHtml(body),
         action: data.action || undefined,
+        hook: data.hook || undefined,
       }
     })
 }

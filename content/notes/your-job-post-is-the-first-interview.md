@@ -5,6 +5,7 @@ tag: "Recruitment"
 readTime: "4 min"
 teaser: "A post that flatters everyone attracts everyone. Write the one that makes the wrong people close the tab."
 status: "published"
+hook: "A post that flatters everyone hires no one."
 action: "Rewrite your job post so the hard part is in the second sentence and the first step is a small test."
 ---
 

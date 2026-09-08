@@ -5,6 +5,7 @@ tag: "Leadership"
 readTime: "6 min"
 teaser: "Every operator who wrote the 90-day rule was either selling a book or had never built a team. Here is what 90 days actually means when you’re inside it."
 status: "published"
+hook: "The 90-day rule is real, for a reason nobody talks about."
 action: "Check which phase each rep under ninety days is in, and coach the phase, not the number."
 ---
 

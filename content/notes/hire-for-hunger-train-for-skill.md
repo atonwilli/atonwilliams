@@ -5,6 +5,7 @@ tag: "Recruitment"
 readTime: "4 min"
 teaser: "Skill is a curriculum. Hunger is not. The one interview question that tells you which one you are looking at."
 status: "published"
+hook: "You can teach anyone to sell. You cannot teach them to want it."
 action: "Ask every candidate this week: tell me about something you wanted badly enough to be bad at it for a while."
 ---
 

@@ -5,6 +5,7 @@ tag: "Sales"
 readTime: "4 min"
 teaser: "Most lost sales are not lost in the pitch. They are lost in the pause after it, when the rep waits to be told yes."
 status: "published"
+hook: "Most sales are lost in a pause, not a pitch."
 action: "Script your ask as a choice between two real options and use it in every conversation this week."
 ---
 

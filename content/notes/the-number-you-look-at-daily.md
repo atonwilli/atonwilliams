@@ -5,6 +5,7 @@ tag: "Operations"
 readTime: "4 min"
 teaser: "Revenue is a report card. It tells you how last month went. The numbers that run a floor are the ones that move before revenue does."
 status: "published"
+hook: "Revenue is a report card. It cannot run a Tuesday."
 action: "Give every seat on your team one leading number, and put it where they see it without asking."
 ---
 

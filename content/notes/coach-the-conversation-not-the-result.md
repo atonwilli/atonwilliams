@@ -5,6 +5,7 @@ tag: "Sales"
 readTime: "4 min"
 teaser: "A closed sale can hide a bad conversation. A lost one can hide a good one. If you only coach outcomes, you are coaching luck."
 status: "published"
+hook: "Your best rep might be your worst coach's blind spot."
 action: "Pick one conversation from today. Ask the three questions. Name one skill. Run the moment again."
 ---
 

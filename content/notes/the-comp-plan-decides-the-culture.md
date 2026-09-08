@@ -5,6 +5,7 @@ tag: "Operations"
 readTime: "8 min"
 teaser: "Pay the wrong thing, get the wrong behavior. Pay the right thing and people self-police. Most owners get this exactly backwards."
 status: "published"
+hook: "Whatever your comp plan pays for is what your floor becomes."
 action: "Take your last payroll run and write down the behavior that produced each of the top five checks."
 ---
 

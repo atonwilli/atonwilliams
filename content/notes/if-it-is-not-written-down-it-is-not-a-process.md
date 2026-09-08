@@ -5,6 +5,7 @@ tag: "Operations"
 readTime: "4 min"
 teaser: "It is a person. And people get sick, get promoted, and leave. The fifteen-minute way to turn what your best people do into something the operation owns."
 status: "published"
+hook: "It is not a process. It is a person who might quit."
 action: "Stand next to your best person while they do the thing, and write the numbered steps. Fifteen minutes."
 ---
 

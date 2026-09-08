@@ -5,6 +5,7 @@ tag: "Sales"
 readTime: "4 min"
 teaser: "A memorized pitch sounds like a memorized pitch. Here is how a rep goes from saying it to owning it, and what the leader has to do to get them there."
 status: "published"
+hook: "A memorized pitch sounds memorized. Here is the fix."
 action: "Run one practice where the customer goes off script, and grade the rep on the shape, not the words."
 ---
 

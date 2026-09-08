@@ -5,6 +5,7 @@ tag: "Leadership"
 readTime: "5 min"
 teaser: "Presence used to mean being in the room. Now it means the team can feel your standard when you are not."
 status: "published"
+hook: "Presence does not scale. A cadence does."
 action: "Write your standard down this week: what a good shift looks like, in one page, and send it to every leader."
 ---
 

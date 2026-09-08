@@ -5,6 +5,7 @@ tag: "Leadership"
 readTime: "4 min"
 teaser: "Three habits that cost nothing and fix most of the culture problems owners hire consultants for."
 status: "published"
+hook: "Three habits, no values wall required."
 action: "Write down the last three decisions your team is still re-asking about, with a date and a name."
 ---
 
