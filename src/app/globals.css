@@ -876,3 +876,11 @@ dialog::backdrop { background: rgba(37, 36, 64, .55); backdrop-filter: blur(3px)
 .pro-buy.dark .price-tag strong { color: var(--ink); } .pro-buy.dark .price-tag s { color: var(--ink-2); }
 .pro-card.agent .meta-label { display: block; margin-top: 10px; }
 .pro-card.agent ul { margin-top: 4px; }
+
+/* Pillar sections in the library and the Pro page */
+.pillar-section { margin-top: 44px; }
+.pillar-head { display: flex; align-items: baseline; gap: 18px; flex-wrap: wrap; padding-bottom: 12px; border-bottom: 2px solid var(--ink); margin-bottom: 18px; }
+.pillar-head h2 { font-size: clamp(28px, 3.2vw, 38px); }
+.pillar-head p { margin: 0; color: var(--ink-2); font-size: 15px; }
+.sub-title { font-size: 12.5px; letter-spacing: .12em; text-transform: uppercase; color: var(--green); font-family: var(--sans); font-weight: 600; margin: 22px 0 10px; }
+.sub-group .grid { margin-bottom: 8px; }

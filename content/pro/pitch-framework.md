@@ -2,6 +2,8 @@
 title: "The Pitch Framework, Pro"
 guide: pitch-framework
 price: 12
+pillar: sales
+sub: scripts
 compare_at: 24
 tagline: "Every beat in three mediums with forty-five lines, three worked pitches, a seven-day drill plan, a scorecard, and four prompts."
 includes:

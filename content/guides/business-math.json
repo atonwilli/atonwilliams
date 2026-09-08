@@ -1,0 +1,176 @@
+{
+ "kind": "spec",
+ "status": "published",
+ "date": "2026-09-08",
+ "slug": "business-math",
+ "num": "14",
+ "topicKey": "operations",
+ "pillar": "operations",
+ "sub": "numbers",
+ "topicLabel": "Operations",
+ "topic": "Operations",
+ "band": " mint",
+ "keys": "business strategy terms gross margin CAC payback contribution margin leverage pricing power price elasticity churn LTV unit economics net revenue retention vertical integration commoditization distribution advantage",
+ "cardBlurb": "Thirteen numbers that decide whether a business is real, each with the math, the mechanism, what owners assume, what it costs when they are wrong, and where it shows up.",
+ "cardTags": [
+  "Free lesson",
+  "Worksheet",
+  "Prompt",
+  "Deeper in Pro"
+ ],
+ "title": "Business math every owner should know",
+ "desc": "Thirteen strategy numbers, explained the way an operator needs them: the formula, the mechanism, the mistake, and where it shows up.",
+ "h1": "Business math.",
+ "em": "Thirteen numbers that decide if it is real.",
+ "lead": "Revenue is the number people post. These are the numbers that decide whether the revenue was worth having. Each one below is short: what it is, the math, what owners assume, what it costs when they are wrong, and where it shows up.",
+ "read": 10,
+ "kit": "Thirteen terms and a prompt",
+ "tiles": [
+  [
+   "The lesson",
+   "Thirteen numbers in three groups: margin, customers, and position."
+  ],
+  [
+   "The prompt",
+   "Compute the thirteen from your own statements and get the three that need attention."
+  ],
+  [
+   "The full sheet",
+   "Forty business terms, the owner's monthly review, and quiz mode."
+  ]
+ ],
+ "sections": [
+  {
+   "nav": "Margin",
+   "label": "Margin",
+   "h2": "What is left of every dollar.",
+   "body": [
+    [
+     "steps",
+     [
+      [
+       "Gross margin.",
+       "(Revenue minus cost of goods sold) divided by revenue. What is left after you make the thing. Cost of goods moves with volume, so it is subtracted before anything else; what survives is the only money that can ever pay for staff, rent, ads, or profit. Owners assume a big revenue number is a good month. Revenue is the orange, not the juice. The tell: revenue climbs every month and the bank balance does not move."
+      ],
+      [
+       "Contribution margin and unit economics.",
+       "Contribution per unit is revenue per unit minus variable cost per unit: whether one single sale makes money on its own. Do not fold overhead into it; mixing fixed cost in hides whether the sale itself works. If one transaction does not cover its own variable cost, no amount of volume rescues it, because volume multiplies the loss. It shows up before a single dollar of ad spend goes out."
+      ],
+      [
+       "Contribution leverage.",
+       "How much of each additional dollar of revenue falls through to profit once the fixed costs are covered. High leverage means growth is worth a lot; low leverage means growth is mostly work. Owners assume growth is always good. Growth on thin contribution is a faster way to run out of cash."
+      ]
+     ]
+    ]
+   ]
+  },
+  {
+   "nav": "Customers",
+   "label": "Customers",
+   "h2": "What a customer costs and what they are worth.",
+   "body": [
+    [
+     "steps",
+     [
+      [
+       "CAC payback.",
+       "Customer acquisition cost divided by gross profit per customer per month: the number of months until a customer has paid back what they cost to win. Acquisition cost is paid in full on day one; it is repaid a slice at a time out of gross profit. The gap is financed entirely out of your cash. Do not spend more to win a customer than their gross profit can return before they are likely to leave. Growth turns into a cash crisis, and the faster you sell the harder it bites."
+      ],
+      [
+       "LTV to CAC.",
+       "Lifetime value of a customer divided by the cost to acquire them. A customer who stays longer or spends more raises the left side without touching the right, which is why retention improves the number faster than cheaper ads. Do not judge a channel on the cost of the first sale alone. The tell: two channels with the same acquisition cost and one produces customers who stay far longer."
+      ],
+      [
+       "Churn.",
+       "Customers who leave in a period, as a rate. The mirror of retention. Every other number in this guide gets worse as churn rises, because the payback clock resets with every replacement customer."
+      ],
+      [
+       "Net revenue retention.",
+       "Revenue from last year's customers this year, divided by what they paid last year, including upgrades and losses. Above 100 percent means the existing base grows without a single new customer. Below it means you are filling a bucket with a hole in it."
+      ]
+     ]
+    ]
+   ]
+  },
+  {
+   "nav": "Position",
+   "label": "Position",
+   "h2": "Whether you can raise the price and keep the customer.",
+   "body": [
+    [
+     "steps",
+     [
+      [
+       "Pricing power.",
+       "How far you can raise the price before anyone leaves: the price increase you can take against the volume you lose taking it. Price is the only lever that moves profit without touching cost, volume, or headcount. Do not discount to win a deal you could have won on the strength of the offer; every discount teaches the market your real price. It shows up in every quote, every renewal, every proposal."
+      ],
+      [
+       "Price elasticity.",
+       "Percent change in quantity sold divided by percent change in price. If quantity moves more than price did, the market is elastic and a rise costs you volume. If it moves less, the rise is nearly free. Do not assume every market behaves the same way. Test a higher price on part of your traffic and watch the number of orders."
+      ],
+      [
+       "Commoditization.",
+       "When the buyer cannot tell your product from the next one, so price becomes the only difference. The end state of every business with no pricing power. The tell: every conversation starts with the price."
+      ],
+      [
+       "Vertical integration.",
+       "Owning the steps you used to pay someone else for. Margin you keep is the sum of the margin at every stage you own. Every stage between raw input and finished sale carries its own margin, and each one you do not own is a margin someone else takes. Do not buy a stage you cannot run as well as your supplier does; a badly run stage costs more than the margin it was meant to capture."
+      ],
+      [
+       "Distribution advantage.",
+       "Reaching the next customer cheaper than anyone else can. Two companies can sell the identical product and pay completely different amounts to put it in front of the same buyer. An audience, a shelf, or a partnership you already own carries almost no marginal cost while every competitor bids for the same person. Do not treat distribution as something to solve after the product is finished. The channel is the harder half to build."
+      ]
+     ]
+    ],
+    [
+     "linkedin",
+     "Revenue is the orange. Gross margin is the juice. If your revenue climbs every month and your bank balance does not move, you are squeezing harder and drinking less. Know the thirteen numbers before you scale the twelfth month in a row."
+    ]
+   ]
+  }
+ ],
+ "ws": [
+  "Your thirteen",
+  "Compute what you can.",
+  "Honest blanks beat guesses."
+ ],
+ "fields": [
+  [
+   "Gross margin last quarter",
+   "Revenue, cost of goods, the percentage."
+  ],
+  [
+   "CAC payback in months",
+   "CAC divided by gross profit per customer per month."
+  ],
+  [
+   "LTV to CAC and churn",
+   "By channel if you can."
+  ],
+  [
+   "Pricing power",
+   "When did you last raise the price? What happened to volume?"
+  ]
+ ],
+ "pr": [
+  "The prompt",
+  "Compute the thirteen from your statements.",
+  "Paste your income statement lines and customer counts. It computes what it can, marks what it cannot, and names the three numbers that need attention first."
+ ],
+ "prompt": "Compute my business numbers from the data below. Use only what I paste. If a number cannot be computed, write \"cannot compute\" and name what you would need.\n\n<b>1.</b> MARGIN: gross margin, contribution per unit, contribution leverage. Formula and value each.\n<b>2.</b> CUSTOMERS: CAC (all-in), CAC payback in months, LTV to CAC, churn rate, net revenue retention.\n<b>3.</b> POSITION: the evidence in my data for or against pricing power (last price change and what volume did), and whether my conversations start with price (I will tell you).\n<b>4.</b> THE THREE that need attention first, each with what owners usually assume, what it is costing me, and the one action for this month.\n<b>5.</b> A one-paragraph honest read of whether this business is real at this scale, in plain language, no praise.\n\nDATA:\n[paste revenue, cost of goods, variable costs, fixed costs, customer counts, churn, CAC by channel, last price change]",
+ "pro_h3": "The owner's numbers system",
+ "pro_items": [
+  "The build prompt that produces a monthly one-page owner review from your statements, with the three numbers to watch",
+  "Forty business terms in the card format, with a worked example for a service business and a product business",
+  "The pricing test: how to raise a price on part of your customers and read the result in thirty days",
+  "The CAC payback rule for your business: the number you never spend past",
+  "Quiz mode: forty questions with an answer key and a scoring guide"
+ ],
+ "offer": [
+  "Work with Aton",
+  "Want the numbers set up so they run the day?",
+  "The strategy session and the ninety-day advisory put one number per role on the wall and a rhythm behind it. By application.",
+  "/contact?topic=consulting",
+  "Ask about a strategy session"
+ ]
+}

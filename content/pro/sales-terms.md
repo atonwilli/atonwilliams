@@ -2,6 +2,8 @@
 title: "Sales Terms, Pro"
 guide: sales-terms
 price: 12
+pillar: sales
+sub: terms
 compare_at: 24
 tagline: "Forty terms every rep and leader should be able to explain, each with the mistake, the drill, and the morning-meeting line, plus the onboarding week, ten meeting cards, and the forty-question quiz."
 includes:

@@ -13,7 +13,7 @@
   "Prompt",
   "Deeper in Pro"
  ],
- "topicLabel": "AI and tools",
+ "topicLabel": "AI",
  "topic": "AI and tools",
  "band": " mint",
  "title": "Prompt your AI with skills",
@@ -176,5 +176,7 @@
   "The operations program documents how your best people do the job and turns it into skills the whole floor can run. By application.",
   "../preview/contact.html?topic=consulting",
   "Ask about a team program"
- ]
+ ],
+ "pillar": "ai",
+ "sub": "claude"
 }

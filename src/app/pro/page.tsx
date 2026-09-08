@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { getProPacks, getLibraryPack, getAgents, getAgentBundle, checkoutEnabled } from '@/lib/pro'
+import { PILLARS, SUBS } from '@/lib/content'
 import { BuyButton } from '@/components/BuyButton'
 import { Price } from '@/components/Price'
 
@@ -18,7 +19,7 @@ export default async function ProPage({ searchParams }: { searchParams: Promise<
         <div className="wrap">
           <span className="eyebrow">Operators Academy Pro</span>
           <h1>Agents that do the job. <em>Packs that build the system.</em></h1>
-          <p className="lead">Five AI agents that run in your own Claude Code: a co-founder, two media buyers, an email strategist, and a creative director, each with memory that compounds. And ten Pro packs: paste one prompt, fill in the blanks, and it builds the whole system behind the free guide. One payment each. Yours forever.</p>
+          <p className="lead">Five AI agents that run in your own Claude Code: a co-founder, two media buyers, an email strategist, and a creative director, each with memory that compounds. And a Pro pack behind every free guide, across sales, AI, recruitment, leadership, and operations: paste one prompt, fill in the blanks, and it builds the whole system. One payment each. Yours forever.</p>
           {unavailable && <p className="small" style={{ marginTop: 14 }}>Checkout is not open yet. Leave your details on the contact page and you will get the link first.</p>}
           <div className="button-row"><a className="button" href="#agents">The agents</a><a className="button secondary" href="#packs">The Pro packs</a></div>
         </div>
@@ -95,7 +96,7 @@ export default async function ProPage({ searchParams }: { searchParams: Promise<
             <div>
               <span className="chip">Best value</span>
               <h2>{lib.title}</h2>
-              <p>{lib.tagline} Ten build prompts, ten PDFs, more than seventy prompts and templates as plain text.</p>
+              <p>{lib.tagline} A build prompt, a PDF, and every prompt as plain text, for each one.</p>
             </div>
             <div className="pro-buy dark">
               <Price price={lib.price} compareAt={lib.compareAt} />
@@ -104,23 +105,33 @@ export default async function ProPage({ searchParams }: { searchParams: Promise<
             </div>
           </div>
 
-          <div className="pro-grid">
-            {packs.map((p, i) => (
-              <article className="pro-card" key={p.sku}>
-                <div className="label-row" style={{ marginBottom: 6 }}>
-                  <span className="tag-id">Pack {String(i + 1).padStart(2, '0')}</span>
+          {PILLARS.map((pl) => {
+            const mine = packs.filter((p) => p.pillar === pl.key)
+            if (!mine.length) return null
+            return (
+              <div className="pillar-section" key={pl.key} id={`packs-${pl.key}`}>
+                <div className="pillar-head"><h2>{pl.label}</h2><p>{pl.blurb}</p></div>
+                <div className="pro-grid">
+                  {mine.map((p) => (
+                    <article className="pro-card" key={p.sku}>
+                      <div className="label-row" style={{ marginBottom: 6 }}>
+                        <span className="tag-id">Pack {packs.indexOf(p) + 1 < 10 ? '0' : ''}{packs.indexOf(p) + 1}</span>
+                        <span className="meta">{SUBS[p.sub || ''] || pl.label}</span>
+                      </div>
+                      <h3>{p.title.replace(', Pro', '')}</h3>
+                      <p>{p.tagline}</p>
+                      <ul>{p.includes.slice(0, 4).map((x) => <li key={x}>{x}</li>)}</ul>
+                      <div className="pro-card-foot">
+                        <Price price={p.price} compareAt={p.compareAt} size="md" />
+                        <BuyButton sku={p.sku} price={p.price} label="Get the pack" variant="" />
+                        <a className="textlink" href={`/guides/${p.guide}`}>Read the free guide</a>
+                      </div>
+                    </article>
+                  ))}
                 </div>
-                <h3>{p.title.replace(', Pro', '')}</h3>
-                <p>{p.tagline}</p>
-                <ul>{p.includes.slice(0, 4).map((x) => <li key={x}>{x}</li>)}</ul>
-                <div className="pro-card-foot">
-                  <Price price={p.price} compareAt={p.compareAt} size="md" />
-                  <BuyButton sku={p.sku} price={p.price} label="Get the pack" variant="" />
-                  <a className="textlink" href={`/guides/${p.guide}`}>Read the free guide</a>
-                </div>
-              </article>
-            ))}
-          </div>
+              </div>
+            )
+          })}
 
           <div className="pro-terms">
             <h3>How it works</h3>

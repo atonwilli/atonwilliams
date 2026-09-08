@@ -12,13 +12,36 @@ export type Note = {
   body: string
 }
 
+export type Pillar = 'sales' | 'ai' | 'recruitment' | 'leadership' | 'operations'
+export const PILLARS: { key: Pillar; label: string; blurb: string }[] = [
+  { key: 'sales', label: 'Sales', blurb: 'Coaching, scripts, objections, frameworks, closing, and the terms.' },
+  { key: 'ai', label: 'AI', blurb: 'Running a business on AI, sorted by the tool you use.' },
+  { key: 'recruitment', label: 'Recruitment', blurb: 'Hiring for hunger and keeping the hire.' },
+  { key: 'leadership', label: 'Leadership', blurb: 'Standards, seats, and the people who run the floor.' },
+  { key: 'operations', label: 'Operations', blurb: 'The numbers and the systems that run the day.' },
+]
+export const SUBS: Record<string, string> = {
+  coaching: 'Coaching', scripts: 'Scripts', objections: 'Objections by medium, industry, and niche', frameworks: 'Frameworks', closing: 'Closing', terms: 'Terms and quizzes',
+  'any-model': 'Works with any model', claude: 'Claude', 'claude-code': 'Claude Code', chatgpt: 'ChatGPT',
+  hiring: 'Hiring', team: 'The team', numbers: 'The numbers', systems: 'Systems',
+}
+export const SUB_ORDER: Record<Pillar, string[]> = {
+  sales: ['coaching', 'scripts', 'objections', 'frameworks', 'closing', 'terms'],
+  ai: ['any-model', 'claude', 'claude-code', 'chatgpt'],
+  recruitment: ['hiring'],
+  leadership: ['team'],
+  operations: ['numbers', 'systems'],
+}
+
 type GuideBase = {
   slug: string
   num: string
   date: string
   status: 'published' | 'draft'
-  topicKey: 'sales' | 'ai'
+  topicKey: string
   topicLabel: string
+  pillar: Pillar
+  sub: string
   keys: string
   cardBlurb: string
   cardTags: string[]

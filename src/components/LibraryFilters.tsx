@@ -2,8 +2,8 @@
 
 import { useEffect, useState } from 'react'
 
-/** Search and topic filter for the guide library. Cards are server-rendered; this only shows and hides them. */
-export function LibraryFilters() {
+/** Pillar filter and search for the guide library. Cards and sections are server-rendered; this only shows and hides them. */
+export function LibraryFilters({ pillars }: { pillars: string[][] }) {
   const [topic, setTopic] = useState('all')
   const [q, setQ] = useState('')
   const [count, setCount] = useState('')
@@ -15,6 +15,8 @@ export function LibraryFilters() {
       c.hidden = !ok
       if (ok) shown++
     })
+    document.querySelectorAll<HTMLElement>('.sub-group').forEach((g) => { g.hidden = !g.querySelector('.card:not([hidden])') })
+    document.querySelectorAll<HTMLElement>('.pillar-section').forEach((s) => { s.hidden = !s.querySelector('.card:not([hidden])') })
     const empty = document.getElementById('empty')
     if (empty) empty.hidden = shown > 0
     setCount(topic === 'all' && !query ? '' : shown + (shown === 1 ? ' guide matches' : ' guides match'))
@@ -27,9 +29,9 @@ export function LibraryFilters() {
           <input id="search" type="search" placeholder="Search by topic or tool" value={q} onChange={(e) => setQ(e.target.value)} />
         </div>
         <div>
-          <label>Browse topics</label>
+          <label>Browse by pillar</label>
           <div className="filters">
-            {[['all', 'All'], ['sales', 'Sales and leadership'], ['ai', 'AI and tools']].map(([k, label]) => (
+            {[['all', 'All'], ...pillars].map(([k, label]) => (
               <button key={k} type="button" aria-pressed={topic === k} data-topic={k} onClick={() => setTopic(k)}>{label}</button>
             ))}
           </div>

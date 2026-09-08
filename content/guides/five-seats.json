@@ -1,0 +1,164 @@
+{
+ "kind": "spec",
+ "status": "published",
+ "date": "2026-09-08",
+ "slug": "five-seats",
+ "num": "15",
+ "topicKey": "leadership",
+ "pillar": "leadership",
+ "sub": "team",
+ "topicLabel": "Leadership",
+ "topic": "Leadership",
+ "band": " mint",
+ "keys": "five seats team structure closer operator numbers pipeline GM integrator second in command org chart hiring A player leadership",
+ "cardBlurb": "You do not need twenty employees to run a real business. You need five seats filled by five A players, and most owners skip the one that compounds the most.",
+ "cardTags": [
+  "Free lesson",
+  "Worksheet",
+  "Prompt",
+  "Deeper in Pro"
+ ],
+ "title": "The five seats",
+ "desc": "The five seats every real business needs filled, what each one owns, and the one most owners skip.",
+ "h1": "The five seats.",
+ "em": "Five A players, not twenty employees.",
+ "lead": "Owners think a real business needs twenty people. It needs five seats, each filled by one person who is excellent at that seat and nothing else. Here are the five, what each owns, and the one that compounds the most and gets skipped the most.",
+ "read": 6,
+ "kit": "Framework and prompt",
+ "tiles": [
+  [
+   "The lesson",
+   "The five seats, what each owns, and how to tell if a seat is empty."
+  ],
+  [
+   "The prompt",
+   "Map your current team onto the seats and find the gaps."
+  ],
+  [
+   "The full system",
+   "Scorecards per seat, the hiring order, and the handoffs between them."
+  ]
+ ],
+ "sections": [
+  {
+   "nav": "The seats",
+   "label": "The five seats",
+   "h2": "One person, one seat, one job.",
+   "body": [
+    [
+     "steps",
+     [
+      [
+       "The closer.",
+       "Brings in the money. A senior salesperson, whatever you call it. Feed them leads and be willing to overpay the market, because a good closer makes everything else in the business easier when money is always coming in."
+      ],
+      [
+       "The operator.",
+       "Delivers the work. Ops, fulfillment, service. One person who makes the thing and loves the thing, not four people each working on one part of it."
+      ],
+      [
+       "The numbers.",
+       "Books, payroll, invoicing, chasing money that is already yours. Truly important at scale, because you cannot make decisions to grow if you do not know where the money is."
+      ],
+      [
+       "The pipeline.",
+       "Marketing, content, partnerships, collaborations. Anyone getting in front of the closer so the money keeps coming in."
+      ],
+      [
+       "The GM.",
+       "The second in command, the integrator. Manages the other four and makes sure the people who are working are working together. The seat most owners skip, and the one that compounds the most over time, especially if you are the CEO."
+      ]
+     ]
+    ],
+    [
+     "said",
+     "The rule",
+     "You just need one A player in each of those seats. A player means the best you can find for that seat, not the most senior person you already have."
+    ]
+   ]
+  },
+  {
+   "nav": "Empty seats",
+   "label": "How to spot an empty seat",
+   "h2": "Most businesses have five seats and two people.",
+   "body": [
+    [
+     "p",
+     "An empty seat does not look empty. It looks like the owner doing it at eleven at night. The closer's seat is empty when the owner is still on every sales conversation. The numbers seat is empty when payroll is a surprise. The pipeline seat is empty when the closer has nobody to talk to on Tuesday. The GM seat is empty when every decision comes back to the owner and nothing happens while they are away."
+    ],
+    [
+     "checks",
+     [
+      "Which seat are you sitting in that someone else should own?",
+      "Which seat has two people in it, each doing half?",
+      "Which seat has nobody, and who is quietly absorbing it?",
+      "If you left for two weeks, which seat would stop?"
+     ]
+    ],
+    [
+     "linkedin",
+     "You do not need twenty employees. You need five seats: someone who brings in the money, someone who makes the thing, someone who owns the numbers, someone who fills the pipeline, and the person who manages the other four. Most owners skip the last one. It is the one that compounds."
+    ]
+   ]
+  },
+  {
+   "nav": "The order",
+   "label": "The hiring order",
+   "h2": "Fill the seat that is bleeding, not the one that is fun.",
+   "body": [
+    [
+     "p",
+     "There is no universal order. The right next hire is the seat whose absence costs the most this quarter. A business with a full pipeline and no closer hires the closer. A business with a great closer and a chaotic delivery hires the operator. A business where the owner is the bottleneck for every decision hires the GM, even though it feels like paying someone to do what the owner already does. That is the point."
+    ],
+    [
+     "p",
+     "Before any hire, write the seat: what it owns, the one number it is measured on, and what done looks like in ninety days. A seat without a number is a title, and titles do not compound."
+    ]
+   ]
+  }
+ ],
+ "ws": [
+  "Your five seats",
+  "Map your team.",
+  "One name per seat, or a blank."
+ ],
+ "fields": [
+  [
+   "The closer",
+   "Who owns bringing in the money? Their one number?"
+  ],
+  [
+   "The operator and the numbers",
+   "Who makes the thing? Who owns the books, payroll, and invoicing?"
+  ],
+  [
+   "The pipeline",
+   "Who is getting in front of the closer every week?"
+  ],
+  [
+   "The GM",
+   "Who manages the other four? If it is you, what stops when you are away?"
+  ]
+ ],
+ "pr": [
+  "The prompt",
+  "Map your team onto the seats.",
+  "Paste your people and what they actually do. It finds the empty seats, the doubled seats, and the next hire."
+ ],
+ "prompt": "Map my team onto the five seats: the closer (brings in the money), the operator (delivers the work), the numbers (books, payroll, invoicing, collections), the pipeline (marketing, content, partnerships, feeding the closer), and the GM (manages the other four).\n\nFor each seat:\n<b>1.</b> Who sits in it today, based only on what they actually do (not their title). \"Owner\" is a valid answer. \"Nobody\" is a valid answer.\n<b>2.</b> The one number that seat should be measured on in my business.\n<b>3.</b> Empty, doubled, or filled. A seat the owner sits in that someone else should own counts as empty.\n\nThen:\n<b>4.</b> THE NEXT HIRE: which seat is costing the most this quarter and why, in three lines.\n<b>5.</b> THE SEAT DESCRIPTION for that hire: what it owns, the one number, what done looks like at ninety days.\n<b>6.</b> One sentence on what stops if the owner leaves for two weeks.\n\nUse only what I tell you. Never invent a person or a number.\n\nMY TEAM AND WHAT EACH PERSON ACTUALLY DOES:\n[paste]",
+ "pro_h3": "The five seats system",
+ "pro_items": [
+  "The build prompt that produces a seat map, five scorecards, and the ninety-day plan for the next hire",
+  "Five seat scorecards: what each owns, the one number, weekly questions, what excellent looks like",
+  "The handoffs: what passes between the pipeline and the closer, the closer and the operator, everyone and the numbers",
+  "The GM chapter: how to hire the seat that manages the rest without losing the company",
+  "Quiz mode: fifteen situations, name the empty seat"
+ ],
+ "offer": [
+  "Work with Aton",
+  "Want the seats filled and the leaders developed?",
+  "Leadership development for managers runs eight weeks with each manager running a real coaching cycle. By application.",
+  "/contact?topic=training",
+  "Ask about leadership development"
+ ]
+}

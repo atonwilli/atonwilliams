@@ -1,0 +1,196 @@
+{
+ "kind": "spec",
+ "status": "published",
+ "date": "2026-09-08",
+ "slug": "marketing-math",
+ "num": "13",
+ "topicKey": "operations",
+ "pillar": "operations",
+ "sub": "numbers",
+ "topicLabel": "Operations",
+ "topic": "Operations",
+ "band": " mint",
+ "keys": "marketing math ROAS CAC CPM CPR CPC LTV attribution window media mix modeling creative fatigue diversity frequency capping schedule events funnel metrics conversions API match rate ads",
+ "cardBlurb": "Fifteen marketing numbers every operator should be able to explain before they spend a dollar on ads, each with the math, the mechanism, the mistake, and the tell.",
+ "cardTags": [
+  "Free lesson",
+  "Worksheet",
+  "Prompt",
+  "Deeper in Pro"
+ ],
+ "title": "Marketing math every operator should know",
+ "desc": "Fifteen numbers that decide whether your ads are working, explained in plain language with the formula, the mechanism, the mistake, and the tell.",
+ "h1": "Marketing math.",
+ "em": "Fifteen numbers before you spend.",
+ "lead": "You do not need to run the ads yourself. You need to know the fifteen numbers well enough to tell whether the person running them is telling you the truth. Each one below has the formula, what it actually measures, the mistake owners make with it, and the tell that something is wrong.",
+ "read": 10,
+ "kit": "Fifteen terms and a prompt",
+ "tiles": [
+  [
+   "The lesson",
+   "Fifteen numbers in four groups: cost, counting, creative, and the funnel."
+  ],
+  [
+   "The prompt",
+   "Turn your ad exports into a one-page read with the tells flagged."
+  ],
+  [
+   "The full sheet",
+   "Forty marketing terms, the audit checklist, and quiz mode."
+  ]
+ ],
+ "sections": [
+  {
+   "nav": "Cost",
+   "label": "The cost numbers",
+   "h2": "What one of anything costs you.",
+   "body": [
+    [
+     "steps",
+     [
+      [
+       "ROAS, return on ad spend.",
+       "Revenue from ads divided by ad spend. $60,000 from $20,000 is 3.0x. It stops at revenue: delivery cost, staff, refunds, and platform fees sit outside it. Never call anything above 1.0 profitable. At 1.0 you got your money back and did the work for free. The tell: ROAS falling while revenue is flat means you bought the same sales for more money than last month."
+      ],
+      [
+       "CAC, customer acquisition cost.",
+       "Ad spend plus sales cost, divided by new customers. ($20,000 + $5,000) / 10 is $2,500. It counts every dollar spent to produce one buyer, not just what the platform charged you. Never leave closer pay, setter pay, software, and creative production out of the top line. On its own it means nothing. Beside lifetime value it becomes a decision."
+      ],
+      [
+       "CPM, cost per thousand impressions.",
+       "What a thousand views of the ad cost. It is the price of the auction that week, not a verdict on the ad. A rising CPM with a steady cost per result means the ad is winning a more expensive auction, which is fine."
+      ],
+      [
+       "CPC, cost per click.",
+       "Spend divided by clicks. $2,000 / 1,000 is $2 a click. The impression is bought; the click is chosen. It is the first number in the chain that reflects a decision the viewer made. Never read a link click as a page view; many clicks never finish loading. A cheap click next to an expensive result means the ad is working and the page is the problem."
+      ],
+      [
+       "CPR, cost per result.",
+       "Spend divided by results, where a result is whatever event you told the platform to optimize for. $2,000 / 25 is $80 a result. Change the event and the number changes meaning. Never compare cost per result between two ad sets optimized for different events; they are two different units. Cost per result rising while the count of results falls is the earliest honest sign the creative or the offer is tiring."
+      ]
+     ]
+    ]
+   ]
+  },
+  {
+   "nav": "Counting",
+   "label": "The counting rules",
+   "h2": "Whether a sale is allowed to count, and where.",
+   "body": [
+    [
+     "steps",
+     [
+      [
+       "Attribution windows.",
+       "The rule that decides whether a sale is allowed to count: days after a click plus days after a view in which a sale still counts. A seven-day click window counts a sale on day six and not on day nine, same ad. It never claims the ad caused the sale, only that it happened soon enough to be credited. Never compare two accounts running different windows. A long sales cycle loses credit at the edge, which is why the ledger you keep yourself is the scoreboard and the platform count is a delivery signal."
+      ],
+      [
+       "Conversions API and match rate.",
+       "Sending the sale from your server instead of the browser. Match rate is matched events divided by events sent: 900 of 1,000 is 90 percent. A browser pixel can be blocked; a server sends the event directly so the sale still gets reported. Never send the same conversion from both without a shared event identifier, or the platform counts one sale twice. Match rate drops when the customer details sent with the event are thin."
+      ],
+      [
+       "Schedule events.",
+       "Telling the platform a real appointment got booked: booked calls sent back. 100 applications, 40 booked calls, 40 events sent. It reports which clicks became a real appointment, which is the only thing the platform can learn to find more of. Never optimize for the application when the booked call is what you sell to. Fewer events arriving than calls booked means the reporting is broken, not the ads. Fix that before touching the campaign."
+      ],
+      [
+       "Media mix modeling.",
+       "Measuring a channel by what happens when you move its spend. Hold every channel still, move one, measure how far revenue moves. It reads a channel by how total output responds to its spend, so nothing depends on who got the last click. Never run it on one month of data. Reach for it when the platform's numbers and your bank account tell two different stories."
+      ]
+     ]
+    ]
+   ]
+  },
+  {
+   "nav": "Creative",
+   "label": "The creative numbers",
+   "h2": "Why the ad stopped working.",
+   "body": [
+    [
+     "steps",
+     [
+      [
+       "Creative fatigue.",
+       "Cost per result rising and volume falling at the same time. $80 a result at 25 results becoming $200 at 6. Two numbers have to move together; cost rising alone can simply be a more expensive auction that week. Never call an ad fatigued because frequency went up. Before blaming the creative, duplicate the campaign with nothing changed and give it three days."
+      ],
+      [
+       "Creative diversity.",
+       "Distinct concepts divided by active ads. 3 concepts across 12 ads is 0.25: twelve ads, three real ideas. A concept is a different reason to buy. Another edit, thumbnail, or hook on the same reason is the same concept in different clothes. When every ad dies in the same week, they were never separate concepts."
+      ],
+      [
+       "Frequency capping.",
+       "Frequency is impressions divided by reach: 400,000 over 100,000 people is 4.0. A cap is you deciding the dose instead of letting the auction decide. Cap it when the same small group is absorbing budget a fresh audience could have used. Never treat high frequency as damage on its own; a warm audience is meant to see the ad again. Not a punishment, a dosage."
+      ]
+     ]
+    ]
+   ]
+  },
+  {
+   "nav": "The funnel",
+   "label": "The funnel",
+   "h2": "Every stage rate multiplied, not added.",
+   "body": [
+    [
+     "said",
+     "Full funnel metrics",
+     "Clicks x apply rate x book rate x show rate x close rate = customers. 1,000 x 10% x 40% x 50% x 25% = 5 customers."
+    ],
+    [
+     "p",
+     "The stages multiply. One weak rate divides everything below it, so the final count can collapse while every stage still looks acceptable on its own. Never fix the cheapest stage first. Fix the stage that is losing the most people, even when it is the hardest to change. Doubling the worst rate in the chain moves the final number further than doubling the traffic at the top."
+    ],
+    [
+     "p",
+     "Back-end selling systems are what happens after the first sale: the follow-up, the upsell, the renewal, the referral. Most acquisition math only works because the back end exists. If yours does not, every number above is more expensive than it looks."
+    ],
+    [
+     "linkedin",
+     "Your funnel is a multiplication, not a sum. 1,000 clicks x 10% x 40% x 50% x 25% is five customers. Double the traffic and you get ten. Double the worst rate and you get ten too, for free. Fix the stage that is losing the most people, not the cheapest one."
+    ]
+   ]
+  }
+ ],
+ "ws": [
+  "Your numbers",
+  "Fill in what you know.",
+  "Leave blanks honest."
+ ],
+ "fields": [
+  [
+   "Spend and results last month",
+   "Ad spend, sales cost, new customers, results by event."
+  ],
+  [
+   "Your CAC and LTV",
+   "Compute CAC with the whole cost. Put LTV next to it."
+  ],
+  [
+   "Your funnel rates",
+   "Apply, book, show, close. Which stage loses the most?"
+  ],
+  [
+   "Creative",
+   "How many distinct concepts are running, against how many ads?"
+  ]
+ ],
+ "pr": [
+  "The prompt",
+  "Turn your exports into a one-page read.",
+  "Paste your ad export and your sales numbers. It computes the fifteen numbers it can, flags the tells, and tells you which stage to fix first."
+ ],
+ "prompt": "Read my numbers and produce a one-page marketing read. Use only the data I paste. If a number cannot be computed from it, write \"cannot compute from this data\" and name the column I would need.\n\n<b>1.</b> COST: ROAS, CAC (with sales cost included), CPM, CPC, CPR by optimization event. One line each with the formula and the value.\n<b>2.</b> TELLS: check each of these and say yes or no with the numbers: ROAS falling with revenue flat; cheap clicks next to expensive results; cost per result rising while results fall; frequency rising without cost rising; events arriving fewer than bookings.\n<b>3.</b> CREATIVE DIVERSITY: distinct concepts divided by active ads, using the ad names or my concept list.\n<b>4.</b> THE FUNNEL: clicks x apply x book x show x close, with each rate, and the stage losing the most people.\n<b>5.</b> THE ONE FIX: the single change that moves the final number the most, and why.\n<b>6.</b> Three questions I should ask whoever runs my ads this week.\n\nAttribution window in use: [ ]\nOptimization event per ad set: [ ]\nDATA:\n[paste export and sales numbers]",
+ "pro_h3": "The marketing numbers system",
+ "pro_items": [
+  "The build prompt that turns your exports into a weekly one-page read with the tells flagged",
+  "Forty marketing terms in the card format: the math, the mechanism, do not, the tell, what it costs, where it shows up",
+  "The ad-account audit checklist an owner can run in fifteen minutes without logging into Ads Manager",
+  "The agency-honesty test: ten questions and the answers that should worry you",
+  "Quiz mode: forty questions, three difficulty levels, answer key"
+ ],
+ "offer": [
+  "Work with Aton",
+  "Want the numbers set up so they run the day?",
+  "The strategy session and the ninety-day advisory put one number per role on the wall and a rhythm behind it. By application.",
+  "/contact?topic=consulting",
+  "Ask about a strategy session"
+ ]
+}

@@ -2,6 +2,8 @@
 title: "Build a Custom Skill, Pro"
 guide: custom-skill
 price: 12
+pillar: ai
+sub: claude
 compare_at: 24
 tagline: "The anatomy of a skill that holds up, five fully written operator skills, the testing rubric, versioning rules, and two prompts to draft and stress-test your own."
 includes:

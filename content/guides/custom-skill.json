@@ -13,7 +13,7 @@
   "Prompt",
   "Deeper in Pro"
  ],
- "topicLabel": "AI and tools",
+ "topicLabel": "AI",
  "topic": "AI and tools",
  "band": " mint",
  "title": "Build a custom skill",
@@ -176,5 +176,7 @@
   "The operations program documents how your best people work and turns it into skills the whole team can run. By application.",
   "../preview/contact.html?topic=consulting",
   "Ask about a team program"
- ]
+ ],
+ "pillar": "ai",
+ "sub": "claude"
 }

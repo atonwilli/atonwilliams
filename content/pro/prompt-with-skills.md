@@ -2,6 +2,8 @@
 title: "Prompt With Skills, Pro"
 guide: prompt-with-skills
 price: 12
+pillar: ai
+sub: claude
 compare_at: 24
 tagline: "Ten complete, ready-to-use skills for operators, the skill-writing template, the index file, and the prompts that turn any repeated task into a skill."
 includes:

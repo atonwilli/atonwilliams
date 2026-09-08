@@ -1,0 +1,165 @@
+{
+ "kind": "spec",
+ "status": "published",
+ "date": "2026-09-08",
+ "slug": "job-post-second-week",
+ "num": "16",
+ "topicKey": "recruitment",
+ "pillar": "recruitment",
+ "sub": "hiring",
+ "topicLabel": "Recruitment",
+ "topic": "Recruitment",
+ "band": "",
+ "keys": "recruiting hiring job post interview hunger onboarding second week retention new hire filter application",
+ "cardBlurb": "The job post that makes the wrong people close the tab, the interview question that finds hunger, and the second week that decides whether the hire stays.",
+ "cardTags": [
+  "Free lesson",
+  "Worksheet",
+  "Prompt",
+  "Deeper in Pro"
+ ],
+ "title": "The job post and the second week",
+ "desc": "Hire for hunger and keep the hire: the post that filters, the question that finds it, and the second week that decides.",
+ "h1": "The job post and the second week.",
+ "em": "Filter first. Then keep them.",
+ "lead": "Most hiring fails at two moments: a post that attracts everyone, and a second week nobody planned. Fix those two and the middle takes care of itself.",
+ "read": 7,
+ "kit": "Framework and prompt",
+ "tiles": [
+  [
+   "The lesson",
+   "The post that filters, the interview question that finds hunger, the second week that decides."
+  ],
+  [
+   "The prompt",
+   "Write your post and your ten-day plan from the real role."
+  ],
+  [
+   "The full system",
+   "The screening pipeline, the second-round script, and the day-ten conversation."
+  ]
+ ],
+ "sections": [
+  {
+   "nav": "The post",
+   "label": "The job post",
+   "h2": "Your job post is the first interview.",
+   "body": [
+    [
+     "steps",
+     [
+      [
+       "Say the hard part in the second sentence.",
+       "Performance based, early hours, a training you have to pass. Every hard truth in the post is a screening question you do not have to ask and a surprise the hire does not get on day four."
+      ],
+      [
+       "Describe a day, not a personality.",
+       "Self-starter, team player, hungry: everyone thinks they are all three. Describe the shift: where they stand, who they talk to, what a good afternoon looks like, what the debrief after it sounds like."
+      ],
+      [
+       "Make the first step a small test.",
+       "One question to answer, a specific subject line, a two-minute video. People who will not do a small thing to get the job will not do the small things inside it."
+      ]
+     ]
+    ],
+    [
+     "said",
+     "The rule",
+     "A good post turns people away. If it is not, it is not doing its job."
+    ]
+   ]
+  },
+  {
+   "nav": "The question",
+   "label": "Hire for hunger",
+   "h2": "Skill has a curriculum. Hunger does not.",
+   "body": [
+    [
+     "p",
+     "You can teach the pitch, the objections, the debrief rhythm. You cannot teach a reason to show up on the bad days. Hunger is a specific thing the person wants that this seat can get them, plus evidence they have already done hard things to get closer to it. Both halves. A goal with no evidence is a wish. Evidence with no goal is a resume."
+    ],
+    [
+     "said",
+     "The question",
+     "Tell me about something you wanted badly enough to be bad at it for a while. Then be quiet."
+    ],
+    [
+     "p",
+     "The hungry ones answer instantly, specifically, and there is a moment in the story where they almost quit and did not. The others reach for a story about a job."
+    ]
+   ]
+  },
+  {
+   "nav": "The second week",
+   "label": "The second week",
+   "h2": "Nobody quits in week one. They decide in week two.",
+   "body": [
+    [
+     "p",
+     "Week one is adrenaline. In week two the attention drops, the first bad shift happens, and the hire looks around to see whether anyone noticed. That look is the whole hire. Put the structure in week two, not week one."
+    ],
+    [
+     "checks",
+     [
+      "A named person who checks in daily, in person or by phone.",
+      "One debrief after the first bad shift, the same day.",
+      "A visible early win the leader points at in front of the team.",
+      "The day-ten conversation: how is it going, what surprised you, what do you need."
+     ]
+    ],
+    [
+     "p",
+     "Measure onboarding by week-two activity, not week-one attendance. Activity that holds or climbs across the second week almost always makes it to ninety days. Activity that drops in week two has already decided."
+    ],
+    [
+     "linkedin",
+     "Nobody quits a job in the second week. They quit a feeling: that the attention they got on day one was a sales pitch. Put the structure in week two. A daily check-in, a same-day debrief after the first bad shift, a visible win, and the day-ten conversation."
+    ]
+   ]
+  }
+ ],
+ "ws": [
+  "Your next hire",
+  "Write the post and the plan.",
+  "Hard part, a day, the test, the second week."
+ ],
+ "fields": [
+  [
+   "The hard part",
+   "The truest hard thing about the role, in one sentence."
+  ],
+  [
+   "A day",
+   "Where they are, who they talk to, what a good afternoon looks like."
+  ],
+  [
+   "The first step",
+   "The small test you will ask applicants to do."
+  ],
+  [
+   "Week two",
+   "Who checks in daily? What is the visible win? When is the day-ten conversation?"
+  ]
+ ],
+ "pr": [
+  "The prompt",
+  "Write the post and the ten-day plan.",
+  "Paste the real role facts. It writes the post with the hard part up front, the first-step test, the hunger question, and the day-by-day second week."
+ ],
+ "prompt": "Write a hiring kit for the role below. Use only the facts I give you. No personality words (self-starter, rockstar, hungry, ninja). Under 250 words for the post.\n\n<b>1.</b> THE POST: sentence one says what the role is; sentence two says the hardest true thing about it; a paragraph describes a day; a short list of what they get; two lines on who this is not for; the first step as a small test with a specific instruction.\n<b>2.</b> THE SCREEN: five questions for the first call, including \"tell me about something you wanted badly enough to be bad at it for a while,\" and what a hungry answer sounds like versus a resume answer.\n<b>3.</b> DAYS 1 TO 10: a day-by-day plan with an owner for every item, the first small win, the same-day debrief after the first bad shift, the daily check-in, and the day-ten conversation with its three questions.\n<b>4.</b> THE NUMBER: the week-two activity number to watch for this role and the level that predicts a ninety-day stay.\n\nROLE FACTS:\n[what the role is, hours, pay structure, the hard truths, where they work, who leads them, systems they need]",
+ "pro_h3": "The hiring system",
+ "pro_items": [
+  "The build prompt that writes the post, the screen, the second-round script, and the ten-day plan for your role",
+  "The screening pipeline: reply speed rules, the booking step, the reminder, and the no-show rule",
+  "The second-round interview script that filters instead of selling",
+  "The day-ten conversation, word for word, and what each answer means",
+  "Quiz mode: twelve applicant answers, hungry or not"
+ ],
+ "offer": [
+  "Work with Aton",
+  "Want the whole recruiting system built for your business?",
+  "The recruiting design and build runs six weeks and leaves a pipeline your team runs. By application.",
+  "/contact?topic=training",
+  "Ask about the recruiting program"
+ ]
+}

@@ -2,6 +2,8 @@
 title: "Objections, Pro"
 guide: objections
 price: 12
+pillar: sales
+sub: objections
 compare_at: 24
 tagline: "Forty objections sorted by reflex and reason, the answer builder, twelve value-rebuild lines, when-to-stop rules, a drill schedule, and three prompts."
 includes:
@@ -31,6 +33,7 @@ CONTEXT
 - What we sell and the verified product facts (does, costs, included, NOT included): [ ]
 - Claims we can make: [ ]   Claims we never make: [ ]
 - Medium (retail or events, phone, meetings, or a mix): [ ]
+- Industry and niche (for example: home services, B2B software, staffing, fitness coaching, financial services, retail subscription): [ ]
 - Who the customer is: [ ]
 - The ten objections we hear most, in the customer's words: [ ]
 - Competitors or alternatives customers mention: [ ]
@@ -42,6 +45,7 @@ The five-second test: is there a specific noun in the objection? No noun ("I am 
 
 BUILD
 1. THE DIAGNOSTIC in our words, with ten of our own objections classified as examples.
+0. THE INDUSTRY READ: the five objections most specific to my industry and niche that a generic bank would miss, with why they come up in this niche.
 2. THE BANK: forty objections our customers raise (start from the ten in CONTEXT, then the thirty most likely for our product and medium). For each: the line as a customer says it, REFLEX or REASON, the angle if reason, the answer in our words, one rebuild line from our facts, and a medium note.
 3. TWELVE REBUILD LINES for our product, four per angle.
 4. THE STOP RULES rewritten for our business, including our exact commitment terms.
@@ -206,6 +210,22 @@ Fifteen minutes a day. Pairs. One customer, one rep. Rotate.
 - Day 9: Meeting versions.
 - Day 10: When to stop. The customer is genuinely not a fit. The rep practices ending well.
 - Days 11 to 14: Full conversations. Objections appear where they naturally would. Score with the grader prompt.
+
+## 8. Objections by industry and niche
+
+The forty above are universal. Every industry adds five of its own, and they are the ones a generic bank misses. Here are six industries. The build prompt writes yours.
+
+**Home services (repair, install, maintenance).** "I will get three quotes." (Reason, cost. "Smart. What will you compare on besides price? Here is where we win and where we do not.") "My last guy disappeared." (Reason, quality. Show who answers and how fast.) "Can you just fix it, not replace it?" (Reason, cost. Answer honestly with both numbers.) "I need to talk to my spouse." (Reason. "What will they want to know?") "It is not urgent." (Reflex until it is. "What happens if it fails in January?")
+
+**B2B software.** "We already have a tool for that." (Reason, value. Sell the gap.) "Our team will not adopt it." (Reason, quality. Show the first week for one user.) "Security will never approve it." (Reason. Have the document ready or say when you will.) "Send me a deck." (Reflex. "What should page one answer?") "Not this quarter." (Reason, timing. "What changes next quarter?")
+
+**Staffing and recruiting.** "We can hire ourselves." (Reason, value. "How long is a seat empty today?") "Your fee is too high." (Reason, cost. Cost of the empty seat per week versus the fee.) "We tried an agency before." (Reason, quality. "What broke: the candidates, the speed, or the follow-through?") "We only need one person." (Reflex. One person is the pilot.) "Send us candidates first." (Reason. Agree to a defined trial with a date.)
+
+**Fitness and coaching.** "I have tried everything." (Reason, quality. "What did the last thing not do?") "I do not have time." (Reflex. "What does a week look like right now?") "I will start next month." (Reflex. "What is different next month?") "I can do it myself." (Reason, value. "What has that produced so far?") "It is a lot of money for something I might not stick with." (Reason, cost. The first-week win and the stop rule.)
+
+**Financial services and insurance.** "I already have a guy." (Reason, value. "What does he do that you like, and what have you never asked him?") "I do not want to think about this." (Reflex. Make one small decision easy.) "Is this a scam?" (Reason. Verifiable answer, license, a way to check.) "I am on a fixed income." (Reason. Slow down, not speed up.) "Let me review it with my kids." (Reason. Offer the family call.)
+
+**Retail subscription (a monthly plan or service).** "I am just looking." (Reflex.) "The one I have is fine." (Reason, value. "One thing you put up with?") "I do not like contracts." (Reason, cost. Exact terms, exact exit.) "Your competitor is cheaper." (Reason, cost. "What is included in their number?") "I will sign up online later." (Reflex. "What would make today the easier day?")
 
 ## 7. The three prompts
 

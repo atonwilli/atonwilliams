@@ -12,6 +12,8 @@ export type ProPack = {
   file: string // zip file name under private/pro
   guide?: string
   kind?: 'pack' | 'agent' | 'bundle'
+  pillar?: string
+  sub?: string
   short?: string
   who?: string[]
   needs?: string
@@ -19,8 +21,8 @@ export type ProPack = {
 
 const ROOT = process.env.CONTENT_DIR || path.join(process.cwd(), 'content')
 export const PRIVATE_DIR = process.env.PRIVATE_DIR || path.join(process.cwd(), 'private', 'pro')
-export const LIBRARY_PRICE = 49
-export const LIBRARY_COMPARE_AT = 120
+export const LIBRARY_PRICE = 69
+export const LIBRARY_COMPARE_AT = 192
 
 function parse(raw: string): Record<string, string | string[]> {
   const m = raw.match(/^---\n([\s\S]*?)\n---\n/)
@@ -39,7 +41,7 @@ function parse(raw: string): Record<string, string | string[]> {
   return data
 }
 
-const ORDER = ['sales-debrief', 'pitch-framework', 'objections', 'brain-file', 'prompt-with-skills', 'what-is-github', 'custom-skill', 'loop-engineering', 'ai-drift', 'sales-terms']
+const ORDER = ['sales-debrief', 'pitch-framework', 'objections', 'brain-file', 'prompt-with-skills', 'what-is-github', 'custom-skill', 'loop-engineering', 'ai-drift', 'sales-terms', 'identity-selling', 'closer-standards', 'marketing-math', 'business-math', 'five-seats', 'job-post-second-week']
 
 export function getProPacks(): ProPack[] {
   const dir = path.join(ROOT, 'pro')
@@ -60,6 +62,8 @@ export function getProPacks(): ProPack[] {
         compareAt: d.compare_at ? Number(d.compare_at) : undefined,
         file: `${slug}-pro.zip`,
         kind: 'pack' as const,
+        pillar: (d.pillar as string) || 'sales',
+        sub: (d.sub as string) || '',
       }
     })
   return packs.sort((a, b) => ORDER.indexOf(a.sku) - ORDER.indexOf(b.sku))
@@ -70,7 +74,7 @@ export function getLibraryPack(): ProPack {
   return {
     sku: 'library',
     title: 'The Operators Pro Library',
-    tagline: `All ${packs.length} Pro packs in one download: every build prompt, SOP, template, drill, and prompt.`,
+    tagline: `All ${packs.length} Pro packs in one download, across sales, AI, recruitment, leadership, and operations.`,
     includes: packs.map((p) => p.title),
     price: LIBRARY_PRICE,
     compareAt: LIBRARY_COMPARE_AT,

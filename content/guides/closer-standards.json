@@ -1,0 +1,183 @@
+{
+ "kind": "spec",
+ "status": "published",
+ "date": "2026-09-08",
+ "slug": "closer-standards",
+ "num": "12",
+ "topicKey": "sales",
+ "pillar": "sales",
+ "sub": "closing",
+ "topicLabel": "Sales",
+ "topic": "Sales",
+ "band": "",
+ "keys": "closing closer standards pre-handle rebuttal objection proof follow up hard yes hard no sales math commission stacking skill discipline",
+ "cardBlurb": "Ten habits that separate people who close from people who post about closing. Pre-handle instead of rebutting, leave with a hard yes or a hard no, never send \"just following up,\" and stop doing sales math with your commission.",
+ "cardTags": [
+  "Free lesson",
+  "Worksheet",
+  "Prompt",
+  "Deeper in Pro"
+ ],
+ "title": "The closer's standards",
+ "desc": "Ten habits that separate people who close from people who talk about closing, and the money habits that keep them closing next year.",
+ "h1": "The closer's standards.",
+ "em": "Ten habits, no theater.",
+ "lead": "You can tell a closer from someone playing one in about five minutes. It is not the energy and it is not the notes app full of rebuttals. It is a small set of habits in the conversation and a smaller set with the money after it. Here they are.",
+ "read": 8,
+ "kit": "Ten standards and a prompt",
+ "tiles": [
+  [
+   "The lesson",
+   "Five conversation standards and five money standards, each with the tell."
+  ],
+  [
+   "The prompt",
+   "Audit your last five conversations against the standards."
+  ],
+  [
+   "The full system",
+   "Pre-handle scripts by objection, the follow-up library, and the commission plan."
+  ]
+ ],
+ "sections": [
+  {
+   "nav": "In the conversation",
+   "label": "In the conversation",
+   "h2": "Five standards you can hear.",
+   "body": [
+    [
+     "steps",
+     [
+      [
+       "Pre-handle, do not rebut.",
+       "A rebuttal is a repair after the doubt has been spoken. Pre-handling raises it first, in your words, before it becomes theirs. Answer the price question inside the pitch and you never rebut it once. Count how many objections you rebut on a normal conversation. Every one is a line missing from the front of your pitch."
+      ],
+      [
+       "Leave with a hard yes or a hard no.",
+       "A follow-up is fine when it is a yes with conditions and a hard time to meet them. \"Let me think about it\" with no date is a no you have not heard yet. Ask for the condition and the time, or take the no and keep the relationship."
+      ],
+      [
+       "Never send \"just following up.\"",
+       "It carries no reason and no next step. Every follow-up names what they said the decision depends on, what changed since, and one small thing to do by a date."
+      ],
+      [
+       "Proof is the whole thing.",
+       "If you show a close, show the screen, the real voice, and the whole conversation. Remove any one of the three and what is left is a story. The same rule applies to your own scorecard: activity you cannot show did not happen."
+      ],
+      [
+       "Study the best, then practice.",
+       "Reading about closing is not practice. Watching the best is useful once. Running the moment again with a partner is what moves the number. One hour a day of real practice compounds; a weekend binge does not."
+      ]
+     ]
+    ],
+    [
+     "said",
+     "The tell",
+     "A closer's notes app has fifteen pre-handled lines and no rebuttal library. The library is a monument to objections they keep choosing not to fix in the pitch."
+    ]
+   ]
+  },
+  {
+   "nav": "With the money",
+   "label": "With the money",
+   "h2": "Five standards you can see in the bank account.",
+   "body": [
+    [
+     "steps",
+     [
+      [
+       "No sales math.",
+       "Sales math is your record month times twelve, called a salary. Commission moves. Budget on your average month over the last six, and treat anything above it as savings, not income."
+      ],
+      [
+       "No vanity math.",
+       "The story is up for a day. The bill lasts a year. Spending a commission check on something nobody remembers by Monday is the most expensive kind of marketing, and it is marketing to people who are not buying."
+      ],
+      [
+       "Protect the four days.",
+       "Every heavy night costs the next several days of sharp thinking. Your talk track will sound fine and your close rate will quietly drop, and you will not be able to point at the reason. Book the big conversations on the mornings you protected."
+      ],
+      [
+       "Stack the skill before the trappings.",
+       "The most valuable skill anyone can own is getting another person to agree to a transaction. Income, leverage, hiring, negotiation, equity, and freedom all sit downstream of it. Get good at it first. Buy the trappings of the person you want to be after you become them."
+      ],
+      [
+       "Respect the boring layer.",
+       "When you build a tool for yourself, remember what real software takes: support, testing, monitoring, backups, access control, a data model. A prototype that runs is not a product that survives. Use tools that have the boring layer and spend your hours selling."
+      ]
+     ]
+    ],
+    [
+     "linkedin",
+     "Your record month times twelve is not your salary. It is a fantasy with a car payment attached. Budget on the average of your last six months. Everything above it is savings. That one rule keeps more closers in the game than any script."
+    ]
+   ]
+  },
+  {
+   "nav": "The audit",
+   "label": "The audit",
+   "h2": "Ten yes-or-no questions after every week.",
+   "body": [
+    [
+     "checks",
+     [
+      "Did I rebut anything I could have pre-handled?",
+      "Did every conversation end in a hard yes, a hard no, or a conditional yes with a date?",
+      "Did I send any follow-up without a reason and a next step?",
+      "Can I show, not describe, my results this week?",
+      "Did I practice a real moment with a partner at least three times?",
+      "Did I spend on last month's record or this year's average?",
+      "Did I buy anything for the story instead of the use?",
+      "Did I protect the mornings before the big conversations?",
+      "Did I put an hour into the skill every day?",
+      "Did I use a tool with the boring layer, or build one without it?"
+     ]
+    ]
+   ]
+  }
+ ],
+ "ws": [
+  "Your week",
+  "Score yourself.",
+  "Ten questions, ten honest answers."
+ ],
+ "fields": [
+  [
+   "Rebutted, could have pre-handled",
+   "List the objections you answered after they were spoken. Each is a line for the front of the pitch."
+  ],
+  [
+   "Conversations without a hard answer",
+   "Which ones ended in a maybe? What condition and date would have made it a conditional yes?"
+  ],
+  [
+   "Follow-ups sent",
+   "Paste your last three. Do they name the decision factor, what changed, and one small next step by a date?"
+  ],
+  [
+   "Money this month",
+   "Average of your last six months, and what you spent above it."
+  ]
+ ],
+ "pr": [
+  "The prompt",
+  "Audit five conversations against the standards.",
+  "Paste anonymized notes or transcripts. It grades each against the five conversation standards and writes the pre-handle lines you were missing."
+ ],
+ "prompt": "Audit these sales conversations against five standards. For each conversation:\n\n<b>1.</b> PRE-HANDLING: list every objection the rep answered after it was spoken. For each, write the line that would have pre-handled it inside the pitch, in the rep's words.\n<b>2.</b> THE ENDING: hard yes, hard no, conditional yes with a date, or a maybe. If a maybe, write the question that would have turned it into a conditional yes with a date.\n<b>3.</b> THE FOLLOW-UP: if a follow-up was sent or planned, rewrite it in five lines: what they said the decision depends on, what changed, what happens next, by when, one question.\n<b>4.</b> PROOF: what in these notes could the rep actually show, not describe?\n<b>5.</b> ONE SKILL to practice this week, in the shape \"the moment was X, the change is Y.\"\n\nUse only what is in the notes. Never invent a customer's words or a product capability. No pressure tactics.\n\nNOTES:\n[paste anonymized notes or transcripts]",
+ "pro_h3": "The closer's system",
+ "pro_items": [
+  "The build prompt that writes your pre-handle lines for the twenty objections you hear most, in your words, for your medium",
+  "The follow-up library: twelve messages that carry a reason and a next step, none of them \"just following up\"",
+  "The conditional-yes script and the hard-no exit that keeps the relationship",
+  "The commission plan: the six-month average budget, the savings rule, and the purchase test",
+  "Quiz mode: twenty conversation endings, name the standard that was broken"
+ ],
+ "offer": [
+  "Work with Aton",
+  "Want this running across your whole team?",
+  "Sales floor training builds the framework into the floor and leaves your leaders running the practice rhythm. By application.",
+  "/contact?topic=training",
+  "Ask about floor training"
+ ]
+}

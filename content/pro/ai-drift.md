@@ -2,6 +2,8 @@
 title: "Prevent AI Drift, Pro"
 guide: ai-drift
 price: 12
+pillar: ai
+sub: any-model
 compare_at: 24
 tagline: "The five kinds of drift and how each shows up, the guardrail file, the weekly audit, a regression set you can run in ten minutes, reset rules, and three prompts."
 includes:

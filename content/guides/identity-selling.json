@@ -1,0 +1,216 @@
+{
+ "kind": "spec",
+ "status": "published",
+ "date": "2026-09-08",
+ "slug": "identity-selling",
+ "num": "11",
+ "topicKey": "sales",
+ "pillar": "sales",
+ "sub": "frameworks",
+ "topicLabel": "Sales",
+ "topic": "Sales",
+ "band": "",
+ "keys": "identity selling framework what makes people buy desired self become better version product features benefits pitch story marketing",
+ "cardBlurb": "Reputation and features are not why people buy. The question they answer is whether the purchase makes them more of who they want to be. The framework, in a sales conversation.",
+ "cardTags": [
+  "Free lesson",
+  "Worksheet",
+  "Prompt",
+  "Deeper in Pro"
+ ],
+ "title": "Identity-based selling",
+ "desc": "Sell who the customer becomes, not what the thing is. The four-part framework for a conversation, a page, or an ad.",
+ "h1": "Identity-based selling.",
+ "em": "Sell who they become, not what it is.",
+ "lead": "Consumer research keeps landing on the same answer: the strongest predictor of a purchase is not the brand's reputation or the product's features. It is whether buying it makes the person more of who they want to be. Here is how to run that in a real conversation without sounding like an ad.",
+ "read": 7,
+ "kit": "Framework and prompt",
+ "tiles": [
+  [
+   "The lesson",
+   "What makes people buy, the three layers under a product, and the four-part framework."
+  ],
+  [
+   "The prompt",
+   "Build the identity layer for your product from its real facts."
+  ],
+  [
+   "The full framework",
+   "Worked examples by medium, the objection crossover, and the ad version."
+  ]
+ ],
+ "sections": [
+  {
+   "nav": "What makes people buy",
+   "label": "What makes people buy",
+   "h2": "A purchase does two jobs.",
+   "body": [
+    [
+     "p",
+     "Every purchase solves a practical problem and expresses an identity. The practical part is visible: the object, the specs, the price. The personal part is quieter, and it is the part that decides. Reputation answers \"can I trust it.\" Features answer \"what can it do.\" The missing question is the one almost nobody answers: <b>is this for someone like me?</b>"
+    ],
+    [
+     "said",
+     "The test",
+     "Does buying this make me more of the person I want to be? Write the connection before you write the pitch."
+    ],
+    [
+     "p",
+     "Same product, different identity. A running shoe is a shoe. To the person who wants to be an athlete it is showing up to train. A camera is a camera. To the person who wants to be a creative it is making something original. The product stays the same. The meaning comes from the life around it."
+    ]
+   ]
+  },
+  {
+   "nav": "Go below the product",
+   "label": "Go below the product",
+   "h2": "Three layers. Most reps stop at the first.",
+   "body": [
+    [
+     "steps",
+     [
+      [
+       "Above the surface: what it is.",
+       "The object, the specs, the price. Necessary, and the least persuasive layer. Reps who live here sell on features and lose on price."
+      ],
+      [
+       "Below the surface: what it lets me do.",
+       "The action the product supports. Train more consistently. Answer every call. Ship the thing this week. This is where most good pitches live."
+      ],
+      [
+       "Deeper: who I can become.",
+       "The identity the action expresses. Someone who trains. Someone whose business runs without them. Someone who creates. Connect the product to a specific way of living and the price conversation changes."
+      ]
+     ]
+    ],
+    [
+     "p",
+     "Sell a better version of the customer, not an instant identity. The honest version is a staircase: start (I want to), practice (make it easier to begin), progress (show the work taking shape), identity (I am someone who does this). A product can support progress. It cannot promise the top step, and you should not."
+    ]
+   ]
+  },
+  {
+   "nav": "The framework",
+   "label": "The four-part framework",
+   "h2": "Desired self, behavior, product, proof.",
+   "body": [
+    [
+     "steps",
+     [
+      [
+       "Desired self.",
+       "Who do they want to become? You find this in discovery, not in your head. \"What made you stop today?\" \"What would be different if this were handled?\" Listen for the person, not the problem."
+      ],
+      [
+       "Behavior.",
+       "What would that person do? Train three mornings a week. Answer every call. Post every Tuesday. Name the action, because the action is what the product supports."
+      ],
+      [
+       "Product.",
+       "Now, and only now, the thing. Present the one feature that supports the behavior. Make its role clear before you list what it includes."
+      ],
+      [
+       "Proof.",
+       "A believable version of the person they want to become, one step ahead of them, not ten. A customer like them, a worked example, a first win they can have this week."
+      ]
+     ]
+    ],
+    [
+     "said",
+     "In a sentence",
+     "Recognize the desired self, show how the tool helps, then present the relevant features. Identity before product."
+    ]
+   ]
+  },
+  {
+   "nav": "Show you can help",
+   "label": "Step outside the sale",
+   "h2": "Show that you can help before you ask for anything.",
+   "body": [
+    [
+     "p",
+     "Inside the sale, the question is what can I say about it. Outside the sale, the question is where does it help them. Three moves, in order: a <b>claim</b> (trust me), a <b>demonstration</b> (watch how this works), and an <b>application</b> (try this specific move). The application is the one people skip and the one that builds trust, because you gave them something useful before they paid."
+    ],
+    [
+     "checks",
+     [
+      "Name what is stuck, in their words.",
+      "Show one change, not the whole system.",
+      "Give them a first win they can get today, with or without you."
+     ]
+    ],
+    [
+     "linkedin",
+     "Nobody buys a product. They buy the version of themselves that owns it. If your pitch lists features, you are selling the top of the iceberg. Go below it: what does it let them do, and who does that make them?"
+    ]
+   ]
+  },
+  {
+   "nav": "By medium",
+   "label": "By medium",
+   "h2": "Same framework, three rooms.",
+   "body": [
+    [
+     "steps",
+     [
+      [
+       "Face to face, retail or event.",
+       "Desired self comes from one question: \"What would you change if you could?\" Proof is the customer two feet away who just signed, or the story of one from last week."
+      ],
+      [
+       "Phone.",
+       "You have less time and no face. Desired self in the story beat: \"most people we talk to want the phone answered every time without hiring for it.\" Proof is a specific, verifiable result, not a number you cannot back."
+      ],
+      [
+       "Meeting.",
+       "The buyer's desired self is often about their team or their standing. \"What does this look like when it works, for you and for them?\" Proof is a pilot with dates."
+      ]
+     ]
+    ]
+   ]
+  }
+ ],
+ "ws": [
+  "Build the identity layer",
+  "Map your product to the framework.",
+  "One row per customer type."
+ ],
+ "fields": [
+  [
+   "Desired self",
+   "Who does this customer want to become? Their words if you have them."
+  ],
+  [
+   "Behavior",
+   "What would that person do that the product supports?"
+  ],
+  [
+   "Product",
+   "The one feature that supports the behavior, from verified facts."
+  ],
+  [
+   "Proof",
+   "A believable example one step ahead of them."
+  ]
+ ],
+ "pr": [
+  "The prompt",
+  "Build the identity layer from your facts.",
+  "Paste your product facts and the customers you actually meet. It builds the four-part map and the lines for your medium. Check every claim."
+ ],
+ "prompt": "Build an identity-based selling map for the product below. Use only the product facts I give you. Never invent a capability, a result, or a customer.\n\nFor each customer type I list:\n<b>1.</b> DESIRED SELF: who they want to become, in one sentence, in words they would use.\n<b>2.</b> BEHAVIOR: the specific action that person would take that this product supports.\n<b>3.</b> PRODUCT: the one feature that supports that behavior, and how to state its role in one line before any list of features.\n<b>4.</b> PROOF: what believable proof looks like one step ahead of them (a customer like them, a worked example, a first win this week). If I have no proof yet, say so and tell me what proof to collect.\n<b>5.</b> Two lines for my medium: a discovery question that surfaces the desired self, and a show line that ties the product to the behavior.\n\nThen write the three-layer version (what it is, what it lets me do, who I can become) as three sentences for the wall.\n\nMedium: [retail / phone / meeting]\nProduct facts: [paste verified facts only]\nCustomer types: [list two or three]",
+ "pro_h3": "The full identity-selling system",
+ "pro_items": [
+  "The build prompt that produces the map, the lines by medium, the objection crossover, and the ad version for your product",
+  "Worked examples for three generic products in all three mediums",
+  "The proof ladder: how to collect believable proof at every stage",
+  "The identity objection: what to say when the customer does not see themselves in it",
+  "Quiz mode: twelve situations, name the desired self"
+ ],
+ "offer": [
+  "Work with Aton",
+  "Want this running across your whole team?",
+  "Sales floor training builds the framework into the floor and leaves your leaders running the practice rhythm. By application.",
+  "/contact?topic=training",
+  "Ask about floor training"
+ ]
+}

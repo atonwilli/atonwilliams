@@ -13,7 +13,7 @@
   "Prompt",
   "Deeper in Pro"
  ],
- "topicLabel": "AI and tools",
+ "topicLabel": "AI",
  "topic": "AI and tools",
  "band": " mint",
  "title": "Set up your first brain file",
@@ -172,5 +172,7 @@
   "The recruiting and operations programs put a brain file behind every seat so the AI works the same way for everyone. By application.",
   "../preview/contact.html?topic=consulting",
   "Ask about a team program"
- ]
+ ],
+ "pillar": "ai",
+ "sub": "any-model"
 }

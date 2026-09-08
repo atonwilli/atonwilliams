@@ -2,6 +2,8 @@
 title: "The Sales Debrief, Pro"
 guide: sales-debrief
 price: 12
+pillar: sales
+sub: coaching
 compare_at: 24
 tagline: "The full debrief system: the SOP, the log, fifteen scripts by medium, four prompts, and a thirty-day rollout."
 includes:

@@ -13,7 +13,7 @@
   "Prompt",
   "Deeper in Pro"
  ],
- "topicLabel": "AI and tools",
+ "topicLabel": "AI",
  "topic": "AI and tools",
  "band": " mint",
  "title": "What GitHub is, and how to use it",
@@ -172,5 +172,7 @@
   "Start with the free business audit from Front Page Intelligence, then talk to us about what to build first.",
   "https://frontpageintelligence.com/audit/",
   "Run the free business audit"
- ]
+ ],
+ "pillar": "ai",
+ "sub": "any-model"
 }
