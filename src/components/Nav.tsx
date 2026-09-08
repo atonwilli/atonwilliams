@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { usePathname } from 'next/navigation'
 
-export type NavProduct = { href: string; label: string; price?: number; group?: string }
+export type NavProduct = { href: string; label: string; price?: number; priceLabel?: string; group?: string }
 
 const links = [
   { href: '/#start', label: 'Start here' },
@@ -62,7 +62,7 @@ export function Nav({ products = [] }: { products?: NavProduct[] }) {
                     {g && <span className="nav-menu-label">{g}</span>}
                     {products.filter((p) => (p.group || '') === g).map((p) => (
                       <a key={p.href} href={p.href} role="menuitem" onClick={() => { setMenu(false); setOpen(false) }}>
-                        <span>{p.label}</span>{p.price != null && <em>${p.price}</em>}
+                        <span>{p.label}</span>{(p.priceLabel || p.price != null) && <em>{p.priceLabel || `$${p.price}`}</em>}
                       </a>
                     ))}
                   </div>

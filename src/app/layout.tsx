@@ -21,6 +21,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     ...getAgents().map((a) => ({ href: `/pro#${a.sku}`, label: a.short || a.title, price: a.price, group: 'Agents' })),
     { href: '/pro#agents', label: team.title, price: team.price, group: 'Bundles' },
     { href: '/pro#packs', label: lib.title, price: lib.price, group: 'Bundles' },
+    { href: '/#work', label: 'Operators Academy Pro', priceLabel: 'from $49/mo', group: 'Membership' },
   ]
   return (
     <html lang="en">
