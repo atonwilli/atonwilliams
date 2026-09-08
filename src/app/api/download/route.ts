@@ -12,16 +12,18 @@ export async function GET(req: Request) {
   const { searchParams } = new URL(req.url)
   const sessionId = searchParams.get('session_id') || ''
   const key = process.env.STRIPE_SECRET_KEY
-  if (!key || !sessionId.startsWith('cs_')) return NextResponse.json({ error: 'Not available' }, { status: 403 })
+  // Anything that is not a paid, known session lands on the thanks page, which explains what to do instead of a raw error.
+  const explain = () => NextResponse.redirect(new URL(`/pro/thanks?session_id=${encodeURIComponent(sessionId)}`, req.url), 303)
+  if (!key || !sessionId.startsWith('cs_')) return explain()
 
   const stripe = new Stripe(key)
   let session: Stripe.Checkout.Session
   try {
     session = await stripe.checkout.sessions.retrieve(sessionId)
   } catch {
-    return NextResponse.json({ error: 'Unknown session' }, { status: 404 })
+    return explain()
   }
-  if (session.payment_status !== 'paid') return NextResponse.json({ error: 'Payment not completed' }, { status: 402 })
+  if (session.payment_status !== 'paid') return explain()
 
   const pack = getPack(String(session.metadata?.sku || ''))
   if (!pack) return NextResponse.json({ error: 'Pack not found' }, { status: 404 })

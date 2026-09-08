@@ -20,7 +20,8 @@ export async function GET(req: Request) {
     if (to) {
       const resend = mailer()
       if (!resend) return NextResponse.json({ error: 'Mail not configured' }, { status: 503 })
-      const sent = await resend.emails.send({ from: FROM, to, subject: `[Sample] ${msg.subject}`, html: msg.html, text: msg.text })
+      const note = '<p style="font-family:sans-serif;font-size:13px;color:#8a1f1f;background:#fdecec;padding:10px 14px;border-radius:10px;margin:0 0 16px">Sample only: this is what a buyer receives. The download button here points at a placeholder session, so it will not download anything. A real purchase carries a real link.</p>'
+      const sent = await resend.emails.send({ from: FROM, to, subject: `[Sample] ${msg.subject}`, html: msg.html.replace('<p style="font-family', note + '<p style="font-family'), text: 'SAMPLE ONLY, the link below is a placeholder.\n\n' + msg.text })
       return NextResponse.json({ ok: !sent.error, to, id: sent.data?.id, error: sent.error })
     }
     return new NextResponse(msg.html, { headers: { 'Content-Type': 'text/html; charset=utf-8' } })
