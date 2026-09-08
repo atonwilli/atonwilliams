@@ -4,8 +4,8 @@ import { CALENDARS, getTopic } from '@/lib/routing'
 export const metadata: Metadata = { title: 'Received', robots: { index: false } }
 export const dynamic = 'force-dynamic'
 
-export default async function Thanks({ searchParams }: { searchParams: Promise<{ route?: string; topic?: string; to?: string; from?: string }> }) {
-  const { route = '', topic = '', to = '', from = '' } = await searchParams
+export default async function Thanks({ searchParams }: { searchParams: Promise<{ route?: string; topic?: string; to?: string; from?: string; confirm?: string; confirmed?: string; already?: string; pending?: string; error?: string }> }) {
+  const { route = '', topic = '', to = '', from = '', confirm = '', confirmed = '', already = '', pending = '', error = '' } = await searchParams
   const t = getTopic(topic)
   const redirect = getTopic(to)
   const cal = t ? CALENDARS[t.calendar] : undefined
@@ -13,8 +13,8 @@ export default async function Thanks({ searchParams }: { searchParams: Promise<{
     return (
       <main className="page"><div className="wrap thanks"><div>
         <span className="eyebrow">Newsletter</span>
-        <h1>You are on the list.</h1>
-        <p className="lead">The next note lands in your inbox on Friday. Until then, the guides are open.</p>
+        {confirmed ? <h1>You are on the list.</h1> : already ? <h1>You were already on the list.</h1> : error ? <h1>That did not go through.</h1> : pending ? <h1>Received.</h1> : <h1>Check your inbox.</h1>}
+        <p className="lead">{confirmed ? 'The next note lands in your inbox on Friday. Until then, the guides are open.' : already ? 'Nothing to do. The next note lands on Friday.' : error === 'email' ? 'That email address did not look right. Try again from the home page.' : error === 'token' ? 'That confirmation link is not valid any more. Sign up again from the home page and use the newest email.' : error ? 'Something went wrong on our side. Try again in a minute, or write to aton@frontpageintelligence.com.' : pending ? 'You are noted. The confirmation email goes out as soon as the list is live.' : 'One email is on its way with a single button. Click it and you are on the list. If it is not there in a minute, check the promotions or spam folder.'}</p>
         <div className="button-row" style={{ justifyContent: 'center' }}><a className="button" href="/guides">Browse the free guides</a></div>
       </div></div></main>
     )

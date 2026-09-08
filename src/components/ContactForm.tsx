@@ -34,7 +34,15 @@ function Form() {
   return (
     <>
       <div className="form-card">
-        <form id="intake" action={FORM} method="POST">
+        <form id="intake" action={FORM} method="POST" onSubmit={(e) => {
+          const form = e.currentTarget
+          const wants = (form.querySelector('[name=newsletter]') as HTMLInputElement | null)?.checked
+          const email = (form.querySelector('[name=email]') as HTMLInputElement | null)?.value
+          if (wants && email) {
+            const interest = track === 'organization' ? 'Updates from Aton' : topic === 'membership' ? 'AI and automation' : 'Sales and rep development'
+            fetch('/api/newsletter/subscribe', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ email, interest, source: 'contact:' + topic }), keepalive: true }).catch(() => {})
+          }
+        }}>
           <input type="hidden" name="_subject" value={`[${t ? t.pipeline : track === 'career' ? 'recruiting' : 'inquiry'}] ${t ? t.label : 'atonwilliams.com'}: ${decision.route}`} />
           <input type="hidden" name="pipeline" value={t ? t.pipeline : ''} />
           <input type="hidden" name="pipeline_owner" value={t ? PIPELINE_OWNER[t.pipeline] : ''} />
