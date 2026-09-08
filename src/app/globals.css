@@ -892,7 +892,8 @@ dialog::backdrop { background: rgba(37, 36, 64, .55); backdrop-filter: blur(3px)
 .steps-bar li.done { color: var(--green); border-color: var(--green); }
 .form-card fieldset.hidden-step { display: none; }
 .form-card fieldset.collapsed legend { font-size: 15px; color: var(--ink-2); margin-bottom: 4px; }
-.form-card fieldset.collapsed .choice-grid, .form-card fieldset.collapsed .choice-list, .form-card fieldset.collapsed .two, .form-card fieldset.collapsed .note, .form-card fieldset.collapsed .button-row { display: none; }
+.form-card fieldset.collapsed .two, .form-card fieldset.collapsed .note, .form-card fieldset.collapsed .button-row { display: none; }
+.form-card fieldset.collapsed .choice-grid { grid-template-columns: 1fr; }
 .form-card fieldset.collapsed .choice.picked { display: flex; }
 .form-card fieldset.collapsed .choice-list .choice:not(.picked), .form-card fieldset.collapsed .choice-grid .choice:not(.picked) { display: none; }
 .choice-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }

@@ -18,11 +18,11 @@ function Form() {
   const [timeline, setTimeline] = useState<string>(TIMELINES[0])
   const [authority, setAuthority] = useState<string>(AUTHORITY[0])
   const [message, setMessage] = useState('')
-  const [step, setStep] = useState(presetTopic ? 2 : 1)
+  const [step, setStep] = useState(presetTopic ? 3 : 1)
 
   useEffect(() => {
     const t = getTopic(params.get('topic') || '')
-    if (t) { setTopic(t.key); setTrack(t.track === 'both' ? 'individual' : t.track); setStep(2) }
+    if (t) { setTopic(t.key); setTrack(t.track === 'both' ? 'individual' : t.track); setStep(3) }
   }, [params])
 
   const t = getTopic(topic)
