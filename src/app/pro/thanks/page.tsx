@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Stripe from 'stripe'
 import { getPack } from '@/lib/pro'
 import { fulfillSession } from '@/lib/fulfill'
+import { readAttribution, flatten } from '@/lib/attribution'
 
 export const metadata: Metadata = { title: 'Your Pro pack', robots: { index: false } }
 export const dynamic = 'force-dynamic'
@@ -19,7 +20,7 @@ export default async function ProThanks({ searchParams }: { searchParams: Promis
       packTitle = pack?.title || 'your Pro pack'
       email = session.customer_details?.email || ''
       state = session.payment_status === 'paid' ? 'paid' : 'pending'
-      if (state === 'paid') await fulfillSession(session)
+      if (state === 'paid') await fulfillSession(session, flatten(await readAttribution()))
     } catch {
       state = 'invalid'
     }

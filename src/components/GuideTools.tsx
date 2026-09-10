@@ -5,7 +5,14 @@ import { useEffect } from 'react'
 /** Copy-the-prompt and download-my-notes buttons on guide pages. Notes never leave the browser. */
 export function GuideTools() {
   useEffect(() => {
+    const track = (event: string, resource: string) => {
+      try { fetch('/api/events', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ event, resource }), keepalive: true }).catch(() => {}) } catch { /* ignore */ }
+    }
+    const slug = location.pathname.split('/').pop() || ''
+    track('resource_viewed', slug)
     const onClick = async (e: MouseEvent) => {
+      const dl = (e.target as HTMLElement).closest<HTMLElement>('[data-event]')
+      if (dl) track(dl.dataset.event || 'download_requested', dl.dataset.resource || slug)
       const t = (e.target as HTMLElement).closest<HTMLElement>('#copy, #save-notes')
       if (!t) return
       if (t.id === 'copy') {
@@ -13,6 +20,7 @@ export function GuideTools() {
         try {
           await navigator.clipboard.writeText(document.getElementById('prompt')?.textContent || '')
           if (status) status.textContent = 'Prompt copied.'
+          track('prompt_copied', slug)
         } catch {
           if (status) status.textContent = 'Select the prompt text to copy it.'
         }

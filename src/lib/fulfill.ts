@@ -9,7 +9,7 @@ import { pushLead } from '@/lib/mesa'
  * Called from the thanks page (first paid load) and from the Stripe webhook,
  * whichever arrives first; the second caller finds the row and does nothing.
  */
-export async function fulfillSession(session: Stripe.Checkout.Session): Promise<{ recorded: boolean; emailed: boolean }> {
+export async function fulfillSession(session: Stripe.Checkout.Session, attribution: Record<string, string> = {}): Promise<{ recorded: boolean; emailed: boolean }> {
   if (session.payment_status !== 'paid') return { recorded: false, emailed: false }
   const pack = getPack(String(session.metadata?.sku || ''))
   const email = (session.customer_details?.email || session.customer_email || '').toLowerCase()
@@ -36,7 +36,7 @@ export async function fulfillSession(session: Stripe.Checkout.Session): Promise<
   const amount = session.amount_total != null ? (session.amount_total / 100).toFixed(2) : ''
   const ok = await pushLead({
     type: 'purchase', email, name, source: `atonwilliams-pro:${pack.sku}`,
-    extras: { sku: pack.sku, product: pack.title, amount, currency: (session.currency || 'usd').toUpperCase(), stripe_session: session.id },
+    extras: { sku: pack.sku, product: pack.title, amount, currency: (session.currency || 'usd').toUpperCase(), stripe_session: session.id, ...attribution },
   })
   if (ok) await client.from('site_purchases').update({ mesa_pushed_at: new Date().toISOString() }).eq('session_id', session.id)
   return { recorded: true, emailed }

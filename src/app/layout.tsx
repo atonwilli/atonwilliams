@@ -5,6 +5,7 @@ import { getAgents, getAgentBundle, getLibraryPack } from '@/lib/pro'
 import { Footer } from '@/components/Footer'
 import { BgDepth } from '@/components/BgDepth'
 import { SiteFx } from '@/components/SiteFx'
+import { Attribution } from '@/components/Attribution'
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://atonwilliams.com'),
@@ -39,6 +40,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         {children}
         <Footer />
         <SiteFx />
+        <Attribution />
       </body>
     </html>
   )

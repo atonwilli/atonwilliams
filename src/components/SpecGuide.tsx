@@ -1,3 +1,5 @@
+import fs from 'node:fs'
+import path from 'node:path'
 import type { SpecGuide as Spec, SpecBlock } from '@/lib/content'
 import { ProBox } from './ProBox'
 
@@ -101,7 +103,8 @@ export function SpecGuidePage({ g }: { g: Spec }) {
                 <span>Prompt &middot; copy and paste</span>
                 <div className="actions">
                   <button className="button light" id="copy" type="button">Copy prompt</button>
-                  <a className="button secondary" style={{ borderColor: 'rgba(255,250,240,.4)', color: 'var(--cream)' }} href={`/downloads/${g.slug}-prompt.txt`} download>Download .txt</a>
+                  <a className="button secondary" style={{ borderColor: 'rgba(255,250,240,.4)', color: 'var(--cream)' }} href={`/downloads/${g.slug}-prompt.txt`} download data-event="download_requested" data-resource={`${g.slug}-prompt`}>Download .txt</a>
+                  {fs.existsSync(path.join(process.cwd(), 'public', 'downloads', `${g.slug}.pdf`)) && <a className="button secondary" style={{ borderColor: 'rgba(255,250,240,.4)', color: 'var(--cream)' }} href={`/downloads/${g.slug}.pdf`} download data-event="download_requested" data-resource={`${g.slug}-pdf`}>Download the PDF</a>}
                 </div>
               </header>
               <pre id="prompt" dangerouslySetInnerHTML={{ __html: prompt }} />

@@ -3,6 +3,7 @@ import path from 'node:path'
 
 /** A purchasable Pro pack. Prices are in whole US dollars. */
 export type ProPack = {
+  status?: 'published' | 'draft'
   sku: string // matches the guide slug, or "library" for the bundle
   title: string
   tagline: string
@@ -43,7 +44,7 @@ function parse(raw: string): Record<string, string | string[]> {
 
 const ORDER = ['sales-debrief', 'pitch-framework', 'objections', 'brain-file', 'prompt-with-skills', 'what-is-github', 'custom-skill', 'loop-engineering', 'ai-drift', 'sales-terms', 'identity-selling', 'closer-standards', 'marketing-math', 'business-math', 'five-seats', 'job-post-second-week', 'app-store-approval', 'google-play-approval', 'build-your-own-app']
 
-export function getProPacks(): ProPack[] {
+function readPacks(): ProPack[] {
   const dir = path.join(ROOT, 'pro')
   if (!fs.existsSync(dir)) return []
   const packs = fs
@@ -53,6 +54,7 @@ export function getProPacks(): ProPack[] {
       const d = parse(fs.readFileSync(path.join(dir, f), 'utf8'))
       const slug = f.replace(/\.md$/, '')
       return {
+        status: (d.status as ProPack['status']) || 'published',
         sku: slug,
         guide: (d.guide as string) || slug,
         title: (d.title as string) || slug,
@@ -67,6 +69,10 @@ export function getProPacks(): ProPack[] {
       }
     })
   return packs.sort((a, b) => ORDER.indexOf(a.sku) - ORDER.indexOf(b.sku))
+}
+/** Packs on sale. Drafts are readable through packForGuide only. */
+export function getProPacks(): ProPack[] {
+  return readPacks().filter((p) => p.status !== 'draft')
 }
 
 export function getLibraryPack(): ProPack {
@@ -136,7 +142,7 @@ export function getPack(sku: string): ProPack | undefined {
 }
 
 export function packForGuide(guide: string): ProPack | undefined {
-  return getProPacks().find((p) => p.guide === guide)
+  return readPacks().find((p) => p.guide === guide)
 }
 
 export function checkoutEnabled(): boolean {

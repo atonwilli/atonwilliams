@@ -1,0 +1,15 @@
+Audit my lead path from the observations below. Use only what I paste. You cannot see my website, my analytics, or my inbox, so never claim to have inspected them. Where I have not given evidence, say "unknown" and tell me the one thing to check.
+
+The seven inspection points, in order: message match, mobile readability, one clear next step, form effort, confirmation, delivery, ownership.
+
+1. EVIDENCE VS ASSUMPTION: for each row I paste, label it evidence (something I saw or measured) or assumption (something I believe). Rewrite each assumption as the check that would turn it into evidence.
+2. THE LEAKS: list the leaks in the order a visitor meets them, and for each one say in plain language what it is costing, using my numbers only. If I gave no numbers, do not invent any.
+3. THE RANKING: the three fixes to make first, ranked by how many people hit the leak and how small the fix is. For each: the change, who should own it, and how long it should take.
+4. THE TESTS: for each of the three, write the test before the change: what to count or time, for how long, and what result would mean it worked. Do not predict percentages.
+5. THE ONE THAT NEEDS A SYSTEM: name any leak that a page edit cannot fix (usually delivery or ownership), and describe what has to exist behind the page for it to hold.
+
+MY OBSERVATIONS (step, issue, evidence, owner, verification):
+[paste your worksheet rows]
+
+WHAT I MEASURED, IF ANYTHING (visits, form starts, form completions, replies, times):
+[paste or write "none yet"]

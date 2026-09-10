@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server'
 import { mailer, site } from '@/lib/newsletter'
 import { pushLead, pipelineNameFor } from '@/lib/mesa'
+import { readAttribution, flatten } from '@/lib/attribution'
 
 /**
  * The contact form posts here. Three things happen, in order of importance:
@@ -36,25 +37,27 @@ export async function POST(req: Request) {
     const s = String(v).trim()
     if (s) extras[k] = s
   }
+  const attribution = flatten(await readAttribution())
   const pipelineKey = get('pipeline') || (get('track') === 'career' ? 'recruiting' : '')
   const source = `atonwilliams-contact${get('topic') ? ':' + get('topic') : ''}`
 
   const pushed = await pushLead({
     type: 'contact', email, name: get('name'), phone: get('phone'), company: get('company'), message: get('message'),
-    pipeline: pipelineNameFor(pipelineKey), source, extras: { ...extras, mesa_pipeline_key: pipelineKey },
+    pipeline: pipelineNameFor(pipelineKey), source, extras: { ...extras, ...attribution, mesa_pipeline_key: pipelineKey },
   })
 
   const resend = mailer()
   if (resend) {
     const rows = FIELDS.filter(([k]) => get(k)).map(([k, label]) =>
       `<tr><td style="padding:6px 10px;color:#666;white-space:nowrap">${label}</td><td style="padding:6px 10px">${esc(get(k)).replace(/\n/g, '<br>')}</td></tr>`).join('')
+    const attrRows = Object.entries(attribution).map(([k, v]) => `<tr><td style="padding:6px 10px;color:#666;white-space:nowrap">${k.replace('_', ' ')}</td><td style="padding:6px 10px">${esc(v)}</td></tr>`).join('')
     const subject = `[${pipelineKey || 'inquiry'}] ${get('topic') || 'atonwilliams.com'}: ${get('route') || 'new lead'}`
     await resend.emails.send({
       from: process.env.NEWSLETTER_FROM || 'Aton Williams <notes@atonwilliams.com>',
       to: INBOX,
       replyTo: email,
       subject,
-      html: `<p style="font:14px system-ui">New lead from atonwilliams.com${pushed ? ' (also in Mesa)' : ' (Mesa push did not go through, this email is the record)'}.</p><table style="font:14px system-ui;border-collapse:collapse">${rows}</table>`,
+      html: `<p style="font:14px system-ui">New lead from atonwilliams.com${pushed ? ' (also in Mesa)' : ' (Mesa push did not go through, this email is the record)'}.</p><table style="font:14px system-ui;border-collapse:collapse">${rows}${attrRows}</table>`,
       text: FIELDS.filter(([k]) => get(k)).map(([k, label]) => `${label}: ${get(k)}`).join('\n'),
     }).catch((e) => console.error('lead email failed', e))
   }

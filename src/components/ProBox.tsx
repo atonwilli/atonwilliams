@@ -7,6 +7,25 @@ export function ProBox({ guide, num }: { guide: string; num: number }) {
   const pack = packForGuide(guide)
   if (!pack) return null
   const lib = getLibraryPack()
+  if (pack.status === 'draft') {
+    return (
+      <section className="lesson" id="pro">
+        <span className="num">{num < 99 && <b>{num}</b>}The Pro companion</span>
+        <h2>{pack.title.replace(/, Pro$/, '')}: in progress.</h2>
+        <p>{pack.tagline} It is not for sale until every chapter is finished. Members of Operators Academy Pro get it the day it ships; everyone else hears in the Friday note.</p>
+        <div className="pro-box">
+          <div>
+            <span className="chip">What it will hold</span>
+            <ul>{pack.includes.map((x) => <li key={x}>{x}</li>)}</ul>
+          </div>
+          <div className="pro-buy">
+            <a className="button peach" href="/membership">See Operators Academy Pro</a>
+            <a className="textlink" href="/#newsletter" style={{ color: 'var(--cream)', borderColor: 'var(--peach)' }}>Get the Friday note</a>
+          </div>
+        </div>
+      </section>
+    )
+  }
   return (
     <section className="lesson" id="pro">
       <span className="num">{num < 99 && <b>{num}</b>}The Pro pack</span>

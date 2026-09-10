@@ -1,0 +1,234 @@
+{
+ "kind": "spec",
+ "status": "published",
+ "date": "2026-09-09",
+ "slug": "before-you-buy-more-traffic",
+ "num": "20",
+ "topicKey": "operations",
+ "pillar": "operations",
+ "sub": "numbers",
+ "topicLabel": "Operations",
+ "topic": "Operations",
+ "band": " mint",
+ "keys": "website audit mobile lead path landing page traffic ads conversion form friction message match CTA confirmation follow-up owner checklist funnel before you buy more traffic marketing audit owners and marketers about to spend on ads visitors arrive and nothing happens",
+ "audience": "owners and marketers about to spend on ads",
+ "problem": "visitors arrive and nothing happens",
+ "cardBlurb": "More traffic into a path that leaks is more money for the same result. The seven-point inspection between a visitor on a phone and a real next step, a worked example, a worksheet, and a prompt that ranks the fixes.",
+ "cardTags": [
+  "Free lesson",
+  "Worked example",
+  "Worksheet",
+  "Prompt",
+  "PDF"
+ ],
+ "title": "Before you buy more traffic",
+ "desc": "Seven things to inspect between a mobile visitor and a real next step, before you pay to send more people down the same path.",
+ "h1": "Before you buy more traffic.",
+ "em": "Fix the path first.",
+ "lead": "Every owner who has bought ads has had the same week: money out, clicks in, and nothing on the other end. Almost every time, the path was leaking before the first dollar was spent. This is the inspection I run before anyone buys traffic. Seven points, in order, from a phone in someone's hand to a person who owns the follow-up.",
+ "read": 9,
+ "kit": "Inspection, worked example, worksheet, and prompt",
+ "tiles": [
+  [
+   "The lesson",
+   "Seven inspection points between a visitor on a phone and a real next step, and what each one costs when it leaks."
+  ],
+  [
+   "The example",
+   "A fictional studio, one observed leak per point, the consequence, the fix, and how to test it."
+  ],
+  [
+   "The prompt",
+   "Paste your observations and it separates evidence from guesses, ranks the fixes, and proposes the tests."
+  ]
+ ],
+ "sections": [
+  {
+   "nav": "Why this first",
+   "label": "Why this first",
+   "h2": "Traffic is a multiplier. It multiplies whatever is already there.",
+   "body": [
+    [
+     "p",
+     "An ad does one thing: it sends more people to the path you already have. If that path converts one in fifty, buying traffic gets you more of one in fifty, at a price. If it converts one in ten, the same money does five times the work. The path is the thing you own. The traffic is the thing you rent. Fix the owned thing first."
+    ],
+    [
+     "said",
+     "The rule",
+     "Do not pay to send more people down a path you have not walked yourself, on a phone, in the last thirty days."
+    ],
+    [
+     "p",
+     "The inspection below is not a redesign. It is seven questions you answer with evidence, on your own phone, in about twenty minutes. Most of the fixes are small. The point is to find the one leak that is quietly costing the most, fix that, test it, and only then turn the traffic up."
+    ]
+   ]
+  },
+  {
+   "nav": "The seven points",
+   "label": "The seven points",
+   "h2": "Walk it from the phone to the person.",
+   "body": [
+    [
+     "steps",
+     [
+      [
+       "Message match.",
+       "The ad or post promised one thing. Does the first screen of the page say the same thing, in the same words, with the same offer? A visitor decides in about three seconds whether they landed in the right place. When the headline changes the promise, they assume a bait and leave. Test: read the ad and the first screen out loud back to back. If a stranger could not tell they belong together, they do not."
+      ],
+      [
+       "Mobile readability.",
+       "Most paid traffic arrives on a phone. Open the page on yours, outdoors, one thumb. Can you read the first sentence without zooming? Is the main button visible without scrolling? Does anything cover the content: a chat widget, a cookie bar, a popup, a video that autoplays? Every one of those is a visitor gone before the offer."
+      ],
+      [
+       "One clear next step.",
+       "A page with four buttons has no button. Decide the single thing you want a visitor to do and make it the only obvious action on the first screen. Everything else is smaller, lower, or gone. The button says what happens next in plain words: \"Get the audit,\" not \"Submit.\""
+      ],
+      [
+       "Form effort.",
+       "Count the fields. Every field you ask for before you have earned anything costs you a share of the people who would have finished. Ask for what you need to deliver the next step and nothing more. Name and email for a resource. Phone only when someone will actually call. The rest is a question for later, when they already trust you."
+      ],
+      [
+       "Confirmation.",
+       "What happens in the first second after they press the button? A blank page, a spinner, or a generic \"thanks\" is a leak. The confirmation should say exactly what they got, when it arrives, and what to do while they wait. This is also where you catch a broken form: submit it yourself and see whether anything actually arrives."
+      ],
+      [
+       "Delivery.",
+       "If the page promised a guide, a call, an audit, or a reply, the thing has to show up, fast, and match the promise. Send it to yourself. Check the from address, the subject, the link, the file, the time it took. A promise that arrives late or arrives wrong teaches the visitor that the next promise is not worth acting on."
+      ],
+      [
+       "Ownership.",
+       "Every inquiry lands with a named person who is accountable for the reply, with a deadline, and the record goes somewhere that will not lose it. Not a shared inbox. Not a notification that scrolls away. A name and a time. This is the leak that never shows up in the analytics, because the visitor did everything right and the business dropped it."
+      ]
+     ]
+    ],
+    [
+     "said",
+     "The tell",
+     "If you cannot say who owns a new inquiry at 6pm on a Friday, the path leaks at the end, no matter how good the page is."
+    ]
+   ]
+  },
+  {
+   "nav": "A worked example",
+   "label": "A worked example",
+   "h2": "Same inspection, run on a business that does not exist.",
+   "body": [
+    [
+     "p",
+     "<b>Northlight Pilates</b> is a fictional two-room studio that runs a paid intro offer through Instagram. It is invented so the numbers and the leaks can be shown plainly. Nothing below is a real client. The owner ran the seven points on her own phone and wrote down what she saw, what it was costing, the fix, and how she would know the fix worked."
+    ],
+    [
+     "steps",
+     [
+      [
+       "Message match.",
+       "<b>Observed:</b> the reel says \"first week free.\" The page headline says \"Reformer classes in Tempe.\" <b>Consequence:</b> the visitor who came for the free week has to hunt for it and many do not. <b>Fix:</b> the first screen repeats the exact promise: \"Your first week is free.\" <b>Test:</b> for one week, count intro signups from the reel link before and after the headline change. No percentages guessed in advance; the count is the result."
+      ],
+      [
+       "Mobile readability.",
+       "<b>Observed:</b> a booking widget loads over the top third of the page on a phone, and the first sentence is behind it. <b>Consequence:</b> the offer is invisible until the visitor dismisses something. <b>Fix:</b> the widget moves below the offer and opens only when the button is pressed. <b>Test:</b> open the page on three different phones and confirm the offer and the button are on the first screen on all three."
+      ],
+      [
+       "One clear next step.",
+       "<b>Observed:</b> the first screen has \"Book,\" \"Pricing,\" \"Schedule,\" and \"Instagram.\" <b>Consequence:</b> the intro offer competes with three other actions. <b>Fix:</b> one button, \"Claim your free week,\" and the rest moved into the menu. <b>Test:</b> watch five people who have never seen the page find the offer; time how long it takes."
+      ],
+      [
+       "Form effort.",
+       "<b>Observed:</b> nine fields, including injury history and emergency contact, before anyone has visited. <b>Consequence:</b> the form asks for trust it has not earned. <b>Fix:</b> name, email, phone. The rest is collected at the front desk on the first visit, where it belongs. <b>Test:</b> completed forms per hundred form starts, one week before and one week after."
+      ],
+      [
+       "Confirmation.",
+       "<b>Observed:</b> after submitting, the page reloads to the top with no message. <b>Consequence:</b> people submit twice, or assume it failed and leave. <b>Fix:</b> a confirmation that says \"You are booked for your free week. Sarah will text you within an hour to pick your first class.\" <b>Test:</b> submit it yourself from a phone and read what you see."
+      ],
+      [
+       "Delivery.",
+       "<b>Observed:</b> the confirmation email comes from a generic sender, lands in promotions, and links to the old schedule. <b>Consequence:</b> the promise arrives wrong. <b>Fix:</b> a from name people recognize, a subject that repeats the promise, and a link checked by hand. <b>Test:</b> send it to two different email providers and open it on a phone."
+      ],
+      [
+       "Ownership.",
+       "<b>Observed:</b> new signups go to an inbox three people can see and nobody owns. <b>Consequence:</b> the Friday evening signup is answered Monday, if at all. <b>Fix:</b> every signup creates a record with Sarah's name on it and a one-hour reply window during open hours. <b>Test:</b> submit a test signup at 5:45pm on a Friday and time the reply."
+      ]
+     ]
+    ],
+    [
+     "p",
+     "Seven observations, seven small fixes, and not one of them needed a new website. The studio ran the tests for two weeks before it turned the ad budget back up. That order is the whole lesson."
+    ]
+   ]
+  },
+  {
+   "nav": "What to do with it",
+   "label": "What to do with it",
+   "h2": "One leak at a time, tested, then traffic.",
+   "body": [
+    [
+     "checks",
+     [
+      "Walk the path on your own phone and fill the worksheet, one row per point.",
+      "Rank the leaks by how many people hit them first: message match and mobile readability usually come before form effort.",
+      "Fix the top one. Write the test before you make the change, so you know what \"worked\" means.",
+      "Run the test for a week. Then the next leak.",
+      "Only when the path holds do you buy more traffic, and you buy it knowing what a visitor is worth."
+     ]
+    ],
+    [
+     "said",
+     "The honest version",
+     "Most owners find two leaks they can fix this afternoon and one that needs a system behind it: delivery and ownership. That third one is where the tools come in."
+    ],
+    [
+     "linkedin",
+     "Bought traffic and got nothing? The path was leaking before the first dollar. Seven points, from a phone in someone's hand to a person who owns the reply: message match, mobile readability, one clear next step, form effort, confirmation, delivery, ownership. Walk it yourself before you pay to send anyone else down it."
+    ]
+   ]
+  }
+ ],
+ "ws": [
+  "Walk the path",
+  "Fill one row per inspection point.",
+  "Evidence means something you saw or measured on your own phone, not something you assume."
+ ],
+ "fields": [
+  [
+   "Step",
+   "Which of the seven points: message match, mobile readability, next step, form effort, confirmation, delivery, ownership."
+  ],
+  [
+   "Issue",
+   "What you observed, in one sentence."
+  ],
+  [
+   "Evidence",
+   "What you saw or measured. A screenshot, a count, a time. If you are guessing, write \"unknown\"."
+  ],
+  [
+   "Owner",
+   "The named person who will fix it and by when."
+  ],
+  [
+   "Verification",
+   "How you will know it worked: the count, the time, or the check you will run."
+  ]
+ ],
+ "pr": [
+  "The prompt",
+  "Rank the fixes from your own observations.",
+  "Paste your worksheet rows and anything you measured. It separates what you saw from what you assumed, ranks the fixes, and writes the tests. It cannot see your site or your analytics; it works only from what you give it."
+ ],
+ "prompt": "Audit my lead path from the observations below. Use only what I paste. You cannot see my website, my analytics, or my inbox, so never claim to have inspected them. Where I have not given evidence, say \"unknown\" and tell me the one thing to check.\n\nThe seven inspection points, in order: message match, mobile readability, one clear next step, form effort, confirmation, delivery, ownership.\n\n<b>1.</b> EVIDENCE VS ASSUMPTION: for each row I paste, label it evidence (something I saw or measured) or assumption (something I believe). Rewrite each assumption as the check that would turn it into evidence.\n<b>2.</b> THE LEAKS: list the leaks in the order a visitor meets them, and for each one say in plain language what it is costing, using my numbers only. If I gave no numbers, do not invent any.\n<b>3.</b> THE RANKING: the three fixes to make first, ranked by how many people hit the leak and how small the fix is. For each: the change, who should own it, and how long it should take.\n<b>4.</b> THE TESTS: for each of the three, write the test before the change: what to count or time, for how long, and what result would mean it worked. Do not predict percentages.\n<b>5.</b> THE ONE THAT NEEDS A SYSTEM: name any leak that a page edit cannot fix (usually delivery or ownership), and describe what has to exist behind the page for it to hold.\n\nMY OBSERVATIONS (step, issue, evidence, owner, verification):\n[paste your worksheet rows]\n\nWHAT I MEASURED, IF ANYTHING (visits, form starts, form completions, replies, times):\n[paste or write \"none yet\"]",
+ "pro_h3": "From audit to working funnel",
+ "pro_items": [
+  "The implementation kit for points five through seven: capture, delivery, owner, and measurement, connected and tested",
+  "The synthetic test lead: one fake inquiry walked through capture, resource delivery, CRM ownership, and a measured reply",
+  "The delivery templates: confirmation page, delivery email, and the owner notification, written and ready",
+  "The measurement sheet: the six counts that tell you the path holds, and how to read them weekly",
+  "The build prompt that produces the whole system for your business when you paste it into Claude"
+ ],
+ "offer": [
+  "Run it on your business",
+  "Want the audit done on your real site, not a fictional one?",
+  "Balise runs the free audit on your site and shows the three friction points with the fixes, in about a minute. Free, no card, and it is the same seven points.",
+  "https://pulse.frontpageintelligence.com/audit",
+  "Run the free Balise audit"
+ ]
+}
