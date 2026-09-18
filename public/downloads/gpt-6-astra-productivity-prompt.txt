@@ -1,0 +1,28 @@
+GPT-6 Astra: five practical workflows
+Aton Williams
+https://atonwilliams.com/guides/gpt-6-astra-productivity
+
+Goal: [one real business task and why it matters]
+Context: [business, audience, current process]
+Inputs: [files, links, examples you are authorized to use]
+Constraints: [scope, budget, tone, what must not change]
+Deliverable: [exact format, length and destination]
+Verification: [how we will check that it is correct]
+
+Use only supported facts. Flag missing inputs and uncertainty. Separate facts from recommendations. Do the work that is possible with your available tools; do not pretend a tool ran. Return the finished artifact, the checks performed, and any remaining blocker. Stop before publishing, spending money or changing external records unless I explicitly authorized that action.
+
+Turn data into a decision.
+Using the attached spreadsheet, help me decide [decision]. Define the reporting period and units. Check missing values and duplicates. Calculate [metrics], show the formulas, and reconcile totals against the source. Create one chart that helps answer the question. List anomalies separately from explanations. Do not infer causes the data cannot prove. Return a one-page decision brief and the calculation details.
+
+Make your templates do more.
+Use the attached approved [report/proposal] as the structure for a new version about [subject]. Use only the new facts below. Preserve [sections, tone, branding]. Replace outdated dates and names. Mark missing evidence as [NEEDS INPUT]. Do not invent prices, testimonials, commitments or results. Return the draft plus a short change log and a list of facts I need to confirm.
+New facts: [paste]
+
+Research with a paper trail.
+Help me choose [option] for [use case] within [constraints]. Research current primary sources using browsing if available. Compare the options on [criteria]. For every factual claim, include the source URL and its date where available. Distinguish published facts, your inference, and unknowns. Do not treat marketing claims as measured results. End with a recommendation, tradeoffs, and what would change it. If current sources cannot be accessed, say so rather than guessing.
+
+Put browser work on rails.
+In [authorized account], prepare [specific task]. You may [allowed actions]. Do not [excluded actions]. Start by checking the current state so you do not duplicate existing work. Save as a draft and stop before publishing or purchasing. Return a link or identifier for the draft, a list of changes and any errors. If you do not have browser access, state that and give me the shortest manual handoff instead.
+
+Test the work before shipping.
+Review [artifact] against these acceptance criteria: [numbered list]. For each item, mark pass, fail or not tested and attach evidence. Check facts against supplied sources, links, readability, missing sections and [task-specific checks]. Fix issues within the authorized scope, then rerun the failed checks. Do not call an untested item a pass. Return the revised artifact and a concise report of remaining failures.

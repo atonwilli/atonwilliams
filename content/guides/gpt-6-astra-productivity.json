@@ -1,0 +1,211 @@
+{
+  "kind": "spec",
+  "slug": "gpt-6-astra-productivity",
+  "num": "24",
+  "date": "2026-09-18",
+  "status": "published",
+  "topicKey": "ai",
+  "keys": "astra gpt-6 productivity prompts business research data reports browser quality",
+  "cardBlurb": "Five practical AI workflows with copyable prompts and a checklist for checking the work.",
+  "cardTags": [
+    "Free guide",
+    "Five workflows",
+    "Prompt pack"
+  ],
+  "topicLabel": "AI",
+  "topic": "AI and tools",
+  "band": " mint",
+  "title": "GPT-6 Astra: five practical workflows",
+  "desc": "Put GPT-6 Astra to work with five business workflows, copyable prompts and checks before you ship.",
+  "h1": "Give Astra a job.",
+  "em": "Not just a question.",
+  "lead": "Five practical workflows for your business. The inputs to provide, the prompts to use and the checks to run before you trust the result.",
+  "read": 8,
+  "kit": "Five prompts and a worksheet",
+  "tiles": [
+    [
+      "Five useful workflows",
+      "Turn a real business task into a clear brief."
+    ],
+    [
+      "Copy the prompts",
+      "Get all five prompts plus the reusable six-part brief."
+    ],
+    [
+      "Build your system",
+      "Explore the rest of the free AI library."
+    ]
+  ],
+  "sections": [
+    {
+      "nav": "Start here",
+      "label": "The brief",
+      "h2": "Give Astra a job. Not just a question.",
+      "body": [
+        [
+          "p",
+          "The useful starting point is a real task, the right inputs and a way to check the result. These five workflows are practical exercises for GPT-6 Astra, not promises of a specific time saving. The same briefing structure also works with other capable assistants."
+        ],
+        [
+          "p",
+          "Available file, browsing and editing tools depend on the product and account you use. Start with the tools you actually have. Never paste private customer or employee information into a tool you are not authorized to use."
+        ]
+      ]
+    },
+    {
+      "nav": "Analyze data",
+      "label": "Workflow",
+      "h2": "Turn data into a decision.",
+      "body": [
+        [
+          "p",
+          "Start with a business question and a file you are authorized to share. Define each column and the reporting period. A polished chart is useful only if its totals reconcile."
+        ],
+        [
+          "code",
+          "Using the attached spreadsheet, help me decide [decision]. Define the reporting period and units. Check missing values and duplicates. Calculate [metrics], show the formulas, and reconcile totals against the source. Create one chart that helps answer the question. List anomalies separately from explanations. Do not infer causes the data cannot prove. Return a one-page decision brief and the calculation details."
+        ],
+        [
+          "said",
+          "Before you use the result",
+          "Check totals against the original file. Confirm dates, currency and units. Ask whether missing records change the conclusion."
+        ]
+      ]
+    },
+    {
+      "nav": "Reuse templates",
+      "label": "Workflow",
+      "h2": "Make your templates do more.",
+      "body": [
+        [
+          "p",
+          "Give it an approved report or proposal, then the new facts. Tell it which sections must stay unchanged. This is a way to reuse your standards without recycling outdated claims."
+        ],
+        [
+          "code",
+          "Use the attached approved [report/proposal] as the structure for a new version about [subject]. Use only the new facts below. Preserve [sections, tone, branding]. Replace outdated dates and names. Mark missing evidence as [NEEDS INPUT]. Do not invent prices, testimonials, commitments or results. Return the draft plus a short change log and a list of facts I need to confirm.\nNew facts: [paste]"
+        ],
+        [
+          "said",
+          "Before you use the result",
+          "Check names, dates, commitments and numbers before sending. Compare the result to the approved example."
+        ]
+      ]
+    },
+    {
+      "nav": "Research",
+      "label": "Workflow",
+      "h2": "Research with a paper trail.",
+      "body": [
+        [
+          "p",
+          "Ask for a decision, not a pile of links. For news or product comparisons, require current primary sources and a date for each finding. If browsing is unavailable, provide sources yourself."
+        ],
+        [
+          "code",
+          "Help me choose [option] for [use case] within [constraints]. Research current primary sources using browsing if available. Compare the options on [criteria]. For every factual claim, include the source URL and its date where available. Distinguish published facts, your inference, and unknowns. Do not treat marketing claims as measured results. End with a recommendation, tradeoffs, and what would change it. If current sources cannot be accessed, say so rather than guessing."
+        ],
+        [
+          "said",
+          "Before you use the result",
+          "Open the sources. Check publication dates and whether each page actually supports the associated claim."
+        ]
+      ]
+    },
+    {
+      "nav": "Browser work",
+      "label": "Workflow",
+      "h2": "Put browser work on rails.",
+      "body": [
+        [
+          "p",
+          "Browser tasks depend on the app, connected tools and permissions available in your session. Start with a reversible task and a clear stopping point."
+        ],
+        [
+          "code",
+          "In [authorized account], prepare [specific task]. You may [allowed actions]. Do not [excluded actions]. Start by checking the current state so you do not duplicate existing work. Save as a draft and stop before publishing or purchasing. Return a link or identifier for the draft, a list of changes and any errors. If you do not have browser access, state that and give me the shortest manual handoff instead."
+        ],
+        [
+          "said",
+          "Before you use the result",
+          "Inspect the saved draft in the destination. Confirm the account, content and stopping point. A written claim of completion is not a receipt."
+        ]
+      ]
+    },
+    {
+      "nav": "Quality review",
+      "label": "Workflow",
+      "h2": "Test the work before shipping.",
+      "body": [
+        [
+          "p",
+          "Define what done means before asking it to review. Give it a website, document or finished asset and a checklist that somebody else could repeat."
+        ],
+        [
+          "code",
+          "Review [artifact] against these acceptance criteria: [numbered list]. For each item, mark pass, fail or not tested and attach evidence. Check facts against supplied sources, links, readability, missing sections and [task-specific checks]. Fix issues within the authorized scope, then rerun the failed checks. Do not call an untested item a pass. Return the revised artifact and a concise report of remaining failures."
+        ],
+        [
+          "said",
+          "Before you use the result",
+          "Read the failed and not-tested items. Run a sample check yourself. Release only when the acceptance criteria are met."
+        ]
+      ]
+    },
+    {
+      "nav": "Sources",
+      "label": "Further reading",
+      "h2": "Check the current product details.",
+      "body": [
+        [
+          "p",
+          "These are workflow recommendations, not benchmark claims. Consult the official documentation for current model availability, tool support and limits."
+        ],
+        [
+          "p",
+          "<a href=\"https://developers.openai.com/api/docs/models/gpt-6-astra\">GPT-6 Astra model documentation</a> \u00b7 <a href=\"https://developers.openai.com/api/docs/guides/latest-model\">Latest-model guidance</a>"
+        ]
+      ]
+    }
+  ],
+  "ws": [
+    "Your first workflow",
+    "Choose one task to try today.",
+    "Write the job, its inputs and a measurable acceptance check."
+  ],
+  "fields": [
+    [
+      "The task",
+      "One recurring job in your business."
+    ],
+    [
+      "The inputs",
+      "Files, examples and relevant context."
+    ],
+    [
+      "The boundaries",
+      "What may change, and what requires approval."
+    ],
+    [
+      "The acceptance check",
+      "How you will verify the result."
+    ]
+  ],
+  "pr": [
+    "The prompt pack",
+    "Start with a better brief.",
+    "Copy this pack or download the text file. Replace every bracketed field with your own details."
+  ],
+  "prompt": "Goal: [one real business task and why it matters]\nContext: [business, audience, current process]\nInputs: [files, links, examples you are authorized to use]\nConstraints: [scope, budget, tone, what must not change]\nDeliverable: [exact format, length and destination]\nVerification: [how we will check that it is correct]\n\nUse only supported facts. Flag missing inputs and uncertainty. Separate facts from recommendations. Do the work that is possible with your available tools; do not pretend a tool ran. Return the finished artifact, the checks performed, and any remaining blocker. Stop before publishing, spending money or changing external records unless I explicitly authorized that action.\n\nTurn data into a decision.\nUsing the attached spreadsheet, help me decide [decision]. Define the reporting period and units. Check missing values and duplicates. Calculate [metrics], show the formulas, and reconcile totals against the source. Create one chart that helps answer the question. List anomalies separately from explanations. Do not infer causes the data cannot prove. Return a one-page decision brief and the calculation details.\n\nMake your templates do more.\nUse the attached approved [report/proposal] as the structure for a new version about [subject]. Use only the new facts below. Preserve [sections, tone, branding]. Replace outdated dates and names. Mark missing evidence as [NEEDS INPUT]. Do not invent prices, testimonials, commitments or results. Return the draft plus a short change log and a list of facts I need to confirm.\nNew facts: [paste]\n\nResearch with a paper trail.\nHelp me choose [option] for [use case] within [constraints]. Research current primary sources using browsing if available. Compare the options on [criteria]. For every factual claim, include the source URL and its date where available. Distinguish published facts, your inference, and unknowns. Do not treat marketing claims as measured results. End with a recommendation, tradeoffs, and what would change it. If current sources cannot be accessed, say so rather than guessing.\n\nPut browser work on rails.\nIn [authorized account], prepare [specific task]. You may [allowed actions]. Do not [excluded actions]. Start by checking the current state so you do not duplicate existing work. Save as a draft and stop before publishing or purchasing. Return a link or identifier for the draft, a list of changes and any errors. If you do not have browser access, state that and give me the shortest manual handoff instead.\n\nTest the work before shipping.\nReview [artifact] against these acceptance criteria: [numbered list]. For each item, mark pass, fail or not tested and attach evidence. Check facts against supplied sources, links, readability, missing sections and [task-specific checks]. Fix issues within the authorized scope, then rerun the failed checks. Do not call an untested item a pass. Return the revised artifact and a concise report of remaining failures.",
+  "pro_h3": "",
+  "pro_items": [],
+  "offer": [
+    "Keep building",
+    "Make one workflow repeatable.",
+    "Once the result works, save the steps as a reusable skill so you can run it again with new inputs.",
+    "/guides/prompt-with-skills",
+    "Build a reusable skill"
+  ],
+  "pillar": "ai",
+  "sub": "chatgpt"
+}

@@ -2,6 +2,7 @@ import fs from 'node:fs'
 import path from 'node:path'
 import type { SpecGuide as Spec, SpecBlock } from '@/lib/content'
 import { ProBox } from './ProBox'
+import { packForGuide } from '@/lib/pro'
 
 function esc(s: string) {
   return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
@@ -30,6 +31,7 @@ function Block({ b }: { b: SpecBlock }) {
 
 export function SpecGuidePage({ g }: { g: Spec }) {
   const n = g.sections.length
+  const hasPro = Boolean(packForGuide(g.slug))
   const prompt = esc(g.prompt).replace(/&lt;b&gt;/g, '<b>').replace(/&lt;\/b&gt;/g, '</b>')
   return (
     <>
@@ -53,7 +55,7 @@ export function SpecGuidePage({ g }: { g: Spec }) {
       <section className="kit" aria-label="What you get">
         <div className="wrap">
           <div className="kit-grid">
-            {[['Free lesson', '#lesson-1', 'Start reading'], ['Prompt', '#prompt-section', 'Copy the prompt'], ['Deeper in Pro', '#pro', 'See what is in Pro']].map(([meta, href, cta], i) => (
+            {[['Free lesson', '#lesson-1', 'Start reading'], ['Prompt', '#prompt-section', 'Copy the prompt'], hasPro ? ['Deeper in Pro', '#pro', 'See what is in Pro'] : ['Keep learning', '/guides', 'Browse free guides']].map(([meta, href, cta], i) => (
               <div className="tile" key={meta}>
                 <span className="meta">{meta}</span>
                 <h3>{g.tiles[i][0]}</h3>
@@ -69,7 +71,7 @@ export function SpecGuidePage({ g }: { g: Spec }) {
         <div className="wrap">
           <nav className="contents" aria-label="Guide sections">
             {g.sections.map((s, i) => <a key={s.nav} href={`#lesson-${i + 1}`}>{s.nav}</a>)}
-            <a href="#worksheet">Worksheet</a><a href="#prompt-section">Prompt</a><a href="#pro">Pro</a>
+            <a href="#worksheet">Worksheet</a><a href="#prompt-section">Prompt</a>{hasPro && <a href="#pro">Pro</a>}
           </nav>
           {g.sections.map((s, i) => (
             <section className="lesson" id={`lesson-${i + 1}`} key={s.nav}>
